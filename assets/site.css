@@ -868,6 +868,47 @@ main:focus { outline: none; }
 
 /* ── Responsive ─────────────────────────────────────────────────────── */
 
+/* Landscape-only media layouts */
+.replay-stage--single { grid-template-columns: minmax(0, 1fr); max-width: 980px; margin-inline: auto; }
+.shot-stack { display: grid; gap: 24px; }
+.feat-media--pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* How It Works guides */
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+.guide-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--red);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  background: var(--panel);
+  color: var(--text);
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.guide-card:hover, .guide-card:focus-visible { border-color: var(--line-strong); background: rgba(255, 255, 255, 0.07); }
+.guide-card-title { font-size: 1.05rem; font-weight: 850; line-height: 1.3; }
+.guide-card-summary { color: var(--muted); line-height: 1.6; font-size: 0.94rem; flex: 1; }
+.guide-card-cta { color: var(--red-2, var(--red)); font-weight: 800; font-size: 0.88rem; }
+.step-guide { margin-top: 16px !important; }
+.breadcrumb { padding-top: 4px; padding-bottom: 8px; }
+.guide-section { padding: 64px 0; }
+.guide-text { max-width: 760px; }
+.guide-text h2 { margin: 0 0 14px; font-size: clamp(1.4rem, 2.4vw, 1.9rem); font-weight: 860; line-height: 1.15; }
+.guide-text p { margin: 0 0 12px; color: var(--muted); line-height: 1.72; }
+.guide-text .tick-list { margin-top: 12px; }
+.guide-text .sub-steps { margin-bottom: 12px; }
+.guide-text strong, .sub-steps strong { color: var(--text); }
+.guide-media { margin-top: 32px; max-width: 980px; }
+.guide-media--pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: none; }
+.guide-access h2, .guide-related h2 { margin: 0 0 18px; font-size: clamp(1.3rem, 2.2vw, 1.7rem); font-weight: 860; }
+.guide-access .lead { margin: 0; }
+.guide-access .card .tick-list { margin-top: 8px; }
+.card--pro { border-top-color: var(--amber); }
+.guide-related { margin-top: 56px; }
+
 @media (max-width: 1024px) {
   .hero-grid,
   .section-heading,
@@ -913,7 +954,8 @@ main:focus { outline: none; }
   .phase-grid { grid-template-columns: 1fr; }
   .phase-card + .phase-card { border-left: 0; border-top: 1px solid var(--line); }
   .shot-row--3, .feat-media--3 { grid-template-columns: 1fr; }
-  .replay-stage, .feat-media--2 { grid-template-columns: 1fr; }
+  .replay-stage, .feat-media--2, .feat-media--pair, .guide-media--pair { grid-template-columns: 1fr; }
+  .guide-section { padding: 44px 0; }
   .replay-stage .shot--portrait, .feat-media--2 .shot--portrait { justify-self: center; max-width: 260px; }
   .tick-list--2col { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }

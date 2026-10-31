@@ -32,26 +32,38 @@ const SITE = {
 };
 
 // Screenshot slots. `file` is relative to assets/screenshots/current/ and may
-// also be an object per language, e.g. { en: "home-en.png", fr: "home-fr.png" }.
-// w/h default to an iPhone Pro Max capture (2868 x 1320) in the slot's orientation.
+// also be an object per language, e.g. { en: "en/home.webp", fr: "fr/home.webp" }.
+// A language without its own file falls back to the English one.
+// w/h default to the web export of an iPhone Pro Max capture (1600 x 736
+// landscape, 900 x 1956 portrait).
 //
-// Optional video: set `video` to an MP4 (H.264) in assets/video/, optionally
-// `videoWebm` for a WebM version, and `videoW`/`videoH` if the clip's size
-// differs from the screenshot. Like `file`, both may be per-language objects.
-// The slot's screenshot becomes the poster frame. The clip plays muted and
-// looping while on screen, has a play/pause button, and never autoplays for
-// visitors who prefer reduced motion.
+// Optional video: set `video` to an MP4 (H.264) in assets/video/ and `poster`
+// to its first-frame image in the same folder. `videoW`/`videoH` give the
+// clip's size. All three may be per-language objects, like `file`. The clip
+// plays muted and looping while on screen, has a play/pause button, and never
+// autoplays for visitors who prefer reduced motion.
+const perLang = (name) => ({ en: `en/${name}`, fr: `fr/${name}`, es: `es/${name}` });
+const clip = (name) => ({ video: perLang(`${name}.mp4`), poster: perLang(`${name}-poster.webp`), videoW: 1280, videoH: 590 });
+
 const SHOTS = {
-  home:                { file: "", orientation: "landscape" },
-  prepare:             { file: "", orientation: "portrait" },
-  dashboard:           { file: "", orientation: "landscape" },
-  pitWallTiming:       { file: "", orientation: "landscape" },
-  pitWallMap:          { file: "", orientation: "landscape" },
-  pitWallGame:         { file: "", orientation: "landscape" },
-  sessionHistory:      { file: "", orientation: "portrait" },
-  raceResults:         { file: "", orientation: "portrait" },
-  raceReplayPortrait:  { file: "", orientation: "portrait" },
-  raceReplayLandscape: { file: "", orientation: "landscape", video: "", videoWebm: "" }
+  home:                  { file: "", orientation: "landscape" },
+  prepare:               { file: perLang("prepare-session.webp"), orientation: "landscape" },
+  dashboard:             { file: perLang("dashboard.webp"), orientation: "landscape" },
+  dashboardVideo:        { file: perLang("dashboard.webp"), orientation: "landscape", ...clip("live-race") },
+  qualifying:            { file: perLang("qualifying.webp"), orientation: "landscape" },
+  vscDelta:              { file: perLang("vsc-delta.webp"), orientation: "landscape", ...clip("vsc-delta") },
+  pitWallTiming:         { file: perLang("pit-wall-timing.webp"), orientation: "landscape" },
+  pitWallVideo:          { file: perLang("pit-wall-timing.webp"), orientation: "landscape", ...clip("pit-wall") },
+  pitWallMap:            { file: perLang("pit-wall-map.webp"), orientation: "landscape" },
+  pitWallCar:            { file: perLang("pit-wall-car.webp"), orientation: "landscape" },
+  jaxAudio:              { file: perLang("jax-audio.webp"), orientation: "landscape" },
+  sessionHistory:        { file: perLang("race-results.webp"), orientation: "landscape" },
+  sessionHistoryFilters: { file: "en/session-history-filters.webp", orientation: "landscape" },
+  lapTrace:              { file: perLang("lap-trace.webp"), orientation: "landscape" },
+  raceReplayLandscape:   { file: perLang("race-results.webp"), orientation: "landscape", ...clip("after-the-race") },
+  setupLibrary:          { file: perLang("setup-library.webp"), orientation: "landscape" },
+  racingTips:            { file: "en/racing-tips.webp", orientation: "landscape" },
+  racingTipsDetail:      { file: "en/racing-tips-detail.webp", orientation: "landscape" }
 };
 
 const copy = {
@@ -94,15 +106,23 @@ const copy = {
     },
     shots: {
       home: "Home",
-      prepare: "Prepare for Session",
+      prepare: "Prepare for Session — your session plan",
       dashboard: "Live Dashboard",
+      dashboardVideo: "Live Dashboard during a race",
+      qualifying: "Dashboard in qualifying",
+      vscDelta: "VSC delta overlay",
       pitWallTiming: "Pit Wall — Timing",
+      pitWallVideo: "Pit Wall — Timing, Map and Car",
       pitWallMap: "Pit Wall — Map",
-      pitWallGame: "Pit Wall — Game",
-      sessionHistory: "Session History",
-      raceResults: "Race results",
-      raceReplayPortrait: "Race Replay",
-      raceReplayLandscape: "Race Replay"
+      pitWallCar: "Pit Wall — Car",
+      jaxAudio: "Jax audio guidance demo",
+      sessionHistory: "Session History — race results",
+      sessionHistoryFilters: "Session History — filters, leagues and seasons",
+      lapTrace: "Session History — comparing two laps",
+      raceReplayLandscape: "After the race: results, Race Replay and lap traces",
+      setupLibrary: "Setup library with ratings",
+      racingTips: "Racing Tips",
+      racingTipsDetail: "A Racing Tip, with an exercise to practise"
     },
     home: {
       titleLines: ["Your race engineer.", "Your pit wall.", "Your race memory."],
@@ -255,7 +275,7 @@ const copy = {
             "Flags, Safety Car, VSC, pit and penalty information",
             "Wing damage, weather and session context"
           ],
-          shots: ["dashboard"]
+          shots: ["dashboardVideo"]
         },
         {
           id: "jax",
@@ -285,7 +305,7 @@ const copy = {
             "Setups used this session, linked to your setup library",
             "Game and session configuration, with compact, readable labels"
           ],
-          shots: ["pitWallTiming", "pitWallMap", "pitWallGame"]
+          shots: ["pitWallTiming", "pitWallMap", "pitWallCar"]
         },
         {
           id: "race-replay",
@@ -302,7 +322,7 @@ const copy = {
             "Reconstructed results when final classification is missing and enough timing was captured"
           ],
           note: "Available for races and sprint races. Replay uses only the data your device received — it cannot rebuild information the game never sent.",
-          shots: ["raceReplayLandscape", "raceReplayPortrait"]
+          shots: ["raceReplayLandscape"]
         },
         {
           id: "session-history",
@@ -318,7 +338,7 @@ const copy = {
             "Career statistics across your saved sessions"
           ],
           note: "Not every session contains every field. JMD reconstructs what it reliably can and shows missing data as missing.",
-          shots: ["sessionHistory", "raceResults"]
+          shots: ["sessionHistory", "lapTrace"]
         },
         {
           id: "lap-trace",
@@ -386,8 +406,7 @@ const copy = {
         {
           phase: "setup",
           title: "Install and open Jax Max Delta",
-          body: "Install JMD on your iPhone or iPad. A short first-run tour covers the essentials — you can replay it later from Settings. No account is needed.",
-          shot: "home"
+          body: "Install JMD on your iPhone or iPad. A short first-run tour covers the essentials — you can replay it later from Settings. No account is needed."
         },
         {
           phase: "setup",
@@ -659,15 +678,23 @@ const copy = {
     },
     shots: {
       home: "Accueil",
-      prepare: "Préparer la session",
+      prepare: "Préparer la session — votre plan",
       dashboard: "Tableau de bord en direct",
-      pitWallTiming: "Mur des stands — Chronos",
+      dashboardVideo: "Le tableau de bord pendant une course",
+      qualifying: "Le tableau de bord en qualification",
+      vscDelta: "Le delta VSC à l’écran",
+      pitWallTiming: "Mur des stands — Timing",
+      pitWallVideo: "Mur des stands — Timing, carte et voiture",
       pitWallMap: "Mur des stands — Carte",
-      pitWallGame: "Mur des stands — Jeu",
-      sessionHistory: "Historique des sessions",
-      raceResults: "Résultats de course",
-      raceReplayPortrait: "Race Replay",
-      raceReplayLandscape: "Race Replay"
+      pitWallCar: "Mur des stands — Voiture",
+      jaxAudio: "Démo du guidage audio de Jax",
+      sessionHistory: "Historique des sessions — résultats de course",
+      sessionHistoryFilters: "Historique des sessions — filtres, ligues et saisons",
+      lapTrace: "Historique des sessions — comparaison de deux tours",
+      raceReplayLandscape: "Après la course : résultats, Race Replay et tracés",
+      setupLibrary: "Bibliothèque de setups avec évaluations",
+      racingTips: "Conseils de course",
+      racingTipsDetail: "Un conseil de course, avec un exercice à pratiquer"
     },
     home: {
       titleLines: ["Votre ingénieur de course.", "Votre mur des stands.", "Votre mémoire de course."],
@@ -820,7 +847,7 @@ const copy = {
             "Drapeaux, voiture de sécurité, VSC, arrêts et pénalités",
             "Dégâts d'aileron, météo et contexte de session"
           ],
-          shots: ["dashboard"]
+          shots: ["dashboardVideo"]
         },
         {
           id: "jax",
@@ -850,7 +877,7 @@ const copy = {
             "Réglages utilisés pendant la session, liés à votre bibliothèque",
             "Configuration du jeu et de la session, avec des libellés compacts et lisibles"
           ],
-          shots: ["pitWallTiming", "pitWallMap", "pitWallGame"]
+          shots: ["pitWallTiming", "pitWallMap", "pitWallCar"]
         },
         {
           id: "race-replay",
@@ -867,7 +894,7 @@ const copy = {
             "Résultats reconstruits lorsque le classement final manque et que suffisamment de chronos ont été captés"
           ],
           note: "Offert pour les courses et les courses sprint. La reprise utilise uniquement les données reçues par votre appareil — elle ne peut pas reconstruire ce que le jeu n'a jamais envoyé.",
-          shots: ["raceReplayLandscape", "raceReplayPortrait"]
+          shots: ["raceReplayLandscape"]
         },
         {
           id: "session-history",
@@ -883,7 +910,7 @@ const copy = {
             "Statistiques de carrière sur l'ensemble de vos sessions"
           ],
           note: "Une session ne contient pas toujours tous les champs. JMD reconstruit ce qu'il peut de façon fiable et affiche les données manquantes comme manquantes.",
-          shots: ["sessionHistory", "raceResults"]
+          shots: ["sessionHistory", "lapTrace"]
         },
         {
           id: "lap-trace",
@@ -951,8 +978,7 @@ const copy = {
         {
           phase: "setup",
           title: "Installer et ouvrir Jax Max Delta",
-          body: "Installez JMD sur votre iPhone ou votre iPad. Une courte visite guidée présente l'essentiel au premier lancement — vous pourrez la revoir plus tard depuis les Réglages. Aucun compte requis.",
-          shot: "home"
+          body: "Installez JMD sur votre iPhone ou votre iPad. Une courte visite guidée présente l'essentiel au premier lancement — vous pourrez la revoir plus tard depuis les Réglages. Aucun compte requis."
         },
         {
           phase: "setup",
@@ -1038,7 +1064,7 @@ const copy = {
         ["Est-ce seulement un tableau de bord de télémétrie?", "Non. Le tableau de bord en direct n'en est qu'une partie. JMD vous aide aussi à préparer une session, vous offre les annonces vocales de Jax et un mur des stands complet pendant que vous pilotez, puis conserve votre historique, vos réglages, vos traces de tour et Race Replay après la session."],
         ["Pourquoi n'y a-t-il pas de Race Replay pour certaines sessions?", "Race Replay est offert pour les courses et les courses sprint captées avec assez de détails. Les essais, les qualifications et le contre-la-montre ont leur propre analyse, axée sur le rythme."],
         ["Où sont stockées mes données?", "Sur votre appareil. L'historique des sessions, les traces de tour et les réglages restent dans le stockage privé de l'app. Si iCloud est disponible, l'app peut aussi sauvegarder votre historique et vos ligues dans votre propre conteneur iCloud privé, que nous ne pouvons pas lire. Consultez la politique de confidentialité pour les détails."],
-        ["Que comprennent les versions gratuite et Jax Pro?", "La version gratuite comprend le tableau de bord complet, le guidage audio de Jax, les conseils de course, la vue À propos de Préparer la session, les onglets MOI et RÉGLAGE du mur des stands, le classement complet, la sauvegarde iCloud, trois sessions récentes et trois réglages suivis. Jax Pro ajoute le plan de session et Mes données, le chronométrage EN DIRECT, les onglets VOITURE, CARTE, TRACE et JEU, ainsi que tout l'historique et toute la bibliothèque de réglages."],
+        ["Que comprennent les versions gratuite et Jax Pro?", "La version gratuite comprend le tableau de bord complet, le guidage audio de Jax, les conseils de course, la vue À propos de Préparer la session, les onglets ME et SETUP du mur des stands, le classement complet, la sauvegarde iCloud, trois sessions récentes et trois réglages suivis. Jax Pro ajoute le plan de session et Mes données, le chronométrage EN DIRECT, les onglets AUTO, MAP, TRACE et GAME, ainsi que tout l'historique et toute la bibliothèque de réglages."],
         ["Comment fonctionnent l'essai et les abonnements?", "L'app décrit un essai de lancement de 14 jours pour les forfaits mensuel et annuel Jax Pro. L'admissibilité, les prix locaux et l'offre exacte affichée par Apple peuvent varier; vérifiez la feuille d'achat Apple avant de confirmer. Apple facture et renouvelle l'abonnement sauf annulation dans les réglages d'abonnements de votre compte Apple. Les achats peuvent être restaurés dans JMD."],
         ["Comment annuler ou demander un remboursement?", "Gérez ou annulez Jax Pro dans les réglages d'abonnements de votre compte Apple. L'annulation met fin au prochain renouvellement, mais n'annule normalement pas un débit existant. Apple contrôle la facturation et les remboursements de l'App Store; utilisez l'assistance aux achats Apple pour une demande de remboursement, ou écrivez à support@jaxmaxdelta.com pour obtenir de l'aide sur JMD."],
         ["Où puis-je le télécharger?", "Jax Max Delta se prépare à sa sortie sur l'App Store. Le lien de téléchargement apparaîtra sur ce site dès qu'il sera disponible."],
@@ -1130,15 +1156,23 @@ const copy = {
     },
     shots: {
       home: "Inicio",
-      prepare: "Preparar sesión",
+      prepare: "Preparar sesión — tu plan",
       dashboard: "Panel en vivo",
-      pitWallTiming: "Muro de boxes — Tiempos",
+      dashboardVideo: "El panel durante una carrera",
+      qualifying: "El panel en clasificación",
+      vscDelta: "El delta VSC en pantalla",
+      pitWallTiming: "Muro de boxes — Timing",
+      pitWallVideo: "Muro de boxes — Timing, mapa y coche",
       pitWallMap: "Muro de boxes — Mapa",
-      pitWallGame: "Muro de boxes — Juego",
-      sessionHistory: "Historial de sesiones",
-      raceResults: "Resultados de carrera",
-      raceReplayPortrait: "Race Replay",
-      raceReplayLandscape: "Race Replay"
+      pitWallCar: "Muro de boxes — Coche",
+      jaxAudio: "Demo de la guía de audio de Jax",
+      sessionHistory: "Historial de sesiones — resultados de carrera",
+      sessionHistoryFilters: "Historial de sesiones — filtros, ligas y temporadas",
+      lapTrace: "Historial de sesiones — comparando dos vueltas",
+      raceReplayLandscape: "Después de la carrera: resultados, Race Replay y trazas",
+      setupLibrary: "Biblioteca de setups con valoraciones",
+      racingTips: "Consejos de carrera",
+      racingTipsDetail: "Un consejo de carrera, con un ejercicio para practicar"
     },
     home: {
       titleLines: ["Tu ingeniero de carrera.", "Tu muro de boxes.", "Tu memoria de carrera."],
@@ -1291,7 +1325,7 @@ const copy = {
             "Banderas, Safety Car, VSC, paradas y penalizaciones",
             "Daños en alerones, clima y contexto de sesión"
           ],
-          shots: ["dashboard"]
+          shots: ["dashboardVideo"]
         },
         {
           id: "jax",
@@ -1321,7 +1355,7 @@ const copy = {
             "Reglajes usados en la sesión, enlazados a tu biblioteca",
             "Configuración del juego y la sesión, con etiquetas compactas y legibles"
           ],
-          shots: ["pitWallTiming", "pitWallMap", "pitWallGame"]
+          shots: ["pitWallTiming", "pitWallMap", "pitWallCar"]
         },
         {
           id: "race-replay",
@@ -1338,7 +1372,7 @@ const copy = {
             "Resultados reconstruidos cuando falta la clasificación final y se captaron suficientes tiempos"
           ],
           note: "Disponible para carreras y sprints. La repetición usa solo los datos que recibió tu dispositivo — no puede reconstruir lo que el juego nunca envió.",
-          shots: ["raceReplayLandscape", "raceReplayPortrait"]
+          shots: ["raceReplayLandscape"]
         },
         {
           id: "session-history",
@@ -1354,7 +1388,7 @@ const copy = {
             "Estadísticas de carrera deportiva de todas tus sesiones"
           ],
           note: "No todas las sesiones contienen todos los campos. JMD reconstruye lo que puede de forma fiable y muestra como faltantes los datos que faltan.",
-          shots: ["sessionHistory", "raceResults"]
+          shots: ["sessionHistory", "lapTrace"]
         },
         {
           id: "lap-trace",
@@ -1422,8 +1456,7 @@ const copy = {
         {
           phase: "setup",
           title: "Instala y abre Jax Max Delta",
-          body: "Instala JMD en tu iPhone o iPad. Un breve recorrido inicial explica lo esencial — puedes volver a verlo desde Ajustes. No necesitas cuenta.",
-          shot: "home"
+          body: "Instala JMD en tu iPhone o iPad. Un breve recorrido inicial explica lo esencial — puedes volver a verlo desde Ajustes. No necesitas cuenta."
         },
         {
           phase: "setup",
@@ -1509,7 +1542,7 @@ const copy = {
         ["¿Es solo un panel de telemetría?", "No. El panel en vivo es una parte. JMD también te ayuda a preparar la sesión, te da los mensajes de voz de Jax y un muro de boxes completo mientras conduces, y guarda tu historial, reglajes, trazas de vuelta y Race Replay después."],
         ["¿Por qué algunas sesiones no tienen Race Replay?", "Race Replay es para carreras y sprints captados con suficiente detalle. Libres, clasificación y contrarreloj tienen su propio análisis centrado en el ritmo."],
         ["¿Dónde se guardan mis datos?", "En tu dispositivo. El historial de sesiones, las trazas de vuelta y los reglajes viven en el almacenamiento privado de la app. Si iCloud está disponible, la app también puede respaldar tu historial y tus ligas en tu propio contenedor privado de iCloud, que nosotros no podemos leer. Consulta la política de privacidad para más detalles."],
-        ["¿Qué incluyen Gratis y Jax Pro?", "Gratis incluye el Panel completo, la guía de audio de Jax, Consejos de carrera, la vista Acerca de de Preparar sesión, las pestañas YO y REGLAJE del muro de boxes, la clasificación completa, la copia en iCloud, tres sesiones recientes y tres reglajes guardados. Jax Pro añade el plan de sesión y Mis datos, tiempos EN VIVO, las pestañas COCHE, MAPA, TRAZA y JUEGO, y acceso a todo tu historial y biblioteca de reglajes."],
+        ["¿Qué incluyen Gratis y Jax Pro?", "Gratis incluye el Panel completo, la guía de audio de Jax, Consejos de carrera, la vista Acerca de de Preparar sesión, las pestañas ME y SETUP del muro de boxes, la clasificación completa, la copia en iCloud, tres sesiones recientes y tres reglajes guardados. Jax Pro añade el plan de sesión y Mis datos, tiempos EN VIVO, las pestañas COCHE, MAP, TRACE y GAME, y acceso a todo tu historial y biblioteca de reglajes."],
         ["¿Cómo funcionan la prueba y las suscripciones?", "La app describe una prueba introductoria de 14 días en los planes mensual y anual de Jax Pro. La elegibilidad, los precios locales y la oferta exacta que muestra Apple pueden variar; revisa la hoja de compra de Apple antes de confirmar. Apple factura y renueva la suscripción salvo que la canceles en los ajustes de suscripciones de tu cuenta de Apple. Puedes restaurar compras en JMD."],
         ["¿Cómo cancelo o solicito un reembolso?", "Gestiona o cancela Jax Pro en los ajustes de suscripciones de tu cuenta de Apple. La cancelación detiene la próxima renovación, pero normalmente no revierte un cobro existente. Apple controla la facturación y los reembolsos del App Store; usa el soporte de compras de Apple para solicitar un reembolso o escribe a support@jaxmaxdelta.com para obtener ayuda con JMD."],
         ["¿Dónde puedo descargarlo?", "Jax Max Delta se prepara para su lanzamiento en el App Store. El enlace de descarga aparecerá en este sitio en cuanto esté disponible."],
@@ -1783,21 +1816,22 @@ function termsSections(lang) {
 
 /* ── Paths ─────────────────────────────────────────────────────────────── */
 
-function inBlogPost() {
-  return document.body.dataset.page === "post";
+// Blog posts (/en/blog/x.html) and guides (/en/how-to/x.html) sit one folder deeper.
+function isNested() {
+  return ["post", "guide"].includes(document.body.dataset.page);
 }
 
 function route(lang, file = "index.html") {
-  const depth = inBlogPost() ? "../" : "";
+  const depth = isNested() ? "../" : "";
   return `${depth}${file}`;
 }
 
 function asset(path) {
-  return inBlogPost() ? `../../assets/${path}` : `../assets/${path}`;
+  return isNested() ? `../../assets/${path}` : `../assets/${path}`;
 }
 
 function langSwitchHref(lang, file) {
-  const depth = inBlogPost() ? "../../" : "../";
+  const depth = isNested() ? "../../" : "../";
   return `${depth}${lang}/${file}`;
 }
 
@@ -1815,7 +1849,7 @@ function boot() {
 }
 
 function renderPage(t, lang, page, slug) {
-  const renderers = { home, features, how, support, blog, privacy, terms, roadmap, post };
+  const renderers = { home, features, how, guide, support, blog, privacy, terms, roadmap, post };
   return (renderers[page] || home)(t, lang, slug);
 }
 
@@ -1823,6 +1857,7 @@ function renderPage(t, lang, page, slug) {
 
 function currentFile(page) {
   if (page === "post") return `blog/${document.body.dataset.slug}.html`;
+  if (page === "guide") return `how-to/${document.body.dataset.slug}.html`;
   if (page === "home") return "index.html";
   if (page === "how") return "how-to.html";
   return `${page}.html`;
@@ -1842,7 +1877,7 @@ function header(t, lang, page) {
         <button class="mobile-nav-toggle" type="button" aria-controls="site-menu" aria-expanded="false"><span class="sr-only">${t.common.menu}</span><span aria-hidden="true"></span></button>
         <div class="nav-right" id="site-menu">
           <nav class="nav-links" aria-label="${t.common.menu}">
-            ${links.map(([key, href]) => `<a href="${route(lang, href)}"${page === key ? ' aria-current="page"' : ""}>${t.nav[key]}</a>`).join("")}
+            ${links.map(([key, href]) => `<a href="${route(lang, href)}"${page === key || (page === "guide" && key === "how") ? ` aria-current="${page === key ? "page" : "true"}"` : ""}>${t.nav[key]}</a>`).join("")}
           </nav>
           <nav class="lang-switcher" aria-label="${t.common.language}">
             ${SITE.langs.map((code) => `<a href="${langSwitchHref(code, file)}" hreflang="${code}" lang="${code}"${code === lang ? ' aria-current="true" class="active"' : ""}>${code.toUpperCase()}</a>`).join("")}
@@ -1962,10 +1997,11 @@ function shot(key, t, lang, { caption = true, eager = false } = {}) {
   const label = t.shots[key];
   const orientation = slot.orientation;
   const file = shotFile(slot, lang);
-  const w = slot.w || (orientation === "landscape" ? 2868 : 1320);
-  const h = slot.h || (orientation === "landscape" ? 1320 : 2868);
+  const w = slot.w || (orientation === "landscape" ? 1600 : 900);
+  const h = slot.h || (orientation === "landscape" ? 736 : 1956);
   const hasVideo = Boolean(localized(slot.video, lang));
-  const poster = file ? asset(`screenshots/current/${file}`) : "";
+  const posterFile = localized(slot.poster, lang);
+  const poster = posterFile ? asset(`video/${posterFile}`) : file ? asset(`screenshots/current/${file}`) : "";
   const body = hasVideo
     ? shotVideo(slot, label, lang, t, w, h, poster)
     : file
@@ -2049,7 +2085,7 @@ function home(t, lang) {
     </section>
 
     <section class="section band" id="prepare">
-      <div class="wrap split split--portrait">
+      <div class="wrap split split--wide">
         <div>
           ${kicker(h.prepare.kicker)}
           <h2>${h.prepare.title}</h2>
@@ -2070,7 +2106,7 @@ function home(t, lang) {
             <p class="lead">${h.race.body}</p>
             ${list(h.race.items)}
           </div>
-          ${shot("dashboard", t, lang)}
+          ${shot("dashboardVideo", t, lang)}
         </div>
         <div class="jax-panel">
           <div>
@@ -2097,7 +2133,7 @@ function home(t, lang) {
           ${list(h.pitWall.items)}
         </div>
         <div class="shot-row shot-row--3">
-          ${shot("pitWallTiming", t, lang)}${shot("pitWallMap", t, lang)}${shot("pitWallGame", t, lang)}
+          ${shot("pitWallTiming", t, lang)}${shot("pitWallMap", t, lang)}${shot("pitWallCar", t, lang)}
         </div>
       </div>
     </section>
@@ -2110,9 +2146,8 @@ function home(t, lang) {
           <p class="lead">${h.replay.body}</p>
           <p class="badge">${h.replay.badge}</p>
         </div>
-        <div class="replay-stage">
+        <div class="replay-stage replay-stage--single">
           ${shot("raceReplayLandscape", t, lang)}
-          ${shot("raceReplayPortrait", t, lang)}
         </div>
         <div class="replay-detail">
           ${list(h.replay.items, "tick-list tick-list--2col")}
@@ -2125,7 +2160,7 @@ function home(t, lang) {
     </section>
 
     <section class="section" id="history">
-      <div class="wrap split split--portrait">
+      <div class="wrap split split--wide">
         <div>
           ${kicker(h.history.kicker)}
           <h2>${h.history.title}</h2>
@@ -2133,7 +2168,7 @@ function home(t, lang) {
           ${list(h.history.items)}
           <p class="fine-note">${h.history.note}</p>
         </div>
-        <div class="shot-pair">${shot("sessionHistory", t, lang)}${shot("raceResults", t, lang)}</div>
+        <div class="shot-stack">${shot("sessionHistory", t, lang)}${shot("lapTrace", t, lang)}</div>
       </div>
     </section>
 
@@ -2204,8 +2239,9 @@ function features(t, lang) {
 
 function featureGroup(g, t, lang, index) {
   const shots = g.shots || [];
+  const pair = shots.length === 2 && shots.every((key) => SHOTS[key].orientation === "landscape");
   const media = shots.length
-    ? `<div class="feat-media feat-media--${shots.length}">${shots.map((key) => shot(key, t, lang)).join("")}</div>`
+    ? `<div class="feat-media feat-media--${pair ? "pair" : shots.length}">${shots.map((key) => shot(key, t, lang)).join("")}</div>`
     : "";
   const wide = shots.length > 1 || (shots.length === 1 && SHOTS[shots[0]].orientation === "landscape");
   return `
@@ -2226,10 +2262,33 @@ function featureGroup(g, t, lang, index) {
 
 /* ── How it works ──────────────────────────────────────────────────────── */
 
+// The guide each How It Works step links to, by step position. Parallel to
+// copy.<lang>.how.steps, which has the same order in every language.
+const STEP_GUIDES = [null, null, "prepare-for-session", null, "dashboard", "jax", "pit-wall", null, "session-history", "session-history", null];
+
+// Guide copy lives in assets/guides.js, loaded only on How It Works and guide pages.
+function guideCopy(lang) {
+  return typeof GUIDES === "undefined" ? null : GUIDES[lang];
+}
+
+function guideCards(g, lang, slugs) {
+  return `<div class="guide-grid">${slugs.map((slug) => {
+    const item = g.items[slug];
+    return `<a class="guide-card" href="${route(lang, `how-to/${slug}.html`)}"><span class="guide-card-title">${item.title}</span><span class="guide-card-summary">${item.summary}</span><span class="guide-card-cta" aria-hidden="true">${g.readGuide} →</span></a>`;
+  }).join("")}</div>`;
+}
+
 function how(t, lang) {
   const h = t.how;
+  const g = guideCopy(lang);
   return `
     ${pageHero(t.common.eyebrow, h.title, h.intro)}
+    ${g ? `<section class="section section--tight band" id="guides">
+      <div class="wrap">
+        ${sectionHead(g.kicker, g.title, g.intro)}
+        ${guideCards(g, lang, GUIDE_ORDER)}
+      </div>
+    </section>` : ""}
     <section class="section section--tight">
       <div class="wrap">
         <ol class="how-steps">
@@ -2240,6 +2299,7 @@ function how(t, lang) {
                 <h2>${step.title}</h2>
                 <p>${step.body}</p>
                 ${step.list ? `<ol class="sub-steps">${step.list.map((x) => `<li>${x}</li>`).join("")}</ol>` : ""}
+                ${g && STEP_GUIDES[i] ? `<p class="step-guide"><a class="text-link" href="${route(lang, `how-to/${STEP_GUIDES[i]}.html`)}">${g.readGuide}: ${g.items[STEP_GUIDES[i]].title} →</a></p>` : ""}
                 ${i === 0 ? `<div class="cta-row cta-row--tight">${storeCta(t)}</div>` : ""}
               </div>
               ${step.shot ? shot(step.shot, t, lang) : ""}
@@ -2252,6 +2312,65 @@ function how(t, lang) {
         ${sectionHead(t.nav.support, h.troubleTitle, "")}
         <div class="grid-3">${h.trouble.map(([title, body]) => `<article class="card"><h3>${title}</h3><p>${body}</p></article>`).join("")}</div>
         <p class="section-link"><a class="text-link" href="${route(lang, "support.html")}">${t.nav.support} →</a></p>
+      </div>
+    </section>`;
+}
+
+/* ── Guides (How It Works subpages) ────────────────────────────────────── */
+
+function guideSection(sec, t, lang, index) {
+  const keys = sec.shots || (sec.shot ? [sec.shot] : []);
+  const media = keys.length
+    ? `<div class="guide-media${keys.length > 1 ? " guide-media--pair" : ""}">${keys.map((key) => shot(key, t, lang)).join("")}</div>`
+    : "";
+  return `
+    <section class="section guide-section${index % 2 ? " band" : ""}">
+      <div class="wrap">
+        <div class="guide-text">
+          <h2>${sec.h}</h2>
+          ${(sec.p || []).map((x) => `<p>${x}</p>`).join("")}
+          ${sec.steps ? `<ol class="sub-steps">${sec.steps.map((x) => `<li>${x}</li>`).join("")}</ol>` : ""}
+          ${sec.list ? list(sec.list) : ""}
+          ${sec.note ? `<p class="fine-note">${sec.note}</p>` : ""}
+        </div>
+        ${media}
+      </div>
+    </section>`;
+}
+
+function guideAccess(g, item, lang, slug) {
+  const link = slug === "free-and-pro" ? "" : `<p class="section-link"><a class="text-link" href="${route(lang, "how-to/free-and-pro.html")}">${g.accessLink} →</a></p>`;
+  if (item.allFree) {
+    return `<div class="guide-access"><h2>${g.accessTitle}</h2><p class="lead">${g.allFreeText}</p>${link}</div>`;
+  }
+  if (!item.access) return "";
+  return `
+    <div class="guide-access">
+      <h2>${g.accessTitle}</h2>
+      <div class="grid-2">
+        <article class="card"><h3>${g.freeLabel}</h3>${list(item.access.free)}</article>
+        <article class="card card--pro"><h3>${g.proLabel}</h3>${list(item.access.pro)}</article>
+      </div>
+      ${item.access.note ? `<p class="fine-note">${item.access.note}</p>` : ""}
+      ${link}
+    </div>`;
+}
+
+function guide(t, lang, slug) {
+  const g = guideCopy(lang);
+  if (!g) return "";
+  const key = g.items[slug] ? slug : GUIDE_ORDER[0];
+  const item = g.items[key];
+  const related = (item.related || []).filter((s) => g.items[s]);
+  return `
+    ${pageHero(g.kicker, item.title, item.summary)}
+    <nav class="wrap breadcrumb" aria-label="${g.kicker}"><a class="text-link" href="${route(lang, "how-to.html")}">← ${g.back}</a></nav>
+    ${item.sections.map((sec, i) => guideSection(sec, t, lang, i)).join("")}
+    <section class="section${item.sections.length % 2 ? " band" : ""}">
+      <div class="wrap">
+        ${guideAccess(g, item, lang, key)}
+        ${related.length ? `<div class="guide-related"><h2>${g.relatedTitle}</h2>${guideCards(g, lang, related)}</div>` : ""}
+        <p class="section-link"><a class="text-link" href="${route(lang, "how-to.html")}">← ${g.back}</a></p>
       </div>
     </section>`;
 }

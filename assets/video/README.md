@@ -1,26 +1,32 @@
-# Preview video
+# Preview videos
 
-Drop the Race Replay preview clip here, then set `video` on the
-`raceReplayLandscape` slot in the `SHOTS` table at the top of `assets/site.js`:
+One folder per language (`en/`, `fr/`, `es/`), each with four clips and their
+poster frames:
 
-```js
-raceReplayLandscape: { file: "race-replay-landscape.png", orientation: "landscape",
-                       video: "jmd-preview.mp4", videoWebm: "jmd-preview.webm" }
+| Clip                  | Source in the app repository            | Used by slot          |
+|-----------------------|-----------------------------------------|-----------------------|
+| `live-race.mp4`       | `assets/previews/<lang>/01_live_race.mp4`     | `dashboardVideo`      |
+| `pit-wall.mp4`        | `assets/previews/<lang>/02_pit_wall.mp4`      | `pitWallVideo`        |
+| `after-the-race.mp4`  | `assets/previews/<lang>/03_after_the_race.mp4`| `raceReplayLandscape` |
+| `vsc-delta.mp4`       | `assets/previews/<lang>/04_vsc_delta.mp4`     | `vscDelta`            |
+
+`<name>-poster.webp` is the frame at 1.5 s, shown before the clip loads.
+
+## Export
+
+The sources are 1920 × 886 H.264 with a silent audio track (about 94 MB for all
+twelve). For the web they are scaled to 1280 px, the audio track is dropped and
+the moov atom moved to the front (about 8 MB for all twelve):
+
+```sh
+ffmpeg -i IN.mp4 -an -vf "scale=1280:-2" -c:v libx264 -profile:v high -pix_fmt yuv420p -preset slow -crf 26 -movflags +faststart OUT.mp4
+ffmpeg -ss 1.5 -i IN.mp4 -frames:v 1 -vf scale=1280:-2 -c:v libwebp -quality 80 OUT-poster.webp
 ```
 
-- `video` (required): H.264 MP4, about 1280px wide, 25–30 s, no audio track
-  needed (it always plays muted). Aim for 3–5 MB.
-- `videoWebm` (optional): a WebM version; browsers that support it load it first.
-- `videoW` / `videoH` (optional): the clip's pixel size, if it isn't the
-  iPhone 2868 × 1320 ratio. This reserves the right space before it loads.
-- The slot's screenshot (`file`) becomes the poster frame, so set it too;
-  with a poster the video isn't downloaded until it's needed.
-- Per-language clips work like screenshots:
-  `video: { en: "preview-en.mp4", fr: "preview-fr.mp4", es: "preview-es.mp4" }`.
+## Slots
+
+In `assets/site.js`, `clip("live-race")` sets `video`, `poster`, `videoW` and
+`videoH` for all three languages. Any slot can take a clip.
 
 Behaviour: plays muted and looping while on screen, pauses off screen, has a
 play/pause button, and never autoplays for visitors who prefer reduced motion.
-The clip appears wherever that slot is used: the homepage Race Replay section,
-Features → Race Replay, and How It Works step 10.
-
-Any other slot can take a `video` the same way.

@@ -7,6 +7,22 @@ Customer support, feedback, privacy and subscription questions use
 `support@jaxmaxdelta.com`. Do not substitute a personal address or the Camilore
 corporate mailbox.
 
+## How It Works guides
+
+The How It Works page links to ten guides (`/<lang>/how-to/<slug>.html`), one
+per part of the app: Dashboard, Pit Wall, traces, Prepare for Session, Session
+History, leagues and seasons, setups, Racing Tips, Jax, and Free vs Jax Pro.
+Their text is in `assets/guides.js` (English is the source; keep French and
+Spanish in step, and check every statement against the app). After adding,
+removing or retitling a guide, regenerate the page shells and sitemap entries:
+
+```sh
+python3 scripts/build_guide_pages.py
+```
+
+Screenshots and preview videos are documented in
+`assets/screenshots/current/README.md` and `assets/video/README.md`.
+
 ## Local validation
 
 There is no dependency installation or compilation step. GitHub Pages serves the
