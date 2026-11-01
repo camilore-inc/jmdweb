@@ -1,53 +1,60 @@
-# Current app screenshots
+# App screenshots: full-size originals
 
-Screenshots live in one folder per language: `en/`, `fr/`, `es/`. The `SHOTS`
-table at the top of `assets/site.js` maps each slot to its file. A slot written
-with `perLang("name.webp")` loads `<lang>/name.webp`; a slot written as a plain
-string (for example `"en/racing-tips.webp"`) uses that one file in every
-language.
+This folder keeps the **full-size originals** of the website captures, one
+folder per language (`en/`, `fr/`, `es/`). Never edit or delete them. The site
+never loads them directly; it loads the web-sized copies in
+`assets/screenshots/web/<lang>/`.
 
-## Source and export
+The App Store screenshots and previews are not copied here; their originals live
+in the app repository, `camilore-inc/JaxMaxDelta`, under
+`apps/jax_max_delta/assets/screenshots/` and `apps/jax_max_delta/assets/previews/`.
 
-Captures come from the app repository, `apps/jax_max_delta/assets/screenshots/`
-(`<lang>/01_dashboard.png` … `11_vsc_delta.png`). They are exported for the web
-as WebP, 1600 px wide for landscape (900 px for portrait), quality 82:
+## Making the web copies
 
 ```sh
-python3 -c "from PIL import Image; im=Image.open('IN.png').convert('RGB'); im.resize((1600, round(im.height*1600/im.width)), Image.LANCZOS).save('OUT.webp', 'WEBP', quality=82, method=6)"
+python3 scripts/build_web_media.py                              # captures in this folder
+python3 scripts/build_web_media.py --app-repo ../JaxMaxDelta    # also App Store screenshots and previews
 ```
 
-| Web file              | App capture             |
-|-----------------------|-------------------------|
-| `dashboard.webp`      | `01_dashboard.png`      |
-| `pit-wall-timing.webp`| `02_pitwall_timing.png` |
-| `pit-wall-map.webp`   | `03_track_map.png`      |
-| `pit-wall-car.webp`   | `04_car_health.png`     |
-| `qualifying.webp`     | `05_qualifying.png`     |
-| `jax-audio.webp`      | `06_jax_audio.png`      |
-| `race-results.webp`   | `07_race_results.png`   |
-| `lap-trace.webp`      | `08_lap_trace.png`      |
-| `prepare-session.webp`| `09_session_prep.png`   |
-| `setup-library.webp`  | `10_setup_library.png`  |
-| `vsc-delta.webp`      | `11_vsc_delta.png`      |
+The script (Pillow, plus ffmpeg for video) writes WebP screenshots, 1600 px wide
+for landscape and 800 px for portrait (each about 20–60 KB), and 1280 px H.264
+previews with no audio track plus a poster frame. Its `SITE_CAPTURES`,
+`APP_CAPTURES` and `APP_PREVIEWS` tables map each original to its web name.
 
-## English-only for now
+## Captures in this folder
 
-These exist in English only; French and Spanish pages show the English image
-until localized captures are added. To localize one, add `fr/<name>.webp` and
-`es/<name>.webp`, then change the slot to `perLang("<name>.webp")`.
+| Original                           | Web copy                        | Slot (`SHOTS` in `assets/site.js`) |
+|------------------------------------|---------------------------------|------------------------------------|
+| `01-home.png`                      | `home.webp`                     | `home`                             |
+| `03a-settings-setup.png` (portrait)| `settings-setup.webp`           | `settingsSetup`                    |
+| `03b-settings-jax.png` (portrait)  | `settings-jax.webp`             | `settingsJax`                      |
+| `03c-settings-support.png` (portrait)| `settings-support.webp`       | `settingsSupport`                  |
+| `04-quick-jax.png`                 | `quick-jax.webp`                | `quickJax`                         |
+| `04b-pit-wall-timing.png`          | `pit-wall-header.webp`          | `pitWallHeader`                    |
+| `05-session-league-season.png`     | `session-league-season.webp`    | `sessionLeagueSeason`              |
+| `06-setup-detail-rating.png`       | `setup-rating.webp`             | `setupRating`                      |
+| `07a-racing-tips-list.png`         | `racing-tips.webp`              | `racingTips`                       |
+| `07b-racing-tip-open.png`          | `racing-tips-detail.webp`       | `racingTipsDetail`                 |
+| `08a-history-filters.png`          | `session-history.webp`          | `sessionHistory`                   |
+| `08b-history-league-filtered.png`  | `session-history-league.webp`   | `sessionHistoryLeague`             |
 
-| Web file                        | Shows                                                    |
-|---------------------------------|----------------------------------------------------------|
-| `racing-tips.webp`              | Racing Tips list, one tip read                           |
-| `racing-tips-detail.webp`       | A Racing Tip (Trail Braking), unread, with PRACTICE THIS |
-| `session-history-filters.webp`  | Session History with the league and season filter chips  |
+## App Store screenshots (app repository)
 
-Still wanted in all three languages (no current capture yet): the Home screen,
-the Settings tabs (SETUP, JAX, SUPPORT, LEGAL), the Jax Pro subscription
-screen, Quick Jax on the Pit Wall, a session's SESSION tab showing LEAGUE &
-SEASON, and a setup's detail screen with its star rating. The captures named
-`HomeScreen.png`, `Portrait-Settings-*.png` and `Subscription.png` in the app
-repository show older builds (v0.8.3, the old paywall list and prices) and are
-deliberately not used.
+| Original                 | Web copy                | Slot              |
+|--------------------------|-------------------------|-------------------|
+| `01_dashboard.png`       | `dashboard.webp`        | `dashboard`       |
+| `02_pitwall_timing.png`  | `pit-wall-timing.webp`  | `pitWallTiming`   |
+| `03_track_map.png`       | `pit-wall-map.webp`     | `pitWallMap`      |
+| `04_car_health.png`      | `pit-wall-car.webp`     | `pitWallCar`      |
+| `05_qualifying.png`      | `qualifying.webp`       | `qualifying`      |
+| `06_jax_audio.png`       | `jax-audio.webp`        | `jaxAudio`        |
+| `07_race_results.png`    | `race-results.webp`     | `raceResults`     |
+| `08_lap_trace.png`       | `lap-trace.webp`        | `lapTrace`        |
+| `09_session_prep.png`    | `prepare-session.webp`  | `prepare`         |
+| `10_setup_library.png`   | `setup-library.webp`    | `setupLibrary`    |
+| `11_vsc_delta.png`       | `vsc-delta.webp`        | `vscDelta`        |
 
-To swap a slot for a looping preview video, see `assets/video/README.md`.
+Every capture is landscape (2868 × 1320) except the three Settings shots, which
+are portrait (1320 × 2868). A slot's `orientation` must match its capture so the
+page reserves the right space; nothing is stretched or cropped. Preview videos
+are described in `assets/video/README.md`.

@@ -7,9 +7,9 @@
  * Edit here:
  *   SITE.store  - App Store / TestFlight links. Leave empty until the real URL
  *                 exists; the site then shows a "Coming soon" state instead.
- *   SHOTS       - Current app screenshots. Drop the file in
- *                 assets/screenshots/current/ and set `file` to its name.
- *                 Slots without a file render a styled placeholder.
+ *   SHOTS       - Current app screenshots and preview videos (web copies in
+ *                 assets/screenshots/web/ and assets/video/). Slots without
+ *                 a file render a styled placeholder.
  *   copy        - All page text. English is the source; keep fr/es in step.
  */
 
@@ -31,11 +31,12 @@ const SITE = {
   ]
 };
 
-// Screenshot slots. `file` is relative to assets/screenshots/current/ and may
-// also be an object per language, e.g. { en: "en/home.webp", fr: "fr/home.webp" }.
+// Screenshot slots. `file` is relative to assets/screenshots/web/ (the
+// web-sized copies; full-size originals stay in assets/screenshots/current/)
+// and may be an object per language, e.g. { en: "en/home.webp", fr: "fr/home.webp" }.
 // A language without its own file falls back to the English one.
-// w/h default to the web export of an iPhone Pro Max capture (1600 x 736
-// landscape, 900 x 1956 portrait).
+// w/h default to the web export size: 1600 x 736 landscape, 800 x 1738 portrait.
+// Regenerate the web copies with scripts/build_web_media.py.
 //
 // Optional video: set `video` to an MP4 (H.264) in assets/video/ and `poster`
 // to its first-frame image in the same folder. `videoW`/`videoH` give the
@@ -46,30 +47,38 @@ const perLang = (name) => ({ en: `en/${name}`, fr: `fr/${name}`, es: `es/${name}
 const clip = (name) => ({ video: perLang(`${name}.mp4`), poster: perLang(`${name}-poster.webp`), videoW: 1280, videoH: 590 });
 
 const SHOTS = {
-  home:                  { file: "", orientation: "landscape" },
+  home:                  { file: perLang("home.webp"), orientation: "landscape" },
   prepare:               { file: perLang("prepare-session.webp"), orientation: "landscape" },
   dashboard:             { file: perLang("dashboard.webp"), orientation: "landscape" },
   dashboardVideo:        { file: perLang("dashboard.webp"), orientation: "landscape", ...clip("live-race") },
   qualifying:            { file: perLang("qualifying.webp"), orientation: "landscape" },
   vscDelta:              { file: perLang("vsc-delta.webp"), orientation: "landscape", ...clip("vsc-delta") },
   pitWallTiming:         { file: perLang("pit-wall-timing.webp"), orientation: "landscape" },
+  pitWallHeader:         { file: perLang("pit-wall-header.webp"), orientation: "landscape" },
   pitWallVideo:          { file: perLang("pit-wall-timing.webp"), orientation: "landscape", ...clip("pit-wall") },
   pitWallMap:            { file: perLang("pit-wall-map.webp"), orientation: "landscape" },
   pitWallCar:            { file: perLang("pit-wall-car.webp"), orientation: "landscape" },
+  quickJax:              { file: perLang("quick-jax.webp"), orientation: "landscape" },
   jaxAudio:              { file: perLang("jax-audio.webp"), orientation: "landscape" },
-  sessionHistory:        { file: perLang("race-results.webp"), orientation: "landscape" },
-  sessionHistoryFilters: { file: "en/session-history-filters.webp", orientation: "landscape" },
+  sessionHistory:        { file: perLang("session-history.webp"), orientation: "landscape" },
+  sessionHistoryLeague:  { file: perLang("session-history-league.webp"), orientation: "landscape" },
+  sessionLeagueSeason:   { file: perLang("session-league-season.webp"), orientation: "landscape" },
+  raceResults:           { file: perLang("race-results.webp"), orientation: "landscape" },
   lapTrace:              { file: perLang("lap-trace.webp"), orientation: "landscape" },
   raceReplayLandscape:   { file: perLang("race-results.webp"), orientation: "landscape", ...clip("after-the-race") },
   setupLibrary:          { file: perLang("setup-library.webp"), orientation: "landscape" },
-  racingTips:            { file: "en/racing-tips.webp", orientation: "landscape" },
-  racingTipsDetail:      { file: "en/racing-tips-detail.webp", orientation: "landscape" }
+  setupRating:           { file: perLang("setup-rating.webp"), orientation: "landscape" },
+  racingTips:            { file: perLang("racing-tips.webp"), orientation: "landscape" },
+  racingTipsDetail:      { file: perLang("racing-tips-detail.webp"), orientation: "landscape" },
+  settingsSetup:         { file: perLang("settings-setup.webp"), orientation: "portrait" },
+  settingsJax:           { file: perLang("settings-jax.webp"), orientation: "portrait" },
+  settingsSupport:       { file: perLang("settings-support.webp"), orientation: "portrait" }
 };
 
 const copy = {
   en: {
     nav: {
-      home: "Home",
+      home: "Home screen",
       features: "Features",
       how: "How It Works",
       support: "Support",
@@ -105,7 +114,7 @@ const copy = {
       readPost: "Read post"
     },
     shots: {
-      home: "Home",
+      home: "Home screen",
       prepare: "Prepare for Session — your session plan",
       dashboard: "Live Dashboard",
       dashboardVideo: "Live Dashboard during a race",
@@ -116,8 +125,16 @@ const copy = {
       pitWallMap: "Pit Wall — Map",
       pitWallCar: "Pit Wall — Car",
       jaxAudio: "Jax audio guidance demo",
-      sessionHistory: "Session History — race results",
-      sessionHistoryFilters: "Session History — filters, leagues and seasons",
+      sessionHistory: "Session History",
+      sessionHistoryLeague: "Session History filtered to one league",
+      sessionLeagueSeason: "A session’s LEAGUE & SEASON tags",
+      raceResults: "Race results",
+      pitWallHeader: "Pit Wall — Classification, Jax and Past",
+      quickJax: "Quick Jax on the Pit Wall",
+      setupRating: "A setup with its star rating",
+      settingsSetup: "Settings — SETUP",
+      settingsJax: "Settings — JAX",
+      settingsSupport: "Settings — SUPPORT",
       lapTrace: "Session History — comparing two laps",
       raceReplayLandscape: "After the race: results, Race Replay and lap traces",
       setupLibrary: "Setup library with ratings",
@@ -338,7 +355,7 @@ const copy = {
             "Career statistics across your saved sessions"
           ],
           note: "Not every session contains every field. JMD reconstructs what it reliably can and shows missing data as missing.",
-          shots: ["sessionHistory", "lapTrace"]
+          shots: ["sessionHistory", "raceResults"]
         },
         {
           id: "lap-trace",
@@ -467,7 +484,7 @@ const copy = {
         {
           phase: "setup",
           title: "Manage settings, data and backup",
-          body: "Settings → SUPPORT holds recording and data-retention options, iCloud Backup (back up now, restore) and the built-in demos. Settings → LEGAL links to the terms and privacy policy."
+          body: "Settings → SETUP holds your Jax Pro status, language and units, the UDP connection, Session Tracking, iCloud Backup (back up now, restore) and how long race data is kept. Settings → SUPPORT has the built-in demos, the first-run tour, your device's IP address, bug reports and the dashboard guide. Settings → LEGAL links to the terms and privacy policy."
         }
       ],
       troubleTitle: "Troubleshooting",
@@ -688,8 +705,16 @@ const copy = {
       pitWallMap: "Mur des stands — Carte",
       pitWallCar: "Mur des stands — Voiture",
       jaxAudio: "Démo du guidage audio de Jax",
-      sessionHistory: "Historique des sessions — résultats de course",
-      sessionHistoryFilters: "Historique des sessions — filtres, ligues et saisons",
+      sessionHistory: "Historique des sessions",
+      sessionHistoryLeague: "Historique filtré sur une ligue",
+      sessionLeagueSeason: "La ligue et la saison d’une session",
+      raceResults: "Résultats de course",
+      pitWallHeader: "Mur des stands — classement, Jax et Passées",
+      quickJax: "La voix de Jax sur le mur des stands",
+      setupRating: "Un réglage et sa note en étoiles",
+      settingsSetup: "Paramètres — RÉGLAGES",
+      settingsJax: "Paramètres — JAX",
+      settingsSupport: "Paramètres — ASSISTANCE",
       lapTrace: "Historique des sessions — comparaison de deux tours",
       raceReplayLandscape: "Après la course : résultats, Race Replay et tracés",
       setupLibrary: "Bibliothèque de setups avec évaluations",
@@ -910,7 +935,7 @@ const copy = {
             "Statistiques de carrière sur l'ensemble de vos sessions"
           ],
           note: "Une session ne contient pas toujours tous les champs. JMD reconstruit ce qu'il peut de façon fiable et affiche les données manquantes comme manquantes.",
-          shots: ["sessionHistory", "lapTrace"]
+          shots: ["sessionHistory", "raceResults"]
         },
         {
           id: "lap-trace",
@@ -1039,7 +1064,7 @@ const copy = {
         {
           phase: "setup",
           title: "Gérer les réglages, les données et la sauvegarde",
-          body: "L'onglet ASSISTANCE des Réglages regroupe l'enregistrement et la conservation des données, la sauvegarde iCloud (sauvegarder maintenant, restaurer) et les démos intégrées. L'onglet LEGAL donne accès aux conditions et à la politique de confidentialité."
+          body: "Dans les Paramètres, l'onglet RÉGLAGES regroupe votre statut Jax Pro, la langue et les unités, la connexion UDP, le suivi des sessions, la sauvegarde iCloud (sauvegarder maintenant, restaurer) et la durée de conservation des données de course. L'onglet ASSISTANCE propose les démos intégrées, la visite de démarrage, l'adresse IP de l'appareil, le signalement de bogues et le guide du tableau de bord. L'onglet LÉGAL donne accès aux conditions et à la politique de confidentialité."
         }
       ],
       troubleTitle: "Dépannage",
@@ -1166,8 +1191,16 @@ const copy = {
       pitWallMap: "Muro de boxes — Mapa",
       pitWallCar: "Muro de boxes — Coche",
       jaxAudio: "Demo de la guía de audio de Jax",
-      sessionHistory: "Historial de sesiones — resultados de carrera",
-      sessionHistoryFilters: "Historial de sesiones — filtros, ligas y temporadas",
+      sessionHistory: "Historial de sesiones",
+      sessionHistoryLeague: "Historial filtrado por una liga",
+      sessionLeagueSeason: "La liga y la temporada de una sesión",
+      raceResults: "Resultados de carrera",
+      pitWallHeader: "Muro de boxes — clasificación, Jax y Anteriores",
+      quickJax: "La voz de Jax en el muro de boxes",
+      setupRating: "Un reglaje con su valoración en estrellas",
+      settingsSetup: "Ajustes — AJUSTES",
+      settingsJax: "Ajustes — JAX",
+      settingsSupport: "Ajustes — SOPORTE",
       lapTrace: "Historial de sesiones — comparando dos vueltas",
       raceReplayLandscape: "Después de la carrera: resultados, Race Replay y trazas",
       setupLibrary: "Biblioteca de setups con valoraciones",
@@ -1388,7 +1421,7 @@ const copy = {
             "Estadísticas de carrera deportiva de todas tus sesiones"
           ],
           note: "No todas las sesiones contienen todos los campos. JMD reconstruye lo que puede de forma fiable y muestra como faltantes los datos que faltan.",
-          shots: ["sessionHistory", "lapTrace"]
+          shots: ["sessionHistory", "raceResults"]
         },
         {
           id: "lap-trace",
@@ -1517,7 +1550,7 @@ const copy = {
         {
           phase: "setup",
           title: "Gestiona ajustes, datos y copia de seguridad",
-          body: "La pestaña SOPORTE de Ajustes reúne las opciones de grabación y retención de datos, la copia de seguridad en iCloud (copiar ahora, restaurar) y las demos integradas. La pestaña LEGAL enlaza a los términos y a la política de privacidad."
+          body: "En Ajustes, la pestaña AJUSTES reúne tu estado de Jax Pro, el idioma y las unidades, la conexión UDP, el seguimiento de sesiones, la copia de seguridad en iCloud (copiar ahora, restaurar) y cuánto tiempo se conservan los datos de carrera. La pestaña SOPORTE tiene las demos integradas, el recorrido inicial, la IP del dispositivo, el envío de errores y la guía del panel. La pestaña LEGAL enlaza a los términos y a la política de privacidad."
         }
       ],
       troubleTitle: "Solución de problemas",
@@ -1997,15 +2030,15 @@ function shot(key, t, lang, { caption = true, eager = false } = {}) {
   const label = t.shots[key];
   const orientation = slot.orientation;
   const file = shotFile(slot, lang);
-  const w = slot.w || (orientation === "landscape" ? 1600 : 900);
-  const h = slot.h || (orientation === "landscape" ? 736 : 1956);
+  const w = slot.w || (orientation === "landscape" ? 1600 : 800);
+  const h = slot.h || (orientation === "landscape" ? 736 : 1738);
   const hasVideo = Boolean(localized(slot.video, lang));
   const posterFile = localized(slot.poster, lang);
-  const poster = posterFile ? asset(`video/${posterFile}`) : file ? asset(`screenshots/current/${file}`) : "";
+  const poster = posterFile ? asset(`video/${posterFile}`) : file ? asset(`screenshots/web/${file}`) : "";
   const body = hasVideo
     ? shotVideo(slot, label, lang, t, w, h, poster)
     : file
-    ? `<img src="${asset(`screenshots/current/${file}`)}" width="${w}" height="${h}" alt="${label}" ${eager ? "" : 'loading="lazy" '}decoding="async">`
+    ? `<img src="${asset(`screenshots/web/${file}`)}" width="${w}" height="${h}" alt="${label}" ${eager ? "" : 'loading="lazy" '}decoding="async">`
     : `<div class="shot-empty" role="img" aria-label="${label} - ${t.common.shotSoon}"><span class="shot-empty-title">${label}</span><span class="shot-empty-note">${t.common.shotSoon}</span></div>`;
   return `<figure class="shot shot--${orientation}${file || hasVideo ? "" : " is-empty"}"><div class="shot-frame">${body}</div>${caption ? `<figcaption>${label}</figcaption>` : ""}</figure>`;
 }
@@ -2168,7 +2201,7 @@ function home(t, lang) {
           ${list(h.history.items)}
           <p class="fine-note">${h.history.note}</p>
         </div>
-        <div class="shot-stack">${shot("sessionHistory", t, lang)}${shot("lapTrace", t, lang)}</div>
+        <div class="shot-stack">${shot("sessionHistory", t, lang)}${shot("raceResults", t, lang)}</div>
       </div>
     </section>
 
@@ -2265,6 +2298,8 @@ function featureGroup(g, t, lang, index) {
 // The guide each How It Works step links to, by step position. Parallel to
 // copy.<lang>.how.steps, which has the same order in every language.
 const STEP_GUIDES = [null, null, "prepare-for-session", null, "dashboard", "jax", "pit-wall", null, "session-history", "session-history", null];
+// Screenshots for steps whose copy names none, by the same step position.
+const STEP_SHOTS = ["home", "settingsSetup", null, null, null, "quickJax", null, null, null, null, "settingsSupport"];
 
 // Guide copy lives in assets/guides.js, loaded only on How It Works and guide pages.
 function guideCopy(lang) {
@@ -2292,7 +2327,7 @@ function how(t, lang) {
     <section class="section section--tight">
       <div class="wrap">
         <ol class="how-steps">
-          ${h.steps.map((step, i) => `
+          ${h.steps.map((step, i) => ({ ...step, shot: step.shot || STEP_SHOTS[i] })).map((step, i) => `
             <li class="how-step${step.shot ? " has-shot" : ""}">
               <div class="how-step-text">
                 <p class="feat-meta"><span class="step-num">${String(i + 1).padStart(2, "0")}</span><span class="phase-tag">${h.phaseLabels[step.phase]}</span></p>

@@ -1,6 +1,6 @@
 # Camilore ownership migration
 
-Last updated: October 24, 2026
+Last updated: November 1, 2026
 
 ## Status and ownership identity
 
@@ -96,11 +96,22 @@ be verified by an authorized mailbox administrator.
 
 ## GitHub and hosting transfer readiness
 
-Current local remote: `https://github.com/beaudrm2/jmdweb.git`. Intended owner:
-`https://github.com/camilore` (repository name to be confirmed). Do not transfer
-until the organization, billing and access controls are ready.
+Status as of November 1, 2026: both repositories are under the Camilore Inc.
+GitHub organization, `camilore-inc`.
 
-After transfer:
+- Website: `https://github.com/camilore-inc/jmdweb` (previously
+  `beaudrm2/jmdweb`). GitHub Pages publishes `jaxmaxdelta.com` from `main`, and
+  the English, French and Spanish pages were confirmed to load after the move.
+- App: `https://github.com/camilore-inc/JaxMaxDelta` (previously
+  `beaudrm2/JaxMaxDelta`), moved on November 1, 2026.
+- The Claude GitHub App is installed on the `camilore-inc` organization.
+
+Developer clones should point their remotes at the `camilore-inc` URLs; GitHub
+redirects the old `beaudrm2` URLs, but the redirect is not permanent if a new
+repository is ever created under the old name.
+
+Post-transfer checklist (keep for reference; items 2, 3, 5 and 7 are still worth
+re-checking in the GitHub and DNS consoles, which this checkout cannot see):
 
 1. Transfer the repository in GitHub; do not create a competing copy first.
 2. Confirm GitHub Pages remains enabled on `main` and still publishes the intended
@@ -152,8 +163,8 @@ changed or backdated; October 24 is shown as the revision date.
   `pro`; do not change identifiers during the website migration.
 - Add the real public App Store URL to `SITE.store.appStoreUrl` only after validation.
 - Verify support mailbox routing and security without sending a customer message.
-- Transfer GitHub ownership and revalidate Pages/custom-domain settings using the
-  checklist above.
+- GitHub ownership is transferred (both repositories are under `camilore-inc`).
+  Revalidate Pages/custom-domain settings using the checklist above.
 - Verify DNS, registrar, TLS and Camilore control of hosting/domain accounts.
 
 ## Validation status

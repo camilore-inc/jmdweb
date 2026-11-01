@@ -91,7 +91,7 @@ const GUIDES = {
           {
             h: "Abbreviations and overlays",
             p: [
-              "Tap the rain forecast in the top bar to open the dashboard legend, which explains every abbreviation (BB, DIFF, PEN, SC, VSC, ERS and more).",
+              "Tap the rain forecast in the top bar to open the dashboard legend, which explains every abbreviation (BB, DIFF, PEN, SC, VSC, ERS and more). The same <strong>Dashboard Guide</strong> is in Settings → SUPPORT.",
               "Under a Virtual Safety Car or Safety Car, a large delta overlay tells you whether you are keeping the required delta. Red flags and race-control phases get their own clear overlays."
             ],
             shot: "vscDelta"
@@ -122,9 +122,10 @@ const GUIDES = {
             h: "The header",
             p: ["The header always shows the track, air and track temperatures, the rain forecast, the number of cars on track and the session clock."],
             list: [
-              "<strong>Jax</strong> opens Quick Jax: turn Jax's voice on or off and choose the message categories without leaving the session.",
+              "<strong>Jax</strong> opens Quick Jax: switch <strong>Jax Audio Guidance</strong> on or off and choose the message categories without leaving the session.",
               "<strong>Past</strong> opens Session History, already filtered to your current game and car. A <strong>RETURN TO PIT WALL</strong> button brings you back."
-            ]
+            ],
+            shot: "pitWallHeader"
           },
           {
             h: "The tabs",
@@ -269,7 +270,8 @@ const GUIDES = {
           },
           {
             h: "Find a session",
-            p: ["The <strong>SESSIONS</strong> tab lists every saved session. Use the search box, the sort control and the filter chips for league, season, game, formula and session type. The <strong>STATS</strong> tab gathers your career figures, and the title bar counts your poles, wins and podiums."]
+            p: ["The <strong>SESSIONS</strong> tab lists every saved session. Use the search box, the sort control and the filter chips for league, season, game, formula and session type. The <strong>STATS</strong> tab gathers your career figures, and the title bar counts your poles, wins and podiums."],
+            shot: "sessionHistory"
           },
           {
             h: "Inside a session",
@@ -286,7 +288,7 @@ const GUIDES = {
           {
             h: "Race results",
             p: ["Race results show the official classification: start position, places gained or lost, race time, best lap, tyre stints, laps and penalties."],
-            shot: "sessionHistory"
+            shot: "raceResults"
           }
         ],
         access: {
@@ -304,7 +306,7 @@ const GUIDES = {
           {
             h: "Why tag a session",
             p: ["If you race in one or more leagues, tagging keeps each league's sessions together. Filter Session History or your stats by league and season to see how a championship is going, without your solo practice mixed in."],
-            shot: "sessionHistoryFilters"
+            shot: "sessionHistoryLeague"
           },
           {
             h: "1. Create a league",
@@ -324,7 +326,8 @@ const GUIDES = {
               "Go to the <strong>SESSION</strong> tab and find <strong>LEAGUE &amp; SEASON</strong>.",
               "Tap <strong>League</strong>, then choose a league in <strong>ASSIGN LEAGUE</strong>, or <strong>None</strong> to remove the tag."
             ],
-            note: "If you have no leagues yet, the League row reads “No leagues”. Create one first, as in step 1."
+            note: "If you have no leagues yet, the League row reads “No leagues”. Create one first, as in step 1.",
+            shot: "sessionLeagueSeason"
           },
           {
             h: "3. Tag a session with a season",
@@ -335,7 +338,8 @@ const GUIDES = {
           },
           {
             h: "4. Filter by league and season",
-            p: ["Back on the SESSIONS tab, tap <strong>All leagues</strong> or <strong>All seasons</strong> to show one league or one season. The season list only offers years you have actually tagged. The STATS tab has the same league and season filters."]
+            p: ["Back on the SESSIONS tab, tap <strong>All leagues</strong> or <strong>All seasons</strong> to show one league or one season. The season list only offers years you have actually tagged. The STATS tab has the same league and season filters."],
+            shot: "sessionHistory"
           }
         ],
         access: {
@@ -365,7 +369,8 @@ const GUIDES = {
               "Tap the stars: one star is <strong>Poor</strong>, two is <strong>Good</strong>, three is <strong>Excellent</strong>.",
               "To remove a rating, tap the selected star again. The setup returns to Not rated."
             ],
-            p: ["A rating and a name belong to the setup itself, not to one session. Rate it in Session History and the library shows the same stars, and the other way round. In the library, sort by <strong>Rating</strong> to put your best setups first."]
+            p: ["A rating and a name belong to the setup itself, not to one session. Rate it in Session History and the library shows the same stars, and the other way round. In the library, sort by <strong>Rating</strong> to put your best setups first."],
+            shot: "setupRating"
           },
           {
             h: "Name it and add camera notes",
@@ -421,16 +426,18 @@ const GUIDES = {
             p: ["Open Settings (the gear icon on the Home screen), then the <strong>JAX</strong> tab:"],
             list: [
               "<strong>Jax calls you</strong>: the name Jax uses for you.",
-              "Turn Jax's voice on or off, choose the <strong>Engineer Voice</strong>, and a <strong>Radio Cue</strong> beep before Jax speaks.",
+              "Turn <strong>Jax Audio Guidance</strong> on or off, choose the <strong>Engineer Voice</strong>, and a <strong>Radio Cue</strong> beep before Jax speaks.",
               "Adjust the speech rate and pitch, then <strong>Test Jax Voice</strong>.",
               "Choose a <strong>Voice Style</strong>, and whether Jax uses <strong>Technical Terms</strong>.",
               "Pick the message categories: Gaps, Lap Crossing, Weather, Fuel, Power Management, Tyres, Penalty Strategy, Teammate, Motivation, Racecraft, Strategy and Race Control.",
               "The <strong>Audio Setup Guide</strong> explains how to hear Jax alongside your game's sound: phone speaker, earbuds, a dual-source headset or a mixer."
-            ]
+            ],
+            shot: "settingsJax"
           },
           {
             h: "Change it mid-session",
-            p: ["On the Pit Wall, tap the <strong>Jax</strong> button for Quick Jax: the voice switch and the same message categories, without leaving the session."]
+            p: ["On the Pit Wall, tap the <strong>Jax</strong> button for Quick Jax: the <strong>Jax Audio Guidance</strong> switch and the message categories, without leaving the session."],
+            shot: "quickJax"
           },
           {
             h: "Hear Jax without a game",
@@ -475,7 +482,8 @@ const GUIDES = {
             p: [
               "Jax Pro comes as monthly and annual App Store subscriptions. The app describes a 14-day introductory trial on both plans. During the trial, everything above is available. Cancel before it ends and you aren't charged.",
               "Eligibility, local prices and the exact offer are shown by Apple's purchase sheet before you confirm. Apple bills and renews the subscription until you cancel it in your Apple Account subscription settings."
-            ]
+            ],
+            shot: "settingsSetup"
           },
           {
             h: "Subscribing and restoring",
@@ -559,7 +567,7 @@ const GUIDES = {
           {
             h: "Abréviations et affichages superposés",
             p: [
-              "Touchez la prévision de pluie dans la barre du haut pour ouvrir la légende du tableau de bord, qui explique chaque abréviation (BB, DIFF, PEN, SC, VSC, ERS et plus).",
+              "Touchez la prévision de pluie dans la barre du haut pour ouvrir la légende du tableau de bord, qui explique chaque abréviation (BB, DIFF, PEN, SC, VSC, ERS et plus). Le même <strong>Guide du tableau de bord</strong> se trouve dans Paramètres → ASSISTANCE.",
               "Sous voiture de sécurité virtuelle ou voiture de sécurité, un grand delta superposé vous indique si vous respectez le delta exigé. Les drapeaux rouges et les phases de la direction de course ont aussi leur affichage bien visible."
             ],
             shot: "vscDelta"
@@ -590,9 +598,10 @@ const GUIDES = {
             h: "L’en-tête",
             p: ["L’en-tête affiche toujours le circuit, les températures de l’air et de la piste, la prévision de pluie, le nombre de voitures en piste et l’horloge de session."],
             list: [
-              "<strong>Jax</strong> ouvre le panneau de la voix de Jax : activez ou coupez sa voix et choisissez les catégories de messages sans quitter la session.",
+              "<strong>Jax</strong> ouvre le panneau <strong>Voix de Jax</strong> : activez ou coupez le <strong>Guidage audio Jax</strong> et choisissez les catégories de messages sans quitter la session.",
               "<strong>Passées</strong> ouvre l’historique des sessions, déjà filtré sur votre jeu et votre voiture. Un bouton <strong>RETOUR AU MUR DES STANDS</strong> vous ramène."
-            ]
+            ],
+            shot: "pitWallHeader"
           },
           {
             h: "Les onglets",
@@ -737,7 +746,8 @@ const GUIDES = {
           },
           {
             h: "Retrouver une session",
-            p: ["L’onglet <strong>SESSIONS</strong> liste chaque session enregistrée. Utilisez la recherche, le tri et les filtres par ligue, saison, jeu, formule et type de session. L’onglet <strong>STATS</strong> rassemble vos chiffres de carrière, et la barre de titre compte vos poles, victoires et podiums."]
+            p: ["L’onglet <strong>SESSIONS</strong> liste chaque session enregistrée. Utilisez la recherche, le tri et les filtres par ligue, saison, jeu, formule et type de session. L’onglet <strong>STATS</strong> rassemble vos chiffres de carrière, et la barre de titre compte vos poles, victoires et podiums."],
+            shot: "sessionHistory"
           },
           {
             h: "Dans une session",
@@ -754,7 +764,7 @@ const GUIDES = {
           {
             h: "Résultats de course",
             p: ["Les résultats donnent le classement officiel : position de départ, places gagnées ou perdues, temps de course, meilleur tour, relais de pneus, tours et pénalités."],
-            shot: "sessionHistory"
+            shot: "raceResults"
           }
         ],
         access: {
@@ -772,7 +782,7 @@ const GUIDES = {
           {
             h: "Pourquoi associer une session",
             p: ["Si vous courez dans une ou plusieurs ligues, l’association garde les sessions de chaque ligue ensemble. Filtrez l’historique ou vos statistiques par ligue et par saison pour suivre un championnat, sans vos essais en solo mélangés."],
-            shot: "sessionHistoryFilters"
+            shot: "sessionHistoryLeague"
           },
           {
             h: "1. Créer une ligue",
@@ -792,7 +802,8 @@ const GUIDES = {
               "Allez dans l’onglet <strong>SESSION</strong> et trouvez <strong>LIGUE ET SAISON</strong>.",
               "Touchez <strong>Ligue</strong>, puis choisissez une ligue dans <strong>ATTRIBUER UNE LIGUE</strong>, ou <strong>Aucune</strong> pour retirer l’association."
             ],
-            note: "Si vous n’avez encore aucune ligue, la ligne Ligue indique « Aucune ligue ». Créez-en une d’abord, comme à l’étape 1."
+            note: "Si vous n’avez encore aucune ligue, la ligne Ligue indique « Aucune ligue ». Créez-en une d’abord, comme à l’étape 1.",
+            shot: "sessionLeagueSeason"
           },
           {
             h: "3. Associer une session à une saison",
@@ -803,7 +814,8 @@ const GUIDES = {
           },
           {
             h: "4. Filtrer par ligue et par saison",
-            p: ["De retour dans l’onglet SESSIONS, touchez <strong>Toutes les ligues</strong> ou <strong>Toutes les saisons</strong> pour n’afficher qu’une ligue ou qu’une saison. La liste des saisons ne propose que les années que vous avez réellement utilisées. L’onglet STATS a les mêmes filtres de ligue et de saison."]
+            p: ["De retour dans l’onglet SESSIONS, touchez <strong>Toutes les ligues</strong> ou <strong>Toutes les saisons</strong> pour n’afficher qu’une ligue ou qu’une saison. La liste des saisons ne propose que les années que vous avez réellement utilisées. L’onglet STATS a les mêmes filtres de ligue et de saison."],
+            shot: "sessionHistory"
           }
         ],
         access: {
@@ -833,7 +845,8 @@ const GUIDES = {
               "Touchez les étoiles : une étoile signifie <strong>Médiocre</strong>, deux <strong>Bon</strong>, trois <strong>Excellent</strong>.",
               "Pour retirer la note, touchez de nouveau l’étoile sélectionnée. Le réglage redevient Non noté."
             ],
-            p: ["La note et le nom appartiennent au réglage lui-même, pas à une seule session. Notez-le dans l’historique et la bibliothèque affiche les mêmes étoiles, et inversement. Dans la bibliothèque, triez par <strong>Note</strong> pour mettre vos meilleurs réglages en tête."]
+            p: ["La note et le nom appartiennent au réglage lui-même, pas à une seule session. Notez-le dans l’historique et la bibliothèque affiche les mêmes étoiles, et inversement. Dans la bibliothèque, triez par <strong>Note</strong> pour mettre vos meilleurs réglages en tête."],
+            shot: "setupRating"
           },
           {
             h: "Le nommer et noter la caméra",
@@ -888,21 +901,23 @@ const GUIDES = {
             h: "Régler Jax",
             p: ["Ouvrez les paramètres (l’engrenage de l’écran d’accueil), puis l’onglet <strong>JAX</strong> :"],
             list: [
-              "<strong>Jax t’appelle</strong> : le nom que Jax utilise pour vous.",
-              "Activez ou coupez la voix de Jax, choisissez la <strong>Voix de l’ingénieur</strong> et un <strong>Signal radio</strong> avant que Jax parle.",
+              "<strong>Jax vous appelle</strong> : le nom que Jax utilise pour vous.",
+              "Activez ou coupez le <strong>Guidage audio Jax</strong>, choisissez la <strong>Voix de l’ingénieur</strong> et un <strong>Signal radio</strong> avant que Jax parle.",
               "Ajustez le débit et la hauteur de la voix, puis touchez <strong>Tester la voix Jax</strong>.",
               "Choisissez un <strong>Style de voix</strong>, et si Jax emploie des <strong>Termes techniques</strong>.",
               "Choisissez les catégories de messages : Écarts, Passage de tour, Météo, Carburant, Gestion de la puissance, Pneus, Stratégie de pénalité, Coéquipier, Motivation, Technique de course, Stratégie et Contrôle de course.",
               "Le <strong>Guide de configuration audio</strong> explique comment entendre Jax en même temps que le son du jeu : haut-parleur du téléphone, écouteurs, casque à deux sources ou mélangeur."
-            ]
+            ],
+            shot: "settingsJax"
           },
           {
             h: "Le changer en pleine session",
-            p: ["Sur le mur des stands, touchez le bouton <strong>Jax</strong> : vous y trouvez l’interrupteur de la voix et les mêmes catégories de messages, sans quitter la session."]
+            p: ["Sur le mur des stands, touchez le bouton <strong>Jax</strong> : vous y trouvez l’interrupteur <strong>Guidage audio Jax</strong> et les catégories de messages, sans quitter la session."],
+            shot: "quickJax"
           },
           {
             h: "Entendre Jax sans jeu",
-            p: ["Dans Paramètres → SUPPORT, ouvrez <strong>Découvrir les démos JMD</strong> et lancez la démo du guidage audio de Jax. Choisissez course, sprint, qualification, essais ou contre-la-montre. Chaque carte montre la situation et indique si Jax a parlé ou s’est retenu, et pourquoi."],
+            p: ["Dans Paramètres → ASSISTANCE, ouvrez <strong>Découvrir les démos JMD</strong> et lancez la démo du guidage audio de Jax. Choisissez course, sprint, qualification, essais ou contre-la-montre. Chaque carte montre la situation et indique si Jax a parlé ou s’est retenu, et pourquoi."],
             shot: "jaxAudio"
           }
         ],
@@ -943,7 +958,8 @@ const GUIDES = {
             p: [
               "Jax Pro est offert en abonnements App Store mensuel et annuel. L’app décrit un essai de lancement de 14 jours sur les deux forfaits. Pendant l’essai, tout ce qui précède est disponible. Annulez avant la fin et vous n’êtes pas facturé.",
               "L’admissibilité, les prix locaux et l’offre exacte sont affichés par la feuille d’achat Apple avant que vous confirmiez. Apple facture et renouvelle l’abonnement jusqu’à ce que vous l’annuliez dans les réglages d’abonnements de votre compte Apple."
-            ]
+            ],
+            shot: "settingsSetup"
           },
           {
             h: "S’abonner et restaurer",
@@ -958,7 +974,7 @@ const GUIDES = {
           },
           {
             h: "Tout essayer avec les démos",
-            p: ["Les démos intégrées (Paramètres → SUPPORT → Découvrir les démos JMD) montrent chaque vue Jax Pro en entier avec des données d’exemple, pour voir ce que vous obtiendriez avant de décider. Une démo n’accorde ni n’enregistre jamais d’abonnement."]
+            p: ["Les démos intégrées (Paramètres → ASSISTANCE → Découvrir les démos JMD) montrent chaque vue Jax Pro en entier avec des données d’exemple, pour voir ce que vous obtiendriez avant de décider. Une démo n’accorde ni n’enregistre jamais d’abonnement."]
           }
         ],
         related: ["pit-wall", "session-history", "prepare-for-session"]
@@ -1027,7 +1043,7 @@ const GUIDES = {
           {
             h: "Abreviaturas y avisos en pantalla",
             p: [
-              "Toca la previsión de lluvia en la barra superior para abrir la leyenda del panel, que explica cada abreviatura (BB, DIFF, PEN, SC, VSC, ERS y más).",
+              "Toca la previsión de lluvia en la barra superior para abrir la leyenda del panel, que explica cada abreviatura (BB, DIFF, PEN, SC, VSC, ERS y más). La misma <strong>Guía del panel</strong> está en Ajustes → SOPORTE.",
               "Con coche de seguridad virtual o coche de seguridad, un gran delta en pantalla te dice si mantienes el delta exigido. Las banderas rojas y las fases de dirección de carrera tienen también su aviso bien visible."
             ],
             shot: "vscDelta"
@@ -1058,9 +1074,10 @@ const GUIDES = {
             h: "La cabecera",
             p: ["La cabecera muestra siempre el circuito, las temperaturas del aire y de la pista, la previsión de lluvia, el número de coches en pista y el reloj de sesión."],
             list: [
-              "<strong>Jax</strong> abre el panel de la voz de Jax: activa o silencia su voz y elige las categorías de mensajes sin salir de la sesión.",
+              "<strong>Jax</strong> abre el panel de la voz de Jax: activa o desactiva la <strong>Guía de audio de Jax</strong> y elige las categorías de mensajes sin salir de la sesión.",
               "<strong>Anteriores</strong> abre el historial de sesiones, ya filtrado por tu juego y tu coche. Un botón <strong>VOLVER AL MURO DE BOXES</strong> te trae de vuelta."
-            ]
+            ],
+            shot: "pitWallHeader"
           },
           {
             h: "Las pestañas",
@@ -1205,7 +1222,8 @@ const GUIDES = {
           },
           {
             h: "Encontrar una sesión",
-            p: ["La pestaña <strong>SESIONES</strong> enumera cada sesión guardada. Usa la búsqueda, el orden y los filtros por liga, temporada, juego, fórmula y tipo de sesión. La pestaña <strong>STATS</strong> reúne tus cifras de carrera deportiva, y la barra de título cuenta tus poles, victorias y podios."]
+            p: ["La pestaña <strong>SESIONES</strong> enumera cada sesión guardada. Usa la búsqueda, el orden y los filtros por liga, temporada, juego, fórmula y tipo de sesión. La pestaña <strong>STATS</strong> reúne tus cifras de carrera deportiva, y la barra de título cuenta tus poles, victorias y podios."],
+            shot: "sessionHistory"
           },
           {
             h: "Dentro de una sesión",
@@ -1222,7 +1240,7 @@ const GUIDES = {
           {
             h: "Resultados de carrera",
             p: ["Los resultados muestran la clasificación oficial: posición de salida, puestos ganados o perdidos, tiempo de carrera, mejor vuelta, stints de neumáticos, vueltas y penalizaciones."],
-            shot: "sessionHistory"
+            shot: "raceResults"
           }
         ],
         access: {
@@ -1240,7 +1258,7 @@ const GUIDES = {
           {
             h: "Por qué asignar una sesión",
             p: ["Si corres en una o varias ligas, asignar las sesiones mantiene juntas las de cada liga. Filtra el historial o tus estadísticas por liga y temporada para seguir un campeonato, sin mezclar tus entrenamientos en solitario."],
-            shot: "sessionHistoryFilters"
+            shot: "sessionHistoryLeague"
           },
           {
             h: "1. Crear una liga",
@@ -1260,7 +1278,8 @@ const GUIDES = {
               "Ve a la pestaña <strong>SESIÓN</strong> y busca <strong>LIGA Y TEMPORADA</strong>.",
               "Toca <strong>Liga</strong> y elige una liga en <strong>ASIGNAR LIGA</strong>, o <strong>Ninguna</strong> para quitar la asignación."
             ],
-            note: "Si aún no tienes ligas, la fila Liga dice «Sin ligas». Crea una primero, como en el paso 1."
+            note: "Si aún no tienes ligas, la fila Liga dice «Sin ligas». Crea una primero, como en el paso 1.",
+            shot: "sessionLeagueSeason"
           },
           {
             h: "3. Asignar una temporada a una sesión",
@@ -1271,7 +1290,8 @@ const GUIDES = {
           },
           {
             h: "4. Filtrar por liga y temporada",
-            p: ["De vuelta en la pestaña SESIONES, toca <strong>Todas las ligas</strong> o <strong>Todas las temporadas</strong> para mostrar una sola liga o temporada. La lista de temporadas solo ofrece los años que hayas asignado. La pestaña STATS tiene los mismos filtros de liga y temporada."]
+            p: ["De vuelta en la pestaña SESIONES, toca <strong>Todas las ligas</strong> o <strong>Todas las temporadas</strong> para mostrar una sola liga o temporada. La lista de temporadas solo ofrece los años que hayas asignado. La pestaña STATS tiene los mismos filtros de liga y temporada."],
+            shot: "sessionHistory"
           }
         ],
         access: {
@@ -1301,7 +1321,8 @@ const GUIDES = {
               "Toca las estrellas: una estrella es <strong>Flojo</strong>, dos <strong>Bueno</strong> y tres <strong>Excelente</strong>.",
               "Para quitar la valoración, vuelve a tocar la estrella seleccionada. El reglaje vuelve a Sin valorar."
             ],
-            p: ["La valoración y el nombre pertenecen al reglaje, no a una sola sesión. Valóralo en el historial y la biblioteca muestra las mismas estrellas, y al revés. En la biblioteca, ordena por <strong>Valoración</strong> para poner primero tus mejores reglajes."]
+            p: ["La valoración y el nombre pertenecen al reglaje, no a una sola sesión. Valóralo en el historial y la biblioteca muestra las mismas estrellas, y al revés. En la biblioteca, ordena por <strong>Valoración</strong> para poner primero tus mejores reglajes."],
+            shot: "setupRating"
           },
           {
             h: "Ponerle nombre y anotar la cámara",
@@ -1357,16 +1378,18 @@ const GUIDES = {
             p: ["Abre los ajustes (el engranaje de la pantalla de inicio) y la pestaña <strong>JAX</strong>:"],
             list: [
               "<strong>Jax te llama</strong>: el nombre que Jax usa contigo.",
-              "Activa o silencia la voz de Jax, elige la <strong>Voz del ingeniero</strong> y una <strong>Señal de radio</strong> antes de que Jax hable.",
+              "Activa o desactiva la <strong>Guía de audio de Jax</strong>, elige la <strong>Voz del ingeniero</strong> y una <strong>Señal de radio</strong> antes de que Jax hable.",
               "Ajusta la velocidad y el tono de la voz y toca <strong>Probar la voz de Jax</strong>.",
               "Elige un <strong>Estilo de voz</strong> y si Jax usa <strong>Términos técnicos</strong>.",
               "Elige las categorías de mensajes: Diferencias, Cruce de vuelta, Clima, Combustible, Gestión de energía, Neumáticos, Estrategia de penalización, Compañero, Motivación, Técnica de carrera, Estrategia y Control de carrera.",
               "La <strong>Guía de configuración de audio</strong> explica cómo oír a Jax junto al sonido del juego: altavoz del teléfono, auriculares, unos cascos con dos fuentes o un mezclador."
-            ]
+            ],
+            shot: "settingsJax"
           },
           {
             h: "Cambiarlo en plena sesión",
-            p: ["En el muro de boxes, toca el botón <strong>Jax</strong>: encontrarás el interruptor de la voz y las mismas categorías de mensajes, sin salir de la sesión."]
+            p: ["En el muro de boxes, toca el botón <strong>Jax</strong>: encontrarás el interruptor <strong>Guía de audio de Jax</strong> y las categorías de mensajes, sin salir de la sesión."],
+            shot: "quickJax"
           },
           {
             h: "Escuchar a Jax sin el juego",
@@ -1411,7 +1434,8 @@ const GUIDES = {
             p: [
               "Jax Pro se ofrece como suscripción mensual o anual en el App Store. La app describe una prueba introductoria de 14 días en ambos planes. Durante la prueba, todo lo anterior está disponible. Cancela antes de que termine y no se te cobra.",
               "La hoja de compra de Apple muestra la elegibilidad, los precios locales y la oferta exacta antes de que confirmes. Apple factura y renueva la suscripción hasta que la canceles en los ajustes de suscripciones de tu cuenta de Apple."
-            ]
+            ],
+            shot: "settingsSetup"
           },
           {
             h: "Suscribirse y restaurar",
