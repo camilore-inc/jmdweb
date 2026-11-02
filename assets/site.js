@@ -144,7 +144,9 @@ const copy = {
     home: {
       titleLines: ["Your race engineer.", "Your pit wall.", "Your race memory."],
       lead: "Jax Max Delta turns live F1 telemetry into the information, coaching, race context and history you need — before, during and after every session.",
-      visualLabel: "Illustration of a lap trace across three sectors",
+      reelLabel: "Jax Max Delta in action",
+      reelPause: "Pause the previews",
+      reelPlay: "Play the previews",
       proof: ["iPhone & iPad", "EA SPORTS F1 24 · F1 25 · F1 26", "Local UDP telemetry", "PlayStation · Xbox · PC", "No account required", "English · Français · Español"],
       phasesKicker: "Before · During · After",
       phasesTitle: "One companion for the whole session.",
@@ -724,7 +726,9 @@ const copy = {
     home: {
       titleLines: ["Votre ingénieur de course.", "Votre mur des stands.", "Votre mémoire de course."],
       lead: "Jax Max Delta transforme la télémétrie F1 en direct en informations, en coaching, en contexte de course et en historique — avant, pendant et après chaque session.",
-      visualLabel: "Illustration d'une trace de tour sur trois secteurs",
+      reelLabel: "Jax Max Delta en action",
+      reelPause: "Mettre les aperçus en pause",
+      reelPlay: "Lire les aperçus",
       proof: ["iPhone et iPad", "EA SPORTS F1 24 · F1 25 · F1 26", "Télémétrie UDP locale", "PlayStation · Xbox · PC", "Aucun compte requis", "English · Français · Español"],
       phasesKicker: "Avant · Pendant · Après",
       phasesTitle: "Un seul compagnon, du début à la fin.",
@@ -1210,7 +1214,9 @@ const copy = {
     home: {
       titleLines: ["Tu ingeniero de carrera.", "Tu muro de boxes.", "Tu memoria de carrera."],
       lead: "Jax Max Delta convierte la telemetría de F1 en vivo en la información, el coaching, el contexto de carrera y el historial que necesitas — antes, durante y después de cada sesión.",
-      visualLabel: "Ilustración de una traza de vuelta en tres sectores",
+      reelLabel: "Jax Max Delta en acción",
+      reelPause: "Pausar las vistas previas",
+      reelPlay: "Reproducir las vistas previas",
       proof: ["iPhone y iPad", "EA SPORTS F1 24 · F1 25 · F1 26", "Telemetría UDP local", "PlayStation · Xbox · PC", "Sin cuenta", "English · Français · Español"],
       phasesKicker: "Antes · Durante · Después",
       phasesTitle: "Un solo compañero para toda la sesión.",
@@ -1879,6 +1885,7 @@ function boot() {
   root.innerHTML = `${header(t, lang, page)}<main id="main" tabindex="-1">${renderPage(t, lang, page, slug)}</main>${footer(t, lang)}`;
   setupMobileNav();
   setupVideos(t);
+  setupHeroReel(t);
 }
 
 function renderPage(t, lang, page, slug) {
@@ -2059,22 +2066,112 @@ function sectionHead(k, title, intro) {
   return `<div class="section-heading"><div>${kicker(k)}<h2>${title}</h2></div>${intro ? `<p>${intro}</p>` : ""}</div>`;
 }
 
-function heroTrace(label) {
+// The home hero: the app's main screen, then each preview clip for a few
+// seconds, crossfading and cycling back to the start. A clip resumes where it
+// left off on the next lap, so each cycle shows a different moment. Visitors
+// who prefer reduced motion see the main screen until they press play.
+const HERO_REEL = ["home", "dashboardVideo", "pitWallVideo", "vscDelta", "raceReplayLandscape"];
+const HERO_REEL_SECONDS = 5;
+
+function heroReel(t, lang) {
+  const h = t.home;
+  const slides = HERO_REEL.map((key, i) => {
+    const slot = SHOTS[key];
+    const label = t.shots[key];
+    const file = shotFile(slot, lang);
+    const video = localized(slot.video, lang);
+    const posterFile = localized(slot.poster, lang);
+    const poster = posterFile ? asset(`video/${posterFile}`) : asset(`screenshots/web/${file}`);
+    const media = video
+      ? `<video muted loop playsinline preload="none" poster="${poster}" width="${slot.videoW}" height="${slot.videoH}" aria-label="${label}"><source src="${asset(`video/${video}`)}" type="video/mp4"></video>`
+      : `<img src="${asset(`screenshots/web/${file}`)}" width="1600" height="736" alt="${label}" decoding="async" fetchpriority="high">`;
+    return `<li class="reel-slide${i === 0 ? " is-active" : ""}" data-label="${label}"${i ? ' aria-hidden="true"' : ""}>${media}</li>`;
+  }).join("");
+  const dots = HERO_REEL.map((key, i) =>
+    `<button class="reel-dot" type="button" aria-label="${t.shots[key]}"${i === 0 ? ' aria-current="true"' : ""}><span aria-hidden="true"></span></button>`).join("");
   return `
-    <svg class="hero-trace" viewBox="0 0 600 360" role="img" aria-label="${label}">
-      <g class="trace-grid">
-        ${[60, 120, 180, 240].map((y) => `<line x1="0" x2="600" y1="${y}" y2="${y}"/>`).join("")}
-        ${[200, 400].map((x) => `<line class="sector" x1="${x}" x2="${x}" y1="20" y2="340"/>`).join("")}
-      </g>
-      <g class="trace-labels"><text x="12" y="36">S1</text><text x="212" y="36">S2</text><text x="412" y="36">S3</text></g>
-      <path class="trace-ref" d="M0,74 L58,64 L92,68 L112,196 L132,204 L154,158 L204,92 L232,84 L252,168 L268,182 L288,128 L334,72 L382,60 L402,214 L422,226 L446,176 L482,118 L520,84 L546,148 L562,156 L586,108 L600,92"/>
-      <path class="trace-speed" d="M0,70 L60,58 L90,62 L110,190 L130,200 L150,150 L200,84 L230,76 L250,162 L265,176 L285,120 L330,64 L380,52 L400,210 L420,222 L445,168 L480,110 L520,76 L545,142 L560,150 L585,100 L600,84"/>
-      <g class="trace-brake">
-        <rect x="90" y="300" width="22" height="18"/><rect x="230" y="300" width="20" height="18"/>
-        <rect x="380" y="300" width="22" height="18"/><rect x="520" y="300" width="25" height="18"/>
-      </g>
-      <path class="trace-throttle" d="M0,280 L90,280 L90,296 L130,296 L130,280 L230,280 L230,296 L268,296 L268,280 L380,280 L380,296 L424,296 L424,280 L520,280 L520,296 L560,296 L560,280 L600,280"/>
-    </svg>`;
+    <div class="hero-reel" role="region" aria-roledescription="carousel" aria-label="${h.reelLabel}">
+      <div class="reel-stage">
+        <ul class="reel-frame">${slides}</ul>
+        <button class="video-toggle" type="button" aria-label="${h.reelPlay}"><span class="video-icon" aria-hidden="true"></span></button>
+      </div>
+      <div class="reel-bar">
+        <p class="reel-caption">${t.shots[HERO_REEL[0]]}</p>
+        <div class="reel-dots">${dots}</div>
+      </div>
+    </div>`;
+}
+
+// Cycles the home hero reel; pauses off-screen, in a hidden tab, and on request.
+function setupHeroReel(t) {
+  const reel = document.querySelector(".hero-reel");
+  if (!reel) return;
+  const slides = [...reel.querySelectorAll(".reel-slide")];
+  const dots = [...reel.querySelectorAll(".reel-dot")];
+  const caption = reel.querySelector(".reel-caption");
+  const toggle = reel.querySelector(".video-toggle");
+  let index = 0;
+  let timer = null;
+  let paused = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let onScreen = true;
+  const running = () => !paused && onScreen && !document.hidden;
+  const videoAt = (i) => slides[i].querySelector("video");
+  const play = (video) => {
+    const result = video.play();
+    if (result && result.catch) result.catch(() => {});
+  };
+  // Warm up the next clip while the current slide is showing.
+  const prepare = (i) => {
+    const video = videoAt(i);
+    if (video && video.preload === "none") { video.preload = "auto"; video.load(); }
+  };
+  const schedule = () => {
+    clearTimeout(timer);
+    if (running()) timer = setTimeout(() => show(index + 1), HERO_REEL_SECONDS * 1000);
+  };
+  const syncMedia = () => {
+    slides.forEach((slide, i) => {
+      const video = videoAt(i);
+      if (!video) return;
+      if (i === index && running()) play(video);
+      else video.pause();
+    });
+  };
+  const syncToggle = () => {
+    toggle.classList.toggle("is-playing", !paused);
+    toggle.setAttribute("aria-label", paused ? t.home.reelPlay : t.home.reelPause);
+  };
+  function show(i) {
+    slides[index].classList.remove("is-active");
+    slides[index].setAttribute("aria-hidden", "true");
+    dots[index].removeAttribute("aria-current");
+    index = (i + slides.length) % slides.length;
+    slides[index].classList.add("is-active");
+    slides[index].removeAttribute("aria-hidden");
+    dots[index].setAttribute("aria-current", "true");
+    caption.textContent = slides[index].dataset.label;
+    prepare(index);
+    prepare((index + 1) % slides.length);
+    syncMedia();
+    schedule();
+  }
+  const resume = () => { syncMedia(); schedule(); };
+  toggle.addEventListener("click", () => {
+    paused = !paused;
+    syncToggle();
+    resume();
+  });
+  dots.forEach((dot, i) => dot.addEventListener("click", () => show(i)));
+  document.addEventListener("visibilitychange", resume);
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => {
+      onScreen = entry.isIntersecting;
+      resume();
+    }, { threshold: 0.25 }).observe(reel);
+  }
+  syncToggle();
+  if (!paused) prepare(1);
+  schedule();
 }
 
 /* ── Home ──────────────────────────────────────────────────────────────── */
@@ -2095,7 +2192,7 @@ function home(t, lang) {
           </div>
         </div>
         <div class="hero-visual">
-          ${heroTrace(h.visualLabel)}
+          ${heroReel(t, lang)}
           <ol class="phase-rail" aria-hidden="true">${h.phases.map(([tag]) => `<li>${tag}</li>`).join("")}</ol>
         </div>
       </div>
