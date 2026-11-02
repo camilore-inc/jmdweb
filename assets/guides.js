@@ -150,8 +150,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["TIMING: the full CLASSIFICATION, every driver", "ME: your laps and stints", "SETUP: your own setup this session"],
-          pro: ["TIMING: LIVE", "CAR", "MAP", "TRACE, with two-lap comparison", "GAME"],
+          free: ["TIMING: the full CLASSIFICATION, every driver", "GAME: the session's game settings", "ME: your laps and stints", "SETUP: your setups this session, by name"],
+          pro: ["TIMING: LIVE", "CAR", "MAP", "TRACE, with two-lap comparison", "SETUP: the setup values"],
           note: "A locked tab names the feature and what Jax Pro adds, and opens the subscription screen when tapped. The built-in demos show every tab in full."
         },
         related: ["dashboard", "traces", "free-and-pro"]
@@ -209,8 +209,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["The Dashboard's full-screen live trace", "Session History TRACE for the sessions you can open (your three most recent)"],
-          pro: ["Pit Wall TRACE, live, with two-lap comparison", "TRACE for every saved session"]
+          free: ["The Dashboard's full-screen live trace", "Session History TRACE for your most recent session"],
+          pro: ["Pit Wall TRACE, live, with two-lap comparison", "TRACE for every earlier session"]
         },
         related: ["pit-wall", "session-history", "dashboard"]
       },
@@ -251,8 +251,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["About: Overview, Corners to prepare, Setup considerations and Tyres", "The full-screen map viewer", "My Data: a preview of how many of your sessions JMD holds for the circuit"],
-          pro: ["Session: your full preparation plan (free shows a short preview)", "My Data: what your own sessions at this circuit tell you"]
+          free: ["About: the track overview — map, length, corners, DRS zones and 2026 rules", "The full-screen map viewer", "My Data: how many of your sessions JMD holds for the circuit"],
+          pro: ["About: corners to prepare, setup considerations, tyres, pit loss and circuit analysis", "Session: your full preparation plan", "My Data: what your own sessions at this circuit tell you"]
         },
         related: ["setups", "session-history", "racing-tips"]
       },
@@ -292,8 +292,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["Every session is saved; saving is never blocked", "Your three most recent sessions open in full, with replay and traces", "Stats from those three sessions"],
-          pro: ["Every saved session opens", "Stats from every session"],
+          free: ["Every session is saved; saving is never blocked", "Every session listed, with stats from all of them", "Your most recent session in full, with highlights, lap histories, replay and traces"],
+          pro: ["Every earlier session opens in full"],
           note: "Older sessions stay listed with the Jax Pro badge. Nothing is deleted when a subscription ends, and resubscribing opens the same records again."
         },
         related: ["leagues-and-seasons", "traces", "setups"]
@@ -344,7 +344,7 @@ const GUIDES = {
         ],
         access: {
           free: ["Creating leagues and tagging sessions you can open", "League and season filters"],
-          pro: ["Opening and tagging every saved session, not only the three most recent"]
+          pro: ["Opening and tagging every saved session, not only the most recent"]
         },
         related: ["session-history", "free-and-pro"]
       },
@@ -378,8 +378,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["Your first three distinct setups: open, rename, rate and add camera notes", "Every setup stays recorded in the session it was driven in"],
-          pro: ["An unlimited setup library. Setups waiting beyond the first three appear with nothing to re-enter"]
+          free: ["Every setup you've run, listed by game, track, name, rating and session", "Every new setup captured with its session"],
+          pro: ["Opening a setup's values, comparing, renaming, rating and camera notes"]
         },
         related: ["session-history", "prepare-for-session", "pit-wall"]
       },
@@ -445,60 +445,64 @@ const GUIDES = {
             shot: "jaxAudio"
           }
         ],
-        allFree: true,
+        access: {
+          free: ["Urgent safety calls: Safety Car, VSC, red, yellow and blue flags, a penalty given to you, a stopped car ahead, traffic as you leave the pits", "Your lap at the line: lap, time and the gap ahead", "Every voice setting, the voice test and the Jax demo"],
+          pro: ["Your complete race engineer: cars closing, traffic, tyres, fuel, energy, pit windows, damage, weather and pace"]
+        },
         related: ["dashboard", "pit-wall", "racing-tips"]
       },
 
       "free-and-pro": {
         title: "What's free and what's in Jax Pro",
-        summary: "Free gives you the essentials for driving and the classification. Jax Pro adds deeper live race intelligence, telemetry analysis, car health and detailed session planning.",
+        summary: "Free lets you race, record and see your activity. Jax Pro helps you understand, revisit, manage and improve your racing.",
         sections: [
           {
-            h: "Always free",
+            h: "Forever free",
             list: [
               "The whole Dashboard, including its full-screen live trace",
-              "Jax audio guidance",
-              "Racing Tips, the built-in demos, support and legal",
-              "Prepare for Session → About: map, corners, setup considerations, tyres, 2026 rules",
-              "Pit Wall: the full TIMING CLASSIFICATION, ME and SETUP",
+              "Pit Wall: the full TIMING CLASSIFICATION for every driver, GAME, ME, and SETUP with your setups by name",
+              "Prepare for Session → About: the track overview — map with the start/finish line, length, corners, DRS zones and 2026 rules",
               "Saving every session; saving is never blocked",
-              "Session History: your three most recent sessions in full, with replay and traces, and stats from those three",
-              "Setup library: your first three distinct setups",
-              "iCloud Backup"
+              "Session History: every session listed, with statistics from all of them",
+              "Your most recent session in full: highlights, classification, lap histories, traces and replay",
+              "Setup library: every setup you've run, listed",
+              "Jax: urgent safety calls — Safety Car, VSC, red, yellow and blue flags, a penalty given to you, a stopped car ahead, traffic as you leave the pits — and your lap at the line",
+              "Time Trial live timing and lap recording",
+              "Racing Tips, the built-in demos, settings, privacy, support and iCloud Backup"
             ]
           },
           {
             h: "Added by Jax Pro",
             list: [
-              "Pit Wall: TIMING LIVE, CAR, MAP, TRACE (with two-lap comparison) and GAME",
-              "Prepare for Session → Session: your full preparation plan",
-              "Prepare for Session → My Data",
-              "Session History: every saved session opens, and stats come from all of them",
-              "An unlimited setup library"
+              "Jax, your complete race engineer: cars closing, traffic, tyres, fuel, energy, pit windows, damage, weather and pace",
+              "Pit Wall: TIMING LIVE, CAR, MAP and TRACE (with two-lap comparison)",
+              "Every earlier session in full: details, highlights, lap histories, traces and replay",
+              "Your setups' values, comparisons, names and ratings, wherever they appear",
+              "Prepare for Session: corners, setup priorities, tyres, pit loss and circuit analysis, My Data, and your session plan"
             ]
           },
           {
             h: "Trial and plans",
             p: [
-              "Jax Pro comes as monthly and annual App Store subscriptions. The app describes a 14-day introductory trial on both plans. During the trial, everything above is available. Cancel before it ends and you aren't charged.",
-              "Eligibility, local prices and the exact offer are shown by Apple's purchase sheet before you confirm. Apple bills and renews the subscription until you cancel it in your Apple Account subscription settings."
+              "Jax Pro comes as monthly and annual App Store subscriptions, both with a 14-day free trial for eligible accounts. During the trial, everything above is available. Cancel before it ends and you aren't charged.",
+              "Eligibility, the price in your country and the exact offer are shown by Apple's purchase sheet before you confirm. Apple bills and renews the subscription until you cancel it in your Apple Account subscription settings."
             ],
             shot: "settingsSetup"
           },
           {
             h: "Subscribing and restoring",
-            p: ["Every locked feature opens the same subscription screen, with the plans and <strong>Restore Purchases</strong>. When you subscribe, locked views unlock straight away, with no restart. The Settings → Jax Pro card shows your status."]
+            p: ["Each locked feature opens the subscription screen with a line about what it unlocks, the plans and <strong>Restore Purchases</strong>. When you subscribe, you go straight to what you tapped, with no restart. The Settings → Jax Pro card shows your status."]
           },
           {
             h: "Your data is never held hostage",
             p: [
-              "Limits only change what you can open, never what is kept. A fourth session on Free is saved like any other; the oldest of the four becomes locked. A fourth setup stays inside its session and joins your library when Jax Pro is active.",
+              "Free never limits what is saved. Every session and every setup is kept and listed, however many you record. A new session becomes the one you can open in full; the previous one keeps its place in the list. You can delete a session at any time.",
               "If a subscription ends, nothing is deleted, truncated or reordered. Resubscribe and the same records open again."
             ]
           },
           {
             h: "Try it all in the demos",
-            p: ["The built-in demos (Settings → SUPPORT → Explore JMD Demos) show every Jax Pro view in full with sample data, so you can see what you'd get before deciding. A demo never grants or records a subscription."]
+            p: ["The built-in demos (Settings → SUPPORT → Explore JMD Demos) show every Jax Pro view and the complete race engineer with sample data, so you can see what you'd get before deciding. A demo never grants or records a subscription."]
           }
         ],
         related: ["pit-wall", "session-history", "prepare-for-session"]
@@ -626,8 +630,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["TIMING : tout le CLASSEMENT, chaque pilote", "ME : vos tours et vos relais", "SETUP : votre propre réglage de la session"],
-          pro: ["TIMING : EN DIRECT", "AUTO", "MAP", "TRACE, avec comparaison de deux tours", "GAME"],
+          free: ["TIMING : tout le CLASSEMENT, chaque pilote", "GAME : les paramètres de jeu de la session", "ME : vos tours et vos relais", "SETUP : vos réglages de la session, par nom"],
+          pro: ["TIMING : EN DIRECT", "AUTO", "MAP", "TRACE, avec comparaison de deux tours", "SETUP : les valeurs des réglages"],
           note: "Un onglet verrouillé nomme la fonction et ce qu’ajoute Jax Pro, et ouvre l’écran d’abonnement quand on le touche. Les démos intégrées montrent chaque onglet en entier."
         },
         related: ["dashboard", "traces", "free-and-pro"]
@@ -685,8 +689,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["Le tracé en direct plein écran du tableau de bord", "Le TRACÉ de l’historique pour les sessions que vous pouvez ouvrir (vos trois plus récentes)"],
-          pro: ["Le TRACE du mur des stands, en direct, avec comparaison de deux tours", "Le TRACÉ de chaque session enregistrée"]
+          free: ["Le tracé en direct plein écran du tableau de bord", "Le TRACÉ de l’historique pour votre session la plus récente"],
+          pro: ["Le TRACE du mur des stands, en direct, avec comparaison de deux tours", "Le TRACÉ de chaque session précédente"]
         },
         related: ["pit-wall", "session-history", "dashboard"]
       },
@@ -727,8 +731,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["À propos : Aperçu, Virages à préparer, Pistes de réglage et Pneumatiques", "La visionneuse de carte plein écran", "Mes données : un aperçu du nombre de vos sessions sur ce circuit"],
-          pro: ["Séance : votre plan de préparation complet (la version gratuite en montre un court aperçu)", "Mes données : ce que vos propres sessions sur ce circuit vous apprennent"]
+          free: ["À propos : l’aperçu du circuit — carte, longueur, virages, zones DRS et règles 2026", "La visionneuse de carte plein écran", "Mes données : le nombre de vos sessions sur ce circuit"],
+          pro: ["À propos : virages à préparer, pistes de réglage, pneumatiques, perte aux stands et analyse du circuit", "Séance : votre plan de préparation complet", "Mes données : ce que vos propres sessions sur ce circuit vous apprennent"]
         },
         related: ["setups", "session-history", "racing-tips"]
       },
@@ -768,8 +772,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["Chaque session est enregistrée ; l’enregistrement n’est jamais bloqué", "Vos trois sessions les plus récentes s’ouvrent en entier, avec replay et tracés", "Des statistiques tirées de ces trois sessions"],
-          pro: ["Chaque session enregistrée s’ouvre", "Des statistiques tirées de toutes vos sessions"],
+          free: ["Chaque session est enregistrée ; l’enregistrement n’est jamais bloqué", "Toutes vos sessions listées, avec des statistiques tirées de toutes", "Votre session la plus récente en entier, avec faits marquants, historique des tours, replay et tracés"],
+          pro: ["Chaque session précédente s’ouvre en entier"],
           note: "Les sessions plus anciennes restent dans la liste avec le badge Jax Pro. Rien n’est supprimé quand un abonnement prend fin, et un nouvel abonnement rouvre les mêmes données."
         },
         related: ["leagues-and-seasons", "traces", "setups"]
@@ -820,7 +824,7 @@ const GUIDES = {
         ],
         access: {
           free: ["Créer des ligues et associer les sessions que vous pouvez ouvrir", "Les filtres de ligue et de saison"],
-          pro: ["Ouvrir et associer chaque session enregistrée, pas seulement les trois plus récentes"]
+          pro: ["Ouvrir et associer chaque session enregistrée, pas seulement la plus récente"]
         },
         related: ["session-history", "free-and-pro"]
       },
@@ -854,8 +858,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["Vos trois premiers réglages distincts : les ouvrir, les renommer, les noter et noter la caméra", "Chaque réglage reste enregistré dans la session où il a servi"],
-          pro: ["Une bibliothèque de réglages illimitée. Les réglages en attente au-delà des trois premiers apparaissent sans rien à ressaisir"]
+          free: ["Tous les réglages utilisés, listés par jeu, circuit, nom, note et session", "Chaque nouveau réglage enregistré avec sa session"],
+          pro: ["Ouvrir les valeurs d’un réglage, comparer, renommer, noter et noter la caméra"]
         },
         related: ["session-history", "prepare-for-session", "pit-wall"]
       },
@@ -921,60 +925,64 @@ const GUIDES = {
             shot: "jaxAudio"
           }
         ],
-        allFree: true,
+        access: {
+          free: ["Les alertes de sécurité urgentes : voiture de sécurité, VSC, drapeaux rouge, jaune et bleu, une pénalité qui vous est infligée, une voiture arrêtée devant, le trafic à la sortie des stands", "Votre tour à la ligne : tour, temps et écart devant", "Tous les réglages de voix, le test de voix et la démo de Jax"],
+          pro: ["Votre ingénieur de course complet : voitures qui reviennent, trafic, pneus, carburant, énergie, fenêtres d’arrêt, dégâts, météo et rythme"]
+        },
         related: ["dashboard", "pit-wall", "racing-tips"]
       },
 
       "free-and-pro": {
         title: "Ce qui est gratuit et ce que comprend Jax Pro",
-        summary: "La version gratuite vous donne l’essentiel pour piloter et le classement. Jax Pro ajoute l’intelligence de course en direct, l’analyse de télémétrie, l’état de la voiture et la planification détaillée des sessions.",
+        summary: "La version gratuite vous permet de courir, d’enregistrer et de voir votre activité. Jax Pro vous aide à comprendre, revoir, gérer et améliorer votre pilotage.",
         sections: [
           {
-            h: "Toujours gratuit",
+            h: "Gratuit pour toujours",
             list: [
               "Tout le tableau de bord, y compris son tracé en direct plein écran",
-              "Le guidage audio de Jax",
-              "Les conseils de course, les démos intégrées, l’assistance et les mentions légales",
-              "Préparer la session → À propos : carte, virages, pistes de réglage, pneumatiques, règles 2026",
-              "Mur des stands : tout le CLASSEMENT du TIMING, ME et SETUP",
+              "Mur des stands : tout le CLASSEMENT du TIMING pour chaque pilote, GAME, ME, et SETUP avec vos réglages par nom",
+              "Préparer la session → À propos : l’aperçu du circuit — carte avec la ligne de départ/arrivée, longueur, virages, zones DRS et règles 2026",
               "L’enregistrement de chaque session ; il n’est jamais bloqué",
-              "Historique des sessions : vos trois sessions les plus récentes en entier, avec replay et tracés, et des statistiques tirées de ces trois sessions",
-              "Bibliothèque de réglages : vos trois premiers réglages distincts",
-              "La sauvegarde iCloud"
+              "Historique des sessions : toutes vos sessions listées, avec des statistiques tirées de toutes",
+              "Votre session la plus récente en entier : faits marquants, classement, historique des tours, tracés et replay",
+              "Bibliothèque de réglages : tous les réglages utilisés, listés",
+              "Jax : les alertes de sécurité urgentes — voiture de sécurité, VSC, drapeaux rouge, jaune et bleu, une pénalité qui vous est infligée, une voiture arrêtée devant, le trafic à la sortie des stands — et votre tour à la ligne",
+              "Le chronométrage en direct et l’enregistrement des tours en contre-la-montre",
+              "Les conseils de course, les démos intégrées, les paramètres, la confidentialité, l’assistance et la sauvegarde iCloud"
             ]
           },
           {
             h: "Ajouté par Jax Pro",
             list: [
-              "Mur des stands : TIMING EN DIRECT, AUTO, MAP, TRACE (avec comparaison de deux tours) et GAME",
-              "Préparer la session → Séance : votre plan de préparation complet",
-              "Préparer la session → Mes données",
-              "Historique des sessions : chaque session enregistrée s’ouvre, et les statistiques les prennent toutes en compte",
-              "Une bibliothèque de réglages illimitée"
+              "Jax, votre ingénieur de course complet : voitures qui reviennent, trafic, pneus, carburant, énergie, fenêtres d’arrêt, dégâts, météo et rythme",
+              "Mur des stands : TIMING EN DIRECT, AUTO, MAP et TRACE (avec comparaison de deux tours)",
+              "Toutes vos sessions précédentes en entier : détails, faits marquants, historique des tours, tracés et replay",
+              "Les valeurs de vos réglages, leurs comparaisons, noms et notes, partout où ils apparaissent",
+              "Préparer la session : virages, priorités de réglage, pneumatiques, perte aux stands et analyse du circuit, Mes données, et votre plan de séance"
             ]
           },
           {
             h: "Essai et forfaits",
             p: [
-              "Jax Pro est offert en abonnements App Store mensuel et annuel. L’app décrit un essai de lancement de 14 jours sur les deux forfaits. Pendant l’essai, tout ce qui précède est disponible. Annulez avant la fin et vous n’êtes pas facturé.",
-              "L’admissibilité, les prix locaux et l’offre exacte sont affichés par la feuille d’achat Apple avant que vous confirmiez. Apple facture et renouvelle l’abonnement jusqu’à ce que vous l’annuliez dans les réglages d’abonnements de votre compte Apple."
+              "Jax Pro est offert en abonnements App Store mensuel et annuel, tous deux avec un essai gratuit de 14 jours pour les comptes admissibles. Pendant l’essai, tout ce qui précède est disponible. Annulez avant la fin et vous n’êtes pas facturé.",
+              "L’admissibilité, le prix dans votre pays et l’offre exacte sont affichés par la feuille d’achat Apple avant que vous confirmiez. Apple facture et renouvelle l’abonnement jusqu’à ce que vous l’annuliez dans les réglages d’abonnements de votre compte Apple."
             ],
             shot: "settingsSetup"
           },
           {
             h: "S’abonner et restaurer",
-            p: ["Chaque fonction verrouillée ouvre le même écran d’abonnement, avec les forfaits et la restauration des achats (<strong>Déjà abonné ? Restaurer</strong>). Dès que vous vous abonnez, les vues verrouillées se débloquent, sans redémarrage. La carte Jax Pro des paramètres indique votre statut."]
+            p: ["Chaque fonction verrouillée ouvre l’écran d’abonnement avec une phrase sur ce qu’elle débloque, les forfaits et la restauration des achats (<strong>Déjà abonné ? Restaurer</strong>). Dès que vous vous abonnez, vous arrivez directement à ce que vous avez touché, sans redémarrage. La carte Jax Pro des paramètres indique votre statut."]
           },
           {
             h: "Vos données ne sont jamais prises en otage",
             p: [
-              "Les limites ne changent que ce que vous pouvez ouvrir, jamais ce qui est conservé. Une quatrième session en version gratuite est enregistrée comme les autres ; la plus ancienne des quatre devient verrouillée. Un quatrième réglage reste dans sa session et rejoint votre bibliothèque quand Jax Pro est actif.",
+              "La version gratuite ne limite jamais ce qui est enregistré. Chaque session et chaque réglage est conservé et listé, quel qu’en soit le nombre. Une nouvelle session devient celle que vous pouvez ouvrir en entier ; la précédente garde sa place dans la liste. Vous pouvez supprimer une session à tout moment.",
               "Si un abonnement prend fin, rien n’est supprimé, tronqué ni réordonné. Réabonnez-vous et les mêmes données se rouvrent."
             ]
           },
           {
             h: "Tout essayer avec les démos",
-            p: ["Les démos intégrées (Paramètres → ASSISTANCE → Découvrir les démos JMD) montrent chaque vue Jax Pro en entier avec des données d’exemple, pour voir ce que vous obtiendriez avant de décider. Une démo n’accorde ni n’enregistre jamais d’abonnement."]
+            p: ["Les démos intégrées (Paramètres → ASSISTANCE → Découvrir les démos JMD) montrent chaque vue Jax Pro et l’ingénieur de course complet avec des données d’exemple, pour voir ce que vous obtiendriez avant de décider. Une démo n’accorde ni n’enregistre jamais d’abonnement."]
           }
         ],
         related: ["pit-wall", "session-history", "prepare-for-session"]
@@ -1102,8 +1110,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["TIMING: toda la CLASIFICACIÓN, cada piloto", "ME: tus vueltas y tus stints", "SETUP: tu propio reglaje de la sesión"],
-          pro: ["TIMING: EN VIVO", "COCHE", "MAP", "TRACE, con comparación de dos vueltas", "GAME"],
+          free: ["TIMING: toda la CLASIFICACIÓN, cada piloto", "GAME: los ajustes de juego de la sesión", "ME: tus vueltas y tus stints", "SETUP: tus reglajes de la sesión, por nombre"],
+          pro: ["TIMING: EN VIVO", "COCHE", "MAP", "TRACE, con comparación de dos vueltas", "SETUP: los valores de los reglajes"],
           note: "Una pestaña bloqueada indica la función y lo que añade Jax Pro, y abre la pantalla de suscripción al tocarla. Las demos integradas muestran todas las pestañas completas."
         },
         related: ["dashboard", "traces", "free-and-pro"]
@@ -1161,8 +1169,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["La traza en vivo a pantalla completa del panel", "La TRAZA del historial para las sesiones que puedes abrir (tus tres más recientes)"],
-          pro: ["El TRACE del muro de boxes, en vivo, con comparación de dos vueltas", "La TRAZA de cada sesión guardada"]
+          free: ["La traza en vivo a pantalla completa del panel", "La TRAZA del historial para tu sesión más reciente"],
+          pro: ["El TRACE del muro de boxes, en vivo, con comparación de dos vueltas", "La TRAZA de cada sesión anterior"]
         },
         related: ["pit-wall", "session-history", "dashboard"]
       },
@@ -1203,8 +1211,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["Acerca de: Resumen, Curvas a preparar, Prioridades de reglaje y Neumáticos", "El visor de mapa a pantalla completa", "Mis datos: un adelanto de cuántas sesiones tuyas tiene JMD en este circuito"],
-          pro: ["Sesión: tu plan de preparación completo (la versión gratis muestra un breve adelanto)", "Mis datos: lo que te enseñan tus propias sesiones en este circuito"]
+          free: ["Acerca de: la vista general del circuito — mapa, longitud, curvas, zonas DRS y reglas 2026", "El visor de mapa a pantalla completa", "Mis datos: cuántas sesiones tuyas tiene JMD en este circuito"],
+          pro: ["Acerca de: curvas a preparar, prioridades de reglaje, neumáticos, pérdida en boxes y análisis del circuito", "Sesión: tu plan de preparación completo", "Mis datos: lo que te enseñan tus propias sesiones en este circuito"]
         },
         related: ["setups", "session-history", "racing-tips"]
       },
@@ -1244,8 +1252,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["Cada sesión se guarda; el guardado nunca se bloquea", "Tus tres sesiones más recientes se abren completas, con repetición y trazas", "Estadísticas de esas tres sesiones"],
-          pro: ["Cada sesión guardada se abre", "Estadísticas de todas tus sesiones"],
+          free: ["Cada sesión se guarda; el guardado nunca se bloquea", "Todas tus sesiones en la lista, con estadísticas de todas ellas", "Tu sesión más reciente completa, con momentos clave, historial de vueltas, repetición y trazas"],
+          pro: ["Cada sesión anterior se abre completa"],
           note: "Las sesiones más antiguas siguen en la lista con la insignia Jax Pro. No se borra nada cuando termina una suscripción, y al volver a suscribirte se abren los mismos registros."
         },
         related: ["leagues-and-seasons", "traces", "setups"]
@@ -1296,7 +1304,7 @@ const GUIDES = {
         ],
         access: {
           free: ["Crear ligas y asignar las sesiones que puedes abrir", "Los filtros de liga y temporada"],
-          pro: ["Abrir y asignar cada sesión guardada, no solo las tres más recientes"]
+          pro: ["Abrir y asignar cada sesión guardada, no solo la más reciente"]
         },
         related: ["session-history", "free-and-pro"]
       },
@@ -1330,8 +1338,8 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["Tus tres primeros reglajes distintos: abrirlos, renombrarlos, valorarlos y anotar la cámara", "Cada reglaje sigue registrado en la sesión en la que se usó"],
-          pro: ["Una biblioteca de reglajes ilimitada. Los reglajes en espera más allá de los tres primeros aparecen sin nada que volver a introducir"]
+          free: ["Todos los reglajes que has usado, en la lista por juego, circuito, nombre, valoración y sesión", "Cada reglaje nuevo se guarda con su sesión"],
+          pro: ["Abrir los valores de un reglaje, compararlos, renombrarlos, valorarlos y anotar la cámara"]
         },
         related: ["session-history", "prepare-for-session", "pit-wall"]
       },
@@ -1397,60 +1405,64 @@ const GUIDES = {
             shot: "jaxAudio"
           }
         ],
-        allFree: true,
+        access: {
+          free: ["Los avisos urgentes de seguridad: coche de seguridad, VSC, banderas roja, amarilla y azul, una penalización que te imponen, un coche parado delante, el tráfico al salir de boxes", "Tu vuelta en la línea: vuelta, tiempo y diferencia con el de delante", "Todos los ajustes de voz, la prueba de voz y la demo de Jax"],
+          pro: ["Tu ingeniero de carrera completo: coches que se acercan, tráfico, neumáticos, combustible, energía, ventanas de parada, daños, clima y ritmo"]
+        },
         related: ["dashboard", "pit-wall", "racing-tips"]
       },
 
       "free-and-pro": {
         title: "Qué es gratis y qué incluye Jax Pro",
-        summary: "Gratis te da lo esencial para conducir y la clasificación. Jax Pro añade inteligencia de carrera en vivo, análisis de telemetría, estado del coche y planificación detallada de sesiones.",
+        summary: "Gratis te permite correr, grabar y ver tu actividad. Jax Pro te ayuda a entender, revisar, gestionar y mejorar tu pilotaje.",
         sections: [
           {
-            h: "Siempre gratis",
+            h: "Gratis para siempre",
             list: [
               "Todo el panel, incluida su traza en vivo a pantalla completa",
-              "La guía de audio de Jax",
-              "Consejos de carrera, las demos integradas, soporte y legal",
-              "Preparar sesión → Acerca de: mapa, curvas, prioridades de reglaje, neumáticos, reglas 2026",
-              "Muro de boxes: toda la CLASIFICACIÓN de TIMING, ME y SETUP",
-              "Guardar cada sesión; nunca se bloquea",
-              "Historial de sesiones: tus tres sesiones más recientes completas, con repetición y trazas, y estadísticas de esas tres",
-              "Biblioteca de reglajes: tus tres primeros reglajes distintos",
-              "Copia de seguridad en iCloud"
+              "Muro de boxes: toda la CLASIFICACIÓN del TIMING para cada piloto, GAME, ME, y SETUP con tus reglajes por nombre",
+              "Preparar la sesión → Acerca de: la vista general del circuito — mapa con la línea de salida/meta, longitud, curvas, zonas DRS y reglas 2026",
+              "El guardado de cada sesión; nunca se bloquea",
+              "Historial de sesiones: todas tus sesiones en la lista, con estadísticas de todas ellas",
+              "Tu sesión más reciente completa: momentos clave, clasificación, historial de vueltas, trazas y repetición",
+              "Biblioteca de reglajes: todos los reglajes que has usado, en la lista",
+              "Jax: los avisos urgentes de seguridad — coche de seguridad, VSC, banderas roja, amarilla y azul, una penalización que te imponen, un coche parado delante, el tráfico al salir de boxes — y tu vuelta en la línea",
+              "El cronometraje en directo y el registro de vueltas en contrarreloj",
+              "Los consejos de pilotaje, las demos integradas, los ajustes, la privacidad, el soporte y la copia de seguridad en iCloud"
             ]
           },
           {
-            h: "Lo que añade Jax Pro",
+            h: "Añadido por Jax Pro",
             list: [
-              "Muro de boxes: TIMING EN VIVO, COCHE, MAP, TRACE (con comparación de dos vueltas) y GAME",
-              "Preparar sesión → Sesión: tu plan de preparación completo",
-              "Preparar sesión → Mis datos",
-              "Historial de sesiones: se abre cada sesión guardada, y las estadísticas las incluyen todas",
-              "Una biblioteca de reglajes ilimitada"
+              "Jax, tu ingeniero de carrera completo: coches que se acercan, tráfico, neumáticos, combustible, energía, ventanas de parada, daños, clima y ritmo",
+              "Muro de boxes: TIMING EN VIVO, COCHE, MAP y TRACE (con comparación de dos vueltas)",
+              "Todas tus sesiones anteriores completas: detalles, momentos clave, historial de vueltas, trazas y repetición",
+              "Los valores de tus reglajes, sus comparaciones, nombres y valoraciones, allí donde aparezcan",
+              "Preparar la sesión: curvas, prioridades de reglaje, neumáticos, pérdida en boxes y análisis del circuito, Mis datos, y tu plan de sesión"
             ]
           },
           {
             h: "Prueba y planes",
             p: [
-              "Jax Pro se ofrece como suscripción mensual o anual en el App Store. La app describe una prueba introductoria de 14 días en ambos planes. Durante la prueba, todo lo anterior está disponible. Cancela antes de que termine y no se te cobra.",
-              "La hoja de compra de Apple muestra la elegibilidad, los precios locales y la oferta exacta antes de que confirmes. Apple factura y renueva la suscripción hasta que la canceles en los ajustes de suscripciones de tu cuenta de Apple."
+              "Jax Pro se ofrece en suscripciones mensual y anual del App Store, ambas con una prueba gratuita de 14 días para las cuentas que cumplan los requisitos. Durante la prueba, todo lo anterior está disponible. Cancela antes de que termine y no se te cobra.",
+              "Los requisitos, el precio en tu país y la oferta exacta los muestra la hoja de compra de Apple antes de confirmar. Apple cobra y renueva la suscripción hasta que la canceles en los ajustes de suscripciones de tu cuenta de Apple."
             ],
             shot: "settingsSetup"
           },
           {
             h: "Suscribirse y restaurar",
-            p: ["Cada función bloqueada abre la misma pantalla de suscripción, con los planes y la restauración de compras (<strong>¿Ya suscrito? Restaurar</strong>). En cuanto te suscribes, las vistas bloqueadas se desbloquean, sin reiniciar. La tarjeta Jax Pro de los ajustes muestra tu estado."]
+            p: ["Cada función bloqueada abre la pantalla de suscripción con una frase sobre lo que desbloquea, los planes y la restauración de compras (<strong>¿Ya suscrito? Restaurar</strong>). En cuanto te suscribes, vas directamente a lo que tocaste, sin reiniciar. La tarjeta Jax Pro de los ajustes muestra tu estado."]
           },
           {
             h: "Tus datos nunca quedan secuestrados",
             p: [
-              "Los límites solo cambian lo que puedes abrir, nunca lo que se conserva. Una cuarta sesión en Gratis se guarda como cualquier otra; la más antigua de las cuatro queda bloqueada. Un cuarto reglaje se queda en su sesión y se une a tu biblioteca cuando Jax Pro está activo.",
+              "Gratis nunca limita lo que se guarda. Cada sesión y cada reglaje se conserva y aparece en la lista, sean cuantos sean. Una sesión nueva pasa a ser la que puedes abrir completa; la anterior conserva su lugar en la lista. Puedes borrar una sesión en cualquier momento.",
               "Si termina una suscripción, no se borra, recorta ni reordena nada. Vuelve a suscribirte y se abren los mismos registros."
             ]
           },
           {
             h: "Pruébalo todo en las demos",
-            p: ["Las demos integradas (Ajustes → SOPORTE → Explorar las demos de JMD) muestran cada vista de Jax Pro completa con datos de ejemplo, para que veas lo que obtendrías antes de decidir. Una demo nunca concede ni registra una suscripción."]
+            p: ["Las demos integradas (Ajustes → SOPORTE → Explorar las demos de JMD) muestran cada vista de Jax Pro y el ingeniero de carrera completo con datos de ejemplo, para que veas lo que obtendrías antes de decidir. Una demo nunca concede ni registra una suscripción."]
           }
         ],
         related: ["pit-wall", "session-history", "prepare-for-session"]
