@@ -91,7 +91,7 @@ const copy = {
       parent: "Jax Max Delta is a product of Camilore Inc.",
       copyright: "© 2026 Camilore Inc. All rights reserved.",
       app: "Jax Max Delta",
-      eyebrow: "Sim racing companion for iPhone & iPad",
+      eyebrow: "Sim racing companion for iPhone",
       skip: "Skip to content",
       menu: "Menu",
       language: "Language",
@@ -108,7 +108,7 @@ const copy = {
       videoPause: "Pause video",
       available: "Available now",
       disclaimer: "Jax Max Delta is an independent sim racing companion app and is not affiliated with or endorsed by EA, Codemasters, Formula 1, FIA, Microsoft, Sony, Fanatec, or any other referenced brand.",
-      footerLead: "Your race engineer, your pit wall and your race memory — for F1 sim racers on iPhone and iPad.",
+      footerLead: "Your race engineer, your pit wall and your race memory — for F1 sim racers on iPhone.",
       footerProduct: "Product",
       footerHelp: "Help & legal",
       readPost: "Read post"
@@ -147,13 +147,13 @@ const copy = {
       reelLabel: "Jax Max Delta in action",
       reelPause: "Pause the previews",
       reelPlay: "Play the previews",
-      proof: ["iPhone & iPad", "EA SPORTS F1 24 · F1 25 · F1 26", "Local UDP telemetry", "PlayStation · Xbox · PC", "No account required", "English · Français · Español"],
+      proof: ["iPhone", "EA SPORTS F1 24 · F1 25 · F1 26", "Local UDP telemetry", "PlayStation · Xbox · PC", "No account required", "English · Français · Español"],
       phasesKicker: "Before · During · After",
       phasesTitle: "One companion for the whole session.",
       phasesIntro: "Jax Max Delta follows the full arc of a session: what to know before you leave the garage, what matters while you drive, and what actually happened once it's over.",
       phases: [
         ["Before", "Prepare", "Choose the circuit and car, then study the layout, corners, tyres, setup notes and your own history there.", "#prepare"],
-        ["During", "Race", "A live dashboard, Jax on the radio and a full pit wall — readable at a glance on your phone or tablet.", "#race"],
+        ["During", "Race", "A live dashboard, Jax on the radio and a full pit wall — readable at a glance on your phone.", "#race"],
         ["After", "Review", "Every session saved on your device: results, setups, conditions, lap traces — and a replay of how the race unfolded.", "#review"]
       ],
       prepare: {
@@ -173,7 +173,7 @@ const copy = {
       race: {
         kicker: "During · Live Dashboard",
         title: "Everything the cockpit hides, at a glance.",
-        body: "Set your iPhone or iPad beside the wheel and keep the numbers that matter in view — without changing camera or cluttering the game HUD.",
+        body: "Set your iPhone beside the wheel and keep the numbers that matter in view — without changing camera or cluttering the game HUD.",
         items: [
           "Position, lap, speed, gear, throttle and brake",
           "Lap, sector and delta timing",
@@ -244,11 +244,11 @@ const copy = {
       platforms: {
         kicker: "Compatibility",
         title: "Built for console and PC F1 racers.",
-        body: "Jax Max Delta listens for the UDP telemetry your EA SPORTS F1 game sends over your local network. Your iPhone or iPad simply needs to be on the same network as your console or PC.",
+        body: "Jax Max Delta listens for the UDP telemetry your EA SPORTS F1 game sends over your local network. Your iPhone simply needs to be on the same network as your console or PC.",
         groups: [
           ["Games", ["EA SPORTS F1 24", "EA SPORTS F1 25", "EA SPORTS F1 26"]],
           ["Race on", ["PlayStation", "Xbox", "PC"]],
-          ["Run JMD on", ["iPhone", "iPad"]]
+          ["Run JMD on", ["iPhone"]]
         ],
         note: "Android is not available yet."
       },
@@ -256,7 +256,7 @@ const copy = {
         kicker: "Availability",
         soonTitle: "Coming soon to the App Store.",
         liveTitle: "Available on the App Store.",
-        body: "Jax Max Delta is getting ready for its public release on iPhone and iPad. Questions or feedback in the meantime? We'd love to hear from you."
+        body: "Jax Max Delta is getting ready for its public release on iPhone. Questions or feedback in the meantime? We'd love to hear from you."
       }
     },
     features: {
@@ -284,7 +284,7 @@ const copy = {
           id: "dashboard",
           phase: "During",
           title: "Live Dashboard",
-          body: "A landscape race display for your iPhone or iPad. Keep critical information visible without changing camera view or cluttering the in-game HUD.",
+          body: "A landscape race display for your iPhone. Keep critical information visible without changing camera view or cluttering the in-game HUD.",
           items: [
             "Position, lap, speed, gear, throttle and brake",
             "Current, last and best laps, sector splits and delta",
@@ -419,20 +419,20 @@ const copy = {
     },
     how: {
       title: "How Jax Max Delta works",
-      intro: "Set up telemetry once. Then prepare, race and review — with your iPhone or iPad on the same network as your console or PC.",
+      intro: "Set up telemetry once. Then prepare, race and review — with your iPhone on the same network as your console or PC.",
       phaseLabels: { before: "Before", during: "During", after: "After", setup: "Set up" },
       steps: [
         {
           phase: "setup",
           title: "Install and open Jax Max Delta",
-          body: "Install JMD on your iPhone or iPad. A short first-run tour covers the essentials — you can replay it later from Settings. No account is needed."
+          body: "Install JMD on your iPhone. A short first-run tour covers the essentials — you can replay it later from Settings. No account is needed."
         },
         {
           phase: "setup",
           title: "Configure UDP telemetry",
           body: "JMD receives your game's telemetry over your local network. It's a one-time setup in the game.",
           list: [
-            "Connect your console or PC and your iPhone or iPad to the same local network.",
+            "Connect your console or PC and your iPhone to the same local network.",
             "In JMD, open Settings → SETUP to see this device's IP address and the UDP port JMD listens on (20777 by default).",
             "In your EA SPORTS F1 game, open the telemetry settings, turn UDP telemetry on, and enter that IP address and port.",
             "JMD detects the game's telemetry format automatically once packets arrive."
@@ -504,9 +504,9 @@ const copy = {
       intro: "Setup help, answers to common questions, and a direct way to reach us.",
       faqTitle: "FAQ",
       faq: [
-        ["Does Jax Max Delta work on console?", "Yes. JMD is designed with console racers in mind. Your game needs to send UDP telemetry, and your iPhone or iPad needs to be on the same local network as your PlayStation, Xbox or PC."],
+        ["Does Jax Max Delta work on console?", "Yes. JMD is designed with console racers in mind. Your game needs to send UDP telemetry, and your iPhone needs to be on the same local network as your PlayStation, Xbox or PC."],
         ["Which games are supported?", "EA SPORTS F1 24, F1 25 and F1 26, using the game's UDP telemetry output."],
-        ["Is it available on Android?", "Not yet. Jax Max Delta currently runs on iPhone and iPad."],
+        ["Is it available on Android?", "Not yet. Jax Max Delta currently runs on iPhone."],
         ["Is Jax officially affiliated with EA, F1, Codemasters, Fanatec, PlayStation, or Xbox?", "No. Jax Max Delta is independent and uses telemetry data from supported games where available."],
         ["Is this only a telemetry dashboard?", "No. The live dashboard is one part. JMD also helps you prepare for a session, gives you Jax's voice calls and a full pit wall while you drive, and keeps your session history, setups, lap traces and Race Replay afterwards."],
         ["Why is there no Race Replay for some sessions?", "Race Replay is for races and sprint races that were captured in enough detail. Practice, qualifying and Time Trial sessions have their own review, focused on pace."],
@@ -520,7 +520,7 @@ const copy = {
       knownTitle: "Common issues",
       known: [
         "No UDP data received because telemetry output is disabled in the game.",
-        "Phone or tablet is not on the same network as the console or PC.",
+        "Your phone is not on the same network as the console or PC.",
         "Wrong game UDP destination IP, port, or telemetry format.",
         "Voice alerts not playing because device volume, silent mode, or alert categories need adjustment."
       ],
@@ -621,7 +621,7 @@ const copy = {
           summary: "Cockpit views and wheels can hide the information you need most. A virtual pit wall puts race data, voice alerts, and session memory back where you can use it.",
           body: [
             ["The blocked-dashboard problem", "Many console racers run cockpit view, a wheel rim, or a screen position that hides fuel, tyre, delta, or warning information. The result is simple: you are making race decisions with missing context."],
-            ["Why a phone or tablet helps", "A second-screen dashboard keeps the critical data visible without forcing you to change camera view or look through clutter. Jax adds the pit wall layer: readable data, useful voice alerts, and support from the side of the track."],
+            ["Why a phone helps", "A second-screen dashboard keeps the critical data visible without forcing you to change camera view or look through clutter. Jax adds the pit wall layer: readable data, useful voice alerts, and support from the side of the track."],
             ["Beyond live data", "The bigger win is that the session becomes part of your racing history. Once you know what happened, what tyres worked, and what setup felt right, your next session starts with better team memory."]
           ]
         },
@@ -673,7 +673,7 @@ const copy = {
       parent: "Jax Max Delta est un produit de Camilore Inc.",
       copyright: "© 2026 Camilore Inc. Tous droits réservés.",
       app: "Jax Max Delta",
-      eyebrow: "Compagnon de sim racing pour iPhone et iPad",
+      eyebrow: "Compagnon de sim racing pour iPhone",
       skip: "Aller au contenu",
       menu: "Menu",
       language: "Langue",
@@ -690,7 +690,7 @@ const copy = {
       videoPause: "Mettre la vidéo en pause",
       available: "Disponible maintenant",
       disclaimer: "Jax Max Delta est une application compagnon de sim racing indépendante. Elle n'est pas affiliée à EA, Codemasters, Formula 1, la FIA, Microsoft, Sony, Fanatec ni à toute autre marque mentionnée, et n'est pas approuvée par celles-ci.",
-      footerLead: "Votre ingénieur de course, votre mur des stands et votre mémoire de course — pour les pilotes F1 virtuels sur iPhone et iPad.",
+      footerLead: "Votre ingénieur de course, votre mur des stands et votre mémoire de course — pour les pilotes F1 virtuels sur iPhone.",
       footerProduct: "Produit",
       footerHelp: "Aide et mentions légales",
       readPost: "Lire l'article"
@@ -729,13 +729,13 @@ const copy = {
       reelLabel: "Jax Max Delta en action",
       reelPause: "Mettre les aperçus en pause",
       reelPlay: "Lire les aperçus",
-      proof: ["iPhone et iPad", "EA SPORTS F1 24 · F1 25 · F1 26", "Télémétrie UDP locale", "PlayStation · Xbox · PC", "Aucun compte requis", "English · Français · Español"],
+      proof: ["iPhone", "EA SPORTS F1 24 · F1 25 · F1 26", "Télémétrie UDP locale", "PlayStation · Xbox · PC", "Aucun compte requis", "English · Français · Español"],
       phasesKicker: "Avant · Pendant · Après",
       phasesTitle: "Un seul compagnon, du début à la fin.",
       phasesIntro: "Jax Max Delta vous suit tout au long de la session : ce qu'il faut savoir avant de quitter le garage, ce qui compte pendant que vous pilotez, et ce qui s'est vraiment passé une fois la course terminée.",
       phases: [
         ["Avant", "Préparer", "Choisissez le circuit et la voiture, puis étudiez le tracé, les virages, les pneus, les notes de réglages et votre propre historique.", "#prepare"],
-        ["Pendant", "Piloter", "Un tableau de bord en direct, Jax à la radio et un mur des stands complet — lisibles d'un coup d'œil sur votre téléphone ou votre tablette.", "#race"],
+        ["Pendant", "Piloter", "Un tableau de bord en direct, Jax à la radio et un mur des stands complet — lisibles d'un coup d'œil sur votre téléphone.", "#race"],
         ["Après", "Analyser", "Chaque session enregistrée sur votre appareil : résultats, réglages, conditions, traces de tour — et la reprise de votre course.", "#review"]
       ],
       prepare: {
@@ -755,7 +755,7 @@ const copy = {
       race: {
         kicker: "Pendant · Tableau de bord en direct",
         title: "Tout ce que le cockpit vous cache, d'un coup d'œil.",
-        body: "Placez votre iPhone ou votre iPad près du volant et gardez les chiffres importants sous les yeux — sans changer de caméra ni encombrer l'affichage du jeu.",
+        body: "Placez votre iPhone près du volant et gardez les chiffres importants sous les yeux — sans changer de caméra ni encombrer l'affichage du jeu.",
         items: [
           "Position, tour, vitesse, rapport, accélérateur et frein",
           "Chronos au tour, par secteur et delta",
@@ -826,11 +826,11 @@ const copy = {
       platforms: {
         kicker: "Compatibilité",
         title: "Conçu pour les pilotes F1 sur console et PC.",
-        body: "Jax Max Delta écoute la télémétrie UDP que votre jeu EA SPORTS F1 envoie sur votre réseau local. Votre iPhone ou iPad doit simplement être sur le même réseau que votre console ou votre PC.",
+        body: "Jax Max Delta écoute la télémétrie UDP que votre jeu EA SPORTS F1 envoie sur votre réseau local. Votre iPhone doit simplement être sur le même réseau que votre console ou votre PC.",
         groups: [
           ["Jeux", ["EA SPORTS F1 24", "EA SPORTS F1 25", "EA SPORTS F1 26"]],
           ["Pilotez sur", ["PlayStation", "Xbox", "PC"]],
-          ["JMD sur", ["iPhone", "iPad"]]
+          ["JMD sur", ["iPhone"]]
         ],
         note: "Android n'est pas encore disponible."
       },
@@ -838,7 +838,7 @@ const copy = {
         kicker: "Disponibilité",
         soonTitle: "Bientôt sur l'App Store.",
         liveTitle: "Disponible sur l'App Store.",
-        body: "Jax Max Delta se prépare à sa sortie publique sur iPhone et iPad. Des questions ou des commentaires d'ici là? Écrivez-nous, ça nous fera plaisir."
+        body: "Jax Max Delta se prépare à sa sortie publique sur iPhone. Des questions ou des commentaires d'ici là? Écrivez-nous, ça nous fera plaisir."
       }
     },
     features: {
@@ -866,7 +866,7 @@ const copy = {
           id: "dashboard",
           phase: "Pendant",
           title: "Tableau de bord en direct",
-          body: "Un affichage de course en mode paysage pour votre iPhone ou votre iPad. Gardez l'information critique visible sans changer de caméra ni encombrer l'affichage du jeu.",
+          body: "Un affichage de course en mode paysage pour votre iPhone. Gardez l'information critique visible sans changer de caméra ni encombrer l'affichage du jeu.",
           items: [
             "Position, tour, vitesse, rapport, accélérateur et frein",
             "Tour en cours, dernier et meilleur tour, temps par secteur et delta",
@@ -1001,20 +1001,20 @@ const copy = {
     },
     how: {
       title: "Comment fonctionne Jax Max Delta",
-      intro: "Configurez la télémétrie une seule fois. Ensuite, préparez, pilotez et analysez — avec votre iPhone ou iPad sur le même réseau que votre console ou votre PC.",
+      intro: "Configurez la télémétrie une seule fois. Ensuite, préparez, pilotez et analysez — avec votre iPhone sur le même réseau que votre console ou votre PC.",
       phaseLabels: { before: "Avant", during: "Pendant", after: "Après", setup: "Configuration" },
       steps: [
         {
           phase: "setup",
           title: "Installer et ouvrir Jax Max Delta",
-          body: "Installez JMD sur votre iPhone ou votre iPad. Une courte visite guidée présente l'essentiel au premier lancement — vous pourrez la revoir plus tard depuis les Réglages. Aucun compte requis."
+          body: "Installez JMD sur votre iPhone. Une courte visite guidée présente l'essentiel au premier lancement — vous pourrez la revoir plus tard depuis les Réglages. Aucun compte requis."
         },
         {
           phase: "setup",
           title: "Configurer la télémétrie UDP",
           body: "JMD reçoit la télémétrie de votre jeu sur votre réseau local. La configuration se fait une seule fois dans le jeu.",
           list: [
-            "Connectez votre console ou votre PC et votre iPhone ou iPad au même réseau local.",
+            "Connectez votre console ou votre PC et votre iPhone au même réseau local.",
             "Dans JMD, ouvrez Réglages, onglet RÉGLAGES, pour voir l'adresse IP de cet appareil et le port UDP écouté par JMD (20777 par défaut).",
             "Dans votre jeu EA SPORTS F1, ouvrez les paramètres de télémétrie, activez la télémétrie UDP et entrez cette adresse IP et ce port.",
             "JMD détecte automatiquement le format de télémétrie du jeu dès la réception des premiers paquets."
@@ -1086,9 +1086,9 @@ const copy = {
       intro: "De l'aide pour la configuration, des réponses aux questions fréquentes et un moyen direct de nous joindre.",
       faqTitle: "FAQ",
       faq: [
-        ["Jax Max Delta fonctionne-t-il sur console?", "Oui. JMD est conçu en pensant aux pilotes sur console. Votre jeu doit envoyer la télémétrie UDP, et votre iPhone ou iPad doit être sur le même réseau local que votre PlayStation, votre Xbox ou votre PC."],
+        ["Jax Max Delta fonctionne-t-il sur console?", "Oui. JMD est conçu en pensant aux pilotes sur console. Votre jeu doit envoyer la télémétrie UDP, et votre iPhone doit être sur le même réseau local que votre PlayStation, votre Xbox ou votre PC."],
         ["Quels jeux sont pris en charge?", "EA SPORTS F1 24, F1 25 et F1 26, par la sortie de télémétrie UDP du jeu."],
-        ["Est-ce offert sur Android?", "Pas encore. Jax Max Delta fonctionne actuellement sur iPhone et iPad."],
+        ["Est-ce offert sur Android?", "Pas encore. Jax Max Delta fonctionne actuellement sur iPhone."],
         ["Jax est-il officiellement affilié à EA, F1, Codemasters, Fanatec, PlayStation ou Xbox?", "Non. Jax Max Delta est indépendant et utilise les données de télémétrie des jeux compatibles lorsqu'elles sont disponibles."],
         ["Est-ce seulement un tableau de bord de télémétrie?", "Non. Le tableau de bord en direct n'en est qu'une partie. JMD vous aide aussi à préparer une session, vous offre les annonces vocales de Jax et un mur des stands complet pendant que vous pilotez, puis conserve votre historique, vos réglages, vos traces de tour et Race Replay après la session."],
         ["Pourquoi n'y a-t-il pas de Race Replay pour certaines sessions?", "Race Replay est offert pour les courses et les courses sprint captées avec assez de détails. Les essais, les qualifications et le contre-la-montre ont leur propre analyse, axée sur le rythme."],
@@ -1102,7 +1102,7 @@ const copy = {
       knownTitle: "Problèmes courants",
       known: [
         "Aucune donnée UDP reçue parce que la sortie de télémétrie est désactivée dans le jeu.",
-        "Le téléphone ou la tablette n'est pas sur le même réseau que la console ou le PC.",
+        "Le téléphone n'est pas sur le même réseau que la console ou le PC.",
         "Mauvaise adresse IP, mauvais port ou mauvais format de télémétrie UDP dans le jeu.",
         "Les alertes vocales ne jouent pas à cause du volume, du mode silencieux ou des catégories d'alertes."
       ],
@@ -1161,7 +1161,7 @@ const copy = {
       parent: "Jax Max Delta es un producto de Camilore Inc.",
       copyright: "© 2026 Camilore Inc. Todos los derechos reservados.",
       app: "Jax Max Delta",
-      eyebrow: "Compañero de sim racing para iPhone y iPad",
+      eyebrow: "Compañero de sim racing para iPhone",
       skip: "Ir al contenido",
       menu: "Menú",
       language: "Idioma",
@@ -1178,7 +1178,7 @@ const copy = {
       videoPause: "Pausar vídeo",
       available: "Disponible ahora",
       disclaimer: "Jax Max Delta es una app independiente de sim racing y no está afiliada ni respaldada por EA, Codemasters, Formula 1, FIA, Microsoft, Sony, Fanatec ni ninguna otra marca mencionada.",
-      footerLead: "Tu ingeniero de carrera, tu muro de boxes y tu memoria de carrera — para pilotos de F1 virtual en iPhone y iPad.",
+      footerLead: "Tu ingeniero de carrera, tu muro de boxes y tu memoria de carrera — para pilotos de F1 virtual en iPhone.",
       footerProduct: "Producto",
       footerHelp: "Ayuda y legal",
       readPost: "Leer artículo"
@@ -1217,13 +1217,13 @@ const copy = {
       reelLabel: "Jax Max Delta en acción",
       reelPause: "Pausar las vistas previas",
       reelPlay: "Reproducir las vistas previas",
-      proof: ["iPhone y iPad", "EA SPORTS F1 24 · F1 25 · F1 26", "Telemetría UDP local", "PlayStation · Xbox · PC", "Sin cuenta", "English · Français · Español"],
+      proof: ["iPhone", "EA SPORTS F1 24 · F1 25 · F1 26", "Telemetría UDP local", "PlayStation · Xbox · PC", "Sin cuenta", "English · Français · Español"],
       phasesKicker: "Antes · Durante · Después",
       phasesTitle: "Un solo compañero para toda la sesión.",
       phasesIntro: "Jax Max Delta te acompaña de principio a fin: lo que debes saber antes de salir del garaje, lo que importa mientras conduces y lo que realmente pasó cuando todo termina.",
       phases: [
         ["Antes", "Preparar", "Elige el circuito y el coche, y estudia el trazado, las curvas, los neumáticos, las notas de reglaje y tu propio historial allí.", "#prepare"],
-        ["Durante", "Competir", "Un panel en vivo, Jax por radio y un muro de boxes completo — legibles de un vistazo en tu teléfono o tablet.", "#race"],
+        ["Durante", "Competir", "Un panel en vivo, Jax por radio y un muro de boxes completo — legibles de un vistazo en tu teléfono.", "#race"],
         ["Después", "Analizar", "Cada sesión guardada en tu dispositivo: resultados, reglajes, condiciones, trazas de vuelta — y la repetición de cómo se desarrolló la carrera.", "#review"]
       ],
       prepare: {
@@ -1243,7 +1243,7 @@ const copy = {
       race: {
         kicker: "Durante · Panel en vivo",
         title: "Todo lo que el cockpit oculta, de un vistazo.",
-        body: "Coloca tu iPhone o iPad junto al volante y mantén a la vista los datos que importan — sin cambiar de cámara ni saturar el HUD del juego.",
+        body: "Coloca tu iPhone junto al volante y mantén a la vista los datos que importan — sin cambiar de cámara ni saturar el HUD del juego.",
         items: [
           "Posición, vuelta, velocidad, marcha, acelerador y freno",
           "Tiempos por vuelta, por sector y delta",
@@ -1314,11 +1314,11 @@ const copy = {
       platforms: {
         kicker: "Compatibilidad",
         title: "Hecho para pilotos de F1 en consola y PC.",
-        body: "Jax Max Delta escucha la telemetría UDP que tu juego EA SPORTS F1 envía por tu red local. Tu iPhone o iPad solo necesita estar en la misma red que tu consola o PC.",
+        body: "Jax Max Delta escucha la telemetría UDP que tu juego EA SPORTS F1 envía por tu red local. Tu iPhone solo necesita estar en la misma red que tu consola o PC.",
         groups: [
           ["Juegos", ["EA SPORTS F1 24", "EA SPORTS F1 25", "EA SPORTS F1 26"]],
           ["Compite en", ["PlayStation", "Xbox", "PC"]],
-          ["JMD en", ["iPhone", "iPad"]]
+          ["JMD en", ["iPhone"]]
         ],
         note: "Android aún no está disponible."
       },
@@ -1326,7 +1326,7 @@ const copy = {
         kicker: "Disponibilidad",
         soonTitle: "Próximamente en el App Store.",
         liveTitle: "Disponible en el App Store.",
-        body: "Jax Max Delta se prepara para su lanzamiento público en iPhone y iPad. ¿Tienes preguntas o comentarios mientras tanto? Nos encantará leerte."
+        body: "Jax Max Delta se prepara para su lanzamiento público en iPhone. ¿Tienes preguntas o comentarios mientras tanto? Nos encantará leerte."
       }
     },
     features: {
@@ -1354,7 +1354,7 @@ const copy = {
           id: "dashboard",
           phase: "Durante",
           title: "Panel en vivo",
-          body: "Una pantalla de carrera en horizontal para tu iPhone o iPad. Mantén visible la información crítica sin cambiar de cámara ni saturar el HUD del juego.",
+          body: "Una pantalla de carrera en horizontal para tu iPhone. Mantén visible la información crítica sin cambiar de cámara ni saturar el HUD del juego.",
           items: [
             "Posición, vuelta, velocidad, marcha, acelerador y freno",
             "Vuelta actual, última y mejor, parciales por sector y delta",
@@ -1489,20 +1489,20 @@ const copy = {
     },
     how: {
       title: "Cómo funciona Jax Max Delta",
-      intro: "Configura la telemetría una vez. Después prepara, compite y analiza — con tu iPhone o iPad en la misma red que tu consola o PC.",
+      intro: "Configura la telemetría una vez. Después prepara, compite y analiza — con tu iPhone en la misma red que tu consola o PC.",
       phaseLabels: { before: "Antes", during: "Durante", after: "Después", setup: "Configuración" },
       steps: [
         {
           phase: "setup",
           title: "Instala y abre Jax Max Delta",
-          body: "Instala JMD en tu iPhone o iPad. Un breve recorrido inicial explica lo esencial — puedes volver a verlo desde Ajustes. No necesitas cuenta."
+          body: "Instala JMD en tu iPhone. Un breve recorrido inicial explica lo esencial — puedes volver a verlo desde Ajustes. No necesitas cuenta."
         },
         {
           phase: "setup",
           title: "Configura la telemetría UDP",
           body: "JMD recibe la telemetría de tu juego por tu red local. Se configura una sola vez en el juego.",
           list: [
-            "Conecta tu consola o PC y tu iPhone o iPad a la misma red local.",
+            "Conecta tu consola o PC y tu iPhone a la misma red local.",
             "En JMD, abre Ajustes, pestaña AJUSTES, para ver la dirección IP de este dispositivo y el puerto UDP en el que escucha JMD (20777 por defecto).",
             "En tu juego EA SPORTS F1, abre los ajustes de telemetría, activa la telemetría UDP e introduce esa dirección IP y ese puerto.",
             "JMD detecta automáticamente el formato de telemetría del juego en cuanto llegan los paquetes."
@@ -1574,9 +1574,9 @@ const copy = {
       intro: "Ayuda de configuración, respuestas a preguntas frecuentes y una forma directa de contactarnos.",
       faqTitle: "Preguntas frecuentes",
       faq: [
-        ["¿Jax Max Delta funciona en consola?", "Sí. JMD está pensado para pilotos de consola. Tu juego debe enviar telemetría UDP y tu iPhone o iPad debe estar en la misma red local que tu PlayStation, Xbox o PC."],
+        ["¿Jax Max Delta funciona en consola?", "Sí. JMD está pensado para pilotos de consola. Tu juego debe enviar telemetría UDP y tu iPhone debe estar en la misma red local que tu PlayStation, Xbox o PC."],
         ["¿Qué juegos son compatibles?", "EA SPORTS F1 24, F1 25 y F1 26, mediante la salida de telemetría UDP del juego."],
-        ["¿Está disponible en Android?", "Todavía no. Jax Max Delta funciona actualmente en iPhone y iPad."],
+        ["¿Está disponible en Android?", "Todavía no. Jax Max Delta funciona actualmente en iPhone."],
         ["¿Jax está afiliado oficialmente con EA, F1, Codemasters, Fanatec, PlayStation o Xbox?", "No. Jax Max Delta es independiente y usa datos de telemetría de juegos compatibles cuando están disponibles."],
         ["¿Es solo un panel de telemetría?", "No. El panel en vivo es una parte. JMD también te ayuda a preparar la sesión, te da los mensajes de voz de Jax y un muro de boxes completo mientras conduces, y guarda tu historial, reglajes, trazas de vuelta y Race Replay después."],
         ["¿Por qué algunas sesiones no tienen Race Replay?", "Race Replay es para carreras y sprints captados con suficiente detalle. Libres, clasificación y contrarreloj tienen su propio análisis centrado en el ritmo."],
@@ -1590,7 +1590,7 @@ const copy = {
       knownTitle: "Problemas comunes",
       known: [
         "No se reciben datos UDP porque la telemetría está desactivada en el juego.",
-        "El teléfono o la tablet no está en la misma red que la consola o el PC.",
+        "El teléfono no está en la misma red que la consola o el PC.",
         "IP, puerto o formato de telemetría UDP incorrectos en el juego.",
         "Las alertas de voz no suenan por el volumen, el modo silencio o las categorías de alertas."
       ],
@@ -1691,7 +1691,7 @@ function cloneLocalizedBlog(lang, source) {
         summary: "La vue cockpit et le volant peuvent cacher les informations les plus utiles. Un muret des puits virtuel remet donnees, alertes vocales et memoire de session au bon endroit.",
         body: [
           ["Le probleme du tableau de bord cache", "Beaucoup de pilotes console utilisent une vue cockpit, un volant ou une position d'ecran qui cache l'essence, les pneus, le delta ou les avertissements. Le resultat est simple : vous prenez des decisions avec trop peu de contexte."],
-          ["Pourquoi un telephone ou une tablette aide", "Un tableau de bord second ecran garde les donnees critiques visibles sans changer de camera ni ajouter du bruit visuel. Jax ajoute la couche muret des puits : donnees lisibles, alertes utiles et soutien pendant la course."],
+          ["Pourquoi un téléphone aide", "Un tableau de bord second ecran garde les donnees critiques visibles sans changer de camera ni ajouter du bruit visuel. Jax ajoute la couche muret des puits : donnees lisibles, alertes utiles et soutien pendant la course."],
           ["Au-dela des donnees en direct", "Le vrai gain arrive quand la session devient une partie de votre historique. Savoir ce qui s'est passe, quels pneus ont fonctionne et quel reglage etait bon donne une meilleure memoire d'equipe pour la prochaine session."]
         ]
       },
@@ -1737,7 +1737,7 @@ function cloneLocalizedBlog(lang, source) {
         summary: "La vista cockpit y el volante pueden ocultar la informacion mas importante. Un muro de pits virtual pone datos, alertas de voz y memoria de sesiones donde sirven.",
         body: [
           ["El problema del dashboard oculto", "Muchos pilotos de consola usan vista cockpit, aro de volante o una posicion de pantalla que oculta combustible, neumaticos, delta o avisos. El resultado es simple: tomas decisiones con contexto incompleto."],
-          ["Por que ayuda un telefono o tablet", "Un dashboard de segunda pantalla mantiene visibles los datos criticos sin cambiar camara ni llenar la vista de ruido. Jax suma la capa de muro de pits: datos legibles, alertas utiles y apoyo durante la carrera."],
+          ["Por qué ayuda un teléfono", "Un dashboard de segunda pantalla mantiene visibles los datos criticos sin cambiar camara ni llenar la vista de ruido. Jax suma la capa de muro de pits: datos legibles, alertas utiles y apoyo durante la carrera."],
           ["Mas alla de los datos en vivo", "La mayor mejora llega cuando la sesion pasa a ser parte de tu historial. Saber que paso, que neumaticos funcionaron y que setup se sintio bien crea una mejor memoria de equipo para la siguiente sesion."]
         ]
       },

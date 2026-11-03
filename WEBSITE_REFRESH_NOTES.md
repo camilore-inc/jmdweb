@@ -223,5 +223,4 @@ See `docs/CAMILORE_OWNERSHIP_MIGRATION.md` for the current audit and approvals.
    accents.
 5. Once the App Store listing exists, consider `SoftwareApplication` JSON-LD
    using the real store data. Nothing was added now, to avoid guessing.
-6. Consider iPad-specific screenshots. The slot system supports custom
-   `w`/`h`.
+6. iPad support is untested, so all iPad references were removed (2026-11-03).
