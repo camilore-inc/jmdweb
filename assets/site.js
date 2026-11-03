@@ -2066,16 +2066,24 @@ function sectionHead(k, title, intro) {
   return `<div class="section-heading"><div>${kicker(k)}<h2>${title}</h2></div>${intro ? `<p>${intro}</p>` : ""}</div>`;
 }
 
-// The home hero: the app's main screen, then each preview clip for a few
-// seconds, crossfading and cycling back to the start. A clip resumes where it
-// left off on the next lap, so each cycle shows a different moment. Visitors
-// who prefer reduced motion see the main screen until they press play.
-const HERO_REEL = ["home", "dashboardVideo", "pitWallVideo", "vscDelta", "raceReplayLandscape"];
+// The home hero: an iPhone playing one screen per phase of a session —
+// prepare, then the live clips, then Race Replay — crossfading in a loop.
+// Below it, Before · During · After is the reel's progress bar: the active
+// phase fills over its slides and each phase can be clicked. A clip resumes
+// where it left off on the next lap. Reduced-motion visitors see the first
+// screen until they press play.
+const HERO_REEL = [
+  ["prepare", 0],
+  ["dashboardVideo", 1],
+  ["pitWallVideo", 1],
+  ["vscDelta", 1],
+  ["raceReplayLandscape", 2]
+];
 const HERO_REEL_SECONDS = 5;
 
 function heroReel(t, lang) {
   const h = t.home;
-  const slides = HERO_REEL.map((key, i) => {
+  const slides = HERO_REEL.map(([key, phase], i) => {
     const slot = SHOTS[key];
     const label = t.shots[key];
     const file = shotFile(slot, lang);
@@ -2085,33 +2093,44 @@ function heroReel(t, lang) {
     const media = video
       ? `<video muted loop playsinline preload="none" poster="${poster}" width="${slot.videoW}" height="${slot.videoH}" aria-label="${label}"><source src="${asset(`video/${video}`)}" type="video/mp4"></video>`
       : `<img src="${asset(`screenshots/web/${file}`)}" width="1600" height="736" alt="${label}" decoding="async" fetchpriority="high">`;
-    return `<li class="reel-slide${i === 0 ? " is-active" : ""}" data-label="${label}"${i ? ' aria-hidden="true"' : ""}>${media}</li>`;
+    return `<li class="reel-slide${i === 0 ? " is-active" : ""}" data-label="${label}" data-phase="${phase}"${i ? ' aria-hidden="true"' : ""}>${media}</li>`;
   }).join("");
-  const dots = HERO_REEL.map((key, i) =>
-    `<button class="reel-dot" type="button" aria-label="${t.shots[key]}"${i === 0 ? ' aria-current="true"' : ""}><span aria-hidden="true"></span></button>`).join("");
+  const phases = h.phases.map(([tag], p) =>
+    `<li><button class="reel-phase${p === 0 ? " is-active" : ""}" type="button"${p === 0 ? ' aria-current="true"' : ""}><span class="reel-phase-name">${tag}</span><span class="reel-phase-track" aria-hidden="true"><span class="reel-phase-fill"></span></span></button></li>`).join("");
   return `
     <div class="hero-reel" role="region" aria-roledescription="carousel" aria-label="${h.reelLabel}">
-      <div class="reel-stage">
-        <ul class="reel-frame">${slides}</ul>
-        <button class="video-toggle" type="button" aria-label="${h.reelPlay}"><span class="video-icon" aria-hidden="true"></span></button>
+      <div class="device">
+        <div class="device-screen">
+          <ul class="reel-frame">${slides}</ul>
+          <span class="device-island" aria-hidden="true"></span>
+        </div>
       </div>
-      <div class="reel-bar">
-        <p class="reel-caption">${t.shots[HERO_REEL[0]]}</p>
-        <div class="reel-dots">${dots}</div>
+      <div class="reel-timeline">
+        <ol class="reel-phases">${phases}</ol>
+        <button class="video-toggle reel-toggle" type="button" aria-label="${h.reelPlay}"><span class="video-icon" aria-hidden="true"></span></button>
+        <p class="reel-caption" aria-live="polite">${t.shots[HERO_REEL[0][0]]}</p>
       </div>
     </div>`;
 }
 
-// Cycles the home hero reel; pauses off-screen, in a hidden tab, and on request.
+// Runs the home hero reel and its phase progress bar; pauses off-screen, in a
+// hidden tab, and on request, and resumes the bar exactly where it stopped.
 function setupHeroReel(t) {
   const reel = document.querySelector(".hero-reel");
   if (!reel) return;
+  const duration = HERO_REEL_SECONDS * 1000;
   const slides = [...reel.querySelectorAll(".reel-slide")];
-  const dots = [...reel.querySelectorAll(".reel-dot")];
+  const phaseButtons = [...reel.querySelectorAll(".reel-phase")];
+  const fills = phaseButtons.map((b) => b.querySelector(".reel-phase-fill"));
   const caption = reel.querySelector(".reel-caption");
-  const toggle = reel.querySelector(".video-toggle");
+  const toggle = reel.querySelector(".reel-toggle");
+  const phaseOf = (i) => Number(slides[i].dataset.phase);
+  const slidesIn = (p) => slides.filter((s) => Number(s.dataset.phase) === p);
   let index = 0;
   let timer = null;
+  let elapsed = 0;      // ms already shown of the current slide
+  let startedAt = 0;    // when the current run of the slide began
+  let ticking = false;
   let paused = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let onScreen = true;
   const running = () => !paused && onScreen && !document.hidden;
@@ -2120,14 +2139,42 @@ function setupHeroReel(t) {
     const result = video.play();
     if (result && result.catch) result.catch(() => {});
   };
-  // Warm up the next clip while the current slide is showing.
   const prepare = (i) => {
     const video = videoAt(i);
     if (video && video.preload === "none") { video.preload = "auto"; video.load(); }
   };
-  const schedule = () => {
+  // Share of the active phase's bar covered after `ms` of the current slide.
+  const progressAt = (ms) => {
+    const own = slidesIn(phaseOf(index));
+    const k = own.indexOf(slides[index]);
+    return (k + Math.min(ms / duration, 1)) / own.length;
+  };
+  const setFill = (fill, value, ms = 0) => {
+    fill.style.transition = ms ? `transform ${ms}ms linear` : "none";
+    fill.style.transform = `scaleX(${value})`;
+  };
+  const drawBar = () => {
+    const active = phaseOf(index);
+    fills.forEach((fill, p) => setFill(fill, p < active ? 1 : p > active ? 0 : progressAt(elapsed)));
+    if (ticking) {
+      const fill = fills[active];
+      void fill.offsetWidth;
+      setFill(fill, progressAt(duration), duration - elapsed);
+    }
+  };
+  const stop = () => {
+    if (ticking) elapsed = Math.min(duration, elapsed + performance.now() - startedAt);
+    ticking = false;
     clearTimeout(timer);
-    if (running()) timer = setTimeout(() => show(index + 1), HERO_REEL_SECONDS * 1000);
+  };
+  const start = () => {
+    stop();
+    if (running()) {
+      ticking = true;
+      startedAt = performance.now();
+      timer = setTimeout(() => show(index + 1), duration - elapsed);
+    }
+    drawBar();
   };
   const syncMedia = () => {
     slides.forEach((slide, i) => {
@@ -2142,26 +2189,32 @@ function setupHeroReel(t) {
     toggle.setAttribute("aria-label", paused ? t.home.reelPlay : t.home.reelPause);
   };
   function show(i) {
+    stop();
     slides[index].classList.remove("is-active");
     slides[index].setAttribute("aria-hidden", "true");
-    dots[index].removeAttribute("aria-current");
     index = (i + slides.length) % slides.length;
     slides[index].classList.add("is-active");
     slides[index].removeAttribute("aria-hidden");
-    dots[index].setAttribute("aria-current", "true");
+    const active = phaseOf(index);
+    phaseButtons.forEach((b, p) => {
+      b.classList.toggle("is-active", p === active);
+      if (p === active) b.setAttribute("aria-current", "true");
+      else b.removeAttribute("aria-current");
+    });
     caption.textContent = slides[index].dataset.label;
     prepare(index);
     prepare((index + 1) % slides.length);
+    elapsed = 0;
     syncMedia();
-    schedule();
+    start();
   }
-  const resume = () => { syncMedia(); schedule(); };
+  const resume = () => { syncMedia(); start(); };
   toggle.addEventListener("click", () => {
     paused = !paused;
     syncToggle();
     resume();
   });
-  dots.forEach((dot, i) => dot.addEventListener("click", () => show(i)));
+  phaseButtons.forEach((b, p) => b.addEventListener("click", () => show(slides.indexOf(slidesIn(p)[0]))));
   document.addEventListener("visibilitychange", resume);
   if ("IntersectionObserver" in window) {
     new IntersectionObserver(([entry]) => {
@@ -2171,7 +2224,7 @@ function setupHeroReel(t) {
   }
   syncToggle();
   if (!paused) prepare(1);
-  schedule();
+  start();
 }
 
 /* ── Home ──────────────────────────────────────────────────────────────── */
@@ -2193,7 +2246,6 @@ function home(t, lang) {
         </div>
         <div class="hero-visual">
           ${heroReel(t, lang)}
-          <ol class="phase-rail" aria-hidden="true">${h.phases.map(([tag]) => `<li>${tag}</li>`).join("")}</ol>
         </div>
       </div>
       <div class="wrap"><ul class="proof-strip">${h.proof.map((p) => `<li>${p}</li>`).join("")}</ul></div>
