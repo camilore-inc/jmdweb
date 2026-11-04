@@ -8,6 +8,7 @@ The full-size originals are never modified. Web copies go to:
 
 Sources:
   * Website captures kept in this repository: assets/screenshots/current/<lang>/*.png
+  * Website clips kept in this repository: assets/video/source/<lang>/*.mp4
   * App Store screenshots and previews in the app repository
     (camilore-inc/JaxMaxDelta), passed with --app-repo:
     apps/jax_max_delta/assets/screenshots/<lang>/*.png
@@ -48,7 +49,13 @@ SITE_CAPTURES = {
     "07b-racing-tip-open": "racing-tips-detail",
     "08a-history-filters": "session-history",
     "08b-history-league-filtered": "session-history-league",
+    "09a-prep-track-map": "prepare-map",
+    "09b-prep-corners": "prepare-corners",
 }
+
+# Website clips kept in this repository: assets/video/source/<lang>/<name>.mp4
+# (1920 px masters, cut from simulator recordings) -> same name in assets/video/<lang>/.
+SITE_PREVIEWS = ("prepare-session",)
 
 # App Store screenshots (app repo) -> web name.
 APP_CAPTURES = {
@@ -60,7 +67,6 @@ APP_CAPTURES = {
     "06_jax_audio": "jax-audio",
     "07_race_results": "race-results",
     "08_lap_trace": "lap-trace",
-    "09_session_prep": "prepare-session",
     "10_setup_library": "setup-library",
     "11_vsc_delta": "vsc-delta",
 }
@@ -87,8 +93,11 @@ def web_video(source: Path, target: Path) -> None:
     run = lambda *args: subprocess.run(["ffmpeg", "-v", "error", "-y", *args], check=True)
     run("-i", str(source), "-an", "-vf", "scale=1280:-2", "-c:v", "libx264", "-profile:v", "high",
         "-pix_fmt", "yuv420p", "-preset", "slow", "-crf", "26", "-movflags", "+faststart", str(target))
-    run("-ss", "1.5", "-i", str(source), "-frames:v", "1", "-vf", "scale=1280:-2",
-        "-c:v", "libwebp", "-quality", "80", str(target.with_name(f"{target.stem}-poster.webp")))
+    # The poster frame goes through Pillow: not every ffmpeg build has a WebP encoder.
+    frame = target.with_name(f"{target.stem}-poster.png")
+    run("-ss", "1.5", "-i", str(source), "-frames:v", "1", "-vf", "scale=1280:-2", str(frame))
+    Image.open(frame).convert("RGB").save(target.with_name(f"{target.stem}-poster.webp"), "WEBP", quality=80, method=6)
+    frame.unlink()
 
 
 def convert(sources: Path, mapping: dict[str, str], lang: str) -> int:
@@ -111,12 +120,20 @@ def main() -> None:
     total = 0
     for lang in LANGS:
         total += convert(ROOT / "assets" / "screenshots" / "current", SITE_CAPTURES, lang)
+    if shutil.which("ffmpeg") is None:
+        raise SystemExit("ffmpeg is required for the preview videos")
+    for lang in LANGS:
+        for name in SITE_PREVIEWS:
+            source = VIDEO / "source" / lang / f"{name}.mp4"
+            if source.is_file():
+                web_video(source, VIDEO / lang / f"{name}.mp4")
+                total += 1
+            else:
+                print(f"  missing {source}")
     if args.app_repo:
         assets = args.app_repo / "apps" / "jax_max_delta" / "assets"
         for lang in LANGS:
             total += convert(assets / "screenshots", APP_CAPTURES, lang)
-        if shutil.which("ffmpeg") is None:
-            raise SystemExit("ffmpeg is required for the preview videos")
         for lang in LANGS:
             for stem, name in APP_PREVIEWS.items():
                 source = assets / "previews" / lang / f"{stem}.mp4"

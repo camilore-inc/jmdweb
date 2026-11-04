@@ -48,7 +48,9 @@ const clip = (name) => ({ video: perLang(`${name}.mp4`), poster: perLang(`${name
 
 const SHOTS = {
   home:                  { file: perLang("home.webp"), orientation: "landscape" },
-  prepare:               { file: perLang("prepare-session.webp"), orientation: "landscape" },
+  prepare:               { file: perLang("prepare-map.webp"), orientation: "landscape", ...clip("prepare-session") },
+  prepareMap:            { file: perLang("prepare-map.webp"), orientation: "landscape" },
+  prepareCorners:        { file: perLang("prepare-corners.webp"), orientation: "landscape" },
   dashboard:             { file: perLang("dashboard.webp"), orientation: "landscape" },
   dashboardVideo:        { file: perLang("dashboard.webp"), orientation: "landscape", ...clip("live-race") },
   qualifying:            { file: perLang("qualifying.webp"), orientation: "landscape" },
@@ -115,7 +117,9 @@ const copy = {
     },
     shots: {
       home: "Home screen",
-      prepare: "Prepare for Session — your session plan",
+      prepare: "Prepare for Session at Spa — map, then corner by corner",
+      prepareMap: "Prepare for Session — the circuit map, every corner numbered",
+      prepareCorners: "Corner notes — gear, braking and apex for each key turn",
       dashboard: "Live Dashboard",
       dashboardVideo: "Live Dashboard during a race",
       qualifying: "Dashboard in qualifying",
@@ -166,7 +170,8 @@ const copy = {
           "Pit lane, speed trap, DRS and energy-management context",
           "Tyre and setup considerations for the chosen car",
           "Race length, weather and Safety Car context",
-          "Your previous sessions and setups at that circuit"
+          "Your previous sessions and setups at that circuit",
+          "Racing Tips — braking, racecraft, strategy and setup, free to read any time"
         ],
         note: "Preparation data varies by circuit and car. JMD shows what it holds for the combination you choose, and tells you when something isn't available."
       },
@@ -278,7 +283,7 @@ const copy = {
             "Your previous sessions and setups at that circuit"
           ],
           note: "Coverage varies by circuit and car; missing information is labelled rather than guessed.",
-          shots: ["prepare"]
+          shots: ["prepareMap", "prepareCorners"]
         },
         {
           id: "dashboard",
@@ -697,7 +702,9 @@ const copy = {
     },
     shots: {
       home: "Accueil",
-      prepare: "Préparer la session — votre plan",
+      prepare: "Préparer la session à Spa — la carte, puis virage par virage",
+      prepareMap: "Préparer la session — la carte du circuit, chaque virage numéroté",
+      prepareCorners: "Notes par virage — rapport, freinage et corde des virages clés",
       dashboard: "Tableau de bord en direct",
       dashboardVideo: "Le tableau de bord pendant une course",
       qualifying: "Le tableau de bord en qualification",
@@ -748,7 +755,8 @@ const copy = {
           "Contexte de la voie des stands, du radar de vitesse, du DRS et de la gestion de l'énergie",
           "Pneus et réglages à considérer pour la voiture choisie",
           "Longueur de course, météo et contexte voiture de sécurité",
-          "Vos sessions et réglages précédents sur ce circuit"
+          "Vos sessions et réglages précédents sur ce circuit",
+          "Conseils de course — freinage, sens de la course, stratégie et réglages, en accès libre"
         ],
         note: "Les données de préparation varient selon le circuit et la voiture. JMD affiche ce qu'il possède pour la combinaison choisie et vous indique ce qui n'est pas disponible."
       },
@@ -860,7 +868,7 @@ const copy = {
             "Vos sessions et réglages précédents sur ce circuit"
           ],
           note: "La couverture varie selon le circuit et la voiture; l'information manquante est signalée plutôt que devinée.",
-          shots: ["prepare"]
+          shots: ["prepareMap", "prepareCorners"]
         },
         {
           id: "dashboard",
@@ -1185,7 +1193,9 @@ const copy = {
     },
     shots: {
       home: "Inicio",
-      prepare: "Preparar sesión — tu plan",
+      prepare: "Preparar sesión en Spa — el mapa y luego curva a curva",
+      prepareMap: "Preparar sesión — el mapa del circuito, cada curva numerada",
+      prepareCorners: "Notas por curva — marcha, frenada y vértice de las curvas clave",
       dashboard: "Panel en vivo",
       dashboardVideo: "El panel durante una carrera",
       qualifying: "El panel en clasificación",
@@ -1236,7 +1246,8 @@ const copy = {
           "Contexto del pit lane, speed trap, DRS y gestión de energía",
           "Neumáticos y reglajes a tener en cuenta para el coche elegido",
           "Duración de carrera, clima y contexto de Safety Car",
-          "Tus sesiones y reglajes anteriores en ese circuito"
+          "Tus sesiones y reglajes anteriores en ese circuito",
+          "Consejos de carrera — frenada, oficio en pista, estrategia y reglajes, de lectura libre"
         ],
         note: "Los datos de preparación varían según el circuito y el coche. JMD muestra lo que tiene para la combinación que elijas y te avisa cuando algo no está disponible."
       },
@@ -1348,7 +1359,7 @@ const copy = {
             "Tus sesiones y reglajes anteriores en ese circuito"
           ],
           note: "La cobertura varía según el circuito y el coche; la información que falta se indica en lugar de suponerse.",
-          shots: ["prepare"]
+          shots: ["prepareMap", "prepareCorners"]
         },
         {
           id: "dashboard",
@@ -2276,6 +2287,11 @@ function home(t, lang) {
           <p class="fine-note">${h.prepare.note}</p>
         </div>
         ${shot("prepare", t, lang)}
+      </div>
+      <div class="wrap">
+        <div class="shot-row shot-row--3">
+          ${shot("prepareCorners", t, lang)}${shot("racingTips", t, lang)}${shot("racingTipsDetail", t, lang)}
+        </div>
       </div>
     </section>
 

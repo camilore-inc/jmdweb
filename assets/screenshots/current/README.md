@@ -37,6 +37,11 @@ previews with no audio track plus a poster frame. Its `SITE_CAPTURES`,
 | `07b-racing-tip-open.png`          | `racing-tips-detail.webp`       | `racingTipsDetail`                 |
 | `08a-history-filters.png`          | `session-history.webp`          | `sessionHistory`                   |
 | `08b-history-league-filtered.png`  | `session-history-league.webp`   | `sessionHistoryLeague`             |
+| `09a-prep-track-map.png`           | `prepare-map.webp`              | `prepareMap`, poster of `prepare`  |
+| `09b-prep-corners.png`             | `prepare-corners.webp`          | `prepareCorners`                   |
+
+`09a`/`09b` come from the Session Preparation demo (Settings → SUPPORT →
+Explore JMD Demos), which shows Spa · F1 26 · Race 50% with the Jax Pro views.
 
 ## App Store screenshots (app repository)
 
@@ -50,7 +55,6 @@ previews with no audio track plus a poster frame. Its `SITE_CAPTURES`,
 | `06_jax_audio.png`       | `jax-audio.webp`        | `jaxAudio`        |
 | `07_race_results.png`    | `race-results.webp`     | `raceResults`     |
 | `08_lap_trace.png`       | `lap-trace.webp`        | `lapTrace`        |
-| `09_session_prep.png`    | `prepare-session.webp`  | `prepare`         |
 | `10_setup_library.png`   | `setup-library.webp`    | `setupLibrary`    |
 | `11_vsc_delta.png`       | `vsc-delta.webp`        | `vscDelta`        |
 

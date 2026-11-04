@@ -1,6 +1,6 @@
 # Preview videos
 
-One folder per language (`en/`, `fr/`, `es/`), each with four clips and their
+One folder per language (`en/`, `fr/`, `es/`), each with five clips and their
 poster frames:
 
 | Clip                  | Source in camilore-inc/JaxMaxDelta      | Used by slot          |
@@ -9,6 +9,12 @@ poster frames:
 | `pit-wall.mp4`        | `assets/previews/<lang>/02_pit_wall.mp4`      | `pitWallVideo`        |
 | `after-the-race.mp4`  | `assets/previews/<lang>/03_after_the_race.mp4`| `raceReplayLandscape` |
 | `vsc-delta.mp4`       | `assets/previews/<lang>/04_vsc_delta.mp4`     | `vscDelta`            |
+| `prepare-session.mp4` | this repository: `source/<lang>/prepare-session.mp4` | `prepare`      |
+
+`prepare-session.mp4` is cut from iOS Simulator recordings of the Session
+Preparation demo (Settings → SUPPORT → Explore JMD Demos): open Spa, expand the
+circuit map, scroll to Corners and open it. The 1920 × 884 masters in `source/`
+have no audio; plain `python3 scripts/build_web_media.py` rebuilds the web copies.
 
 `<name>-poster.webp` is the frame at 1.5 s, shown before the clip loads.
 
