@@ -127,6 +127,27 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/roadmap.html"/>
   </url>
   <url>
+    <loc>https://jaxmaxdelta.com/en/roro.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/roro.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/roro.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/roro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/roro.html"/>
+  </url>
+  <url>
+    <loc>https://jaxmaxdelta.com/fr/roro.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/roro.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/roro.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/roro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/roro.html"/>
+  </url>
+  <url>
+    <loc>https://jaxmaxdelta.com/es/roro.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/roro.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/roro.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/roro.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/roro.html"/>
+  </url>
+  <url>
     <loc>https://jaxmaxdelta.com/en/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/privacy.html"/>

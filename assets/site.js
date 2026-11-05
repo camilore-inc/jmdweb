@@ -86,6 +86,7 @@ const copy = {
       support: "Support",
       blog: "Blog",
       roadmap: "Roadmap",
+      roro: "Roro Engine",
       privacy: "Privacy",
       terms: "Terms"
     },
@@ -532,6 +533,77 @@ const copy = {
       feedbackTitle: "Contact & feedback",
       feedbackBody: "Useful reports include your game, platform, device, app version, telemetry settings, and a short description of what you expected versus what happened."
     },
+    roro: {
+      title: "The Roro Engine",
+      intro: "The brain behind the scenes of Jax Max Delta. It plans, calculates and decides, learns who you are from every session you store, and helps you go from the basement to the podium.",
+      statusTag: "R2 · In development",
+      status: "The Roro Engine is the focus of the next major release. It has no date yet, and the details below may change as we build and test it on real sessions.",
+      ideaKicker: "The idea",
+      ideaTitle: "One brain behind your race engineer",
+      ideaIntro: "Today, each part of Jax watches the telemetry on its own. The Roro Engine brings it together: one picture of your race, one plan, and one place that decides what deserves your attention.",
+      layers: [
+        ["Understand", "A running picture of the race: your pace and your rivals', tyre wear and how fast it's dropping, fuel and energy, gaps projected forward, and the weather on its way."],
+        ["Plan", "What you're trying to do: stint lengths, the pit window, target lap times, the energy budget, when to attack and when to defend. Updated whenever the race changes."],
+        ["Decide", "What's worth saying now, what goes on screen, and what can wait for the next straight. Every call has a reason, and it is dropped the moment it stops being true."]
+      ],
+      personalKicker: "From basement to podium",
+      personalTitle: "It knows who you are",
+      personalIntro: "Today, Jax Max Delta gives you the information and gets you going. With the Roro Engine, it will know who is driving: your pace, your habits, your strengths and what holds you back, built from every session you store. Like having an AI for your racing.",
+      personal: [
+        ["Your league, your season", "If you race in a league, every race you store in Jax Max Delta becomes knowledge: your rivals, the circuits, how your season is going. The Roro Engine uses all of it to help you finish as high as possible in your league."],
+        ["Racing Tips that fit you", "Tips adapted to how you drive and where you lose time, to help you think like a racer and become one, not just read more data."],
+        ["It grows with you", "The more you drive, the better it knows you, and the more its advice is about you rather than drivers in general."],
+        ["Wherever you start", "Starting out or chasing a title, it meets you where you are and helps you take the next step."]
+      ],
+      addKicker: "What it will add",
+      addTitle: "From the first practice lap to the debrief",
+      addIntro: "The Roro Engine is the groundwork for a set of features that need a real understanding of your race, not just the latest number.",
+      adds: [
+        ["Before", "Pre-race planning", [
+          "Strategy options built from your own practice long runs",
+          "Target lap times for qualifying and the race",
+          "Who to expect around you, and how fast they are",
+          "A weather plan, and a fallback if the Safety Car comes out"
+        ]],
+        ["During", "Live race strategy", [
+          "A pit window that shows where you'll rejoin and who you'll be racing",
+          "A warning before your tyres fall away, not after",
+          "Threats laps in advance: “car 27 will be with you in four laps”",
+          "When to switch tyres as the rain arrives",
+          "Fuel and energy targets, lap by lap"
+        ]],
+        ["During", "Aware of what's around you", [
+          "Faster cars arriving in practice and qualifying, called early",
+          "Who is fighting whom around you, and what it means for your race",
+          "Calls that stay quiet once a situation is over"
+        ]],
+        ["After", "Post-race analysis", [
+          "Where the time went: pace, strategy, traffic or incidents",
+          "What-ifs: what a different pit lap would have changed",
+          "Practice, qualifying and race as one weekend story"
+        ]],
+        ["Garage", "Setup recommendations", [
+          "Suggested changes to your setup, each with its reason",
+          "Based on your own setup history and your driving style",
+          "Takes the track and the forecast weather into account",
+          "Try it, measure it, then keep it or go back"
+        ]],
+        ["Practice", "What to work on", [
+          "A short plan for each practice session",
+          "Objectives drawn from the corners where you lose the most time",
+          "A check afterwards: did it get better?"
+        ]]
+      ],
+      principlesKicker: "How it will behave",
+      principlesTitle: "A calm teammate, not a chatty one",
+      principles: [
+        ["Speaks less, says more", "Fewer, better-timed calls. Anything that isn't urgent waits for a straight."],
+        ["Sure, or quiet", "Every estimate carries a confidence. If the Roro Engine isn't sure, Jax doesn't say it."],
+        ["Explains itself", "Every recommendation comes with its reason, so you can judge it for yourself."],
+        ["One reading of your race", "Live, in Race Replay and in Session History, the same race means the same thing."]
+      ],
+      roadmapLink: "See the full roadmap"
+    },
     roadmap: {
       title: "Roadmap",
       intro: "What's in Jax Max Delta today, and the directions we're exploring next. Future items carry no dates and may change.",
@@ -556,6 +628,9 @@ const copy = {
           "Polish driven by early-release feedback",
           "Broader preparation coverage for more circuit and car combinations",
           "More ways to compare sessions across circuits, setups and conditions"
+        ]],
+        ["R2 · The Roro Engine", [
+          "<a class=\"text-link\" href=\"roro.html\">The Roro Engine</a>: one brain behind Jax for strategy, pre-race planning, post-race analysis, setup recommendations and practice plans"
         ]],
         ["Exploring · Future", [
           "A connected race-weekend view: practice, qualifying and race as one story",
@@ -671,6 +746,7 @@ const copy = {
       support: "Soutien",
       blog: "Blogue",
       roadmap: "Feuille de route",
+      roro: "Roro Engine",
       privacy: "Confidentialité",
       terms: "Conditions"
     },
@@ -1117,6 +1193,77 @@ const copy = {
       feedbackTitle: "Contact et commentaires",
       feedbackBody: "Un bon rapport inclut votre jeu, votre plateforme, votre appareil, la version de l'app, vos réglages de télémétrie et une courte description de ce que vous attendiez par rapport à ce qui s'est passé."
     },
+    roro: {
+      title: "Le Roro Engine",
+      intro: "Le cerveau en coulisses de Jax Max Delta. Il planifie, calcule et décide, apprend qui vous êtes à partir de chaque session que vous enregistrez, et vous aide à passer du sous-sol au podium.",
+      statusTag: "R2 · En développement",
+      status: "Le Roro Engine est au cœur de la prochaine version majeure. Il n'a pas encore de date, et ce qui suit peut changer à mesure que nous le construisons et le testons sur de vraies sessions.",
+      ideaKicker: "L'idée",
+      ideaTitle: "Un seul cerveau derrière votre ingénieur de course",
+      ideaIntro: "Aujourd'hui, chaque partie de Jax lit la télémétrie de son côté. Le Roro Engine rassemble tout : une seule vision de votre course, un seul plan, et un seul endroit qui décide de ce qui mérite votre attention.",
+      layers: [
+        ["Comprendre", "Une image de la course mise à jour en continu : votre rythme et celui de vos rivaux, l'usure des pneus et la vitesse à laquelle elle progresse, le carburant et l'énergie, les écarts projetés vers l'avant, et la météo qui arrive."],
+        ["Planifier", "Ce que vous cherchez à faire : la longueur des relais, la fenêtre d'arrêt, les temps au tour visés, le budget d'énergie, quand attaquer et quand défendre. Mis à jour dès que la course change."],
+        ["Décider", "Ce qui vaut la peine d'être dit maintenant, ce qui s'affiche à l'écran, et ce qui peut attendre la prochaine ligne droite. Chaque message a une raison, et il est abandonné dès qu'il n'est plus vrai."]
+      ],
+      personalKicker: "Du sous-sol au podium",
+      personalTitle: "Il sait qui vous êtes",
+      personalIntro: "Aujourd'hui, Jax Max Delta vous donne l'information et vous lance. Avec le Roro Engine, il saura qui est au volant : votre rythme, vos habitudes, vos forces et ce qui vous retient, à partir de chaque session que vous enregistrez. Comme avoir une IA pour votre pilotage.",
+      personal: [
+        ["Votre ligue, votre saison", "Si vous courez dans une ligue, chaque course enregistrée dans Jax Max Delta devient du savoir : vos rivaux, les circuits, le déroulement de votre saison. Le Roro Engine s'en sert pour vous aider à finir le plus haut possible dans votre ligue."],
+        ["Des conseils de course faits pour vous", "Des conseils adaptés à votre façon de piloter et aux endroits où vous perdez du temps, pour vous aider à penser comme un pilote et à en devenir un, pas seulement à lire plus de données."],
+        ["Il grandit avec vous", "Plus vous roulez, mieux il vous connaît, et plus ses conseils parlent de vous plutôt que des pilotes en général."],
+        ["Peu importe d'où vous partez", "Débutant ou en quête d'un titre, il vous prend là où vous êtes et vous aide à franchir la prochaine étape."]
+      ],
+      addKicker: "Ce qu'il apportera",
+      addTitle: "Du premier tour d'essais au débriefing",
+      addIntro: "Le Roro Engine est la base d'une série de fonctions qui demandent une vraie compréhension de votre course, pas seulement le dernier chiffre reçu.",
+      adds: [
+        ["Avant", "Planification d'avant-course", [
+          "Des options de stratégie tirées de vos propres relais longs en essais",
+          "Des temps au tour visés pour les qualifications et la course",
+          "Qui vous attend autour de vous, et à quel rythme",
+          "Un plan météo, et une solution de repli si la voiture de sécurité sort"
+        ]],
+        ["Pendant", "Stratégie de course en direct", [
+          "Une fenêtre d'arrêt qui montre où vous ressortirez et contre qui vous courrez",
+          "Une alerte avant que vos pneus ne lâchent, pas après",
+          "Les menaces plusieurs tours à l'avance : « la voiture 27 sera sur vous dans quatre tours »",
+          "Le moment de changer de pneus quand la pluie arrive",
+          "Des cibles de carburant et d'énergie, tour par tour"
+        ]],
+        ["Pendant", "Conscient de ce qui vous entoure", [
+          "Les voitures plus rapides qui arrivent en essais et en qualifications, annoncées tôt",
+          "Qui se bat avec qui autour de vous, et ce que cela change pour votre course",
+          "Des messages qui se taisent une fois la situation terminée"
+        ]],
+        ["Après", "Analyse d'après-course", [
+          "Où le temps s'est perdu : rythme, stratégie, trafic ou incidents",
+          "Et si… : ce qu'un autre tour d'arrêt aurait changé",
+          "Essais, qualifications et course racontés comme un seul week-end"
+        ]],
+        ["Garage", "Recommandations de réglages", [
+          "Des modifications suggérées à votre réglage, chacune avec sa raison",
+          "Fondées sur votre historique de réglages et votre style de pilotage",
+          "Tiennent compte du circuit et de la météo prévue",
+          "Essayez, mesurez, puis gardez ou revenez en arrière"
+        ]],
+        ["Essais", "Sur quoi travailler", [
+          "Un court plan pour chaque séance d'essais",
+          "Des objectifs tirés des virages où vous perdez le plus de temps",
+          "Une vérification ensuite : est-ce que ça s'est amélioré?"
+        ]]
+      ],
+      principlesKicker: "Comment il se comportera",
+      principlesTitle: "Un coéquipier calme, pas bavard",
+      principles: [
+        ["Parler moins, dire plus", "Moins de messages, mieux placés. Ce qui n'est pas urgent attend une ligne droite."],
+        ["Sûr, ou silencieux", "Chaque estimation a un niveau de confiance. Si le Roro Engine n'est pas sûr, Jax ne le dit pas."],
+        ["Il s'explique", "Chaque recommandation vient avec sa raison, pour que vous puissiez en juger vous-même."],
+        ["Une seule lecture de votre course", "En direct, dans Race Replay et dans l'historique des sessions, la même course veut dire la même chose."]
+      ],
+      roadmapLink: "Voir la feuille de route complète"
+    },
     roadmap: {
       title: "Feuille de route",
       intro: "Ce que Jax Max Delta offre aujourd'hui, et les pistes que nous explorons ensuite. Les éléments futurs n'ont pas de date et peuvent changer.",
@@ -1142,6 +1289,9 @@ const copy = {
           "Couverture de préparation élargie à plus de combinaisons circuit et voiture",
           "Plus de façons de comparer les sessions selon le circuit, les réglages et les conditions"
         ]],
+        ["R2 · Le Roro Engine", [
+          "<a class=\"text-link\" href=\"roro.html\">Le Roro Engine</a> : un seul cerveau derrière Jax pour la stratégie, la préparation d'avant-course, l'analyse d'après-course, les recommandations de réglages et les plans d'essais"
+        ]],
         ["À l'étude · Futur", [
           "Une vue week-end de course : essais, qualifications et course en une seule histoire",
           "Une analyse de type reprise pour les essais et les qualifications",
@@ -1162,6 +1312,7 @@ const copy = {
       support: "Soporte",
       blog: "Blog",
       roadmap: "Hoja de ruta",
+      roro: "Roro Engine",
       privacy: "Privacidad",
       terms: "Términos"
     },
@@ -1608,6 +1759,77 @@ const copy = {
       feedbackTitle: "Contacto y comentarios",
       feedbackBody: "Un buen reporte incluye tu juego, plataforma, dispositivo, versión de la app, ajustes de telemetría y una breve descripción de lo que esperabas frente a lo que pasó."
     },
+    roro: {
+      title: "El Roro Engine",
+      intro: "El cerebro entre bastidores de Jax Max Delta. Planifica, calcula y decide, aprende quién eres a partir de cada sesión que guardas y te ayuda a pasar del sótano al podio.",
+      statusTag: "R2 · En desarrollo",
+      status: "El Roro Engine es el centro de la próxima versión mayor. Todavía no tiene fecha, y lo que sigue puede cambiar a medida que lo construimos y lo probamos en sesiones reales.",
+      ideaKicker: "La idea",
+      ideaTitle: "Un solo cerebro detrás de tu ingeniero de carrera",
+      ideaIntro: "Hoy, cada parte de Jax lee la telemetría por su cuenta. El Roro Engine lo reúne todo: una sola visión de tu carrera, un solo plan y un solo lugar que decide qué merece tu atención.",
+      layers: [
+        ["Entender", "Una imagen de la carrera que se actualiza sin parar: tu ritmo y el de tus rivales, el desgaste de los neumáticos y lo rápido que avanza, el combustible y la energía, las diferencias proyectadas hacia delante y el tiempo que se acerca."],
+        ["Planificar", "Lo que intentas hacer: la duración de los stints, la ventana de parada, los tiempos por vuelta objetivo, el presupuesto de energía, cuándo atacar y cuándo defender. Se actualiza en cuanto cambia la carrera."],
+        ["Decidir", "Qué vale la pena decir ahora, qué aparece en pantalla y qué puede esperar a la siguiente recta. Cada mensaje tiene un motivo, y se descarta en cuanto deja de ser cierto."]
+      ],
+      personalKicker: "Del sótano al podio",
+      personalTitle: "Sabe quién eres",
+      personalIntro: "Hoy, Jax Max Delta te da la información y te pone en marcha. Con el Roro Engine, sabrá quién conduce: tu ritmo, tus hábitos, tus puntos fuertes y lo que te frena, a partir de cada sesión que guardas. Como tener una IA para tu pilotaje.",
+      personal: [
+        ["Tu liga, tu temporada", "Si corres en una liga, cada carrera que guardas en Jax Max Delta se convierte en conocimiento: tus rivales, los circuitos, cómo va tu temporada. El Roro Engine lo usa todo para ayudarte a terminar lo más arriba posible en tu liga."],
+        ["Consejos de carrera hechos para ti", "Consejos adaptados a tu forma de conducir y a dónde pierdes tiempo, para ayudarte a pensar como un piloto y a convertirte en uno, no solo a leer más datos."],
+        ["Crece contigo", "Cuanto más conduces, mejor te conoce, y más hablan sus consejos de ti y no de los pilotos en general."],
+        ["Empieces donde empieces", "Tanto si empiezas como si vas a por un título, te encuentra donde estás y te ayuda a dar el siguiente paso."]
+      ],
+      addKicker: "Lo que añadirá",
+      addTitle: "De la primera vuelta de libres al análisis final",
+      addIntro: "El Roro Engine es la base de un conjunto de funciones que necesitan entender de verdad tu carrera, no solo el último dato recibido.",
+      adds: [
+        ["Antes", "Planificación previa a la carrera", [
+          "Opciones de estrategia basadas en tus propias tandas largas de libres",
+          "Tiempos por vuelta objetivo para la clasificación y la carrera",
+          "Quién estará a tu alrededor y a qué ritmo",
+          "Un plan para el tiempo y una alternativa si sale el coche de seguridad"
+        ]],
+        ["Durante", "Estrategia de carrera en vivo", [
+          "Una ventana de parada que muestra dónde saldrás y contra quién correrás",
+          "Un aviso antes de que tus neumáticos caigan, no después",
+          "Las amenazas con vueltas de antelación: «el coche 27 te alcanzará en cuatro vueltas»",
+          "Cuándo cambiar de neumáticos cuando llega la lluvia",
+          "Objetivos de combustible y energía, vuelta a vuelta"
+        ]],
+        ["Durante", "Atento a lo que te rodea", [
+          "Los coches más rápidos que llegan en libres y clasificación, avisados con tiempo",
+          "Quién lucha con quién a tu alrededor y qué significa para tu carrera",
+          "Mensajes que se callan cuando la situación ha terminado"
+        ]],
+        ["Después", "Análisis posterior a la carrera", [
+          "Dónde se fue el tiempo: ritmo, estrategia, tráfico o incidentes",
+          "Y si…: qué habría cambiado otra vuelta de parada",
+          "Libres, clasificación y carrera como la historia de un solo fin de semana"
+        ]],
+        ["Garaje", "Recomendaciones de reglaje", [
+          "Cambios sugeridos a tu reglaje, cada uno con su motivo",
+          "Basados en tu historial de reglajes y tu estilo de conducción",
+          "Tienen en cuenta el circuito y la previsión del tiempo",
+          "Pruébalo, mídelo y luego quédatelo o vuelve atrás"
+        ]],
+        ["Libres", "En qué trabajar", [
+          "Un plan corto para cada sesión de libres",
+          "Objetivos sacados de las curvas donde más tiempo pierdes",
+          "Una comprobación después: ¿has mejorado?"
+        ]]
+      ],
+      principlesKicker: "Cómo se comportará",
+      principlesTitle: "Un compañero tranquilo, no charlatán",
+      principles: [
+        ["Hablar menos, decir más", "Menos mensajes, mejor colocados. Lo que no es urgente espera a una recta."],
+        ["Seguro, o callado", "Cada estimación tiene un nivel de confianza. Si el Roro Engine no está seguro, Jax no lo dice."],
+        ["Se explica", "Cada recomendación llega con su motivo, para que puedas juzgarla tú mismo."],
+        ["Una sola lectura de tu carrera", "En vivo, en Race Replay y en el historial de sesiones, la misma carrera significa lo mismo."]
+      ],
+      roadmapLink: "Ver la hoja de ruta completa"
+    },
     roadmap: {
       title: "Hoja de ruta",
       intro: "Lo que Jax Max Delta ofrece hoy y las direcciones que estamos explorando. Los elementos futuros no tienen fecha y pueden cambiar.",
@@ -1632,6 +1854,9 @@ const copy = {
           "Mejoras guiadas por los comentarios de los primeros usuarios",
           "Más cobertura de preparación para más combinaciones de circuito y coche",
           "Más formas de comparar sesiones por circuito, reglaje y condiciones"
+        ]],
+        ["R2 · El Roro Engine", [
+          "<a class=\"text-link\" href=\"roro.html\">El Roro Engine</a>: un solo cerebro detrás de Jax para la estrategia, la preparación previa, el análisis posterior, las recomendaciones de reglaje y los planes de libres"
         ]],
         ["En estudio · Futuro", [
           "Una vista de fin de semana: libres, clasificación y carrera como una sola historia",
@@ -1900,7 +2125,7 @@ function boot() {
 }
 
 function renderPage(t, lang, page, slug) {
-  const renderers = { home, features, how, guide, support, blog, privacy, terms, roadmap, post };
+  const renderers = { home, features, how, guide, support, blog, privacy, terms, roadmap, roro, post };
   return (renderers[page] || home)(t, lang, slug);
 }
 
@@ -2004,7 +2229,7 @@ function footer(t, lang) {
           <p class="footer-parent">${t.common.parent} <a href="${SITE.corporateUrl}">camilore.com</a></p>
           <p class="footer-copyright">${t.common.copyright}</p>
         </div>
-        ${col(t.common.footerProduct, [["features", "features.html"], ["how", "how-to.html"], ["roadmap", "roadmap.html"], ["blog", "blog.html"]])}
+        ${col(t.common.footerProduct, [["features", "features.html"], ["how", "how-to.html"], ["roadmap", "roadmap.html"], ["roro", "roro.html"], ["blog", "blog.html"]])}
         ${col(t.common.footerHelp, [["support", "support.html"], ["privacy", "privacy.html"], ["terms", "terms.html"]])}
         <p class="footer-disclaimer">${t.common.disclaimer}</p>
       </div>
@@ -2629,6 +2854,45 @@ function legalPage(eyebrow, data) {
 function roadmap(t) {
   const r = t.roadmap;
   return `${pageHero(t.common.eyebrow, r.title, r.intro)}<section class="section section--tight"><div class="wrap timeline">${r.groups.map(([name, items], i) => `<article class="timeline-item${i === 0 ? " is-current" : ""}"><h2 class="timeline-tag">${name}</h2>${list(items, i === 0 ? "tick-list tick-list--2col" : "tick-list")}</article>`).join("")}</div></section>`;
+}
+
+// The Roro Engine (R2): what it is and what it will add. Future work: no
+// "Available now" tags, and the status line says it is in development.
+function roro(t, lang) {
+  const r = t.roro;
+  return `
+    ${pageHero(t.common.eyebrow, r.title, r.intro)}
+    <section class="section section--tight">
+      <div class="wrap">
+        <p class="feat-meta"><span class="phase-tag">${r.statusTag}</span></p>
+        <p class="fine-note">${r.status}</p>
+      </div>
+    </section>
+    <section class="section band">
+      <div class="wrap">
+        ${sectionHead(r.ideaKicker, r.ideaTitle, r.ideaIntro)}
+        <div class="grid-3">${r.layers.map(([title, body], i) => `<article class="card card--future"><p class="step-num">0${i + 1}</p><h3>${title}</h3><p>${body}</p></article>`).join("")}</div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        ${sectionHead(r.personalKicker, r.personalTitle, r.personalIntro)}
+        <div class="grid-2">${r.personal.map(([title, body]) => `<article class="card card--future"><h3>${title}</h3><p>${body}</p></article>`).join("")}</div>
+      </div>
+    </section>
+    <section class="section band">
+      <div class="wrap">
+        ${sectionHead(r.addKicker, r.addTitle, r.addIntro)}
+        <div class="grid-3">${r.adds.map(([phase, title, items]) => `<article class="card card--future"><p class="feat-meta"><span class="phase-tag">${phase}</span></p><h3>${title}</h3>${list(items)}</article>`).join("")}</div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="wrap">
+        ${sectionHead(r.principlesKicker, r.principlesTitle, "")}
+        <div class="grid-4">${r.principles.map(([title, body]) => `<article class="card"><h3>${title}</h3><p>${body}</p></article>`).join("")}</div>
+        <p class="section-link"><a class="text-link" href="${route(lang, "roadmap.html")}">${r.roadmapLink} →</a></p>
+      </div>
+    </section>`;
 }
 
 document.addEventListener("DOMContentLoaded", boot);
