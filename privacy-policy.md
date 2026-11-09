@@ -1,11 +1,8 @@
 # Jax Max Delta — Privacy Policy
 
-> **Legal review required:** this source reflects substantive October 24, 2026
-> revisions and must be approved before it is represented as final legal advice.
-
 **Original effective date:** August 17, 2026
 
-**Last updated:** October 24, 2026
+**Last updated:** November 9, 2026
 
 Jax Max Delta ("the app") is a product owned and operated by Camilore Inc.
 ("Camilore", "we", "us"). Subject to completion of the applicable transfer
@@ -17,14 +14,18 @@ not to be survived.
 
 - Jax Max Delta has **no user accounts**. You may optionally enter a name for Jax
   to call you; it is stored locally with your app preferences.
-- Your telemetry, lap data, session history and car setups are stored **on your device**.
+- Your telemetry, lap data, session history, race history and car setups are stored
+  **on your device**. They are never published to leaderboards and never shared with
+  other drivers.
 - We do not sell or rent your data, and we do not use it for advertising. Limited
   third-party processing is described below.
 - Information leaves your device only through **crash diagnostics**, **purchase and
   subscription processing**, support messages or exports you initiate, and — only if
-  your device has iCloud available — a **backup of your session history in your own
-  private iCloud container**, which Camilore cannot read.
-- You can delete everything at any time from inside the app, or by deleting the app.
+  your device has iCloud available and iCloud Backup is on — a **backup of your session
+  history and race history in your own private iCloud container**, which Camilore
+  cannot read.
+- You can delete the data on your device at any time from inside the app, or by deleting
+  the app. iCloud backups are removed separately (see 4.3).
 
 ## 2. What the app receives from your game
 
@@ -44,15 +45,19 @@ The following stay in the app's private storage on your device:
 
 - session history (tracks, session types, lap and sector times, positions, results,
   events, penalties, weather);
+- race history for Race Replay (every driver's laps, positions, tyres, pit stops and
+  race events, as broadcast by the game);
 - lap traces (throttle, brake, steering, speed, gear, ERS, DRS samples);
 - car setups captured from your sessions, and your ratings of them;
 - your app preferences: connection host and port, game selection, language, units,
   the optional name you ask Jax to use, Jax voice and audio-guidance settings,
   and the data-retention setting.
 
-You control how long the heavier data is kept through **Settings → SUPPORT** (data
-capture and retention), and you can delete individual sessions or all of them at any
-time.
+You control how long the heavier data — lap traces and race history — is kept through
+**Settings → SETUP → Storage → Keep race data for** (forever, 1 year, 9, 6, 3 or 1
+months, or 1 week). Choosing a shorter period asks before anything is deleted. Session
+results, laps and positions are not affected by that setting. You can delete individual
+sessions or all of them at any time.
 
 ## 4. What leaves your device
 
@@ -79,13 +84,20 @@ to an identity.
 
 ### 4.3 iCloud backup of your session history
 
-If your device has iCloud enabled and available, the app can back up your session
-history and league data into **the app's own private iCloud container**
-(`iCloud.com.camilore.jaxmaxdelta`) inside **your** iCloud account. This is a real,
-shipped feature and this policy states it plainly.
+If your device has iCloud enabled and available, the app backs up your session history,
+league data and race history after each completed session into **the app's own private
+iCloud container** (`iCloud.com.camilore.jaxmaxdelta`) inside **your** iCloud account.
+iCloud Backup is on by default; you can turn it off in **Settings → SETUP → Session
+Tracking & iCloud Backup**. This is a real, shipped feature and this policy states it
+plainly.
 
-- The backup contains session records and leagues. It does **not** contain lap-trace
-  or race-data files, which remain only on the device that captured them.
+- The backup contains your session records, leagues and the race history used for
+  Race Replay (one file per race). It does **not** contain lap traces (your throttle,
+  brake and steering samples), which remain only on the device that captured them.
+- The race history in iCloud mirrors your device. When a session's race history is
+  deleted on the device — by you, or by the "Keep race data for" setting — its copy is
+  removed from iCloud at the next backup. Session records remain in the dated backup
+  copies until those copies are replaced.
 - The container belongs to your Apple Account. Apple provides the storage. **We have no
   access to it** — we cannot read, list or recover your backups.
 - The app keeps the most recent backup plus up to five dated copies, and prunes older
@@ -93,18 +105,21 @@ shipped feature and this policy states it plainly.
 - Before restoring, the app writes a local safety copy on your device so a restore can
   be undone.
 - Restoring never overwrites a session already on the device.
-- To remove these backups, delete the app's data from iCloud in iOS Settings, or delete
-  the app.
+- To remove these backups, delete the app's data from iCloud in iOS Settings. Deleting
+  the app removes the data stored on the device; it is not the way to remove the iCloud
+  backups.
 
 Apple's handling of iCloud data is governed by Apple's privacy policy.
 
 ### 4.4 Exports you initiate
 
-You can export your session history to a file and share it through the iOS share sheet
-(Files, AirDrop, Messages, and so on). This happens only when you ask for it, the file
-goes wherever you send it, and it does not pass through us.
+In **Settings → SETUP → Export & Import** you can export your session history, leagues
+and race history to a single file and share it through the iOS share sheet (Files,
+AirDrop, Messages, and so on). Lap traces are not included. This happens only when you
+ask for it, the file goes wherever you send it, and it does not pass through us. You can
+import such a file on any device; importing never overwrites a session already there.
 
-### 4.5 Support messages
+### 4.5 Support messages and feature suggestions
 
 If you contact `support@jaxmaxdelta.com`, Camilore receives only what you choose to
 send — typically your email address, device model, app version and a description of
@@ -112,9 +127,14 @@ the issue. We use it to answer you, troubleshoot, keep support records and impro
 product. Do not send raw telemetry or sensitive files unless support requests them and
 you are comfortable sharing them.
 
+Feature suggestions sent to the same address are voluntary and are handled like any
+other support message. Nothing from the app is attached automatically.
+
 ## 5. What we do not do
 
 - No in-app accounts, sign-up or automatic email collection.
+- No leaderboards or public profiles, and no publishing or sharing of your sessions,
+  setups or lap traces with other drivers.
 - No advertising, no ad identifiers, no IDFA, no ad networks.
 - No cross-app or cross-site tracking, and no App Tracking Transparency prompt, because
   we do not track.
@@ -138,12 +158,16 @@ decision-making that produces legal effects.
 ## 7. Retention
 
 - Data on your device is kept until you delete it, either by deleting sessions in the
-  app, letting your retention setting prune trace data, or deleting the app.
+  app, letting your retention setting prune lap traces and race history, or deleting
+  the app.
 - iCloud backups are kept in your own container until you delete them; the app itself
-  keeps the latest plus five dated copies.
+  keeps the latest plus five dated copies, and removes the race history of sessions no
+  longer on your device.
 - Crash reports are retained by Firebase according to Google's published Crashlytics
   retention periods.
 - Purchase records are retained by Apple and RevenueCat under their own policies.
+- Support emails, including feature suggestions, are kept as support records for as
+  long as they are needed to answer you, follow up and improve the product.
 
 ## 8. Your rights
 

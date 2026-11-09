@@ -1,6 +1,6 @@
 # Camilore ownership migration
 
-Last updated: November 1, 2026
+Last updated: November 9, 2026
 
 ## Status and ownership identity
 
@@ -64,8 +64,11 @@ The adjacent local JMD app repository was reviewed read-only. It confirms:
 - no app user accounts;
 - optional driver nickname stored in local preferences;
 - local UDP reception and local session/race/lap-trace recording;
-- private iCloud container `iCloud.com.camilore.jaxmaxdelta`, with session and
-  league backup but not lap-trace/race-data files;
+- private iCloud container `iCloud.com.camilore.jaxmaxdelta`, with session,
+  league and race-history (Race Replay) backup; the player lap trace is never
+  backed up, and iCloud race-history files mirror the device's retention
+  (corrected November 9, 2026 from the app's
+  `docs/architecture/session-history-and-backup.md` §9 and §12, SH-040);
 - Firebase Crashlytics diagnostics;
 - Apple purchases managed through RevenueCat entitlement `pro`;
 - current RevenueCat code requests monthly and annual packages without hardcoded
@@ -132,10 +135,38 @@ configuration, webhooks, checked-in environment variables, analytics key or host
 secret. DNS/registrar state and GitHub Pages account settings cannot be inferred
 from the checkout.
 
-## Legal approval required
+## Legal approval status
 
-The expanded Privacy Policy and Terms are drafting work, not approved legal advice.
-The pages visibly carry a legal-review notice. Counsel should specifically review:
+### Privacy Policy — approved
+
+The owner reported on November 9, 2026 that the Privacy Policy is legally
+approved. The approval itself is held by the owner and is not stored in this
+repository. On the same day:
+
+- the "Legal review required" banner was removed from `privacy-policy.md`, and
+  the visible legal-review notice was removed from the EN/FR/ES privacy pages,
+  deliberately and only for the Privacy Policy;
+- the original effective date (August 17, 2026) was kept and **Last updated**
+  was set to November 9, 2026, the day of the change; nothing was backdated;
+- factual drift found while publishing was corrected against the app
+  (read-only): iCloud Backup includes race history (one file per race) but not
+  the player lap trace; iCloud race history mirrors the device's retention;
+  the retention and Export & Import locations are Settings → SETUP; export
+  carries race history but not lap traces; deleting the app does not remove
+  iCloud backups; iCloud Backup is on by default and can be turned off;
+- one sentence was added on voluntary feature-suggestion emails (handled and
+  retained like other support correspondence), with the retention line it
+  needs.
+
+These corrections post-date the approval. They state app behaviour more
+accurately and add no new processing, but the owner may wish to show the diff
+to counsel.
+
+### Terms of Use — still under review
+
+The expanded Terms remain drafting work, not approved legal advice. The pages
+still carry their visible legal-review notice; leave it in place until approval
+is recorded here. Counsel should specifically review:
 
 - the conditional October 1 transfer language and contracting-entity transition;
 - Canadian and Quebec private-sector privacy applicability, privacy-officer/contact
@@ -148,14 +179,15 @@ The pages visibly carry a legal-review notice. Counsel should specifically revie
 - Apple subscription, renewal, cancellation and refund wording; and
 - trademark/nominative-use language for games, Formula 1, platforms and hardware.
 
-Do not remove the review notice or treat the October 24 revision as approved until
-authorized legal review is recorded. The August 17 original effective date was not
-changed or backdated; October 24 is shown as the revision date.
+Do not remove the Terms review notice or treat the October 24 Terms revision as
+approved until authorized legal review is recorded. The Privacy Policy items in
+the list above are covered by the November 9 approval.
 
 ## External actions remaining
 
 - Execute/confirm the ownership transfer documentation.
-- Obtain legal approval and then remove/update the draft notices deliberately.
+- Obtain legal approval of the Terms and then remove their draft notice deliberately
+  (the Privacy Policy was approved on November 9, 2026).
 - Verify App Store Connect publisher/support/privacy URLs, localized listing,
   screenshots, minimum OS, Free/Pro descriptions, monthly/annual products, prices,
   14-day introductory offers, eligibility and refund/support copy.

@@ -105,7 +105,32 @@ check(
     "© 2026 Camilore Inc. All rights reserved." in site_js,
     "English copyright missing",
 )
-check("Legal review status:" in site_js, "English legal review notice missing")
+check("Legal review status:" in site_js, "English Terms legal review notice missing")
+
+# Feature suggestions: a plain mailto to the support mailbox, with a localized
+# subject in every language. No form, no other destination.
+check(
+    "mailto:${SITE.contact}?subject=${encodeURIComponent(s.suggestSubject)}" in site_js,
+    "feature-suggestion link must be a mailto to SITE.contact with an encoded subject",
+)
+for subject in ("JMD Feature Suggestion", "JMD – Suggestion de fonction", "JMD – Sugerencia de función"):
+    check(f'suggestSubject: "{subject}"' in site_js, f"feature-suggestion subject missing: {subject}")
+check(
+    len(re.findall(r'href="support\.html#suggest-a-feature"', site_js)) == 1
+    and 'id="suggest-a-feature"' in site_js,
+    "roadmap link to the Suggest a feature entry is broken",
+)
+
+# The approved Privacy Policy: the page and its Markdown source show the same
+# revision date.
+policy_md = (ROOT / "privacy-policy.md").read_text(encoding="utf-8")
+md_updated = re.search(r"\*\*Last updated:\*\* ([A-Z][a-z]+ \d{1,2}, \d{4})", policy_md)
+check(md_updated is not None, "privacy-policy.md: missing Last updated date")
+if md_updated:
+    check(
+        f"Last updated: {md_updated.group(1)}" in site_js,
+        "English privacy page date does not match privacy-policy.md",
+    )
 check((ROOT / "en" / "privacy.html").is_file(), "English privacy route missing")
 check((ROOT / "en" / "terms.html").is_file(), "English terms route missing")
 

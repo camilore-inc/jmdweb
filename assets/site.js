@@ -111,7 +111,7 @@ const copy = {
       videoPause: "Pause video",
       available: "Available now",
       disclaimer: "Jax Max Delta is an independent sim racing companion app and is not affiliated with or endorsed by EA, Codemasters, Formula 1, FIA, Microsoft, Sony, Fanatec, or any other referenced brand.",
-      footerLead: "Your race engineer, your pit wall and your race memory — for F1 sim racers on iPhone.",
+      footerLead: "Your pit wall in your hand, your race engineer in your ear, and your race memory — for F1 sim racers on iPhone.",
       footerProduct: "Product",
       footerHelp: "Help & legal",
       readPost: "Read post"
@@ -147,8 +147,8 @@ const copy = {
       racingTipsDetail: "A Racing Tip, with an exercise to practise"
     },
     home: {
-      titleLines: ["Your race engineer.", "Your pit wall.", "Your race memory."],
-      lead: "Jax Max Delta turns live F1 telemetry into the information, coaching, race context and history you need — before, during and after every session.",
+      titleLines: ["Your pit wall. In your hand.", "Your race engineer. In your ear."],
+      lead: "Your iPhone becomes the pit wall beside your cockpit. Jax Max Delta turns live F1 telemetry into preparation, coaching and race context — and keeps a race memory of every session, before, during and after.",
       reelLabel: "Jax Max Delta in action",
       reelPause: "Pause the previews",
       reelPlay: "Play the previews",
@@ -237,15 +237,16 @@ const copy = {
         note: "What a session contains depends on what the game sent. JMD fills gaps from captured data where it can, and shows missing data as missing."
       },
       privacy: {
-        kicker: "Your data",
-        title: "Private by design.",
-        body: "Jax Max Delta has no user accounts. An optional name for Jax to use, your telemetry and your history stay on your device.",
+        kicker: "Private by design",
+        title: "Your race data. Your competitive edge.",
+        body: "Many telemetry services are built around leaderboards and shared laps. League and esports drivers protect their setups, traces and technique — so Jax Max Delta keeps them private.",
         points: [
+          ["Never published", "Your setups, lap traces and race history are never posted to a leaderboard or shared with other drivers."],
+          ["On your iPhone", "Sessions, setups, lap traces and race history are saved in the app's private storage on your device."],
           ["No account", "Nothing to sign up for, and no automatic email collection."],
-          ["On your device", "Sessions, lap traces and setups live in the app's private storage."],
-          ["Your own iCloud", "If iCloud is available, session history can be backed up to your private iCloud container — which we cannot read."],
-          ["No ads, no tracking", "No advertising, no ad identifiers, no cross-app tracking."]
-        ]
+          ["Your own iCloud", "Optional backup goes to your private iCloud container, which Camilore cannot read. Lap traces stay on your iPhone."]
+        ],
+        note: "No ads, no tracking. Crash reports go to Firebase Crashlytics, and Apple and RevenueCat confirm your subscription status — never your race data."
       },
       platforms: {
         kicker: "Compatibility",
@@ -273,7 +274,7 @@ const copy = {
           id: "prepare",
           phase: "Before",
           title: "Prepare for Session",
-          body: "Choose a circuit and a car, then review the circuit and plan the session ahead. Circuit knowledge and your own history, side by side.",
+          body: "Arrive at every session already knowing the circuit. Choose a circuit and a car, then plan the session ahead with circuit knowledge and your own history side by side.",
           items: [
             "Circuit overview with an interactive, numbered circuit map",
             "Corner-by-corner notes: gear, speed, braking and apex context where data exists",
@@ -290,7 +291,7 @@ const copy = {
           id: "dashboard",
           phase: "During",
           title: "Live Dashboard",
-          body: "A landscape race display for your iPhone. Keep critical information visible without changing camera view or cluttering the in-game HUD.",
+          body: "Keep critical information in view without changing camera or cluttering the in-game HUD. A landscape race display for your iPhone, beside the wheel.",
           items: [
             "Position, lap, speed, gear, throttle and brake",
             "Current, last and best laps, sector splits and delta",
@@ -321,7 +322,7 @@ const copy = {
           id: "pit-wall",
           phase: "During",
           title: "Virtual Pit Wall",
-          body: "A deeper live view of the race and the session. Open it over the dashboard with one tap, or directly from the Home screen.",
+          body: "See the whole race the way a pit wall does: the field, the circuit and your own car, live. Open it over the dashboard with one tap, or directly from the Home screen.",
           items: [
             "Timing tower: positions, gaps, lap and sector times, tyres and stints",
             "Live circuit map with every car on track",
@@ -400,7 +401,7 @@ const copy = {
             "Session history, traces and setups stored on your device",
             "Optional iCloud Backup of session history to your own private iCloud container",
             "Export your session history through the iOS share sheet",
-            "Choose how long heavier trace data is kept",
+            "Choose how long lap traces and race history are kept",
             "Delete individual sessions or all of them at any time"
           ],
           link: ["privacy.html", "Read the privacy policy"]
@@ -516,7 +517,7 @@ const copy = {
         ["Is Jax officially affiliated with EA, F1, Codemasters, Fanatec, PlayStation, or Xbox?", "No. Jax Max Delta is independent and uses telemetry data from supported games where available."],
         ["Is this only a telemetry dashboard?", "No. The live dashboard is one part. JMD also helps you prepare for a session, gives you Jax's voice calls and a full pit wall while you drive, and keeps your session history, setups, lap traces and Race Replay afterwards."],
         ["Why is there no Race Replay for some sessions?", "Race Replay is for races and sprint races that were captured in enough detail. Practice, qualifying and Time Trial sessions have their own review, focused on pace."],
-        ["Where is my data stored?", "On your device. Session history, lap traces and setups live in the app's private storage. If iCloud is available, the app can also back up your session history and leagues into your own private iCloud container, which we cannot read. See the privacy policy for details."],
+        ["Where is my data stored?", "On your device. Session history, race history, lap traces and setups live in the app's private storage, and none of it is published or shared with other drivers. If iCloud is available, the app can also back up your session history, leagues and race history into your own private iCloud container, which we cannot read; lap traces stay on your device. See the privacy policy for details."],
         ["What is included with Free and Jax Pro?", "Free includes the full Dashboard, the full timing classification, Pit Wall GAME, ME and SETUP, the track overview in Prepare for Session, every session saved and listed with your statistics, your most recent session in full, every setup listed, Jax's urgent safety calls and lap-line callouts, Racing Tips and iCloud Backup. Jax Pro adds the complete Jax race engineer, LIVE timing, Pit Wall CAR, MAP and TRACE, every earlier session in full, your setups' values and management, and personalised preparation: circuit analysis, My Data and the Session plan."],
         ["How do the trial and subscriptions work?", "The app describes a 14-day introductory trial on its monthly and annual Jax Pro plans. Eligibility, localized prices and the exact offer shown by Apple can vary; review the Apple purchase sheet before confirming. Apple bills and renews the subscription unless it is cancelled in your Apple Account subscription settings. Purchases can be restored in JMD."],
         ["How do I cancel or request a refund?", "Manage or cancel Jax Pro in your Apple Account subscription settings. Cancellation stops future renewal but does not normally reverse an existing charge. Apple controls App Store billing and refund decisions; use Apple's purchase support for refund requests, or contact support@jaxmaxdelta.com for JMD help."],
@@ -530,8 +531,14 @@ const copy = {
         "Wrong game UDP destination IP, port, or telemetry format.",
         "Voice alerts not playing because device volume, silent mode, or alert categories need adjustment."
       ],
-      feedbackTitle: "Contact & feedback",
-      feedbackBody: "Useful reports include your game, platform, device, app version, telemetry settings, and a short description of what you expected versus what happened."
+      feedbackTitle: "Technical support & bug reports",
+      feedbackBody: "Useful reports include your game, platform, device, app version, telemetry settings, and a short description of what you expected versus what happened.",
+      suggestTitle: "Suggest a feature",
+      suggestBody: "An idea that would make JMD better before, during or after a session? Tell us what it is and the problem it would solve.",
+      suggestCta: "Suggest a feature",
+      suggestNote: "Sending a suggestion is voluntary. Your email app opens with a short template, and nothing from the app or your device is attached automatically.",
+      suggestSubject: "JMD Feature Suggestion",
+      suggestTemplate: "Feature idea:\n\n\nWhat problem would it solve?\n\n\nWhen would it help (practice, qualifying, race, league, review)?\n\n\nOptional — game, platform and app version:\n"
     },
     roro: {
       title: "The Roro Engine",
@@ -607,6 +614,7 @@ const copy = {
     roadmap: {
       title: "Roadmap",
       intro: "What's in Jax Max Delta today, and the directions we're exploring next. Future items carry no dates and may change.",
+      suggest: "Have an idea? Suggest a feature",
       groups: [
         ["Available now · R1", [
           "Prepare for Session: circuit map, corners, tyres, setup and session context",
@@ -642,33 +650,35 @@ const copy = {
         ]]
       ]
     },
-    // Legal copy is a review draft; the visible notice prevents it from being
-    // mistaken for approved legal advice before Camilore's counsel signs off.
+    // Privacy Policy: approved by legal review (owner-reported, November 9, 2026).
+    // privacy-policy.md is the source; keep these sections in step with it. The
+    // Terms below are still a review draft and keep their visible notice.
     privacy: {
       title: "Privacy Policy",
       intro: "This policy explains how Camilore Inc. handles information for Jax Max Delta, including local telemetry, diagnostics, purchases, support and private iCloud Backup.",
-      updated: "Original effective date: August 17, 2026 · Last updated: October 24, 2026",
-      reviewNotice: "Legal review status: substantive revisions require approval before production publication.",
+      updated: "Original effective date: August 17, 2026 · Last updated: November 9, 2026",
       sections: [
-        ["Who is responsible", "Jax Max Delta is a product owned and operated by <strong>Camilore Inc.</strong> Subject to completion of the applicable transfer documentation, Camilore Inc. assumed ownership and operation on October 1, 2026. In this policy, “Camilore,” “we” and “us” mean Camilore Inc."],
-        ["The short version", "Jax Max Delta has <strong>no user accounts</strong>. The app optionally lets you enter a name for Jax to call you; that name, your telemetry, lap data, session history, car setups and preferences are stored <strong>on your device</strong>. We do not use this information for advertising or sell it. Information leaves your device only through <strong>crash diagnostics</strong>, <strong>purchase and subscription processing</strong>, support messages you choose to send, exports you initiate, and — if iCloud is available — a <strong>backup in your own private iCloud container</strong>, which Camilore cannot access."],
-        ["What the app receives from your game", "Jax Max Delta listens on your local network for the UDP telemetry your F1 game broadcasts (EA F1 24, F1 25 and F1 26). That traffic travels only across your own network, from your console or PC to your phone. It is received by the app and never sent onward by it. It contains race data — lap times, speed, tyre state, positions, the names the game assigns to drivers in your session — and no information about you personally. The app does not transmit telemetry to us or to anyone else."],
-        ["What is stored on your device", "The following stay in the app's private storage on your device: the optional name you ask Jax to use; session history (tracks, session types, lap and sector times, positions, driver names supplied by the game, results, events, penalties and weather); locally recorded race and lap-trace data (including throttle, brake, steering, speed, gear, ERS and DRS samples); car setups and your ratings; and app preferences such as connection host and port, game, language, units, Jax voice and audio-guidance settings, and data retention. You can change or remove your preferred name, control heavier trace-data retention, and delete individual sessions or all sessions in the app."],
-        ["Purchases", "Subscriptions are sold by Apple and managed for us by RevenueCat, Inc. When you subscribe or restore a purchase, Apple and RevenueCat process the transaction and an anonymous app-installation identifier so the app knows whether your subscription is active. We never receive your payment details — Apple handles payment entirely. See <a href=\"https://www.apple.com/legal/privacy/\">Apple's privacy policy</a> and <a href=\"https://www.revenuecat.com/privacy\">RevenueCat's privacy policy</a>."],
-        ["Crash and stability diagnostics", "The app uses Google Firebase Crashlytics to report crashes and errors so we can fix them. A crash report contains technical information — the error, the code path, device model, operating-system version, app version and an anonymous installation identifier. It does not contain your telemetry, your session history, your setups, or anything that identifies you personally. We do not use this data for advertising and it is not linked to an identity. See <a href=\"https://firebase.google.com/support/privacy\">Firebase privacy information</a>."],
-        ["iCloud Backup of your session history", "If your device has iCloud enabled and available, the app can back up your session history and league data into <strong>the app's own private iCloud container</strong> (<code>iCloud.com.camilore.jaxmaxdelta</code>) inside <strong>your</strong> iCloud account. This is a shipped feature, so this policy states it plainly. The backup contains session records and leagues; it does <strong>not</strong> contain lap-trace or race-data files, which remain only on the device that captured them. The container belongs to your Apple Account and Apple provides the storage — <strong>we have no access to it</strong>, and we cannot read, list or recover your backups. The app keeps the most recent backup plus up to five dated copies and prunes older ones. Before restoring, the app writes a local safety copy on your device so a restore can be undone, and restoring never overwrites a session already on the device. To remove these backups, delete the app's data from iCloud in iOS Settings, or delete the app. Apple's handling of iCloud data is governed by Apple's privacy policy."],
-        ["Exports you initiate", "You can export your session history to a file and share it through the iOS share sheet (Files, AirDrop, Messages, and so on). This happens only when you ask for it, the file goes wherever you send it, and it does not pass through us."],
-        ["Support messages", "If you email support@jaxmaxdelta.com, Camilore receives the information you choose to send, such as your email address, device model, app version and issue description. We use it to respond, troubleshoot, maintain support records and improve the product. Do not send raw telemetry or other sensitive files unless support asks for them and you are comfortable sharing them."],
-        ["What we do not do", "No in-app accounts, sign-up or automatic email collection. No advertising, no ad identifiers, no IDFA, no ad networks. No cross-app or cross-site tracking, and no App Tracking Transparency prompt, because we do not track. No product analytics or behavioural telemetry sent to us. No selling or renting your data. No location collection — the app does not request location access. No contacts, photos, microphone or camera access."],
-        ["Legal bases (EEA/UK users)", "Where the GDPR applies, we rely on <strong>contract</strong> — processing purchase and subscription status so we can give you the features you paid for — and <strong>legitimate interests</strong> — crash diagnostics, to keep the app from failing on your device, balanced against the fact that the data is technical and not identity-linked. We do not process special categories of data and we do not carry out automated decision-making that produces legal effects."],
-        ["Retention", "Data on your device is kept until you delete it, either by deleting sessions in the app, letting your retention setting prune trace data, or deleting the app. iCloud backups are kept in your own container until you delete them; the app itself keeps the latest plus five dated copies. Crash reports are retained by Firebase according to Google's published Crashlytics retention periods. Purchase records are retained by Apple and RevenueCat under their own policies."],
-        ["Your rights", "Depending on where you live, including in Canada or Quebec, applicable privacy law may give you rights concerning access, correction, deletion, withdrawal of consent, data portability or complaints to a privacy regulator. These rights are not absolute and depend on the information and law involved. Most JMD data is under your direct control in the app. For questions or requests involving support records, diagnostics or purchase status, contact support@jaxmaxdelta.com. We may need enough information to verify and respond to a request without creating a user account."],
-        ["Children", "Jax Max Delta is rated 4+ in the App Store and is designed for sim racers, but it is not directed specifically to children. We do not knowingly solicit personal information from children. If you believe a child sent personal information to support, contact us so we can review and address it."],
-        ["International processing", "Apple, Google and RevenueCat provide services internationally and may process limited purchase or diagnostic information outside your province, state or country under their own terms and privacy practices. Review the linked provider notices for current details; Camilore does not claim a processing location that those providers have not verified."],
-        ["Changes to this policy", "If this policy changes, we will update the last-updated date and publish the revised version at this address. We will not backdate a revision. Material app-facing changes may also be described in release notes."],
-        ["Contact", "Camilore Inc. is responsible for Jax Max Delta. Privacy and support inquiries: <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>. Corporate website: <a href=\"https://camilore.com\">camilore.com</a>."]
+        ["Who is responsible", "Jax Max Delta is a product owned and operated by <strong>Camilore Inc.</strong> Subject to completion of the applicable transfer documentation, Camilore Inc. assumed ownership and operation on October 1, 2026. In this policy, “Camilore,” “we” and “us” mean Camilore Inc. This policy explains what the app does with your information. It is written to be read, not to be survived."],
+        ["1. The short version", "Jax Max Delta has <strong>no user accounts</strong>. You may optionally enter a name for Jax to call you; it is stored locally with your app preferences. Your telemetry, lap data, session history, race history and car setups are stored <strong>on your device</strong>. They are never published to leaderboards and never shared with other drivers. We do not sell or rent your data, and we do not use it for advertising; limited third-party processing is described below. Information leaves your device only through <strong>crash diagnostics</strong>, <strong>purchase and subscription processing</strong>, support messages or exports you initiate, and — only if your device has iCloud available and iCloud Backup is on — a <strong>backup of your session history and race history in your own private iCloud container</strong>, which Camilore cannot read. You can delete the data on your device at any time from inside the app, or by deleting the app. iCloud backups are removed separately (see 4.3)."],
+        ["2. What the app receives from your game", "Jax Max Delta listens on your local network for the UDP telemetry your F1 game broadcasts (EA F1 24, F1 25 and F1 26). That traffic travels only across your own network, from your console or PC to your phone. It is received by the app and never sent onward by it. It contains race data — lap times, speed, tyre state, positions, the names the game assigns to drivers in your session — and no information about you personally. The app does not transmit telemetry to us or to anyone else."],
+        ["3. What is stored on your device", "The following stay in the app's private storage on your device: session history (tracks, session types, lap and sector times, positions, results, events, penalties, weather); race history for Race Replay (every driver's laps, positions, tyres, pit stops and race events, as broadcast by the game); lap traces (throttle, brake, steering, speed, gear, ERS and DRS samples); car setups captured from your sessions, and your ratings of them; and your app preferences — connection host and port, game selection, language, units, the optional name you ask Jax to use, Jax voice and audio-guidance settings, and the data-retention setting. You control how long the heavier data — lap traces and race history — is kept through <strong>Settings → SETUP → Storage → Keep race data for</strong> (forever, 1 year, 9, 6, 3 or 1 months, or 1 week). Choosing a shorter period asks before anything is deleted. Session results, laps and positions are not affected by that setting. You can delete individual sessions or all of them at any time."],
+        ["4.1 Purchases", "Subscriptions are sold by Apple and managed for us by RevenueCat, Inc. When you subscribe or restore a purchase, Apple and RevenueCat process the transaction and an anonymous app-installation identifier so the app knows whether your subscription is active. We never receive your payment details — Apple handles payment entirely. See <a href=\"https://www.apple.com/legal/privacy/\">Apple's privacy policy</a> and <a href=\"https://www.revenuecat.com/privacy\">RevenueCat's privacy policy</a>."],
+        ["4.2 Crash and stability diagnostics", "The app uses Google Firebase Crashlytics to report crashes and errors so we can fix them. A crash report contains technical information — the error, the code path, device model, operating-system version, app version and an anonymous installation identifier. It does not contain your telemetry, your session history, your setups, or anything that identifies you personally. We do not use this data for advertising and it is not linked to an identity. See <a href=\"https://firebase.google.com/support/privacy\">Firebase privacy information</a>."],
+        ["4.3 iCloud backup of your session history", "If your device has iCloud enabled and available, the app backs up your session history, league data and race history after each completed session into <strong>the app's own private iCloud container</strong> (<code>iCloud.com.camilore.jaxmaxdelta</code>) inside <strong>your</strong> iCloud account. iCloud Backup is on by default; you can turn it off in <strong>Settings → SETUP → Session Tracking & iCloud Backup</strong>. This is a real, shipped feature and this policy states it plainly. The backup contains your session records, leagues and the race history used for Race Replay (one file per race). It does <strong>not</strong> contain lap traces (your throttle, brake and steering samples), which remain only on the device that captured them. The race history in iCloud mirrors your device: when a session's race history is deleted on the device — by you, or by the “Keep race data for” setting — its copy is removed from iCloud at the next backup. Session records remain in the dated backup copies until those copies are replaced. The container belongs to your Apple Account and Apple provides the storage — <strong>we have no access to it</strong>; we cannot read, list or recover your backups. The app keeps the most recent backup plus up to five dated copies, and prunes older ones. Before restoring, the app writes a local safety copy on your device so a restore can be undone, and restoring never overwrites a session already on the device. To remove these backups, delete the app's data from iCloud in iOS Settings. Deleting the app removes the data stored on the device; it is not the way to remove the iCloud backups. Apple's handling of iCloud data is governed by Apple's privacy policy."],
+        ["4.4 Exports you initiate", "In <strong>Settings → SETUP → Export & Import</strong> you can export your session history, leagues and race history to a single file and share it through the iOS share sheet (Files, AirDrop, Messages, and so on). Lap traces are not included. This happens only when you ask for it, the file goes wherever you send it, and it does not pass through us. You can import such a file on any device; importing never overwrites a session already there."],
+        ["4.5 Support messages and feature suggestions", "If you contact <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>, Camilore receives only what you choose to send — typically your email address, device model, app version and a description of the issue. We use it to answer you, troubleshoot, keep support records and improve the product. Do not send raw telemetry or sensitive files unless support requests them and you are comfortable sharing them. Feature suggestions sent to the same address are voluntary and are handled like any other support message. Nothing from the app is attached automatically."],
+        ["5. What we do not do", "No in-app accounts, sign-up or automatic email collection. No leaderboards or public profiles, and no publishing or sharing of your sessions, setups or lap traces with other drivers. No advertising, no ad identifiers, no IDFA, no ad networks. No cross-app or cross-site tracking, and no App Tracking Transparency prompt, because we do not track. No product analytics or behavioural telemetry sent to us. No selling or renting your data. No location collection — the app does not request location access. No contacts, photos, microphone or camera access."],
+        ["6. Legal bases (EEA/UK users)", "Where the GDPR applies, we rely on <strong>contract</strong> — processing purchase and subscription status so we can give you the features you paid for — and <strong>legitimate interests</strong> — crash diagnostics, to keep the app from failing on your device, balanced against the fact that the data is technical and not identity-linked. We do not process special categories of data and we do not carry out automated decision-making that produces legal effects."],
+        ["7. Retention", "Data on your device is kept until you delete it, either by deleting sessions in the app, letting your retention setting prune lap traces and race history, or deleting the app. iCloud backups are kept in your own container until you delete them; the app itself keeps the latest plus five dated copies, and removes the race history of sessions no longer on your device. Crash reports are retained by Firebase according to Google's published Crashlytics retention periods. Purchase records are retained by Apple and RevenueCat under their own policies. Support emails, including feature suggestions, are kept as support records for as long as they are needed to answer you, follow up and improve the product."],
+        ["8. Your rights", "Depending on where you live, including in Canada or Quebec, applicable privacy law may give you rights concerning access, correction, deletion, withdrawal of consent, data portability or complaints to a privacy regulator. These rights are not absolute and depend on the information and law involved. Most JMD data is under your direct control in the app. For questions or requests involving support records, diagnostics or purchase status, contact <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>. We may need enough information to verify and respond to a request without creating a user account."],
+        ["9. Children", "Jax Max Delta is rated 4+ in the App Store and is designed for sim racers, but it is not directed specifically to children. We do not knowingly solicit personal information from children. If you believe a child sent personal information to support, contact us so we can review and address it."],
+        ["10. International processing", "Apple, Google and RevenueCat provide services internationally and may process limited purchase or diagnostic information outside your province, state or country under their own terms and privacy practices. Review the linked provider notices for current details; Camilore does not claim a processing location that those providers have not verified."],
+        ["11. Changes to this policy", "If this policy changes, we will update the last-updated date and publish the revised version at this address. We will not backdate a revision. Material app-facing changes may also be described in release notes."],
+        ["12. Contact", "Camilore Inc. is responsible for Jax Max Delta. Privacy and support inquiries: <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>. Corporate website: <a href=\"https://camilore.com\">camilore.com</a>."]
       ]
     },
+    // The Terms remain a review draft; the visible notice prevents them from
+    // being mistaken for approved legal advice before Camilore's counsel signs off.
     terms: {
       title: "Terms of Use",
       intro: "These terms govern your use of Jax Max Delta and its Free and Jax Pro capabilities.",
@@ -771,7 +781,7 @@ const copy = {
       videoPause: "Mettre la vidéo en pause",
       available: "Disponible maintenant",
       disclaimer: "Jax Max Delta est une application compagnon de sim racing indépendante. Elle n'est pas affiliée à EA, Codemasters, Formula 1, la FIA, Microsoft, Sony, Fanatec ni à toute autre marque mentionnée, et n'est pas approuvée par celles-ci.",
-      footerLead: "Votre ingénieur de course, votre mur des stands et votre mémoire de course — pour les pilotes F1 virtuels sur iPhone.",
+      footerLead: "Votre mur des stands dans votre main, votre ingénieur de course à votre oreille et votre mémoire de course — pour les pilotes F1 virtuels sur iPhone.",
       footerProduct: "Produit",
       footerHelp: "Aide et mentions légales",
       readPost: "Lire l'article"
@@ -807,8 +817,8 @@ const copy = {
       racingTipsDetail: "Un conseil de course, avec un exercice à pratiquer"
     },
     home: {
-      titleLines: ["Votre ingénieur de course.", "Votre mur des stands.", "Votre mémoire de course."],
-      lead: "Jax Max Delta transforme la télémétrie F1 en direct en informations, en coaching, en contexte de course et en historique — avant, pendant et après chaque session.",
+      titleLines: ["Votre mur des stands. Dans votre main.", "Votre ingénieur de course. À votre oreille."],
+      lead: "Votre iPhone devient le mur des stands à côté de votre cockpit. Jax Max Delta transforme la télémétrie F1 en direct en préparation, en coaching et en contexte de course — et garde la mémoire de chaque session, avant, pendant et après.",
       reelLabel: "Jax Max Delta en action",
       reelPause: "Mettre les aperçus en pause",
       reelPlay: "Lire les aperçus",
@@ -897,15 +907,16 @@ const copy = {
         note: "Le contenu d'une session dépend de ce que le jeu a envoyé. JMD comble les lacunes à partir des données captées lorsque c'est possible, et affiche les données manquantes comme manquantes."
       },
       privacy: {
-        kicker: "Vos données",
-        title: "Confidentiel dès la conception.",
-        body: "Jax Max Delta n'a aucun compte utilisateur. Le nom facultatif que Jax doit utiliser, votre télémétrie et votre historique restent sur votre appareil.",
+        kicker: "Confidentiel dès la conception",
+        title: "Vos données de course. Votre avantage compétitif.",
+        body: "Bien des services de télémétrie sont bâtis autour de classements et de tours partagés. Les pilotes de ligue et d'esport protègent leurs réglages, leurs traces et leur technique — alors Jax Max Delta les garde privés.",
         points: [
+          ["Jamais publiées", "Vos réglages, vos traces de tour et votre historique de course ne sont jamais affichés dans un classement ni partagés avec d'autres pilotes."],
+          ["Sur votre iPhone", "Sessions, réglages, traces de tour et historique de course sont enregistrés dans le stockage privé de l'app sur votre appareil."],
           ["Aucun compte", "Aucune inscription ni collecte automatique de courriel."],
-          ["Sur votre appareil", "Sessions, traces de tour et réglages restent dans le stockage privé de l'app."],
-          ["Votre propre iCloud", "Si iCloud est disponible, l'historique des sessions peut être sauvegardé dans votre conteneur iCloud privé — que nous ne pouvons pas lire."],
-          ["Ni pub ni pistage", "Aucune publicité, aucun identifiant publicitaire, aucun suivi entre apps."]
-        ]
+          ["Votre propre iCloud", "La sauvegarde facultative va dans votre conteneur iCloud privé, que Camilore ne peut pas lire. Les traces de tour restent sur votre iPhone."]
+        ],
+        note: "Ni pub ni pistage. Les rapports de plantage passent par Firebase Crashlytics, et Apple et RevenueCat confirment votre abonnement — jamais vos données de course."
       },
       platforms: {
         kicker: "Compatibilité",
@@ -933,7 +944,7 @@ const copy = {
           id: "prepare",
           phase: "Avant",
           title: "Préparer la session",
-          body: "Choisissez un circuit et une voiture, puis étudiez le circuit et planifiez la session à venir. La connaissance du circuit et votre propre historique, côte à côte.",
+          body: "Arrivez à chaque session en connaissant déjà le circuit. Choisissez un circuit et une voiture, puis planifiez la session à venir avec la connaissance du circuit et votre propre historique, côte à côte.",
           items: [
             "Aperçu du circuit avec une carte interactive et des virages numérotés",
             "Notes virage par virage : rapport, vitesse, freinage et point de corde lorsque les données existent",
@@ -950,7 +961,7 @@ const copy = {
           id: "dashboard",
           phase: "Pendant",
           title: "Tableau de bord en direct",
-          body: "Un affichage de course en mode paysage pour votre iPhone. Gardez l'information critique visible sans changer de caméra ni encombrer l'affichage du jeu.",
+          body: "Gardez l'information critique sous les yeux sans changer de caméra ni encombrer l'affichage du jeu. Un affichage de course en mode paysage pour votre iPhone, à côté du volant.",
           items: [
             "Position, tour, vitesse, rapport, accélérateur et frein",
             "Tour en cours, dernier et meilleur tour, temps par secteur et delta",
@@ -981,7 +992,7 @@ const copy = {
           id: "pit-wall",
           phase: "Pendant",
           title: "Mur des stands virtuel",
-          body: "Une vue plus approfondie de la course et de la session, en direct. Ouvrez-le par-dessus le tableau de bord d'une seule touche, ou directement depuis l'accueil.",
+          body: "Voyez toute la course comme depuis le mur des stands : le peloton, le circuit et votre propre voiture, en direct. Ouvrez-le par-dessus le tableau de bord d'une seule touche, ou directement depuis l'accueil.",
           items: [
             "Tour de chronométrage : positions, écarts, temps au tour et par secteur, pneus et relais",
             "Carte du circuit en direct avec toutes les voitures en piste",
@@ -1060,7 +1071,7 @@ const copy = {
             "Historique des sessions, traces et réglages stockés sur votre appareil",
             "Sauvegarde iCloud facultative de l'historique des sessions dans votre propre conteneur iCloud privé",
             "Exportation de l'historique des sessions avec la feuille de partage iOS",
-            "Choix de la durée de conservation des traces, plus volumineuses",
+            "Choix de la durée de conservation des traces de tour et de l'historique de course",
             "Suppression d'une session ou de toutes les sessions en tout temps"
           ],
           link: ["privacy.html", "Lire la politique de confidentialité"]
@@ -1176,7 +1187,7 @@ const copy = {
         ["Jax est-il officiellement affilié à EA, F1, Codemasters, Fanatec, PlayStation ou Xbox?", "Non. Jax Max Delta est indépendant et utilise les données de télémétrie des jeux compatibles lorsqu'elles sont disponibles."],
         ["Est-ce seulement un tableau de bord de télémétrie?", "Non. Le tableau de bord en direct n'en est qu'une partie. JMD vous aide aussi à préparer une session, vous offre les annonces vocales de Jax et un mur des stands complet pendant que vous pilotez, puis conserve votre historique, vos réglages, vos traces de tour et Race Replay après la session."],
         ["Pourquoi n'y a-t-il pas de Race Replay pour certaines sessions?", "Race Replay est offert pour les courses et les courses sprint captées avec assez de détails. Les essais, les qualifications et le contre-la-montre ont leur propre analyse, axée sur le rythme."],
-        ["Où sont stockées mes données?", "Sur votre appareil. L'historique des sessions, les traces de tour et les réglages restent dans le stockage privé de l'app. Si iCloud est disponible, l'app peut aussi sauvegarder votre historique et vos ligues dans votre propre conteneur iCloud privé, que nous ne pouvons pas lire. Consultez la politique de confidentialité pour les détails."],
+        ["Où sont stockées mes données?", "Sur votre appareil. L'historique des sessions, l'historique de course, les traces de tour et les réglages restent dans le stockage privé de l'app, et rien n'est publié ni partagé avec d'autres pilotes. Si iCloud est disponible, l'app peut aussi sauvegarder votre historique de sessions, vos ligues et votre historique de course dans votre propre conteneur iCloud privé, que nous ne pouvons pas lire; les traces de tour restent sur votre appareil. Consultez la politique de confidentialité pour les détails."],
         ["Que comprennent les versions gratuite et Jax Pro?", "La version gratuite comprend le tableau de bord complet, le classement complet, les onglets GAME, ME et SETUP du mur des stands, l'aperçu du circuit dans Préparer la session, chaque session enregistrée et listée avec vos statistiques, votre session la plus récente en entier, tous vos réglages listés, les alertes de sécurité urgentes de Jax et votre tour à la ligne, les conseils de course et la sauvegarde iCloud. Jax Pro ajoute l'ingénieur de course Jax complet, le chronométrage EN DIRECT, les onglets AUTO, MAP et TRACE, chaque session précédente en entier, les valeurs et la gestion de vos réglages, et une préparation personnalisée : analyse du circuit, Mes données et plan de séance."],
         ["Comment fonctionnent l'essai et les abonnements?", "L'app décrit un essai de lancement de 14 jours pour les forfaits mensuel et annuel Jax Pro. L'admissibilité, les prix locaux et l'offre exacte affichée par Apple peuvent varier; vérifiez la feuille d'achat Apple avant de confirmer. Apple facture et renouvelle l'abonnement sauf annulation dans les réglages d'abonnements de votre compte Apple. Les achats peuvent être restaurés dans JMD."],
         ["Comment annuler ou demander un remboursement?", "Gérez ou annulez Jax Pro dans les réglages d'abonnements de votre compte Apple. L'annulation met fin au prochain renouvellement, mais n'annule normalement pas un débit existant. Apple contrôle la facturation et les remboursements de l'App Store; utilisez l'assistance aux achats Apple pour une demande de remboursement, ou écrivez à support@jaxmaxdelta.com pour obtenir de l'aide sur JMD."],
@@ -1190,8 +1201,14 @@ const copy = {
         "Mauvaise adresse IP, mauvais port ou mauvais format de télémétrie UDP dans le jeu.",
         "Les alertes vocales ne jouent pas à cause du volume, du mode silencieux ou des catégories d'alertes."
       ],
-      feedbackTitle: "Contact et commentaires",
-      feedbackBody: "Un bon rapport inclut votre jeu, votre plateforme, votre appareil, la version de l'app, vos réglages de télémétrie et une courte description de ce que vous attendiez par rapport à ce qui s'est passé."
+      feedbackTitle: "Soutien technique et rapports de bogues",
+      feedbackBody: "Un bon rapport inclut votre jeu, votre plateforme, votre appareil, la version de l'app, vos réglages de télémétrie et une courte description de ce que vous attendiez par rapport à ce qui s'est passé.",
+      suggestTitle: "Suggérer une fonction",
+      suggestBody: "Une idée qui rendrait JMD meilleur avant, pendant ou après une session? Dites-nous laquelle et quel problème elle réglerait.",
+      suggestCta: "Suggérer une fonction",
+      suggestNote: "L'envoi d'une suggestion est volontaire. Votre app de courriel s'ouvre avec un court modèle, et rien de l'app ni de votre appareil n'est joint automatiquement.",
+      suggestSubject: "JMD – Suggestion de fonction",
+      suggestTemplate: "Idée de fonction :\n\n\nQuel problème réglerait-elle?\n\n\nQuand serait-elle utile (essais, qualifications, course, ligue, analyse)?\n\n\nFacultatif — jeu, plateforme et version de l'app :\n"
     },
     roro: {
       title: "Le Roro Engine",
@@ -1267,6 +1284,7 @@ const copy = {
     roadmap: {
       title: "Feuille de route",
       intro: "Ce que Jax Max Delta offre aujourd'hui, et les pistes que nous explorons ensuite. Les éléments futurs n'ont pas de date et peuvent changer.",
+      suggest: "Une idée? Suggérez une fonction",
       groups: [
         ["Disponible maintenant · R1", [
           "Préparer la session : carte du circuit, virages, pneus, réglages et contexte de session",
@@ -1337,7 +1355,7 @@ const copy = {
       videoPause: "Pausar vídeo",
       available: "Disponible ahora",
       disclaimer: "Jax Max Delta es una app independiente de sim racing y no está afiliada ni respaldada por EA, Codemasters, Formula 1, FIA, Microsoft, Sony, Fanatec ni ninguna otra marca mencionada.",
-      footerLead: "Tu ingeniero de carrera, tu muro de boxes y tu memoria de carrera — para pilotos de F1 virtual en iPhone.",
+      footerLead: "Tu muro de boxes en tu mano, tu ingeniero de carrera en tu oído y tu memoria de carrera — para pilotos de F1 virtual en iPhone.",
       footerProduct: "Producto",
       footerHelp: "Ayuda y legal",
       readPost: "Leer artículo"
@@ -1373,8 +1391,8 @@ const copy = {
       racingTipsDetail: "Un consejo de carrera, con un ejercicio para practicar"
     },
     home: {
-      titleLines: ["Tu ingeniero de carrera.", "Tu muro de boxes.", "Tu memoria de carrera."],
-      lead: "Jax Max Delta convierte la telemetría de F1 en vivo en la información, el coaching, el contexto de carrera y el historial que necesitas — antes, durante y después de cada sesión.",
+      titleLines: ["Tu muro de boxes. En tu mano.", "Tu ingeniero de carrera. En tu oído."],
+      lead: "Tu iPhone se convierte en el muro de boxes junto a tu cockpit. Jax Max Delta transforma la telemetría de F1 en vivo en preparación, coaching y contexto de carrera — y guarda la memoria de cada sesión, antes, durante y después.",
       reelLabel: "Jax Max Delta en acción",
       reelPause: "Pausar las vistas previas",
       reelPlay: "Reproducir las vistas previas",
@@ -1463,15 +1481,16 @@ const copy = {
         note: "Lo que contiene una sesión depende de lo que envió el juego. JMD completa huecos con los datos captados cuando puede, y muestra como faltantes los datos que faltan."
       },
       privacy: {
-        kicker: "Tus datos",
-        title: "Privado desde el diseño.",
-        body: "Jax Max Delta no tiene cuentas de usuario. El nombre opcional que quieres que use Jax, tu telemetría y tu historial permanecen en tu dispositivo.",
+        kicker: "Privado desde el diseño",
+        title: "Tus datos de carrera. Tu ventaja competitiva.",
+        body: "Muchos servicios de telemetría giran en torno a clasificaciones y vueltas compartidas. Los pilotos de liga y de esports protegen sus reglajes, sus trazas y su técnica — por eso Jax Max Delta los mantiene privados.",
         points: [
+          ["Nunca se publican", "Tus reglajes, trazas de vuelta e historial de carrera nunca aparecen en una clasificación ni se comparten con otros pilotos."],
+          ["En tu iPhone", "Sesiones, reglajes, trazas de vuelta e historial de carrera se guardan en el almacenamiento privado de la app en tu dispositivo."],
           ["Sin cuenta", "Nada que registrar y ninguna recogida automática de emails."],
-          ["En tu dispositivo", "Sesiones, trazas de vuelta y reglajes viven en el almacenamiento privado de la app."],
-          ["Tu propio iCloud", "Si iCloud está disponible, el historial de sesiones puede respaldarse en tu contenedor privado de iCloud — que nosotros no podemos leer."],
-          ["Sin anuncios ni rastreo", "Sin publicidad, sin identificadores publicitarios, sin seguimiento entre apps."]
-        ]
+          ["Tu propio iCloud", "La copia de seguridad opcional va a tu contenedor privado de iCloud, que Camilore no puede leer. Las trazas de vuelta se quedan en tu iPhone."]
+        ],
+        note: "Sin anuncios ni rastreo. Los reportes de fallos pasan por Firebase Crashlytics, y Apple y RevenueCat confirman tu suscripción — nunca tus datos de carrera."
       },
       platforms: {
         kicker: "Compatibilidad",
@@ -1499,7 +1518,7 @@ const copy = {
           id: "prepare",
           phase: "Antes",
           title: "Preparar sesión",
-          body: "Elige un circuito y un coche, repasa el circuito y planifica la próxima sesión. El conocimiento del circuito y tu propio historial, lado a lado.",
+          body: "Llega a cada sesión conociendo ya el circuito. Elige un circuito y un coche y planifica la próxima sesión con el conocimiento del circuito y tu propio historial, lado a lado.",
           items: [
             "Vista general del circuito con un mapa interactivo y curvas numeradas",
             "Notas curva a curva: marcha, velocidad, frenada y vértice cuando hay datos",
@@ -1516,7 +1535,7 @@ const copy = {
           id: "dashboard",
           phase: "Durante",
           title: "Panel en vivo",
-          body: "Una pantalla de carrera en horizontal para tu iPhone. Mantén visible la información crítica sin cambiar de cámara ni saturar el HUD del juego.",
+          body: "Mantén la información crítica a la vista sin cambiar de cámara ni saturar el HUD del juego. Una pantalla de carrera en horizontal para tu iPhone, junto al volante.",
           items: [
             "Posición, vuelta, velocidad, marcha, acelerador y freno",
             "Vuelta actual, última y mejor, parciales por sector y delta",
@@ -1547,7 +1566,7 @@ const copy = {
           id: "pit-wall",
           phase: "Durante",
           title: "Muro de boxes virtual",
-          body: "Una vista más profunda de la carrera y la sesión en vivo. Ábrelo sobre el panel con un toque, o directamente desde Inicio.",
+          body: "Mira toda la carrera como desde el muro de boxes: la parrilla, el circuito y tu propio coche, en vivo. Ábrelo sobre el panel con un toque, o directamente desde Inicio.",
           items: [
             "Torre de tiempos: posiciones, diferencias, tiempos por vuelta y sector, neumáticos y stints",
             "Mapa del circuito en vivo con todos los coches en pista",
@@ -1626,7 +1645,7 @@ const copy = {
             "Historial de sesiones, trazas y reglajes guardados en tu dispositivo",
             "Copia de seguridad opcional en iCloud del historial de sesiones, en tu propio contenedor privado",
             "Exporta tu historial de sesiones con la hoja de compartir de iOS",
-            "Elige cuánto tiempo se conservan las trazas, más pesadas",
+            "Elige cuánto tiempo se conservan las trazas de vuelta y el historial de carrera",
             "Borra sesiones individuales o todas en cualquier momento"
           ],
           link: ["privacy.html", "Leer la política de privacidad"]
@@ -1742,7 +1761,7 @@ const copy = {
         ["¿Jax está afiliado oficialmente con EA, F1, Codemasters, Fanatec, PlayStation o Xbox?", "No. Jax Max Delta es independiente y usa datos de telemetría de juegos compatibles cuando están disponibles."],
         ["¿Es solo un panel de telemetría?", "No. El panel en vivo es una parte. JMD también te ayuda a preparar la sesión, te da los mensajes de voz de Jax y un muro de boxes completo mientras conduces, y guarda tu historial, reglajes, trazas de vuelta y Race Replay después."],
         ["¿Por qué algunas sesiones no tienen Race Replay?", "Race Replay es para carreras y sprints captados con suficiente detalle. Libres, clasificación y contrarreloj tienen su propio análisis centrado en el ritmo."],
-        ["¿Dónde se guardan mis datos?", "En tu dispositivo. El historial de sesiones, las trazas de vuelta y los reglajes viven en el almacenamiento privado de la app. Si iCloud está disponible, la app también puede respaldar tu historial y tus ligas en tu propio contenedor privado de iCloud, que nosotros no podemos leer. Consulta la política de privacidad para más detalles."],
+        ["¿Dónde se guardan mis datos?", "En tu dispositivo. El historial de sesiones, el historial de carrera, las trazas de vuelta y los reglajes viven en el almacenamiento privado de la app, y nada se publica ni se comparte con otros pilotos. Si iCloud está disponible, la app también puede respaldar tu historial de sesiones, tus ligas y tu historial de carrera en tu propio contenedor privado de iCloud, que nosotros no podemos leer; las trazas de vuelta se quedan en tu dispositivo. Consulta la política de privacidad para más detalles."],
         ["¿Qué incluyen Gratis y Jax Pro?", "Gratis incluye el Panel completo, la clasificación completa, las pestañas GAME, ME y SETUP del muro de boxes, la vista general del circuito en Preparar sesión, cada sesión guardada y en la lista con tus estadísticas, tu sesión más reciente completa, todos tus reglajes en la lista, los avisos urgentes de seguridad de Jax y tu vuelta en la línea, Consejos de carrera y la copia en iCloud. Jax Pro añade el ingeniero de carrera Jax completo, tiempos EN VIVO, las pestañas COCHE, MAP y TRACE, cada sesión anterior completa, los valores y la gestión de tus reglajes, y una preparación personalizada: análisis del circuito, Mis datos y el plan de sesión."],
         ["¿Cómo funcionan la prueba y las suscripciones?", "La app describe una prueba introductoria de 14 días en los planes mensual y anual de Jax Pro. La elegibilidad, los precios locales y la oferta exacta que muestra Apple pueden variar; revisa la hoja de compra de Apple antes de confirmar. Apple factura y renueva la suscripción salvo que la canceles en los ajustes de suscripciones de tu cuenta de Apple. Puedes restaurar compras en JMD."],
         ["¿Cómo cancelo o solicito un reembolso?", "Gestiona o cancela Jax Pro en los ajustes de suscripciones de tu cuenta de Apple. La cancelación detiene la próxima renovación, pero normalmente no revierte un cobro existente. Apple controla la facturación y los reembolsos del App Store; usa el soporte de compras de Apple para solicitar un reembolso o escribe a support@jaxmaxdelta.com para obtener ayuda con JMD."],
@@ -1756,8 +1775,14 @@ const copy = {
         "IP, puerto o formato de telemetría UDP incorrectos en el juego.",
         "Las alertas de voz no suenan por el volumen, el modo silencio o las categorías de alertas."
       ],
-      feedbackTitle: "Contacto y comentarios",
-      feedbackBody: "Un buen reporte incluye tu juego, plataforma, dispositivo, versión de la app, ajustes de telemetría y una breve descripción de lo que esperabas frente a lo que pasó."
+      feedbackTitle: "Soporte técnico y reporte de errores",
+      feedbackBody: "Un buen reporte incluye tu juego, plataforma, dispositivo, versión de la app, ajustes de telemetría y una breve descripción de lo que esperabas frente a lo que pasó.",
+      suggestTitle: "Sugerir una función",
+      suggestBody: "¿Una idea que haría JMD mejor antes, durante o después de una sesión? Cuéntanos cuál es y qué problema resolvería.",
+      suggestCta: "Sugerir una función",
+      suggestNote: "Enviar una sugerencia es voluntario. Tu app de correo se abre con una breve plantilla, y no se adjunta nada de la app ni de tu dispositivo automáticamente.",
+      suggestSubject: "JMD – Sugerencia de función",
+      suggestTemplate: "Idea de función:\n\n\n¿Qué problema resolvería?\n\n\n¿Cuándo ayudaría (libres, clasificación, carrera, liga, análisis)?\n\n\nOpcional — juego, plataforma y versión de la app:\n"
     },
     roro: {
       title: "El Roro Engine",
@@ -1833,6 +1858,7 @@ const copy = {
     roadmap: {
       title: "Hoja de ruta",
       intro: "Lo que Jax Max Delta ofrece hoy y las direcciones que estamos explorando. Los elementos futuros no tienen fecha y pueden cambiar.",
+      suggest: "¿Tienes una idea? Sugiere una función",
       groups: [
         ["Disponible ahora · R1", [
           "Preparar sesión: mapa del circuito, curvas, neumáticos, reglajes y contexto de sesión",
@@ -1884,8 +1910,7 @@ function cloneLocalizedLegal(lang, source) {
     return {
       title: "Politique de confidentialité",
       intro: "Cette politique explique comment Camilore Inc. traite les renseignements liés à Jax Max Delta, notamment la télémétrie locale, les diagnostics, les achats, le soutien et la sauvegarde iCloud privée.",
-      updated: "Date d'entrée en vigueur initiale : 17 août 2026 · Dernière mise à jour : 24 octobre 2026",
-      reviewNotice: "Statut de l'examen juridique : les révisions substantielles doivent être approuvées avant leur publication en production.",
+      updated: "Date d'entrée en vigueur initiale : 17 août 2026 · Dernière mise à jour : 9 novembre 2026",
       sections: privacySections("fr")
     };
   }
@@ -1893,8 +1918,7 @@ function cloneLocalizedLegal(lang, source) {
     return {
       title: "Política de privacidad",
       intro: "Esta política explica cómo Camilore Inc. trata la información relacionada con Jax Max Delta, incluida la telemetría local, los diagnósticos, las compras, el soporte y la copia privada en iCloud.",
-      updated: "Fecha de entrada en vigor original: 17 de agosto de 2026 · Última actualización: 24 de octubre de 2026",
-      reviewNotice: "Estado de revisión legal: las revisiones sustanciales requieren aprobación antes de publicarse en producción.",
+      updated: "Fecha de entrada en vigor original: 17 de agosto de 2026 · Última actualización: 9 de noviembre de 2026",
       sections: privacySections("es")
     };
   }
@@ -2013,42 +2037,42 @@ function cloneLocalizedBlog(lang, source) {
 
 function privacySections(lang) {
   const fr = [
-    ["Responsable", "Jax Max Delta est un produit détenu et exploité par <strong>Camilore Inc.</strong> Sous réserve de la signature des documents de transfert applicables, Camilore Inc. en a assumé la propriété et l'exploitation le 1er octobre 2026."],
-    ["La version courte", "Jax Max Delta n'a <strong>aucun compte utilisateur</strong>. Vous pouvez indiquer un nom facultatif que Jax utilisera; il reste sur votre appareil avec votre télémétrie, vos tours, vos sessions, vos réglages et vos préférences. Nous ne vendons pas ces renseignements et ne les utilisons pas pour la publicité. Seuls les diagnostics de plantage, le traitement des achats, les messages ou exportations que vous lancez et, si disponible, une sauvegarde dans votre propre conteneur iCloud privé quittent l'appareil."],
-    ["Ce que l'app recoit de votre jeu", "Jax Max Delta ecoute sur votre reseau local la telemetrie UDP diffusee par votre jeu F1 (EA F1 24, F1 25 et F1 26). Ce trafic circule uniquement sur votre propre reseau, de votre console ou PC vers votre telephone. Il est recu par l'app et n'est jamais retransmis par elle. Il contient des donnees de course — chronos, vitesse, etat des pneus, positions, les noms que le jeu attribue aux pilotes de votre session — et aucune information vous concernant personnellement. L'app ne transmet la telemetrie ni a nous ni a qui que ce soit."],
-    ["Ce qui est stocké sur votre appareil", "Le nom facultatif que Jax doit utiliser, l'historique des sessions, les noms de pilotes fournis par le jeu, les enregistrements locaux de course et les traces de tour, les réglages de voiture, vos évaluations et les préférences de l'app restent dans le stockage privé de votre appareil. Vous pouvez modifier ou supprimer votre nom, gérer la conservation des traces lourdes et supprimer une session ou toutes les sessions dans l'app."],
-    ["Achats", "Les abonnements sont vendus par Apple et geres pour nous par RevenueCat, Inc. Lorsque vous vous abonnez ou restaurez un achat, Apple et RevenueCat traitent la transaction ainsi qu'un identifiant d'installation anonyme afin que l'app sache si votre abonnement est actif. Nous ne recevons jamais vos donnees de paiement — Apple gere entierement le paiement. Voir la <a href=\"https://www.apple.com/legal/privacy/\">politique de confidentialite d'Apple</a> et la <a href=\"https://www.revenuecat.com/privacy\">politique de confidentialite de RevenueCat</a>."],
-    ["Diagnostics de plantage et de stabilite", "L'app utilise Google Firebase Crashlytics pour signaler les plantages et les erreurs afin que nous puissions les corriger. Un rapport de plantage contient des informations techniques — l'erreur, le chemin de code, le modele d'appareil, la version du systeme d'exploitation, la version de l'app et un identifiant d'installation anonyme. Il ne contient ni votre telemetrie, ni votre historique de sessions, ni vos reglages, ni quoi que ce soit qui vous identifie personnellement. Nous n'utilisons pas ces donnees a des fins publicitaires et elles ne sont liees a aucune identite. Voir les <a href=\"https://firebase.google.com/support/privacy\">informations de confidentialite de Firebase</a>."],
-    ["Sauvegarde iCloud de votre historique de sessions", "Si iCloud est active et disponible sur votre appareil, l'app peut sauvegarder votre historique de sessions et vos donnees de ligue dans <strong>le conteneur iCloud prive de l'app</strong> (<code>iCloud.com.camilore.jaxmaxdelta</code>), a l'interieur de <strong>votre</strong> compte iCloud. C'est une fonction reellement livree, et cette politique le dit clairement. La sauvegarde contient les enregistrements de sessions et les ligues ; elle ne contient <strong>pas</strong> les fichiers de traces de tour ni de donnees de course, qui restent uniquement sur l'appareil qui les a captures. Le conteneur appartient a votre compte Apple et Apple fournit le stockage — <strong>nous n'y avons aucun acces</strong> : nous ne pouvons ni lire, ni lister, ni recuperer vos sauvegardes. L'app conserve la sauvegarde la plus recente plus jusqu'a cinq copies datees, et elimine les plus anciennes. Avant une restauration, l'app ecrit une copie de securite locale sur votre appareil afin qu'une restauration puisse etre annulee, et une restauration n'ecrase jamais une session deja presente sur l'appareil. Pour supprimer ces sauvegardes, supprimez les donnees de l'app dans iCloud via les Reglages iOS, ou supprimez l'app. Le traitement des donnees iCloud par Apple est regi par la politique de confidentialite d'Apple."],
-    ["Exportations que vous lancez", "Vous pouvez exporter votre historique de sessions dans un fichier et le partager via la feuille de partage iOS (Fichiers, AirDrop, Messages, etc.). Cela ne se produit que si vous le demandez, le fichier va la ou vous l'envoyez, et il ne passe pas par nous."],
-    ["Messages au support", "Si vous contactez le support, nous recevons uniquement ce que vous choisissez de nous envoyer — en general votre courriel, le modele d'appareil, la version de l'app et une description du probleme. Nous l'utilisons pour vous repondre et corriger le probleme, et pour rien d'autre."],
-    ["Ce que nous ne faisons pas", "Aucun compte dans l'app, aucune inscription et aucune collecte automatique de courriel. Aucune publicité, aucun identifiant publicitaire, aucun IDFA, aucun réseau publicitaire. Aucun suivi entre apps ou entre sites et aucune analyse produit ou télémétrie comportementale envoyée vers nous. Aucune vente ni location de vos données. Aucun accès à la localisation, aux contacts, aux photos, au microphone ou à la caméra."],
-    ["Bases legales (utilisateurs EEE/Royaume-Uni)", "Lorsque le RGPD s'applique, nous nous appuyons sur le <strong>contrat</strong> — traiter l'achat et le statut d'abonnement pour vous donner les fonctions que vous avez payees — et sur les <strong>interets legitimes</strong> — les diagnostics de plantage, pour eviter que l'app ne defaille sur votre appareil, mis en balance avec le fait que ces donnees sont techniques et non liees a une identite. Nous ne traitons pas de categories particulieres de donnees et nous ne prenons pas de decision automatisee produisant des effets juridiques."],
-    ["Conservation", "Les donnees sur votre appareil sont conservees jusqu'a ce que vous les supprimiez, en supprimant des sessions dans l'app, en laissant votre reglage de conservation elaguer les traces, ou en supprimant l'app. Les sauvegardes iCloud restent dans votre propre conteneur jusqu'a ce que vous les supprimiez ; l'app conserve la plus recente plus cinq copies datees. Les rapports de plantage sont conserves par Firebase selon les durees de conservation publiees par Google pour Crashlytics. Les enregistrements d'achat sont conserves par Apple et RevenueCat selon leurs propres politiques."],
-    ["Vos droits", "Selon l'endroit où vous vivez, notamment au Canada ou au Québec, la loi applicable peut vous donner des droits d'accès, de rectification, d'effacement, de retrait du consentement, de portabilité ou de plainte auprès d'une autorité. Ces droits dépendent des renseignements et de la loi. La plupart des données JMD sont sous votre contrôle direct dans l'app. Pour les dossiers de soutien, diagnostics ou achats, écrivez à support@jaxmaxdelta.com."],
-    ["Enfants", "Jax Max Delta est classé 4+ dans l'App Store et est conçu pour les pilotes de sim racing, sans viser particulièrement les enfants. Nous ne sollicitons pas sciemment de renseignements personnels d'enfants. Si un enfant en a envoyé au soutien, contactez-nous afin que nous puissions examiner la situation."],
-    ["Traitement international", "Apple, Google et RevenueCat offrent des services à l'échelle internationale et peuvent traiter des renseignements limités sur les achats ou diagnostics à l'extérieur de votre province ou pays selon leurs propres conditions et pratiques. Consultez les avis liés pour les détails actuels."],
-    ["Modifications de cette politique", "Si cette politique change, nous mettrons à jour la date de dernière modification et publierons la version révisée à cette adresse. Nous ne daterons pas rétroactivement une révision."],
-    ["Contact", "Camilore Inc. est responsable de Jax Max Delta. Questions de confidentialité et soutien : <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>. Site de l'entreprise : <a href=\"https://camilore.com\">camilore.com</a>."]
+    ["Responsable", "Jax Max Delta est un produit détenu et exploité par <strong>Camilore Inc.</strong> Sous réserve de la signature des documents de transfert applicables, Camilore Inc. en a assumé la propriété et l'exploitation le 1er octobre 2026. Dans cette politique, « Camilore », « nous » et « notre » désignent Camilore Inc. Cette politique explique ce que l'app fait de vos renseignements. Elle est écrite pour être lue, pas pour être subie."],
+    ["1. La version courte", "Jax Max Delta n'a <strong>aucun compte utilisateur</strong>. Vous pouvez indiquer un nom facultatif que Jax utilisera pour s'adresser à vous; il est stocké localement avec vos préférences. Votre télémétrie, vos données de tour, votre historique de sessions, votre historique de course et vos réglages de voiture sont stockés <strong>sur votre appareil</strong>. Ils ne sont jamais publiés dans un classement en ligne et jamais partagés avec d'autres pilotes. Nous ne vendons ni ne louons vos données et ne les utilisons pas à des fins publicitaires; le traitement limité par des tiers est décrit ci-dessous. Des renseignements quittent votre appareil uniquement par les <strong>diagnostics de plantage</strong>, le <strong>traitement des achats et des abonnements</strong>, les messages au soutien ou les exportations que vous lancez et — seulement si iCloud est disponible sur votre appareil et que la sauvegarde iCloud est activée — une <strong>sauvegarde de votre historique de sessions et de votre historique de course dans votre propre conteneur iCloud privé</strong>, que Camilore ne peut pas lire. Vous pouvez supprimer les données de votre appareil en tout temps depuis l'app, ou en supprimant l'app. Les sauvegardes iCloud se suppriment séparément (voir 4.3)."],
+    ["2. Ce que l'app reçoit de votre jeu", "Jax Max Delta écoute sur votre réseau local la télémétrie UDP diffusée par votre jeu F1 (EA F1 24, F1 25 et F1 26). Ce trafic circule uniquement sur votre propre réseau, de votre console ou PC vers votre téléphone. Il est reçu par l'app et n'est jamais retransmis par elle. Il contient des données de course — temps au tour, vitesse, état des pneus, positions, noms attribués par le jeu aux pilotes de votre session — et aucun renseignement sur vous personnellement. L'app ne transmet pas la télémétrie à nous ni à qui que ce soit."],
+    ["3. Ce qui est stocké sur votre appareil", "Les éléments suivants restent dans le stockage privé de l'app sur votre appareil : l'historique des sessions (circuits, types de session, temps au tour et par secteur, positions, résultats, événements, pénalités, météo); l'historique de course pour Race Replay (les tours, positions, pneus, arrêts aux stands et événements de course de chaque pilote, tels que diffusés par le jeu); les traces de tour (échantillons d'accélérateur, de frein, de direction, de vitesse, de rapport, d'ERS et de DRS); les réglages de voiture captés pendant vos sessions et vos évaluations; et vos préférences — hôte et port de connexion, jeu, langue, unités, le nom facultatif que Jax doit utiliser, réglages de voix et de guidage audio de Jax, et réglage de conservation des données. Vous contrôlez la durée de conservation des données plus lourdes — traces de tour et historique de course — dans <strong>Paramètres → RÉGLAGES → Stockage → Conserver les données de course</strong> (toujours, 1 an, 9, 6, 3 ou 1 mois, ou 1 semaine). Choisir une période plus courte demande une confirmation avant toute suppression. Les résultats, les tours et les positions des sessions ne sont pas touchés par ce réglage. Vous pouvez supprimer une session ou toutes vos sessions en tout temps."],
+    ["4.1 Achats", "Les abonnements sont vendus par Apple et gérés pour nous par RevenueCat, Inc. Lorsque vous vous abonnez ou restaurez un achat, Apple et RevenueCat traitent la transaction ainsi qu'un identifiant d'installation anonyme afin que l'app sache si votre abonnement est actif. Nous ne recevons jamais vos données de paiement — Apple gère entièrement le paiement. Voir la <a href=\"https://www.apple.com/legal/privacy/\">politique de confidentialité d'Apple</a> et la <a href=\"https://www.revenuecat.com/privacy\">politique de confidentialité de RevenueCat</a>."],
+    ["4.2 Diagnostics de plantage et de stabilité", "L'app utilise Google Firebase Crashlytics pour signaler les plantages et les erreurs afin que nous puissions les corriger. Un rapport de plantage contient des informations techniques — l'erreur, le chemin de code, le modèle d'appareil, la version du système d'exploitation, la version de l'app et un identifiant d'installation anonyme. Il ne contient ni votre télémétrie, ni votre historique de sessions, ni vos réglages, ni quoi que ce soit qui vous identifie personnellement. Nous n'utilisons pas ces données à des fins publicitaires et elles ne sont liées à aucune identité. Voir les <a href=\"https://firebase.google.com/support/privacy\">informations de confidentialité de Firebase</a>."],
+    ["4.3 Sauvegarde iCloud de votre historique de sessions", "Si iCloud est activé et disponible sur votre appareil, l'app sauvegarde votre historique de sessions, vos données de ligue et votre historique de course après chaque session terminée dans <strong>le conteneur iCloud privé de l'app</strong> (<code>iCloud.com.camilore.jaxmaxdelta</code>), à l'intérieur de <strong>votre</strong> compte iCloud. La sauvegarde iCloud est activée par défaut; vous pouvez la désactiver dans <strong>Paramètres → RÉGLAGES → Suivi de session et sauvegarde iCloud</strong>. C'est une fonction réelle et livrée, et cette politique le dit clairement. La sauvegarde contient vos sessions, vos ligues et l'historique de course utilisé par Race Replay (un fichier par course). Elle ne contient <strong>pas</strong> les traces de tour (vos échantillons d'accélérateur, de frein et de direction), qui restent uniquement sur l'appareil qui les a captées. L'historique de course dans iCloud reflète votre appareil : lorsque l'historique de course d'une session est supprimé de l'appareil — par vous ou par le réglage « Conserver les données de course » —, sa copie est retirée d'iCloud à la sauvegarde suivante. Les sessions restent dans les copies datées jusqu'à ce que celles-ci soient remplacées. Le conteneur appartient à votre compte Apple et Apple fournit le stockage — <strong>nous n'y avons pas accès</strong>; nous ne pouvons ni lire, ni lister, ni récupérer vos sauvegardes. L'app conserve la sauvegarde la plus récente et jusqu'à cinq copies datées, et supprime les plus anciennes. Avant une restauration, l'app écrit une copie de sécurité locale sur votre appareil pour que la restauration puisse être annulée, et une restauration n'écrase jamais une session déjà présente sur l'appareil. Pour supprimer ces sauvegardes, supprimez les données de l'app dans iCloud depuis les Réglages d’iOS. Supprimer l'app efface les données stockées sur l'appareil; ce n'est pas ainsi qu'on supprime les sauvegardes iCloud. Le traitement des données iCloud par Apple est régi par la politique de confidentialité d'Apple."],
+    ["4.4 Exportations que vous lancez", "Dans <strong>Paramètres → RÉGLAGES → Exporter et importer</strong>, vous pouvez exporter votre historique de sessions, vos ligues et votre historique de course dans un seul fichier et le partager par la feuille de partage iOS (Fichiers, AirDrop, Messages, etc.). Les traces de tour ne sont pas incluses. Cela ne se produit que si vous le demandez, le fichier va là où vous l'envoyez et il ne passe pas par nous. Vous pouvez importer un tel fichier sur n'importe quel appareil; l'importation n'écrase jamais une session déjà présente."],
+    ["4.5 Messages au soutien et suggestions de fonctions", "Si vous écrivez à <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>, Camilore reçoit uniquement ce que vous choisissez d'envoyer — en général votre adresse courriel, le modèle d'appareil, la version de l'app et une description du problème. Nous l'utilisons pour vous répondre, résoudre le problème, tenir des dossiers de soutien et améliorer le produit. N'envoyez pas de télémétrie brute ni de fichiers sensibles, sauf si le soutien le demande et que vous êtes à l'aise de les partager. Les suggestions de fonctions envoyées à la même adresse sont volontaires et traitées comme tout autre message au soutien. Rien n'est joint automatiquement depuis l'app."],
+    ["5. Ce que nous ne faisons pas", "Aucun compte dans l'app, aucune inscription et aucune collecte automatique de courriel. Aucun classement en ligne ni profil public, et aucune publication ni aucun partage de vos sessions, réglages ou traces de tour avec d'autres pilotes. Aucune publicité, aucun identifiant publicitaire, aucun IDFA, aucun réseau publicitaire. Aucun suivi entre apps ou entre sites, et aucune demande de transparence du suivi (ATT), parce que nous ne faisons pas de suivi. Aucune analytique de produit ni télémétrie comportementale envoyée chez nous. Aucune vente ni location de vos données. Aucune collecte de localisation — l'app ne demande pas l'accès à la localisation. Aucun accès aux contacts, aux photos, au microphone ni à la caméra."],
+    ["6. Bases légales (utilisateurs de l'EEE et du Royaume-Uni)", "Lorsque le RGPD s'applique, nous nous appuyons sur le <strong>contrat</strong> — traiter l'achat et le statut d'abonnement pour vous donner les fonctions que vous avez payées — et sur l'<strong>intérêt légitime</strong> — les diagnostics de plantage, pour éviter que l'app ne plante sur votre appareil, en tenant compte du fait que ces données sont techniques et non liées à une identité. Nous ne traitons aucune catégorie particulière de données et ne prenons aucune décision automatisée produisant des effets juridiques."],
+    ["7. Conservation", "Les données sur votre appareil sont conservées jusqu'à ce que vous les supprimiez, en supprimant des sessions dans l'app, en laissant votre réglage de conservation élaguer les traces de tour et l'historique de course, ou en supprimant l'app. Les sauvegardes iCloud restent dans votre propre conteneur jusqu'à ce que vous les supprimiez; l'app conserve elle-même la plus récente et cinq copies datées, et retire l'historique de course des sessions qui ne sont plus sur votre appareil. Les rapports de plantage sont conservés par Firebase selon les durées de conservation publiées par Google pour Crashlytics. Les dossiers d'achat sont conservés par Apple et RevenueCat selon leurs propres politiques. Les courriels au soutien, y compris les suggestions de fonctions, sont conservés comme dossiers de soutien aussi longtemps qu'ils sont nécessaires pour vous répondre, faire un suivi et améliorer le produit."],
+    ["8. Vos droits", "Selon l'endroit où vous vivez, notamment au Canada ou au Québec, la loi applicable peut vous donner des droits d'accès, de rectification, de suppression, de retrait du consentement, de portabilité ou de plainte auprès d'une autorité de protection de la vie privée. Ces droits ne sont pas absolus et dépendent des renseignements et de la loi en cause. La plupart des données de JMD sont sous votre contrôle direct dans l'app. Pour toute question ou demande concernant les dossiers de soutien, les diagnostics ou le statut d'achat, écrivez à <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>. Nous pourrions avoir besoin de renseignements suffisants pour vérifier votre demande et y répondre sans créer de compte utilisateur."],
+    ["9. Enfants", "Jax Max Delta est classé 4+ dans l'App Store et est conçu pour les pilotes de course virtuelle, sans viser particulièrement les enfants. Nous ne sollicitons pas sciemment de renseignements personnels auprès d'enfants. Si vous croyez qu'un enfant a envoyé des renseignements personnels au soutien, écrivez-nous afin que nous puissions examiner la situation et y donner suite."],
+    ["10. Traitement international", "Apple, Google et RevenueCat offrent des services à l'échelle internationale et peuvent traiter des renseignements limités sur les achats ou les diagnostics à l'extérieur de votre province, de votre État ou de votre pays selon leurs propres conditions et pratiques. Consultez les avis liés de ces fournisseurs pour les détails à jour; Camilore n'affirme aucun lieu de traitement que ces fournisseurs n'ont pas confirmé."],
+    ["11. Modifications de cette politique", "Si cette politique change, nous mettrons à jour la date de dernière mise à jour et publierons la version révisée à cette adresse. Nous n'antidaterons jamais une révision. Les changements importants touchant l'app pourront aussi être décrits dans les notes de version."],
+    ["12. Contact", "Camilore Inc. est responsable de Jax Max Delta. Questions de confidentialité et soutien : <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>. Site de l'entreprise : <a href=\"https://camilore.com\">camilore.com</a>."]
   ];
   const es = [
-    ["Responsable", "Jax Max Delta es un producto propiedad de <strong>Camilore Inc.</strong> y operado por esta empresa. Sujeto a la firma de la documentación de transferencia aplicable, Camilore Inc. asumió la propiedad y operación el 1 de octubre de 2026."],
-    ["La versión corta", "Jax Max Delta no tiene <strong>cuentas de usuario</strong>. Puedes indicar un nombre opcional para que Jax lo use; permanece en tu dispositivo junto con la telemetría, vueltas, sesiones, reglajes y preferencias. No vendemos esta información ni la usamos para publicidad. Solo salen del dispositivo los diagnósticos de fallos, el procesamiento de compras, los mensajes o exportaciones que tú inicias y, si está disponible, una copia en tu propio contenedor privado de iCloud."],
-    ["Lo que la app recibe de tu juego", "Jax Max Delta escucha en tu red local la telemetria UDP que emite tu juego de F1 (EA F1 24, F1 25 y F1 26). Ese trafico viaja solo por tu propia red, desde tu consola o PC hasta tu telefono. La app lo recibe y nunca lo reenvia. Contiene datos de carrera — tiempos de vuelta, velocidad, estado de neumaticos, posiciones, los nombres que el juego asigna a los pilotos de tu sesion — y ninguna informacion sobre ti personalmente. La app no transmite telemetria ni a nosotros ni a nadie mas."],
-    ["Lo que se guarda en tu dispositivo", "El nombre opcional que quieres que use Jax, el historial de sesiones, los nombres de pilotos que proporciona el juego, las grabaciones locales de carrera y trazas de vuelta, los reglajes, tus valoraciones y las preferencias de la app permanecen en el almacenamiento privado de tu dispositivo. Puedes cambiar o eliminar tu nombre, controlar la retención de las trazas más pesadas y borrar una sesión o todas las sesiones dentro de la app."],
-    ["Compras", "Las suscripciones las vende Apple y las gestiona para nosotros RevenueCat, Inc. Cuando te suscribes o restauras una compra, Apple y RevenueCat procesan la transaccion y un identificador anonimo de instalacion para que la app sepa si tu suscripcion esta activa. Nunca recibimos tus datos de pago — Apple gestiona el pago por completo. Consulta la <a href=\"https://www.apple.com/legal/privacy/\">politica de privacidad de Apple</a> y la <a href=\"https://www.revenuecat.com/privacy\">politica de privacidad de RevenueCat</a>."],
-    ["Diagnosticos de fallos y estabilidad", "La app usa Google Firebase Crashlytics para reportar fallos y errores y poder corregirlos. Un reporte de fallo contiene informacion tecnica — el error, la ruta de codigo, el modelo de dispositivo, la version del sistema operativo, la version de la app y un identificador anonimo de instalacion. No contiene tu telemetria, ni tu historial de sesiones, ni tus setups, ni nada que te identifique personalmente. No usamos estos datos para publicidad y no estan vinculados a una identidad. Consulta la <a href=\"https://firebase.google.com/support/privacy\">informacion de privacidad de Firebase</a>."],
-    ["Copia de seguridad en iCloud de tu historial de sesiones", "Si tu dispositivo tiene iCloud activado y disponible, la app puede respaldar tu historial de sesiones y tus datos de liga en <strong>el contenedor privado de iCloud de la propia app</strong> (<code>iCloud.com.camilore.jaxmaxdelta</code>), dentro de <strong>tu</strong> cuenta de iCloud. Es una funcion ya publicada, y esta politica lo dice con claridad. La copia contiene registros de sesiones y ligas; <strong>no</strong> contiene archivos de trazas de vuelta ni de datos de carrera, que permanecen solo en el dispositivo que los capturo. El contenedor pertenece a tu cuenta de Apple y Apple provee el almacenamiento — <strong>nosotros no tenemos acceso</strong>: no podemos leer, listar ni recuperar tus copias. La app conserva la copia mas reciente mas hasta cinco copias fechadas, y elimina las mas antiguas. Antes de restaurar, la app escribe una copia de seguridad local en tu dispositivo para que la restauracion se pueda deshacer, y restaurar nunca sobrescribe una sesion que ya esta en el dispositivo. Para eliminar estas copias, borra los datos de la app en iCloud desde los Ajustes de iOS, o elimina la app. El tratamiento de los datos de iCloud por parte de Apple se rige por la politica de privacidad de Apple."],
-    ["Exportaciones que tu inicias", "Puedes exportar tu historial de sesiones a un archivo y compartirlo mediante la hoja de comparticion de iOS (Archivos, AirDrop, Mensajes, etc.). Esto ocurre solo cuando tu lo pides, el archivo va a donde tu lo envies, y no pasa por nosotros."],
-    ["Mensajes de soporte", "Si contactas con soporte, recibimos unicamente lo que eliges enviarnos — normalmente tu email, el modelo de dispositivo, la version de la app y una descripcion del problema. Lo usamos para responderte y solucionar el problema, y para nada mas."],
-    ["Lo que no hacemos", "Sin cuentas dentro de la app, registro ni recogida automática de emails. Sin publicidad, identificadores publicitarios, IDFA ni redes de anuncios. Sin seguimiento entre apps o sitios ni analítica de producto o telemetría de comportamiento enviada a nosotros. Sin venta ni alquiler de tus datos. Sin acceso a ubicación, contactos, fotos, micrófono o cámara."],
-    ["Bases legales (usuarios del EEE/Reino Unido)", "Cuando se aplica el RGPD, nos basamos en el <strong>contrato</strong> — tratar la compra y el estado de la suscripcion para darte las funciones que has pagado — y en el <strong>interes legitimo</strong> — los diagnosticos de fallos, para evitar que la app falle en tu dispositivo, ponderado frente al hecho de que esos datos son tecnicos y no estan vinculados a una identidad. No tratamos categorias especiales de datos y no realizamos decisiones automatizadas con efectos juridicos."],
-    ["Conservacion", "Los datos en tu dispositivo se conservan hasta que los borres, ya sea eliminando sesiones en la app, dejando que tu ajuste de retencion depure las trazas, o eliminando la app. Las copias de iCloud permanecen en tu propio contenedor hasta que las borres; la app conserva la mas reciente mas cinco copias fechadas. Los reportes de fallos los conserva Firebase segun los periodos de retencion publicados por Google para Crashlytics. Los registros de compra los conservan Apple y RevenueCat segun sus propias politicas."],
-    ["Tus derechos", "Según dónde vivas, incluido Canadá o Quebec, la ley aplicable puede darte derechos de acceso, corrección, eliminación, retirada del consentimiento, portabilidad o reclamación ante un regulador. Estos derechos dependen de la información y la ley. La mayor parte de los datos de JMD está bajo tu control directo en la app. Para registros de soporte, diagnósticos o compras, escribe a support@jaxmaxdelta.com."],
-    ["Niños", "Jax Max Delta tiene clasificación 4+ en el App Store y está diseñado para pilotos de sim racing, sin estar dirigido específicamente a niños. No solicitamos conscientemente información personal de niños. Si un niño envió información al soporte, contáctanos para revisarla."],
-    ["Procesamiento internacional", "Apple, Google y RevenueCat prestan servicios internacionalmente y pueden tratar información limitada de compras o diagnósticos fuera de tu provincia o país según sus propios términos y prácticas. Consulta los avisos enlazados para obtener detalles actuales."],
-    ["Cambios en esta política", "Si esta política cambia, actualizaremos la fecha de última modificación y publicaremos la versión revisada en esta dirección. No pondremos una fecha retroactiva a una revisión."],
-    ["Contacto", "Camilore Inc. es responsable de Jax Max Delta. Consultas de privacidad y soporte: <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>. Sitio corporativo: <a href=\"https://camilore.com\">camilore.com</a>."]
+    ["Responsable", "Jax Max Delta es un producto propiedad de <strong>Camilore Inc.</strong> y operado por esta empresa. Sujeto a la firma de la documentación de transferencia aplicable, Camilore Inc. asumió la propiedad y operación el 1 de octubre de 2026. En esta política, «Camilore», «nosotros» y «nuestro» se refieren a Camilore Inc. Esta política explica qué hace la app con tu información. Está escrita para leerse, no para sufrirse."],
+    ["1. La versión corta", "Jax Max Delta no tiene <strong>cuentas de usuario</strong>. Puedes indicar un nombre opcional para que Jax se dirija a ti; se guarda localmente con tus preferencias. Tu telemetría, tus datos de vuelta, tu historial de sesiones, tu historial de carrera y tus reglajes se guardan <strong>en tu dispositivo</strong>. Nunca se publican en clasificaciones en línea ni se comparten con otros pilotos. No vendemos ni alquilamos tus datos y no los usamos para publicidad; el tratamiento limitado por terceros se describe más abajo. La información sale de tu dispositivo solo mediante los <strong>diagnósticos de fallos</strong>, el <strong>procesamiento de compras y suscripciones</strong>, los mensajes de soporte o las exportaciones que tú inicias y — solo si tu dispositivo tiene iCloud disponible y la copia de seguridad en iCloud está activada — una <strong>copia de tu historial de sesiones y de carrera en tu propio contenedor privado de iCloud</strong>, que Camilore no puede leer. Puedes borrar los datos de tu dispositivo en cualquier momento desde la app, o eliminando la app. Las copias de iCloud se borran por separado (ver 4.3)."],
+    ["2. Lo que la app recibe de tu juego", "Jax Max Delta escucha en tu red local la telemetría UDP que emite tu juego de F1 (EA F1 24, F1 25 y F1 26). Ese tráfico viaja solo por tu propia red, desde tu consola o PC hasta tu teléfono. La app lo recibe y nunca lo reenvía. Contiene datos de carrera — tiempos por vuelta, velocidad, estado de los neumáticos, posiciones, los nombres que el juego asigna a los pilotos de tu sesión — y ninguna información sobre ti personalmente. La app no transmite la telemetría ni a nosotros ni a nadie."],
+    ["3. Lo que se guarda en tu dispositivo", "Lo siguiente permanece en el almacenamiento privado de la app en tu dispositivo: el historial de sesiones (circuitos, tipos de sesión, tiempos por vuelta y por sector, posiciones, resultados, eventos, sanciones, meteorología); el historial de carrera para Race Replay (las vueltas, posiciones, neumáticos, paradas en boxes y eventos de carrera de cada piloto, tal como los emite el juego); las trazas de vuelta (muestras de acelerador, freno, dirección, velocidad, marcha, ERS y DRS); los reglajes captados en tus sesiones y tus valoraciones; y tus preferencias — host y puerto de conexión, juego, idioma, unidades, el nombre opcional que quieres que use Jax, ajustes de voz y guía de audio de Jax, y el ajuste de conservación de datos. Tú decides cuánto tiempo se conservan los datos más pesados — trazas de vuelta e historial de carrera — en <strong>Ajustes → AJUSTES → Almacenamiento → Conservar datos de carrera</strong> (siempre, 1 año, 9, 6, 3 o 1 meses, o 1 semana). Elegir un periodo más corto pide confirmación antes de borrar nada. Los resultados, las vueltas y las posiciones de las sesiones no se ven afectados por ese ajuste. Puedes borrar una sesión o todas en cualquier momento."],
+    ["4.1 Compras", "Las suscripciones las vende Apple y las gestiona para nosotros RevenueCat, Inc. Cuando te suscribes o restauras una compra, Apple y RevenueCat procesan la transacción y un identificador anónimo de instalación para que la app sepa si tu suscripción está activa. Nunca recibimos tus datos de pago — Apple gestiona el pago por completo. Consulta la <a href=\"https://www.apple.com/legal/privacy/\">política de privacidad de Apple</a> y la <a href=\"https://www.revenuecat.com/privacy\">política de privacidad de RevenueCat</a>."],
+    ["4.2 Diagnósticos de fallos y estabilidad", "La app usa Google Firebase Crashlytics para reportar fallos y errores y poder corregirlos. Un reporte de fallo contiene información técnica — el error, la ruta de código, el modelo de dispositivo, la versión del sistema operativo, la versión de la app y un identificador anónimo de instalación. No contiene tu telemetría, ni tu historial de sesiones, ni tus reglajes, ni nada que te identifique personalmente. No usamos estos datos para publicidad y no están vinculados a una identidad. Consulta la <a href=\"https://firebase.google.com/support/privacy\">información de privacidad de Firebase</a>."],
+    ["4.3 Copia de seguridad en iCloud de tu historial de sesiones", "Si tu dispositivo tiene iCloud activado y disponible, la app respalda tu historial de sesiones, tus datos de liga y tu historial de carrera después de cada sesión completada en <strong>el contenedor privado de iCloud de la propia app</strong> (<code>iCloud.com.camilore.jaxmaxdelta</code>), dentro de <strong>tu</strong> cuenta de iCloud. La copia de seguridad en iCloud está activada por defecto; puedes desactivarla en <strong>Ajustes → AJUSTES → Seguimiento de sesión y copia de seguridad iCloud</strong>. Es una función real y disponible, y esta política lo dice claramente. La copia contiene tus sesiones, tus ligas y el historial de carrera que usa Race Replay (un archivo por carrera). <strong>No</strong> contiene las trazas de vuelta (tus muestras de acelerador, freno y dirección), que permanecen solo en el dispositivo que las captó. El historial de carrera en iCloud refleja tu dispositivo: cuando se borra el historial de carrera de una sesión en el dispositivo — por ti o por el ajuste «Conservar datos de carrera» —, su copia se retira de iCloud en la siguiente copia de seguridad. Las sesiones permanecen en las copias fechadas hasta que estas se sustituyen. El contenedor pertenece a tu cuenta de Apple y Apple proporciona el almacenamiento — <strong>no tenemos acceso</strong>; no podemos leer, listar ni recuperar tus copias. La app conserva la copia más reciente y hasta cinco copias fechadas, y elimina las más antiguas. Antes de restaurar, la app escribe una copia de seguridad local en tu dispositivo para que la restauración pueda deshacerse, y restaurar nunca sobrescribe una sesión que ya está en el dispositivo. Para eliminar estas copias, borra los datos de la app en iCloud desde los Ajustes de iOS. Eliminar la app borra los datos guardados en el dispositivo; no es la forma de eliminar las copias de iCloud. El tratamiento de los datos de iCloud por parte de Apple se rige por la política de privacidad de Apple."],
+    ["4.4 Exportaciones que tú inicias", "En <strong>Ajustes → AJUSTES → Exportar e importar</strong> puedes exportar tu historial de sesiones, tus ligas y tu historial de carrera a un solo archivo y compartirlo mediante la hoja para compartir de iOS (Archivos, AirDrop, Mensajes, etc.). Las trazas de vuelta no se incluyen. Esto ocurre solo cuando tú lo pides, el archivo va a donde tú lo envíes y no pasa por nosotros. Puedes importar ese archivo en cualquier dispositivo; importar nunca sobrescribe una sesión que ya esté allí."],
+    ["4.5 Mensajes de soporte y sugerencias de funciones", "Si escribes a <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>, Camilore recibe solo lo que tú decides enviar — normalmente tu dirección de email, el modelo de dispositivo, la versión de la app y una descripción del problema. Lo usamos para responderte, resolver el problema, mantener registros de soporte y mejorar el producto. No envíes telemetría en bruto ni archivos sensibles salvo que soporte lo pida y te sientas cómodo compartiéndolos. Las sugerencias de funciones enviadas a la misma dirección son voluntarias y se tratan como cualquier otro mensaje de soporte. La app no adjunta nada automáticamente."],
+    ["5. Lo que no hacemos", "Sin cuentas dentro de la app, registro ni recogida automática de emails. Sin clasificaciones en línea ni perfiles públicos, y sin publicar ni compartir tus sesiones, reglajes o trazas de vuelta con otros pilotos. Sin publicidad, identificadores publicitarios, IDFA ni redes de anuncios. Sin seguimiento entre apps o sitios, y sin solicitud de App Tracking Transparency, porque no hacemos seguimiento. Sin analítica de producto ni telemetría de comportamiento enviada a nosotros. Sin venta ni alquiler de tus datos. Sin recogida de ubicación — la app no solicita acceso a la ubicación. Sin acceso a contactos, fotos, micrófono ni cámara."],
+    ["6. Bases legales (usuarios del EEE y del Reino Unido)", "Cuando se aplica el RGPD, nos basamos en el <strong>contrato</strong> — tratar la compra y el estado de la suscripción para darte las funciones que has pagado — y en el <strong>interés legítimo</strong> — los diagnósticos de fallos, para evitar que la app falle en tu dispositivo, teniendo en cuenta que esos datos son técnicos y no están vinculados a una identidad. No tratamos categorías especiales de datos ni tomamos decisiones automatizadas que produzcan efectos jurídicos."],
+    ["7. Conservación", "Los datos en tu dispositivo se conservan hasta que los borres, ya sea eliminando sesiones en la app, dejando que tu ajuste de conservación depure las trazas de vuelta y el historial de carrera, o eliminando la app. Las copias de iCloud permanecen en tu propio contenedor hasta que las borres; la propia app conserva la más reciente y cinco copias fechadas, y retira el historial de carrera de las sesiones que ya no están en tu dispositivo. Firebase conserva los reportes de fallos según los plazos de conservación de Crashlytics publicados por Google. Apple y RevenueCat conservan los registros de compra según sus propias políticas. Los emails de soporte, incluidas las sugerencias de funciones, se conservan como registros de soporte mientras sean necesarios para responderte, hacer seguimiento y mejorar el producto."],
+    ["8. Tus derechos", "Según dónde vivas, incluido Canadá o Quebec, la ley aplicable puede darte derechos de acceso, corrección, eliminación, retirada del consentimiento, portabilidad o reclamación ante una autoridad de protección de datos. Estos derechos no son absolutos y dependen de la información y de la ley aplicable. La mayoría de los datos de JMD están bajo tu control directo en la app. Para preguntas o solicitudes sobre registros de soporte, diagnósticos o el estado de compra, escribe a <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>. Puede que necesitemos información suficiente para verificar y responder a una solicitud sin crear una cuenta de usuario."],
+    ["9. Niños", "Jax Max Delta tiene clasificación 4+ en el App Store y está diseñado para pilotos de simracing, sin estar dirigido específicamente a niños. No solicitamos conscientemente información personal de niños. Si crees que un niño envió información personal a soporte, contáctanos para que podamos revisarlo y resolverlo."],
+    ["10. Procesamiento internacional", "Apple, Google y RevenueCat prestan servicios a nivel internacional y pueden tratar información limitada de compras o diagnósticos fuera de tu provincia, estado o país según sus propios términos y prácticas de privacidad. Consulta los avisos enlazados de esos proveedores para ver los detalles actuales; Camilore no afirma un lugar de tratamiento que esos proveedores no hayan confirmado."],
+    ["11. Cambios en esta política", "Si esta política cambia, actualizaremos la fecha de última actualización y publicaremos la versión revisada en esta dirección. Nunca pondremos una fecha retroactiva a una revisión. Los cambios importantes que afecten a la app también podrán describirse en las notas de la versión."],
+    ["12. Contacto", "Camilore Inc. es responsable de Jax Max Delta. Consultas de privacidad y soporte: <a href=\"mailto:support@jaxmaxdelta.com\">support@jaxmaxdelta.com</a>. Sitio corporativo: <a href=\"https://camilore.com\">camilore.com</a>."]
   ];
   return lang === "fr" ? fr : es;
 }
@@ -2601,6 +2625,7 @@ function home(t, lang) {
         <div class="grid-4">
           ${h.privacy.points.map(([title, body]) => `<article class="card"><h3>${title}</h3><p>${body}</p></article>`).join("")}
         </div>
+        <p class="fine-note">${h.privacy.note}</p>
         <p class="section-link"><a class="text-link" href="${route(lang, "privacy.html")}">${t.common.ctaPrivacy} →</a></p>
       </div>
     </section>
@@ -2817,12 +2842,23 @@ function support(t, lang) {
           <p>${s.feedbackBody}</p>
           <p><a class="text-link" href="mailto:${SITE.contact}">${SITE.contact}</a></p>
           <a class="btn btn-primary" href="mailto:${SITE.contact}">${t.common.ctaSupport}</a>
+          <h2 id="suggest-a-feature">${s.suggestTitle}</h2>
+          <p>${s.suggestBody}</p>
+          <a class="btn btn-secondary" href="${suggestionMailto(s)}">${s.suggestCta}</a>
+          <p class="fine-note">${s.suggestNote}</p>
           <h2>${s.knownTitle}</h2>
           ${list(s.known)}
           <p><a class="text-link" href="${route(lang, "how-to.html")}">${t.nav.how}</a> · <a class="text-link" href="${route(lang, "privacy.html")}">${t.nav.privacy}</a></p>
         </aside>
       </div>
     </section>`;
+}
+
+// Feature suggestions go to the support mailbox with a localized subject and a
+// short template. A plain mailto: link — no form, no service, nothing attached.
+function suggestionMailto(s) {
+  const crlf = (text) => text.replace(/\n/g, "\r\n");
+  return `mailto:${SITE.contact}?subject=${encodeURIComponent(s.suggestSubject)}&body=${encodeURIComponent(crlf(s.suggestTemplate))}`;
 }
 
 function blog(t, lang) {
@@ -2853,7 +2889,7 @@ function legalPage(eyebrow, data) {
 
 function roadmap(t) {
   const r = t.roadmap;
-  return `${pageHero(t.common.eyebrow, r.title, r.intro)}<section class="section section--tight"><div class="wrap timeline">${r.groups.map(([name, items], i) => `<article class="timeline-item${i === 0 ? " is-current" : ""}"><h2 class="timeline-tag">${name}</h2>${list(items, i === 0 ? "tick-list tick-list--2col" : "tick-list")}</article>`).join("")}</div></section>`;
+  return `${pageHero(t.common.eyebrow, r.title, r.intro)}<section class="section section--tight"><div class="wrap timeline">${r.groups.map(([name, items], i) => `<article class="timeline-item${i === 0 ? " is-current" : ""}"><h2 class="timeline-tag">${name}</h2>${list(items, i === 0 ? "tick-list tick-list--2col" : "tick-list")}</article>`).join("")}</div><div class="wrap"><p class="section-link"><a class="text-link" href="support.html#suggest-a-feature">${r.suggest} →</a></p></div></section>`;
 }
 
 // The Roro Engine (R2): what it is and what it will add. Future work: no
