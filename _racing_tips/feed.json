@@ -1,0 +1,1471 @@
+{
+  "schema": 1,
+  "version": "2026-11-09.1",
+  "categories": [
+    {
+      "id": "driving_technique",
+      "title": {
+        "en": "DRIVING TECHNIQUE",
+        "fr": "TECHNIQUE DE CONDUITE",
+        "es": "TÉCNICA DE CONDUCCIÓN"
+      }
+    },
+    {
+      "id": "race_tools",
+      "title": {
+        "en": "RACE TOOLS",
+        "fr": "OUTILS DE COURSE",
+        "es": "HERRAMIENTAS DE CARRERA"
+      }
+    },
+    {
+      "id": "preparation",
+      "title": {
+        "en": "PREPARATION",
+        "fr": "PRÉPARATION",
+        "es": "PREPARACIÓN"
+      }
+    },
+    {
+      "id": "rules_penalties",
+      "title": {
+        "en": "RULES & PENALTIES",
+        "fr": "RÈGLES ET PÉNALITÉS",
+        "es": "REGLAS Y PENALIZACIONES"
+      }
+    }
+  ],
+  "tips": [
+    {
+      "id": "trail_braking",
+      "category": "driving_technique",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Trail Braking",
+        "fr": "Freinage dégressif",
+        "es": "Frenada degresiva"
+      },
+      "summary": {
+        "en": "Carry braking into the corner to rotate the car.",
+        "fr": "Maintenez le frein en entrée de virage pour améliorer la rotation.",
+        "es": "Mantén el freno en la entrada de curva para mejorar la rotación."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Trail braking means keeping light brake pressure as you begin to turn in. It shifts weight onto the front tyres, improves rotation, and lets you adjust speed and line mid-corner. It is most effective in medium and high-speed corners where rotation is the limiting factor. Release the brake fully by the apex."
+          },
+          {
+            "type": "image",
+            "src": "images/trail_braking.png",
+            "caption": "Red: brake pressure. Cyan: steering. Full braking from the red marker, then ease off the brake from turn-in (yellow) to the apex (green) while you add steering. The amber band is the trail, where brake and steering overlap."
+          },
+          {
+            "type": "exercise",
+            "text": "Pick one slow corner in your next session. Enter with 30% brake as you begin to steer. Release fully at the apex. Compare your rotation and exit speed to your usual technique."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Le freinage dégressif consiste à maintenir une légère pression sur les freins au moment d'amorcer la trajectoire. Cela transfère le poids sur les pneus avant, améliore la rotation et vous permet d'ajuster la vitesse et la trajectoire en milieu de virage. Relâchez complètement le frein à l'apex."
+          },
+          {
+            "type": "image",
+            "src": "images/trail_braking.png",
+            "caption": "Rouge : pression de freinage. Cyan : braquage. Freinage maximal dès le repère rouge, puis relâchez progressivement le frein entre le point de braquage (jaune) et la corde (vert) pendant que vous ajoutez du braquage. La bande orange est le trail braking, là où frein et braquage se chevauchent."
+          },
+          {
+            "type": "exercise",
+            "text": "Dans votre prochaine session, choisissez un virage lent. Entrez avec 30 % de frein en début de rotation. Relâchez complètement à l'apex. Comparez la rotation et la vitesse en sortie."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "La frenada degresiva consiste en mantener una leve presión en el freno al inicio del giro. Esto transfiere el peso a los neumáticos delanteros, mejora la rotación y permite ajustar velocidad y trazada a mitad de curva. Suelta el freno completamente en el vértice."
+          },
+          {
+            "type": "image",
+            "src": "images/trail_braking.png",
+            "caption": "Rojo: presión de freno. Cian: giro del volante. Frenada a fondo desde la marca roja; después suelta el freno poco a poco entre el punto de giro (amarillo) y el vértice (verde) mientras añades giro. La franja ámbar es el trail braking, donde freno y volante se solapan."
+          },
+          {
+            "type": "exercise",
+            "text": "En tu próxima sesión, elige una curva lenta. Entra con un 30 % de freno al comenzar a girar. Suelta completamente en el vértice. Compara la rotación y la velocidad de salida."
+          }
+        ]
+      }
+    },
+    {
+      "id": "racing_line",
+      "category": "driving_technique",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Racing Line",
+        "fr": "Trajectoire de course",
+        "es": "Trazada de carrera"
+      },
+      "summary": {
+        "en": "Use the full track width to maximise corner speed.",
+        "fr": "Utilisez toute la largeur de piste pour maximiser la vitesse.",
+        "es": "Usa todo el ancho de la pista para maximizar la velocidad."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "The racing line is the path through a corner that allows the highest average speed. Enter from the outside edge, clip a late apex, and track out to the exit kerb. A late apex gives a better exit angle and lets you apply throttle earlier. On low-grip surfaces, the dry-weather line often has less rubber and more grip."
+          },
+          {
+            "type": "image",
+            "src": "images/racing_line.png",
+            "caption": "Cyan: the late-apex line. Brake at the red mark, turn in at yellow, clip the inside kerb at green, then let the car run out to the exit kerb at blue. Dashed: the geometric line, which apexes earlier and leaves you still turning on the exit."
+          },
+          {
+            "type": "exercise",
+            "text": "Find a hairpin or slow corner on your current track. Aim for a late apex — turn in later than feels natural. Focus on a clean exit and early throttle. Review your data overlay to compare the line."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "La trajectoire de course est le chemin à travers un virage qui permet la vitesse moyenne la plus élevée. Entrez depuis l'extérieur, visez un apex tardif et sortez vers le bord extérieur. Un apex tardif donne un meilleur angle de sortie et permet d'accélérer plus tôt."
+          },
+          {
+            "type": "image",
+            "src": "images/racing_line.png",
+            "caption": "En cyan : la trajectoire à point de corde tardif. Freinez au repère rouge, braquez au point jaune, touchez le vibreur intérieur au point vert, puis laissez la voiture s'élargir jusqu'au vibreur de sortie au point bleu. En pointillé : la trajectoire géométrique, qui prend la corde plus tôt et vous oblige à tourner encore en sortie."
+          },
+          {
+            "type": "exercise",
+            "text": "Sur un épingle ou virage lent, visez un apex plus tardif que d'habitude. Concentrez-vous sur une sortie propre et une accélération précoce. Analysez votre tracé dans les données."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "La trazada de carrera es el camino a través de una curva que permite la velocidad media más alta. Entra desde el exterior, toca un vértice tardío y traza hacia el borde exterior de salida. Un vértice tardío da un mejor ángulo de salida y permite acelerar antes."
+          },
+          {
+            "type": "image",
+            "src": "images/racing_line.png",
+            "caption": "En cian: la trazada con vértice tardío. Frena en la marca roja, gira en el punto amarillo, toca el piano interior en el punto verde y deja que el coche se abra hasta el piano de salida en el punto azul. En discontinua: la trazada geométrica, que toma el vértice antes y te obliga a seguir girando a la salida."
+          },
+          {
+            "type": "exercise",
+            "text": "En una horquilla o curva lenta de tu circuito, apunta a un vértice más tardío de lo habitual. Concéntrate en una salida limpia y una aceleración temprana. Revisa tus datos de trazada."
+          }
+        ]
+      }
+    },
+    {
+      "id": "corner_exit",
+      "category": "driving_technique",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Corner Exit",
+        "fr": "Sortie de virage",
+        "es": "Salida de curva"
+      },
+      "summary": {
+        "en": "Apply throttle early and smoothly for maximum drive.",
+        "fr": "Accélérez tôt et en douceur pour maximiser la propulsion.",
+        "es": "Aplica el acelerador pronto y suavemente para maximizar la tracción."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Corner exit is where race pace is won or lost. Apply throttle as early as possible without losing traction. The car should be pointing straight — or nearly straight — before you apply full throttle. A good exit compounds over a long straight. Hesitation at the apex costs more time than a slow entry."
+          },
+          {
+            "type": "image",
+            "src": "images/corner_exit.png",
+            "caption": "Top: throttle. Bottom: speed on the following straight. Cyan: one smooth, committed application from the apex (green). Dashed: a hesitant lift and re-apply. The green area is the speed you keep all the way down the straight."
+          },
+          {
+            "type": "exercise",
+            "text": "After your next race, check your throttle trace on the main straight. If you see a hesitation or partial throttle before the straight, you are losing time at corner exit. Focus on a smooth, committed throttle application at the apex."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "La sortie de virage est là où le rythme de course se joue. Appliquez les gaz le plus tôt possible sans perdre l'adhérence. La voiture doit être droite avant l'accélération complète. Une bonne sortie se cumule sur une longue ligne droite."
+          },
+          {
+            "type": "image",
+            "src": "images/corner_exit.png",
+            "caption": "En haut : accélérateur. En bas : vitesse dans la ligne droite suivante. Cyan : une seule remise des gaz, franche et progressive, dès la corde (vert). En pointillé : une hésitation, un lever de pied puis une nouvelle remise des gaz. La zone verte est la vitesse gagnée sur toute la ligne droite."
+          },
+          {
+            "type": "exercise",
+            "text": "Après votre prochaine course, analysez votre trace d'accélération sur la ligne droite principale. Si vous hésitez avant la ligne droite, vous perdez du temps en sortie de virage. Travaillez sur une accélération fluide à l'apex."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "La salida de curva es donde se gana o pierde el ritmo de carrera. Aplica el acelerador lo antes posible sin perder tracción. El coche debe estar recto — o casi recto — antes del acelerador a fondo. Una buena salida se acumula a lo largo de una recta larga."
+          },
+          {
+            "type": "image",
+            "src": "images/corner_exit.png",
+            "caption": "Arriba: acelerador. Abajo: velocidad en la recta siguiente. Cian: una sola aplicación, progresiva y decidida, desde el vértice (verde). Discontinua: una duda, levantar y volver a acelerar. La zona verde es la velocidad que conservas en toda la recta."
+          },
+          {
+            "type": "exercise",
+            "text": "Tras tu próxima carrera, revisa tu traza de aceleración en la recta principal. Si hay una vacilación antes de la recta, estás perdiendo tiempo en la salida de curva. Trabaja en una aceleración fluida y decidida en el vértice."
+          }
+        ]
+      }
+    },
+    {
+      "id": "wet_driving",
+      "category": "driving_technique",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Wet Driving",
+        "fr": "Conduite sur piste mouillée",
+        "es": "Conducción en mojado"
+      },
+      "summary": {
+        "en": "Adapt inputs and line for low-grip conditions.",
+        "fr": "Adaptez vos entrées et votre trajectoire par faible adhérence.",
+        "es": "Adapta tus entradas y trazada para condiciones de baja adherencia."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "In wet conditions, grip is unpredictable and late braking is dangerous. Use earlier braking points, smoother steering inputs, and trail brakes gently. Avoid painted lines, kerbs, and standing water. The racing line is often different in the wet — favour grip over the shortest path. Turn in gradually; sudden inputs break traction without warning."
+          },
+          {
+            "type": "exercise",
+            "text": "In your next wet session, add 20% to your normal braking points at every corner. Eliminate kerb use entirely. Focus on smooth inputs throughout and evaluate grip changes across different parts of the track."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Sur piste mouillée, l'adhérence est imprévisible et un freinage tardif est dangereux. Freinez plus tôt, guidez la direction doucement et dosez le freinage progressif avec précaution. Évitez les lignes peintes, bordures et flaques. La trajectoire est souvent différente sous la pluie."
+          },
+          {
+            "type": "exercise",
+            "text": "Lors de votre prochaine session mouillée, ajoutez 20 % à vos points de freinage. Éliminez complètement l'utilisation des bordures. Concentrez-vous sur des entrées fluides tout au long du tour."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "En condiciones de lluvia, la adherencia es impredecible y frenar tarde es peligroso. Usa puntos de frenada más anticipados, giros de volante más suaves y dosifica el freno con cuidado. Evita las líneas pintadas, bordillos y charcos. La trazada suele ser diferente bajo la lluvia."
+          },
+          {
+            "type": "exercise",
+            "text": "En tu próxima sesión en mojado, añade un 20 % a tus puntos de frenada normales. Elimina por completo el uso de bordillos. Concéntrate en entradas suaves durante toda la vuelta."
+          }
+        ]
+      }
+    },
+    {
+      "id": "defending",
+      "category": "driving_technique",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Defending",
+        "fr": "Défense de position",
+        "es": "Defensa de posición"
+      },
+      "summary": {
+        "en": "Protect your position without compromising your race.",
+        "fr": "Protégez votre position sans compromettre votre course.",
+        "es": "Protege tu posición sin comprometer tu carrera."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Effective defending is about positioning, not aggression. Make one clear move to defend before the braking zone, then hold your line. Braking slightly later than normal can help. Be aware of your opponent — late or dangerous moves are penalised. A well-placed car is harder to pass than a desperate one. Tire condition matters: defending on worn tyres costs more time than a managed pace."
+          },
+          {
+            "type": "image",
+            "src": "images/defending.png",
+            "caption": "Cyan: the defender makes one move, to the inside, before the braking zone (red). Amber: the attacker in the slipstream. A second move inside the braking zone (crossed out) is not allowed."
+          },
+          {
+            "type": "exercise",
+            "text": "In your next race, when defending, make one clear defensive move before the braking zone and commit to it. Evaluate after the race whether you held position without a penalty."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Défendre efficacement, c'est se positionner intelligemment, pas agressivement. Effectuez un déplacement clair avant la zone de freinage, puis tenez votre trajectoire. Un déplacement tardif ou dangereux est pénalisé. Une voiture bien placée est plus difficile à dépasser qu'une défense désespérée."
+          },
+          {
+            "type": "image",
+            "src": "images/defending.png",
+            "caption": "Cyan : le défenseur fait un seul déplacement, vers l'intérieur, avant la zone de freinage (rouge). Orange : l'attaquant dans l'aspiration. Un second déplacement dans la zone de freinage (barré) est interdit."
+          },
+          {
+            "type": "exercise",
+            "text": "Dans votre prochaine course, faites un déplacement défensif clair avant la zone de freinage et engagez-vous. Évaluez si vous avez tenu la position sans pénalité."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "Defender bien es cuestión de posicionamiento, no de agresividad. Haz un movimiento claro antes de la zona de frenada y mantén tu trazada. Las maniobras tardías o peligrosas se penalizan. Un coche bien colocado es más difícil de adelantar que una defensa desesperada."
+          },
+          {
+            "type": "image",
+            "src": "images/defending.png",
+            "caption": "Cian: quien defiende hace un solo movimiento, hacia el interior, antes de la zona de frenada (roja). Ámbar: el atacante en el rebufo. Un segundo movimiento dentro de la zona de frenada (tachado) no está permitido."
+          },
+          {
+            "type": "exercise",
+            "text": "En tu próxima carrera, al defender, haz un movimiento defensivo claro antes de la zona de frenada y comprométete con él. Evalúa si mantuviste la posición sin penalización."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ers",
+      "category": "race_tools",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "ERS",
+        "fr": "ERS",
+        "es": "ERS"
+      },
+      "summary": {
+        "en": "Deploy energy at the right moment to attack or defend.",
+        "fr": "Déployez l'énergie au bon moment pour attaquer ou défendre.",
+        "es": "Despliega energía en el momento justo para atacar o defender."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "The Energy Recovery System (ERS) stores kinetic energy under braking and deploys it as extra power on demand. In F1 24/25, manage your deployment mode lap by lap. Overtake mode gives maximum power for a short burst — useful on a long straight or into a DRS zone. Deploy on straights and recharge through slow sections. Avoid deploying in corners where you cannot use the extra power."
+          },
+          {
+            "type": "exercise",
+            "text": "Identify one straight per lap where you are losing time. Switch to overtake mode one lap before your planned attack. Compare straight-line speed and exit speed to previous laps."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "L'ERS stocke l'énergie cinétique au freinage et la restitue sous forme de puissance supplémentaire. Le mode Dépassement offre une poussée maximale sur une courte durée — utile sur une longue ligne droite ou dans une zone DRS. Déployez sur les lignes droites et rechargez dans les sections lentes."
+          },
+          {
+            "type": "exercise",
+            "text": "Identifiez une ligne droite où vous perdez du temps. Passez en mode dépassement un tour avant votre attaque prévue. Comparez la vitesse en ligne droite et la vitesse en sortie."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "El ERS almacena energía cinética bajo frenada y la despliega como potencia adicional. El modo de adelantamiento ofrece máxima potencia durante un breve periodo — útil en rectas largas o zonas DRS. Despliega en las rectas y recarga en las secciones lentas."
+          },
+          {
+            "type": "exercise",
+            "text": "Identifica una recta por vuelta donde pierdes tiempo. Cambia al modo de adelantamiento una vuelta antes de tu ataque previsto. Compara la velocidad en recta y la velocidad de salida."
+          }
+        ]
+      }
+    },
+    {
+      "id": "drs",
+      "category": "race_tools",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "DRS",
+        "fr": "DRS",
+        "es": "DRS"
+      },
+      "summary": {
+        "en": "Gain straight-line speed within one second of the car ahead.",
+        "fr": "Gagnez de la vitesse en ligne droite à moins d'une seconde du pilote devant.",
+        "es": "Gana velocidad en recta a menos de un segundo del coche de delante."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "DRS opens the rear wing flap when you are within one second of the car ahead at the detection point, reducing drag and increasing top speed by 10–15 km/h. Plan your lap to maximise your DRS window — avoid losing the gap in the final sector before the detection point. Combine DRS with a full ERS deployment on the same straight for maximum attack potential."
+          },
+          {
+            "type": "exercise",
+            "text": "Review your telemetry after a race. Check when you were within the DRS window. Identify if you lost the gap in the final sector before the detection point and target that sector in your next session."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Le DRS ouvre le volet de l'aileron arrière dans une zone DRS lorsque vous êtes à moins d'une seconde de la voiture devant au point de détection, réduisant la traînée de 10–15 km/h. Planifiez votre tour pour maximiser votre fenêtre DRS — évitez de perdre le delta dans le dernier secteur avant le point de détection."
+          },
+          {
+            "type": "exercise",
+            "text": "Analysez votre télémétrie après une course. Vérifiez quand vous étiez dans la fenêtre DRS. Identifiez si vous avez perdu le delta dans le dernier secteur avant le point de détection."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "El DRS abre el alerón trasero en una zona DRS cuando estás a menos de un segundo del coche de delante en el punto de detección, reduciendo la resistencia aerodinámica en 10–15 km/h. Planifica tu vuelta para maximizar tu ventana DRS — evita perder el delta en el último sector antes del punto de detección."
+          },
+          {
+            "type": "exercise",
+            "text": "Revisa tu telemetría tras una carrera. Comprueba cuándo estabas en la ventana DRS. Identifica si perdiste el delta en el último sector antes del punto de detección y trabaja ese sector."
+          }
+        ]
+      }
+    },
+    {
+      "id": "f1_26_power",
+      "category": "race_tools",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "F1 26 Power Management",
+        "fr": "Gestion de la puissance F1 26",
+        "es": "Gestión de potencia F1 26"
+      },
+      "summary": {
+        "en": "Understand the new 2026 hybrid power unit.",
+        "fr": "Comprendre le nouveau groupe motopropulseur hybride 2026.",
+        "es": "Entiende la nueva unidad de potencia híbrida de 2026."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "F1 2026 introduces a 50/50 split between combustion and electrical power. The MGU-H is removed; the MGU-K is larger and provides more continuous deployment. Recharging is faster, giving more flexible strategy. The POWER tab on the Pit Wall shows your current mode, battery level, and a recommendation based on your gap to the car ahead and behind."
+          },
+          {
+            "type": "exercise",
+            "text": "In F1 26 sessions, monitor the POWER tab in the Pit Wall screen. Watch the recommended mode and battery level. Focus on deploying fully in attack situations and conserving when the gap is stable."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "La F1 2026 introduit une répartition 50/50 entre puissance thermique et électrique. Le MGU-H est supprimé ; le MGU-K est plus puissant et permet un déploiement plus continu. La recharge est plus rapide. L'onglet POWER du Pit Wall affiche votre mode actuel, le niveau de batterie et une recommandation."
+          },
+          {
+            "type": "exercise",
+            "text": "Dans vos sessions F1 26, surveillez l'onglet POWER du Pit Wall. Observez le mode recommandé et le niveau de batterie. Concentrez-vous sur un déploiement complet dans les situations d'attaque."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "La F1 2026 introduce una división 50/50 entre potencia térmica y eléctrica. Se elimina el MGU-H; el MGU-K es más potente y permite un despliegue continuo. La recarga es más rápida. La pestaña de POTENCIA en el Pit Wall muestra tu modo actual, nivel de batería y una recomendación de gestión."
+          },
+          {
+            "type": "exercise",
+            "text": "En sesiones de F1 26, supervisa la pestaña POTENCIA del Pit Wall. Observa el modo recomendado y el nivel de batería. Concéntrate en desplegar completamente en situaciones de ataque."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fuel_management",
+      "category": "race_tools",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Fuel Management",
+        "fr": "Gestion du carburant",
+        "es": "Gestión de combustible"
+      },
+      "summary": {
+        "en": "Use the minimum fuel needed without costing lap time.",
+        "fr": "Utilisez le minimum de carburant sans perdre de temps au tour.",
+        "es": "Usa el mínimo combustible necesario sin perder tiempo por vuelta."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Fuel management is about lift-and-coast (LICO) at the right places without losing race time. Brake slightly earlier at the end of long straights, then coast briefly into the braking zone. This saves fuel while reducing brake wear. Your dashboard fuel delta shows surplus or deficit in laps. A positive delta means you have room to push; a negative delta means you need to save."
+          },
+          {
+            "type": "exercise",
+            "text": "Find the longest straight on your current track. Start your braking point 20 m earlier than normal, then coast for 1–2 seconds before braking. After the lap, check the fuel delta on your dashboard."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "La gestion du carburant repose sur le levé de pied (LICO) aux bons endroits. Freinez légèrement plus tôt en fin de ligne droite, puis roulez sur l'élan avant de freiner vraiment. Le delta carburant du tableau de bord indique votre surplus ou déficit en tours. Un delta positif signifie que vous pouvez attaquer."
+          },
+          {
+            "type": "exercise",
+            "text": "Trouvez la ligne droite la plus longue de votre circuit. Déplacez votre point de freinage 20 m plus tôt et roulez sur l'élan 1–2 secondes avant de freiner. Vérifiez le delta carburant après le tour."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "La gestión de combustible se basa en levantar el pie (LICO) en los lugares correctos. Frena ligeramente antes al final de las rectas largas y déjate llevar brevemente antes de frenar de verdad. El delta de combustible del tablero muestra tu superávit o déficit en vueltas."
+          },
+          {
+            "type": "exercise",
+            "text": "Encuentra la recta más larga de tu circuito. Adelanta tu punto de frenada 20 m y déjate llevar 1–2 segundos antes de frenar. Comprueba el delta de combustible tras la vuelta."
+          }
+        ]
+      }
+    },
+    {
+      "id": "tyre_management",
+      "category": "race_tools",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Tyre Management",
+        "fr": "Gestion des pneus",
+        "es": "Gestión de neumáticos"
+      },
+      "summary": {
+        "en": "Protect your tyres to extend the stint and maintain pace.",
+        "fr": "Préservez vos pneus pour prolonger le relais et maintenir le rythme.",
+        "es": "Protege tus neumáticos para alargar el stint y mantener el ritmo."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Tyre degradation costs you lap time as the stint progresses. Reduce sliding, limit aggressive kerb use, and trail brake gently to reduce front tyre stress. In hot conditions, carry more corner speed to reduce steering angle — this reduces front wear. The Pit Wall dashboard shows tyre temperature and wear per corner. High rear wear usually means too much throttle on exit."
+          },
+          {
+            "type": "exercise",
+            "text": "In your next stint, focus on smooth steering and zero kerb use. After 10 laps, compare your tyre wear to a previous stint where you were more aggressive. Note the difference in lap time delta."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "La dégradation des pneus coûte du temps au fil du relais. Réduisez les glissades, limitez l'utilisation agressive des bordures et dosez le freinage dégressif pour réduire la contrainte sur les pneus avant. Par temps chaud, prenez les virages avec plus de vitesse pour réduire l'angle de braquage et l'usure avant."
+          },
+          {
+            "type": "exercise",
+            "text": "Dans votre prochain relais, concentrez-vous sur une direction fluide et zéro bordure. Après 10 tours, comparez l'usure à un relais précédent plus agressif."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "La degradación de neumáticos te cuesta tiempo a medida que avanza el stint. Reduce los deslizamientos, limita el uso agresivo de bordillos y dosifica la frenada degresiva para reducir el estrés en los neumáticos delanteros. En condiciones de calor, lleva más velocidad de curva para reducir el ángulo de giro y el desgaste delantero."
+          },
+          {
+            "type": "exercise",
+            "text": "En tu próximo stint, concéntrate en una dirección suave y cero bordillos. Tras 10 vueltas, compara el desgaste con un stint previo más agresivo."
+          }
+        ]
+      }
+    },
+    {
+      "id": "jmd_delta_guide",
+      "category": "race_tools",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Reading Your Delta Display",
+        "fr": "Comprendre votre affichage delta",
+        "es": "Leer tu pantalla delta"
+      },
+      "summary": {
+        "en": "Understand every JMD delta state, from outlap to red flag.",
+        "fr": "Comprenez chaque état du delta JMD, du tour de sortie au drapeau rouge.",
+        "es": "Entiende cada estado del delta JMD, de la vuelta de salida a la bandera roja."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "The delta display in the centre of the dashboard changes state depending on what you are doing on track. Here is what each state means.\n\nOUTLAP\nYou just left the pits in practice or qualifying. Tyres are cold, you are not on a timed lap. No delta is shown.\n\n- - - . - -  (cycling)\nYou are on a flying lap but Jax has no reference lap yet. In a race, this also shows immediately after a pit stop. Drive a clean lap and the delta will appear automatically.\n\nDELTA (green, e.g. -0.574)\nYou are FASTER than your reference lap at this point on track. Green means you are ahead of your own pace. Push on.\n\nDELTA (red, e.g. +0.234)\nYou are SLOWER than your reference lap. Time to find pace.\n\nDELTA + ! (amber, e.g. -0.574!)\nYour reference lap was set under invalid conditions (track limits, yellow flags). The delta is approximate — treat it as a guide, not a target.\n\nVSC +0.4 (green) / VSC -0.2 (red)\nVirtual Safety Car. Colors are INVERTED. Green means you are slow enough — safe. Red means you are going too fast and risk a penalty. Stay as close to zero as possible without going negative.\n\nSC (Safety Car)\nSame as VSC. Stay positive. Close up to the car in front, but do not overtake.\n\nRETURN TO PITS (flashing red)\nRed Flag. Stop immediately and return to the pit lane.\n\nFORMATION LAP\nThe formation lap is in progress. No timing. Warm your tyres and brakes, find your grid slot."
+          },
+          {
+            "type": "exercise",
+            "text": "In your next practice session, watch the centre delta as you leave the pits. Notice it show OUTLAP, then cycling dashes on your first flying lap, then a live green or red delta once Jax has a reference. Learn each state so you can read it at a glance during a race."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "L'affichage du delta au centre du tableau de bord change d'état selon ce que vous faites en piste. Voici la signification de chaque état.\n\nSORTIE DE STAND (tour de sortie)\nVous venez de quitter les stands en essais ou en qualifications. Les pneus sont froids, vous n'êtes pas sur un tour chronométré. Aucun delta n'est affiché.\n\n- - - . - -  (défilant)\nVous êtes sur un tour lancé mais Jax n'a pas encore de tour de référence. En course, cela apparaît aussi juste après un arrêt au stand. Réalisez un tour propre et le delta apparaîtra automatiquement.\n\nDELTA (vert, ex. -0,574)\nVous êtes PLUS RAPIDE que votre tour de référence à cet endroit de la piste. Le vert signifie que vous êtes en avance sur votre propre rythme. Continuez.\n\nDELTA (rouge, ex. +0,234)\nVous êtes PLUS LENT que votre tour de référence. Il est temps de trouver du rythme.\n\nDELTA + ! (ambre, ex. -0,574!)\nVotre tour de référence a été établi dans des conditions invalides (limites de piste, drapeaux jaunes). Le delta est approximatif — traitez-le comme un repère, pas comme un objectif.\n\nVSC +0,4 (vert) / VSC -0,2 (rouge)\nVoiture de sécurité virtuelle. Les couleurs sont INVERSÉES. Le vert signifie que vous êtes assez lent — en sécurité. Le rouge signifie que vous allez trop vite et risquez une pénalité. Restez aussi proche de zéro que possible sans passer en négatif.\n\nSC (voiture de sécurité)\nComme la VSC. Restez positif. Rapprochez-vous de la voiture devant, mais ne la dépassez pas.\n\nRENTRE AU STAND (rouge clignotant)\nDrapeau rouge. Arrêtez-vous immédiatement et rentrez dans la voie des stands.\n\nTOUR DE FORMATION\nLe tour de formation est en cours. Pas de chronométrage. Chauffez vos pneus et vos freins, trouvez votre emplacement sur la grille."
+          },
+          {
+            "type": "exercise",
+            "text": "Lors de votre prochaine séance d'essais, observez le delta central en quittant les stands. Notez qu'il affiche « Sortie de stand », puis les tirets défilants sur votre premier tour lancé, puis un delta vert ou rouge en direct une fois que Jax a une référence. Apprenez chaque état pour le lire d'un coup d'œil en course."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "La pantalla del delta en el centro del tablero cambia de estado según lo que estés haciendo en pista. Esto es lo que significa cada estado.\n\nVUELTA DE SALIDA\nAcabas de salir del box en prácticas o clasificación. Los neumáticos están fríos, no estás en una vuelta cronometrada. No se muestra ningún delta.\n\n- - - . - -  (parpadeando)\nEstás en una vuelta lanzada pero Jax aún no tiene una vuelta de referencia. En carrera, esto también aparece justo después de una parada en boxes. Completa una vuelta limpia y el delta aparecerá automáticamente.\n\nDELTA (verde, ej. -0,574)\nEres MÁS RÁPIDO que tu vuelta de referencia en este punto de la pista. El verde significa que vas por delante de tu propio ritmo. Sigue empujando.\n\nDELTA (rojo, ej. +0,234)\nEres MÁS LENTO que tu vuelta de referencia. Es hora de encontrar ritmo.\n\nDELTA + ! (ámbar, ej. -0,574!)\nTu vuelta de referencia se estableció en condiciones inválidas (límites de pista, banderas amarillas). El delta es aproximado — trátalo como una guía, no como un objetivo.\n\nVSC +0,4 (verde) / VSC -0,2 (rojo)\nCoche de seguridad virtual. Los colores están INVERTIDOS. El verde significa que vas lo bastante lento — seguro. El rojo significa que vas demasiado rápido y arriesgas una penalización. Mantente lo más cerca de cero posible sin pasar a negativo.\n\nSC (coche de seguridad)\nIgual que la VSC. Mantente positivo. Acércate al coche de delante, pero no lo adelantes.\n\nVUELVE A BOXES (rojo parpadeante)\nBandera roja. Detente inmediatamente y regresa a la calle de boxes.\n\nVUELTA DE FORMACIÓN\nLa vuelta de formación está en curso. Sin cronometraje. Calienta tus neumáticos y frenos, encuentra tu posición en la parrilla."
+          },
+          {
+            "type": "exercise",
+            "text": "En tu próxima sesión de prácticas, observa el delta central al salir del box. Fíjate en que muestra «Vuelta de salida», luego los guiones parpadeantes en tu primera vuelta lanzada, y después un delta verde o rojo en directo una vez que Jax tiene una referencia. Aprende cada estado para leerlo de un vistazo en carrera."
+          }
+        ]
+      }
+    },
+    {
+      "id": "setups",
+      "category": "preparation",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Setups",
+        "fr": "Réglages",
+        "es": "Reglajes"
+      },
+      "summary": {
+        "en": "Configure the car to match the track and your style.",
+        "fr": "Configurez la voiture selon le circuit et votre style.",
+        "es": "Configura el coche para adaptarlo al circuito y tu estilo."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Setup affects balance, tyre wear, and aero efficiency. High downforce improves corner speed but reduces straight-line speed. Stiffer suspension reduces body roll but decreases mechanical grip on bumpy tracks. Start with the recommended setup and make one change at a time. The Pit Wall Setup tab shows your current settings and recommended values."
+          },
+          {
+            "type": "exercise",
+            "text": "On your next track, open the Pit Wall Setup tab. Compare recommended values to your current setup. Make one change — try softening the front anti-roll bar — and assess the difference on corner entry in your next practice run."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Le réglage influence l'équilibre, l'usure des pneus et l'efficacité aérodynamique. Un appui élevé améliore la vitesse en courbe mais réduit la vitesse en ligne droite. Commencez par les réglages recommandés et modifiez un paramètre à la fois. L'onglet Réglages du Pit Wall affiche vos valeurs actuelles et celles recommandées."
+          },
+          {
+            "type": "exercise",
+            "text": "Sur votre prochain circuit, ouvrez l'onglet Réglages du Pit Wall. Comparez les valeurs recommandées à vos réglages actuels. Essayez d'assouplir la barre anti-roulis avant et évaluez la différence en entrée de virage."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "La configuración afecta al equilibrio, al desgaste de neumáticos y a la eficiencia aerodinámica. Un alto nivel de carga aerodinámica mejora la velocidad en curva pero reduce la velocidad en recta. Comienza con la configuración recomendada y cambia un parámetro a la vez. La pestaña Configuración del Pit Wall muestra tus valores actuales y los recomendados."
+          },
+          {
+            "type": "exercise",
+            "text": "En tu próximo circuito, abre la pestaña Configuración del Pit Wall. Compara los valores recomendados con tu configuración actual. Prueba a suavizar la barra estabilizadora delantera y evalúa la diferencia en la entrada de curva."
+          }
+        ]
+      }
+    },
+    {
+      "id": "race_planning",
+      "category": "preparation",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Race Planning",
+        "fr": "Planification de course",
+        "es": "Planificación de carrera"
+      },
+      "summary": {
+        "en": "Prepare your strategy before the lights go out.",
+        "fr": "Préparez votre stratégie avant le départ.",
+        "es": "Prepara tu estrategia antes de que se apaguen los semáforos."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Before a race, understand the tyre compounds and their expected life. Plan your pit stops based on track position, safety car probability, and fuel load. In races below 40 laps, a one-stop is often fastest. Longer races may need two. Know your undercut and overcut windows for the cars you are racing. A safety car can reset all of this — have a Plan B."
+          },
+          {
+            "type": "exercise",
+            "text": "Before your next race, write down your planned pit lap and tyre strategy. After the race, compare your plan to what happened. Note where you deviated and why."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Avant une course, étudiez les composés disponibles et leur durée de vie estimée. Planifiez vos arrêts au stand en fonction de la position en piste, de la probabilité de voiture de sécurité et du carburant. Dans les courses de moins de 40 tours, un seul arrêt est souvent le plus rapide. Connaissez vos fenêtres d'undercut et overcut."
+          },
+          {
+            "type": "exercise",
+            "text": "Avant votre prochaine course, notez votre tour d'arrêt prévu et votre stratégie de pneus. Après la course, comparez votre plan à ce qui s'est passé. Notez où vous avez dévié et pourquoi."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "Antes de una carrera, estudia los compuestos disponibles y su vida útil estimada. Planifica tus paradas según la posición en pista, la probabilidad de coche de seguridad y la carga de combustible. En carreras de menos de 40 vueltas, una sola parada suele ser la más rápida. Conoce tus ventanas de undercut y overcut."
+          },
+          {
+            "type": "exercise",
+            "text": "Antes de tu próxima carrera, anota tu vuelta de parada prevista y tu estrategia de neumáticos. Tras la carrera, compara tu plan con lo que ocurrió. Anota dónde te desviaste y por qué."
+          }
+        ]
+      }
+    },
+    {
+      "id": "weekend_planning",
+      "category": "preparation",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Weekend Planning",
+        "fr": "Planification du week-end",
+        "es": "Planificación del fin de semana"
+      },
+      "summary": {
+        "en": "Structure practice sessions for maximum race pace.",
+        "fr": "Structurez vos sessions d'essais pour maximiser le rythme de course.",
+        "es": "Estructura tus sesiones de práctica para maximizar el ritmo de carrera."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "A structured race weekend has clear goals for each session. P1 is for long runs and tyre data. P2 focuses on qualifying simulation and setup refinement. P3 locks in your final setup. Use practice data to decide your qualifying mode and race strategy. Do not waste laps chasing a fast time when the session goal is race pace."
+          },
+          {
+            "type": "exercise",
+            "text": "In your next practice session, use the first half for a 5-lap representative stint on race fuel. Use the second half for a qualifying simulation lap. Compare both to find where race pace and qualifying pace differ on this track."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Un week-end structuré a des objectifs clairs pour chaque session. Les EL1 servent aux relais longs et aux données de pneus. Les EL2 se concentrent sur la simulation de qualifications et l'affinage du réglage. Les EL3 fixent le réglage final. N'utilisez pas les tours d'essais uniquement à la recherche d'un chrono rapide."
+          },
+          {
+            "type": "exercise",
+            "text": "Dans votre prochaine session d'essais, consacrez la première moitié à un relais représentatif de 5 tours. Consacrez la seconde moitié à une simulation de tour de qualification. Comparez les deux."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "Un fin de semana estructurado tiene objetivos claros para cada sesión. La P1 es para stints largos y datos de neumáticos. La P2 se centra en simulaciones de clasificación y ajuste de configuración. La P3 define la configuración final. No malgastes vueltas persiguiendo un tiempo rápido cuando el objetivo es el ritmo de carrera."
+          },
+          {
+            "type": "exercise",
+            "text": "En tu próxima sesión de práctica, usa la primera mitad para un stint representativo de 5 vueltas. Usa la segunda mitad para una simulación de vuelta de clasificación. Compara ambas."
+          }
+        ]
+      }
+    },
+    {
+      "id": "qualifying_prep",
+      "category": "preparation",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Qualifying Prep",
+        "fr": "Préparation aux qualifications",
+        "es": "Preparación para la clasificación"
+      },
+      "summary": {
+        "en": "Build a structured approach to your fastest lap.",
+        "fr": "Construisez une approche structurée pour votre tour le plus rapide.",
+        "es": "Construye un enfoque estructurado para tu vuelta más rápida."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Qualifying is about one perfect lap. Prepare your tyres — complete an out-lap that brings tyre temperature into the optimal window. Know your track limits. In the hot lap, attack every braking point without over-committing. Use the delta on the dashboard to compare to your best reference lap in real time. One penalty or track limit violation can cost you multiple grid positions."
+          },
+          {
+            "type": "exercise",
+            "text": "In your next qualifying session, plan your out-lap. Use 60–70% pace to build tyre temperature without scrubbing life. Then aim for a clean hot lap with no track limits violations."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Les qualifications, c'est un tour parfait. Préparez vos pneus sur le tour d'installation pour atteindre la fenêtre de température optimale. Connaissez vos limites de piste. En mode attaque, engagez chaque point de freinage sans en faire trop. Utilisez le delta du tableau de bord pour vous comparer à votre meilleur tour de référence en temps réel."
+          },
+          {
+            "type": "exercise",
+            "text": "Dans votre prochaine session de qualifications, planifiez votre tour de sortie. Roulez à 60–70 % pour monter en température sans user les pneus. Visez ensuite un tour propre sans violations de limites de piste."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "La clasificación consiste en una vuelta perfecta. Prepara tus neumáticos en una vuelta de instalación que lleve la temperatura a la ventana óptima. Conoce tus límites de pista. En la vuelta rápida, ataca cada punto de frenada sin excederte. Usa el delta del tablero para compararte con tu mejor vuelta de referencia en tiempo real."
+          },
+          {
+            "type": "exercise",
+            "text": "En tu próxima clasificación, planifica tu vuelta de salida. Usa un 60–70 % del ritmo para calentar los neumáticos sin gastar vida. Luego apunta a una vuelta limpia sin violaciones de límites de pista."
+          }
+        ]
+      }
+    },
+    {
+      "id": "pit_strategy",
+      "category": "preparation",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Pit Strategy",
+        "fr": "Stratégie aux stands",
+        "es": "Estrategia de paradas"
+      },
+      "summary": {
+        "en": "Time your pit stops to maximise track position.",
+        "fr": "Programmez vos arrêts pour maximiser la position en piste.",
+        "es": "Programa tus paradas para maximizar la posición en pista."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Pit strategy balances fresh tyres against track position. An undercut means pitting before your rival — you gain time on fresh rubber while they lose pace on worn tyres. An overcut means staying out, making track position while your rival loses time in the pit lane. A safety car changes everything — pit immediately if you are on old tyres. Monitor the timing screen in the Pit Wall."
+          },
+          {
+            "type": "exercise",
+            "text": "In your next race, identify the car you are racing directly. After lap 10, check the Pit Wall timing screen to compare tyre age. Decide whether to undercut or overcut and execute the plan."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "La stratégie aux stands équilibre pneus frais et position en piste. L'undercut consiste à rentrer avant votre rival — vous gagnez en rythme sur des pneus neufs. L'overcut consiste à rester en piste, gagnant de la position pendant que votre rival perd du temps aux stands. Une voiture de sécurité peut tout changer — rentrez immédiatement si vos pneus sont usés."
+          },
+          {
+            "type": "exercise",
+            "text": "Dans votre prochaine course, identifiez la voiture que vous combattez. Après le tour 10, consultez l'écran de classement du Pit Wall pour comparer l'âge des pneus. Décidez d'un undercut ou overcut et exécutez le plan."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "La estrategia de paradas equilibra neumáticos frescos con posición en pista. El undercut consiste en parar antes que tu rival. El overcut consiste en quedarse en pista, ganando posición mientras tu rival pierde tiempo en el box. Un coche de seguridad lo cambia todo — para de inmediato si tienes neumáticos desgastados. Supervisa la pantalla de tiempos en el Pit Wall."
+          },
+          {
+            "type": "exercise",
+            "text": "En tu próxima carrera, identifica el coche contra el que compites. Tras la vuelta 10, consulta la pantalla de tiempos del Pit Wall para comparar la edad de los neumáticos. Decide si hacer undercut o overcut y ejecuta el plan."
+          }
+        ]
+      }
+    },
+    {
+      "id": "tyre_compounds_c0_c6",
+      "category": "rules_penalties",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Tyre Compounds C0–C6",
+        "fr": "Composés de pneus C0 à C6",
+        "es": "Compuestos de neumático C0 a C6"
+      },
+      "summary": {
+        "en": "Understand what the visual compound and actual C compound both mean.",
+        "fr": "Comprenez ce que signifient le composé visuel et le composé C réel.",
+        "es": "Entiende qué significan el compuesto visual y el compuesto C real."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "F1 tyres are shown to the driver as Soft, Medium, or Hard, but they also have an actual compound from C0 to C6. C0 is the hardest dry tyre and C6 is the softest. That is why Jax may show S4, M3, or H2 on the dashboard. S4 means the tyre is visually Soft this weekend, but the actual rubber is C4. This matters because C4 might be the Soft tyre at one track and the Medium or Hard tyre at another. Intermediates and wets are not C compounds. F2 may show SS, S, M, H, or W."
+          },
+          {
+            "type": "image",
+            "src": "images/tyre_compounds.png",
+            "caption": "Pirelli's range runs from C0, the hardest, to C6, the softest. Each weekend uses three neighbouring compounds, shown in the game as Hard (white), Medium (yellow) and Soft (red) — here C2, C3 and C4."
+          },
+          {
+            "type": "exercise",
+            "text": "When comparing sessions, look at the C compound as well as Soft, Medium, or Hard. A Medium C4 and a Hard C4 share the same rubber but play different roles in their race weekends. Jax stores both so you can answer questions like \"What happened last time I used C4?\" across different tracks."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Les pneus F1 sont présentés au pilote en Tendre, Medium ou Dur, mais ils ont aussi un composé réel allant de C0 à C6. C0 est le plus dur et C6 le plus tendre. C'est pourquoi Jax peut afficher S4, M3 ou H2 sur le tableau de bord. S4 signifie que le pneu est visuellement Tendre ce week-end, mais que le caoutchouc réel est C4. Cela compte car C4 peut être le Tendre sur un circuit et le Medium ou Dur sur un autre. Les Intermédiaires et Pluie ne sont pas des composés C. En F2, on peut voir SS, S, M, H ou W."
+          },
+          {
+            "type": "image",
+            "src": "images/tyre_compounds.png",
+            "caption": "La gamme Pirelli va du C0, le plus dur, au C6, le plus tendre. Chaque week-end utilise trois gommes voisines, affichées dans le jeu comme Dur (blanc), Medium (jaune) et Tendre (rouge) — ici C2, C3 et C4."
+          },
+          {
+            "type": "exercise",
+            "text": "Lorsque vous comparez des sessions, regardez le composé C en plus du Tendre, Medium ou Dur. Un Medium C4 et un Dur C4 utilisent le même caoutchouc, mais jouent des rôles différents selon le week-end. Jax conserve les deux pour répondre à des questions comme « Que s'est-il passé la dernière fois que j'ai utilisé C4 ? »."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "Los neumáticos de F1 se presentan al piloto como Blando, Medio o Duro, pero también tienen un compuesto real de C0 a C6. C0 es el más duro y C6 el más blando. Por eso Jax puede mostrar S4, M3 o H2 en el panel. S4 significa que el neumático es visualmente Blando este fin de semana, pero el caucho real es C4. Esto importa porque C4 puede ser el Blando en un circuito y el Medio o Duro en otro. Los Intermedios y los de Lluvia no son compuestos C. En F2 puede verse SS, S, M, H o W."
+          },
+          {
+            "type": "image",
+            "src": "images/tyre_compounds.png",
+            "caption": "La gama de Pirelli va del C0, el más duro, al C6, el más blando. Cada fin de semana usa tres compuestos vecinos, que el juego muestra como Duro (blanco), Medio (amarillo) y Blando (rojo); aquí, C2, C3 y C4."
+          },
+          {
+            "type": "exercise",
+            "text": "Al comparar sesiones, fíjate en el compuesto C además del Blando, Medio o Duro. Un Medio C4 y un Duro C4 usan el mismo caucho pero tienen roles distintos según el fin de semana. Jax guarda ambos para responder preguntas como \"¿Qué ocurrió la última vez que usé C4?\" en distintos circuitos."
+          }
+        ]
+      }
+    },
+    {
+      "id": "battery_management_2026",
+      "category": "rules_penalties",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "2026 Battery Modes",
+        "fr": "Modes batterie 2026",
+        "es": "Modos de batería 2026"
+      },
+      "summary": {
+        "en": "Use None, Medium, Hotlap, and Boost at the right moment.",
+        "fr": "Utilisez Aucun, Moyen, Tour lancé et Boost au bon moment.",
+        "es": "Usa Ninguno, Medio, Vuelta Rápida y Boost en el momento adecuado."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "The 2026-style power model is about allocating battery at the right moments rather than holding one mode all lap. None helps with traction, recovery, and lift-and-coast — it saves battery without costing significant pace. Medium is the stable race mode for consistent deployment. Boost is a short attack or defence weapon that drains battery quickly — use it for exits, battles, and decisive moments. Hotlap is for qualifying-style push laps and is not always the right race mode. Avoid holding Boost in high gear unless you are in an active fight."
+          },
+          {
+            "type": "exercise",
+            "text": "In a race, think: None to control and recover, Medium to race efficiently, Boost to fight and attack, lift to recharge before big braking zones."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Le modèle de puissance 2026 consiste à allouer la batterie aux bons moments plutôt que de maintenir un seul mode tout au long du tour. Aucun aide à la traction, à la récupération et au levé de pied — il économise la batterie sans coûter de rythme significatif. Moyen est le mode de course stable pour un déploiement constant. Boost est une courte arme d'attaque ou de défense qui draine rapidement la batterie — utilisez-le pour les sorties de virage, les batailles et les moments décisifs. Tour lancé est pour les tours en mode qualification et n'est pas toujours le bon mode de course."
+          },
+          {
+            "type": "exercise",
+            "text": "En course, pensez : Aucun pour contrôler et récupérer, Moyen pour courir efficacement, Boost pour attaquer et défendre, levé de pied pour recharger avant les grands points de freinage."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "El modelo de potencia 2026 consiste en asignar batería en los momentos correctos en lugar de mantener un solo modo durante toda la vuelta. Ninguno ayuda con la tracción, la recuperación y levantar el pie — ahorra batería sin costar ritmo significativo. Medio es el modo de carrera estable para un despliegue constante. Boost es una corta arma de ataque o defensa que drena la batería rápidamente — úsalo en salidas de curva, batallas y momentos decisivos. Vuelta Rápida es para vueltas al estilo de clasificación y no siempre es el mejor modo de carrera."
+          },
+          {
+            "type": "exercise",
+            "text": "En carrera, piensa: Ninguno para controlar y recuperar, Medio para correr con eficiencia, Boost para atacar y defender, levantar el pie para recargar antes de las grandes zonas de frenada."
+          }
+        ]
+      }
+    },
+    {
+      "id": "track_limits",
+      "category": "rules_penalties",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Track Limits",
+        "fr": "Limites de piste",
+        "es": "Límites de pista"
+      },
+      "summary": {
+        "en": "Keep all four wheels inside track boundaries to avoid warnings.",
+        "fr": "Gardez les quatre roues à l'intérieur des limites pour éviter les avertissements.",
+        "es": "Mantén las cuatro ruedas dentro de los límites para evitar advertencias."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Track limits usually mean leaving the defined track surface with all four wheels. Repeated violations build into warnings and then time penalties. In league racing, track-limit discipline can change the final result. Exit kerbs and painted runoff areas are not always part of the legal track surface. If the game shows a warning on a specific corner, that corner is being monitored — adjust your exit line."
+          },
+          {
+            "type": "exercise",
+            "text": "A clean lap that stays inside track limits is often worth more than a slightly faster lap that risks a warning. Target one corner per session where you are consistently brushing the limits and move your exit point inward."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Les limites de piste signifient généralement quitter la surface de piste définie avec les quatre roues. Des violations répétées s'accumulent en avertissements puis en pénalités de temps. En course en ligue, la discipline aux limites de piste peut changer le résultat final. Les bordures de sortie et les zones de dégagement peintes ne font pas toujours partie de la piste légale. Si le jeu signale un avertissement dans un virage, ce virage est surveillé — ajustez votre ligne de sortie."
+          },
+          {
+            "type": "exercise",
+            "text": "Un tour propre dans les limites vaut souvent plus qu'un tour légèrement plus rapide qui risque un avertissement. Ciblez un virage par session où vous frisez régulièrement les limites et décalez votre point de sortie vers l'intérieur."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "Los límites de pista suelen significar salir de la superficie de pista definida con las cuatro ruedas. Las violaciones repetidas acumulan advertencias y luego penalizaciones de tiempo. En carreras de liga, la disciplina en los límites puede cambiar el resultado final. Los bordillos de salida y las zonas de escape pintadas no siempre forman parte de la pista legal. Si el juego muestra una advertencia en una curva concreta, esa curva está vigilada — ajusta tu línea de salida."
+          },
+          {
+            "type": "exercise",
+            "text": "Una vuelta limpia dentro de los límites vale a menudo más que una vuelta ligeramente más rápida que arriesga una advertencia. Trabaja en la curva donde habitualmente rozas los límites y mueve tu punto de salida hacia dentro."
+          }
+        ]
+      }
+    },
+    {
+      "id": "drive_through_penalty",
+      "category": "rules_penalties",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Drive-Through Penalty",
+        "fr": "Pénalité de passage",
+        "es": "Penalización drive-through"
+      },
+      "summary": {
+        "en": "Enter the pit lane, respect the speed limit, and drive through without stopping.",
+        "fr": "Entrez dans la voie des stands, respectez la limite de vitesse, et traversez sans vous arrêter.",
+        "es": "Entra en el pit lane, respeta el límite de velocidad y circula sin detenerte."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "A drive-through means entering the pit lane under the speed limit and driving to pit exit without receiving any service. It costs significant race time — typically 20–25 seconds depending on pit lane length. In most rule sets it must be served within a limited number of laps or the penalty escalates. Do not add more time by speeding at pit entry."
+          },
+          {
+            "type": "exercise",
+            "text": "Serve a drive-through cleanly. Brake early for pit entry, hold the speed limiter from the entry line, and focus on a smooth exit. One clean execution costs less than hesitating and triggering a second penalty."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Un passage signifie entrer dans la voie des stands sous la limite de vitesse et rouler jusqu'à la sortie sans recevoir de service. Cela coûte un temps significatif — typiquement 20 à 25 secondes selon la longueur de la voie des stands. Dans la plupart des règlements, il doit être purgé dans un nombre limité de tours ou la pénalité s'alourdit. N'ajoutez pas de temps en dépassant la limite à l'entrée des stands."
+          },
+          {
+            "type": "exercise",
+            "text": "Purgez un passage proprement. Freinez tôt à l'entrée des stands, maintenez le limiteur depuis la ligne d'entrée et concentrez-vous sur une sortie fluide. Une exécution propre coûte moins que d'hésiter et de déclencher une deuxième pénalité."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "Un drive-through significa entrar en el pit lane bajo el límite de velocidad y circular hasta la salida sin recibir ningún servicio. Cuesta tiempo significativo — normalmente 20–25 segundos según la longitud del pit lane. En la mayoría de reglamentos debe cumplirse en un número limitado de vueltas o la penalización se agrava. No añadas más tiempo superando el límite en la entrada al pit lane."
+          },
+          {
+            "type": "exercise",
+            "text": "Cumple el drive-through limpiamente. Frena pronto en la entrada, mantén el limitador desde la línea de entrada y concéntrate en una salida fluida. Una ejecución limpia cuesta menos que dudar y provocar una segunda penalización."
+          }
+        ]
+      }
+    },
+    {
+      "id": "time_penalties",
+      "category": "rules_penalties",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Time Penalties",
+        "fr": "Pénalités de temps",
+        "es": "Penalizaciones de tiempo"
+      },
+      "summary": {
+        "en": "Added to your race time — track position is not the same as final position.",
+        "fr": "Ajoutées à votre temps de course — la position en piste n'est pas la position finale.",
+        "es": "Se añaden a tu tiempo de carrera — la posición en pista no es la posición final."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Time penalties are added to your race time at the finish. You may cross the line ahead on track but lose positions after the penalty is applied. They come from track-limit violations, collisions, illegal overtakes, speeding, or failing to follow race procedures. A 3-second penalty means you need more than 3 seconds of gap to the car behind to keep position in the final classified result."
+          },
+          {
+            "type": "exercise",
+            "text": "Always know your gap to the cars around you when carrying a penalty. If you have a 5-second penalty and the car behind is 4 seconds back, you must create more gap or you will lose the position after the finish."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Les pénalités de temps sont ajoutées à votre temps de course à l'arrivée. Vous pouvez franchir la ligne en avance sur la piste mais perdre des positions après application de la pénalité. Elles viennent des violations de limites de piste, collisions, dépassements illégaux, excès de vitesse ou non-respect des procédures. Une pénalité de 3 secondes signifie que vous devez avoir plus de 3 secondes d'écart sur la voiture derrière pour conserver la position au classement."
+          },
+          {
+            "type": "exercise",
+            "text": "Connaissez toujours votre écart sur les voitures autour de vous lorsque vous portez une pénalité. Si vous avez 5 secondes de pénalité et que la voiture derrière est à 4 secondes, vous devez créer plus d'écart avant l'arrivée."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "Las penalizaciones de tiempo se añaden a tu tiempo de carrera al final. Puedes cruzar la línea por delante en pista pero perder posiciones tras aplicar la penalización. Provienen de violaciones de límites de pista, colisiones, adelantamientos ilegales, exceso de velocidad o incumplimiento de procedimientos. Una penalización de 3 segundos significa que necesitas más de 3 segundos de ventaja sobre el coche de atrás para conservar la posición en el resultado final."
+          },
+          {
+            "type": "exercise",
+            "text": "Siempre conoce tu diferencia con los coches a tu alrededor cuando llevas una penalización. Si tienes 5 segundos de penalización y el coche de atrás está a 4 segundos, debes crear más hueco antes de la llegada."
+          }
+        ]
+      }
+    },
+    {
+      "id": "stop_go_penalties",
+      "category": "rules_penalties",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Stop-Go Penalty",
+        "fr": "Pénalité stop-go",
+        "es": "Penalización stop-go"
+      },
+      "summary": {
+        "en": "Enter the pit lane, stop for the required time, and rejoin.",
+        "fr": "Entrez dans la voie des stands, arrêtez-vous le temps requis, et repartez.",
+        "es": "Entra en el pit lane, detente el tiempo requerido y reincorpórate."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "A stop-go requires entering the pit lane and stopping for a mandatory time — typically 10 seconds — without receiving any normal service during the stop. It is more severe than a time penalty because it removes track position entirely. Like a drive-through, it must be served within a limited number of laps. Missing or delaying the stop can lead to disqualification."
+          },
+          {
+            "type": "exercise",
+            "text": "If you receive a stop-go, plan a clean pit entry immediately. Do not speed at pit entry and do not attempt a last-minute repair call at the same time — stacking additional pit lane penalties makes a bad situation worse."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Un stop-go nécessite d'entrer dans la voie des stands et de s'arrêter pendant un temps obligatoire — généralement 10 secondes — sans recevoir de service normal. C'est plus sévère qu'une pénalité de temps car il retire complètement la position en piste. Comme un passage, il doit être purgé dans un nombre limité de tours. Ne pas le purger ou le retarder peut mener à une disqualification."
+          },
+          {
+            "type": "exercise",
+            "text": "Si vous recevez un stop-go, planifiez immédiatement une entrée propre aux stands. Ne dépassez pas la limite de vitesse à l'entrée et n'essayez pas de combiner avec un appel aux mécaniciens — cumuler des pénalités supplémentaires aggrave la situation."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "Un stop-go requiere entrar en el pit lane y detenerse durante un tiempo obligatorio — normalmente 10 segundos — sin recibir servicio normal durante la parada. Es más grave que una penalización de tiempo porque elimina completamente la posición en pista. Como el drive-through, debe cumplirse en un número limitado de vueltas. No cumplirlo o retrasarlo puede llevar a la descalificación."
+          },
+          {
+            "type": "exercise",
+            "text": "Si recibes un stop-go, planifica de inmediato una entrada limpia al box. No superes el límite de velocidad en la entrada y no intentes combinar con una llamada a mecánicos — acumular más penalizaciones empeora la situación."
+          }
+        ]
+      }
+    },
+    {
+      "id": "pit_lane_speeding",
+      "category": "rules_penalties",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Pit Lane Speeding",
+        "fr": "Excès de vitesse aux stands",
+        "es": "Exceso de velocidad en boxes"
+      },
+      "summary": {
+        "en": "Respect the pit lane speed limit from the entry line.",
+        "fr": "Respectez la limite de vitesse dans la voie des stands dès la ligne d'entrée.",
+        "es": "Respeta el límite de velocidad del pit lane desde la línea de entrada."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "The pit lane speed limit applies from the moment you cross the pit entry line. Braking even slightly late can trigger an automatic speeding penalty before the limiter is active. Pit lane speeding can ruin a well-timed strategy stop and may result in a time penalty that costs a position. Some tracks have challenging pit entries requiring a later-than-usual braking point on the main track."
+          },
+          {
+            "type": "exercise",
+            "text": "Treat pit entry like a corner with a hard braking point. Identify the pit entry on each track during practice and find a reliable braking reference. A perfect strategy call can be lost by a single speeding violation."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "La limite de vitesse de la voie des stands s'applique dès que vous franchissez la ligne d'entrée. Freiner même légèrement trop tard peut déclencher une pénalité automatique avant que le limiteur soit actif. Un excès de vitesse dans les stands peut ruiner un arrêt stratégique bien planifié et peut entraîner une pénalité de temps qui fait perdre une position."
+          },
+          {
+            "type": "exercise",
+            "text": "Traitez l'entrée des stands comme un virage avec un point de freinage précis. Identifiez l'entrée des stands de chaque circuit en essais libres et trouvez un repère de freinage fiable. Une décision stratégique parfaite peut être gâchée par une seule violation de vitesse."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "El límite de velocidad del pit lane se aplica desde el momento en que cruzas la línea de entrada. Frenar aunque sea ligeramente tarde puede activar una penalización automática antes de que el limitador esté activo. Un exceso de velocidad en boxes puede arruinar una parada estratégica bien planificada y puede resultar en una penalización de tiempo que cuesta una posición."
+          },
+          {
+            "type": "exercise",
+            "text": "Trata la entrada al pit lane como una curva con un punto de frenada definido. Identifica la entrada a boxes de cada circuito en los entrenamientos y encuentra una referencia de frenada fiable. Una decisión estratégica perfecta puede perderse por una sola infracción de velocidad."
+          }
+        ]
+      }
+    },
+    {
+      "id": "blue_flags",
+      "category": "rules_penalties",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Blue Flags",
+        "fr": "Drapeaux bleus",
+        "es": "Banderas azules"
+      },
+      "summary": {
+        "en": "Let the lapping car through safely — be predictable.",
+        "fr": "Laissez passer la voiture qui prend un tour — soyez prévisible.",
+        "es": "Deja pasar al coche que te dobla de forma segura — sé predecible."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Blue flags mean a significantly faster car is lapping you. You should let the faster car past without racing them. Sudden braking, unexpected steering moves, or blocking a DRS zone can cause collisions and may result in penalties. The fastest way to manage a blue flag situation is to hold a predictable line and allow the lapping car to complete the pass on a straight or a clean section."
+          },
+          {
+            "type": "image",
+            "src": "images/flags.png",
+            "caption": "The flags and boards you will see, numbered as below."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "1 Green: track clear, racing resumes.",
+              "2 Yellow: hazard ahead. Slow down, no overtaking.",
+              "3 Double yellow: big hazard. Slow right down, be ready to stop.",
+              "4 Blue: a faster car is about to lap you. Let it by safely.",
+              "5 Red: session stopped. Return slowly to the pit lane.",
+              "6 Chequered: end of the session.",
+              "7 Safety Car: hold position, keep the delta, no overtaking.",
+              "8 Virtual Safety Car: keep above the minimum delta time, no overtaking."
+            ]
+          },
+          {
+            "type": "exercise",
+            "text": "When you see a blue flag, lift slightly and hold your line. Do not suddenly change direction or brake earlier than normal. Let the faster car choose where to overtake — your job is to be predictable, not to close the door."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Les drapeaux bleus signifient qu'une voiture nettement plus rapide est en train de vous prendre un tour. Vous devez la laisser passer sans la racing. Un freinage soudain, un changement de direction inattendu ou bloquer une zone DRS peut provoquer des collisions et peut entraîner des pénalités. La meilleure façon de gérer un drapeau bleu est de tenir une trajectoire prévisible et laisser la voiture en retard effectuer le dépassement sur une ligne droite ou une section dégagée."
+          },
+          {
+            "type": "image",
+            "src": "images/flags.png",
+            "caption": "Les drapeaux et panneaux que vous verrez, numérotés ci-dessous."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "1 Vert : piste dégagée, la course reprend.",
+              "2 Jaune : danger devant. Ralentissez, dépassement interdit.",
+              "3 Double jaune : danger important. Ralentissez fortement, soyez prêt à vous arrêter.",
+              "4 Bleu : une voiture plus rapide va vous prendre un tour. Laissez-la passer en sécurité.",
+              "5 Rouge : séance arrêtée. Rentrez lentement aux stands.",
+              "6 Damier : fin de la séance.",
+              "7 Voiture de sécurité : gardez votre position et le delta, dépassement interdit.",
+              "8 Voiture de sécurité virtuelle : restez au-dessus du delta minimum, dépassement interdit."
+            ]
+          },
+          {
+            "type": "exercise",
+            "text": "Quand vous voyez un drapeau bleu, levez légèrement le pied et tenez votre trajectoire. Ne changez pas brusquement de direction et ne freinez pas plus tôt que d'habitude. Laissez la voiture plus rapide choisir où dépasser — votre rôle est d'être prévisible."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "Las banderas azules indican que un coche significativamente más rápido está a punto de doblarte. Debes dejarle pasar sin competir con él. Frenadas bruscas, movimientos de volante inesperados o bloquear una zona DRS pueden causar colisiones y pueden resultar en penalizaciones. La forma más rápida de gestionar una bandera azul es mantener una trazada predecible y dejar que el coche más rápido complete el adelantamiento en una recta o sección despejada."
+          },
+          {
+            "type": "image",
+            "src": "images/flags.png",
+            "caption": "Las banderas y paneles que verás, numerados abajo."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "1 Verde: pista libre, se reanuda la carrera.",
+              "2 Amarilla: peligro delante. Reduce, prohibido adelantar.",
+              "3 Doble amarilla: peligro grave. Reduce mucho, prepárate para detenerte.",
+              "4 Azul: un coche más rápido va a doblarte. Déjalo pasar con seguridad.",
+              "5 Roja: sesión detenida. Vuelve despacio al pit lane.",
+              "6 A cuadros: fin de la sesión.",
+              "7 Coche de seguridad: mantén la posición y el delta, prohibido adelantar.",
+              "8 Coche de seguridad virtual: mantente por encima del delta mínimo, prohibido adelantar."
+            ]
+          },
+          {
+            "type": "exercise",
+            "text": "Cuando veas una bandera azul, suelta ligeramente y mantén tu trazada. No cambies de dirección de repente ni frenes antes de lo normal. Deja que el coche más rápido elija dónde adelantar — tu trabajo es ser predecible."
+          }
+        ]
+      }
+    },
+    {
+      "id": "safety_car_vsc",
+      "category": "rules_penalties",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Safety Car & VSC",
+        "fr": "Voiture de sécurité et VSC",
+        "es": "Coche de seguridad y VSC"
+      },
+      "summary": {
+        "en": "Manage delta, temperatures, and strategy under neutralisation.",
+        "fr": "Gérez le delta, les températures et la stratégie lors d'une neutralisation.",
+        "es": "Gestiona el delta, las temperaturas y la estrategia durante la neutralización."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "Under a Safety Car (SC) or Virtual Safety Car (VSC), the race is neutralised and overtaking is not permitted unless a car ahead enters the pit lane. Your primary job is to manage the delta — stay within the target gap and do not fall too far back from the car ahead. Tyre and brake temperatures may drop significantly, especially on cool tracks. A SC restart requires careful management of tyre temperature, battery charge, and gap to the car ahead."
+          },
+          {
+            "type": "image",
+            "src": "images/flags.png",
+            "caption": "The flags and boards you will see, numbered as below."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "1 Green: track clear, racing resumes.",
+              "2 Yellow: hazard ahead. Slow down, no overtaking.",
+              "3 Double yellow: big hazard. Slow right down, be ready to stop.",
+              "4 Blue: a faster car is about to lap you. Let it by safely.",
+              "5 Red: session stopped. Return slowly to the pit lane.",
+              "6 Chequered: end of the session.",
+              "7 Safety Car: hold position, keep the delta, no overtaking.",
+              "8 Virtual Safety Car: keep above the minimum delta time, no overtaking."
+            ]
+          },
+          {
+            "type": "exercise",
+            "text": "Under SC or VSC, manage delta first. Then assess: are your tyres cold? Is a pit stop now faster than staying out? Does your battery need recharging before the restart? Deal with these in order, not all at once."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Sous une voiture de sécurité (SC) ou une voiture de sécurité virtuelle (VSC), la course est neutralisée et les dépassements sont interdits, sauf si la voiture devant entre dans la voie des stands. Votre première priorité est de gérer le delta — restez dans l'écart cible et ne vous éloignez pas trop de la voiture devant. Les températures des pneus et des freins peuvent chuter significativement. Un redémarrage après SC demande de gérer la température des pneus, la charge de batterie et l'écart sur la voiture devant."
+          },
+          {
+            "type": "image",
+            "src": "images/flags.png",
+            "caption": "Les drapeaux et panneaux que vous verrez, numérotés ci-dessous."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "1 Vert : piste dégagée, la course reprend.",
+              "2 Jaune : danger devant. Ralentissez, dépassement interdit.",
+              "3 Double jaune : danger important. Ralentissez fortement, soyez prêt à vous arrêter.",
+              "4 Bleu : une voiture plus rapide va vous prendre un tour. Laissez-la passer en sécurité.",
+              "5 Rouge : séance arrêtée. Rentrez lentement aux stands.",
+              "6 Damier : fin de la séance.",
+              "7 Voiture de sécurité : gardez votre position et le delta, dépassement interdit.",
+              "8 Voiture de sécurité virtuelle : restez au-dessus du delta minimum, dépassement interdit."
+            ]
+          },
+          {
+            "type": "exercise",
+            "text": "Sous SC ou VSC, gérez le delta en premier. Puis évaluez : vos pneus sont-ils froids ? Un arrêt maintenant est-il plus rapide que rester en piste ? Votre batterie doit-elle être rechargée avant le redémarrage ? Traitez ces questions dans l'ordre, pas toutes à la fois."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "Bajo un coche de seguridad (SC) o coche de seguridad virtual (VSC), la carrera está neutralizada y adelantar no está permitido salvo que el coche delante entre en el pit lane. Tu prioridad principal es gestionar el delta — mantente dentro del hueco objetivo y no te quedes demasiado lejos del coche delante. Las temperaturas de neumáticos y frenos pueden bajar significativamente. El reinicio tras el SC requiere gestionar la temperatura de neumáticos, la carga de batería y el hueco con el coche de delante."
+          },
+          {
+            "type": "image",
+            "src": "images/flags.png",
+            "caption": "Las banderas y paneles que verás, numerados abajo."
+          },
+          {
+            "type": "bullets",
+            "items": [
+              "1 Verde: pista libre, se reanuda la carrera.",
+              "2 Amarilla: peligro delante. Reduce, prohibido adelantar.",
+              "3 Doble amarilla: peligro grave. Reduce mucho, prepárate para detenerte.",
+              "4 Azul: un coche más rápido va a doblarte. Déjalo pasar con seguridad.",
+              "5 Roja: sesión detenida. Vuelve despacio al pit lane.",
+              "6 A cuadros: fin de la sesión.",
+              "7 Coche de seguridad: mantén la posición y el delta, prohibido adelantar.",
+              "8 Coche de seguridad virtual: mantente por encima del delta mínimo, prohibido adelantar."
+            ]
+          },
+          {
+            "type": "exercise",
+            "text": "Bajo SC o VSC, gestiona el delta primero. Luego evalúa: ¿tienes los neumáticos fríos? ¿Una parada ahora es más rápida que quedarse en pista? ¿Necesitas recargar batería antes del reinicio? Trata estas preguntas por orden, no todas a la vez."
+          }
+        ]
+      }
+    },
+    {
+      "id": "illegal_overtake_give_back",
+      "category": "rules_penalties",
+      "published": "2026-11-09",
+      "updated": "2026-11-09",
+      "title": {
+        "en": "Illegal Overtake",
+        "fr": "Dépassement illégal",
+        "es": "Adelantamiento ilegal"
+      },
+      "summary": {
+        "en": "If you gained a position unfairly, give it back quickly.",
+        "fr": "Si vous avez gagné une position de façon irrégulière, rendez-la rapidement.",
+        "es": "Si ganaste una posición de forma ilegal, devuélvela rápidamente."
+      },
+      "body": {
+        "en": [
+          {
+            "type": "paragraph",
+            "text": "An illegal overtake happens when you gain a position off the track, under yellow flags, under the Safety Car, or by using an unfair advantage such as pushing a driver wide. Giving the position back promptly is usually cheaper than waiting for a stewards decision and receiving a time penalty. To give a position back safely, let the car re-pass on a straight with no sudden braking."
+          },
+          {
+            "type": "exercise",
+            "text": "If you know a pass was not clean, give it back on the next straight. Slow slightly, leave room, and let the car through predictably. A clean position swap costs you a few seconds; a penalty can cost much more."
+          }
+        ],
+        "fr": [
+          {
+            "type": "paragraph",
+            "text": "Un dépassement illégal se produit quand vous gagnez une position hors piste, sous drapeaux jaunes, sous voiture de sécurité ou en utilisant un avantage déloyal comme pousser un concurrent à l'extérieur. Rendre la position rapidement est généralement moins coûteux qu'attendre une décision des commissaires et recevoir une pénalité de temps. Pour rendre une position en sécurité, laissez la voiture repasser sur une ligne droite sans freinage brusque."
+          },
+          {
+            "type": "exercise",
+            "text": "Si vous savez qu'un dépassement n'était pas propre, rendez-le sur la prochaine ligne droite. Levez légèrement le pied, laissez de la place et laissez passer la voiture de façon prévisible. Un échange propre de position vous coûte quelques secondes ; une pénalité peut coûter beaucoup plus."
+          }
+        ],
+        "es": [
+          {
+            "type": "paragraph",
+            "text": "Un adelantamiento ilegal ocurre cuando ganas una posición fuera de pista, bajo banderas amarillas, bajo el coche de seguridad o usando una ventaja desleal como empujar a un rival fuera. Devolver la posición rápidamente suele ser más barato que esperar una decisión de comisarios y recibir una penalización de tiempo. Para devolver una posición de forma segura, deja que el coche vuelva a adelantar en una recta sin frenazos bruscos."
+          },
+          {
+            "type": "exercise",
+            "text": "Si sabes que el adelantamiento no fue limpio, devuélvelo en la próxima recta. Suelta ligeramente, deja espacio y deja pasar al coche de forma predecible. Un intercambio limpio de posición te cuesta unos segundos; una penalización puede costar mucho más."
+          }
+        ]
+      }
+    }
+  ]
+}

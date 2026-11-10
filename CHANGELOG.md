@@ -3,6 +3,17 @@
 The website has no version number of its own. Entries are dated and name the
 Jax Max Delta app release the site was checked against.
 
+## 2026-11-09 — Racing Tips feed (app 0.30.0)
+
+- New `_racing_tips/` folder: the Racing Tips content the app downloads from
+  GitHub (`version.json`, `feed.json`, `images/`). The leading underscore
+  keeps it off jaxmaxdelta.com. 26 tips in EN/FR/ES, 7 of them illustrated.
+  Authoring guide in `_racing_tips/README.md`; check with
+  `python3 scripts/validate_racing_tips.py`.
+- Racing Tips guide (EN/FR/ES): new section on illustrated tips that update on
+  their own, sorting (Category / Recent / Unread) and changed tips showing as
+  unread.
+
 ## 2026-11-09 — Terms approved; new homepage lead (app 0.29.0)
 
 - **Legal review complete.** The "Legal review status: this expanded draft

@@ -24,6 +24,13 @@ Screenshots and preview videos: full-size originals stay untouched; the site
 loads web-sized copies made by `python3 scripts/build_web_media.py` (see
 `assets/screenshots/current/README.md` and `assets/video/README.md`).
 
+## Racing Tips feed
+
+`_racing_tips/` holds the Racing Tips the Jax Max Delta app downloads (not
+published on the website). See `_racing_tips/README.md` for the format and
+how to publish a change, and run `python3 scripts/validate_racing_tips.py`
+before pushing.
+
 ## Local validation
 
 There is no dependency installation or compilation step. GitHub Pages serves the

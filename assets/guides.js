@@ -407,6 +407,14 @@ const GUIDES = {
               "Tap <strong>Mark as read</strong> when you're done. The tip's dot turns green in the list, so you can see what's left. Tap <strong>Mark as unread</strong> to undo."
             ],
             shot: "racingTipsDetail"
+          },
+          {
+            h: "New tips arrive on their own",
+            p: ["Many tips now come with diagrams, and the collection is updated regularly. When you open the app it checks for new tips and downloads them in English, French and Spanish; pull down on the list to check again. Your tips stay available offline."],
+            list: [
+              "Sort by <strong>Category</strong>, <strong>Recent</strong> (latest updates first) or <strong>Unread</strong>.",
+              "A new tip, or one that has changed since you read it, shows as unread again, so nothing new slips past."
+            ]
           }
         ],
         allFree: true,
@@ -887,6 +895,14 @@ const GUIDES = {
               "Touchez <strong>Marquer comme lu</strong> quand vous avez terminé. La pastille du conseil devient verte dans la liste, pour voir ce qu’il reste. Touchez <strong>Marquer non lu</strong> pour annuler."
             ],
             shot: "racingTipsDetail"
+          },
+          {
+            h: "Les nouveaux conseils arrivent d'eux-mêmes",
+            p: ["Beaucoup de conseils sont maintenant illustrés de schémas, et la collection est mise à jour régulièrement. À l'ouverture, l'app vérifie s'il y a de nouveaux conseils et les télécharge en français, en anglais et en espagnol ; tirez la liste vers le bas pour vérifier à nouveau. Vos conseils restent disponibles hors ligne."],
+            list: [
+              "Triez par <strong>Catégorie</strong>, <strong>Récents</strong> (dernières mises à jour d'abord) ou <strong>Non lus</strong>.",
+              "Un nouveau conseil, ou un conseil modifié depuis votre lecture, redevient non lu : rien de nouveau ne vous échappe."
+            ]
           }
         ],
         allFree: true,
@@ -1367,6 +1383,14 @@ const GUIDES = {
               "Toca <strong>Marcar como leído</strong> al terminar. El punto del consejo se vuelve verde en la lista, para que veas lo que te queda. Toca <strong>Marcar como no leído</strong> para deshacerlo."
             ],
             shot: "racingTipsDetail"
+          },
+          {
+            h: "Los nuevos consejos llegan solos",
+            p: ["Muchos consejos incluyen ahora diagramas, y la colección se actualiza con regularidad. Al abrir la app, comprueba si hay consejos nuevos y los descarga en español, inglés y francés; desliza la lista hacia abajo para comprobarlo de nuevo. Tus consejos siguen disponibles sin conexión."],
+            list: [
+              "Ordena por <strong>Categoría</strong>, <strong>Recientes</strong> (últimas actualizaciones primero) o <strong>No leídos</strong>.",
+              "Un consejo nuevo, o uno que ha cambiado desde que lo leíste, vuelve a aparecer como no leído, así no se te escapa nada."
+            ]
           }
         ],
         allFree: true,
