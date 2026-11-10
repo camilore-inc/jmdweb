@@ -162,11 +162,12 @@ These corrections post-date the approval. They state app behaviour more
 accurately and add no new processing, but the owner may wish to show the diff
 to counsel.
 
-### Terms of Use — still under review
+### Terms of Use — approved
 
-The expanded Terms remain drafting work, not approved legal advice. The pages
-still carry their visible legal-review notice; leave it in place until approval
-is recorded here. Counsel should specifically review:
+The owner recorded the legal review of the expanded Terms as complete on
+2026-11-09, and the visible legal-review notice was removed from the EN/FR/ES
+Terms pages. The points below were the review checklist; they are kept for
+reference. Counsel should specifically review:
 
 - the conditional October 1 transfer language and contracting-entity transition;
 - Canadian and Quebec private-sector privacy applicability, privacy-officer/contact

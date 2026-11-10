@@ -105,7 +105,8 @@ check(
     "© 2026 Camilore Inc. All rights reserved." in site_js,
     "English copyright missing",
 )
-check("Legal review status:" in site_js, "English Terms legal review notice missing")
+# Terms approved 2026-11-09: no legal-review draft notice may be published.
+check("reviewNotice:" not in site_js, "a legal-review draft notice is still published")
 
 # Feature suggestions: a plain mailto to the support mailbox, with a localized
 # subject in every language. No form, no other destination.

@@ -150,7 +150,7 @@ const copy = {
     },
     home: {
       titleLines: ["Your Race Engineer.", "Your Pit Wall.", "Your Race Memory."],
-      lead: "Your iPhone becomes the pit wall beside your cockpit. Jax Max Delta turns live F1 telemetry into preparation, coaching and race context — and keeps a race memory of every session, before, during and after.",
+      lead: "Your phone becomes your live dashboard, or the pit wall beside your cockpit. Jax Max Delta turns live F1 telemetry into on-track assistance — and keeps a race memory of every session, using it to prepare you for the next one.",
       reelLabel: "Jax Max Delta in action",
       reelPause: "Pause the previews",
       reelPlay: "Play the previews",
@@ -685,7 +685,6 @@ const copy = {
       title: "Terms of Use",
       intro: "These terms govern your use of Jax Max Delta and its Free and Jax Pro capabilities.",
       updated: "Last updated: October 24, 2026",
-      reviewNotice: "Legal review status: this expanded draft requires approval before production publication.",
       sections: [
         ["Operator and acceptance", "Jax Max Delta is a product owned and operated by <strong>Camilore Inc.</strong> Subject to completion of the applicable transfer documentation, Camilore Inc. assumed ownership and operation on October 1, 2026. By downloading or using JMD, you agree to these terms and Apple's applicable App Store terms. If you do not agree, do not use the app."],
         ["Independent product and trademarks", "Jax Max Delta is an independent telemetry companion. It is not affiliated with, sponsored by or endorsed by Formula 1, FIA, EA, Codemasters, any team, Sony, Microsoft, Xbox, PlayStation, Fanatec or another referenced rights holder. Names and marks belong to their respective owners and are used only to identify compatible games, platforms or equipment."],
@@ -819,7 +818,7 @@ const copy = {
     },
     home: {
       titleLines: ["Votre ingénieur de course.", "Votre mur des stands.", "Votre mémoire de course."],
-      lead: "Votre iPhone devient le mur des stands à côté de votre cockpit. Jax Max Delta transforme la télémétrie F1 en direct en préparation, en coaching et en contexte de course — et garde la mémoire de chaque session, avant, pendant et après.",
+      lead: "Votre téléphone devient votre tableau de bord en direct, ou le mur des stands à côté de votre cockpit. Jax Max Delta transforme la télémétrie F1 en direct en assistance en piste — et garde la mémoire de chaque session pour mieux vous préparer à la suivante.",
       reelLabel: "Jax Max Delta en action",
       reelPause: "Mettre les aperçus en pause",
       reelPlay: "Lire les aperçus",
@@ -1392,7 +1391,7 @@ const copy = {
     },
     home: {
       titleLines: ["Tu ingeniero de carrera.", "Tu muro de boxes.", "Tu memoria de carrera."],
-      lead: "Tu iPhone se convierte en el muro de boxes junto a tu cockpit. Jax Max Delta transforma la telemetría de F1 en vivo en preparación, coaching y contexto de carrera — y guarda la memoria de cada sesión, antes, durante y después.",
+      lead: "Tu teléfono se convierte en tu panel en vivo, o en el muro de boxes junto a tu cockpit. Jax Max Delta transforma la telemetría de F1 en vivo en asistencia en pista — y guarda la memoria de cada sesión para prepararte mejor para la siguiente.",
       reelLabel: "Jax Max Delta en acción",
       reelPause: "Pausar las vistas previas",
       reelPlay: "Reproducir las vistas previas",
@@ -1927,7 +1926,6 @@ function cloneLocalizedLegal(lang, source) {
       title: "Conditions d'utilisation",
       intro: "Ces conditions régissent votre utilisation de Jax Max Delta et de ses fonctions gratuites et Jax Pro.",
       updated: "Dernière mise à jour : 24 octobre 2026",
-      reviewNotice: "Statut de l'examen juridique : cette version élargie doit être approuvée avant sa publication en production.",
       sections: termsSections("fr")
     };
   }
@@ -1935,7 +1933,6 @@ function cloneLocalizedLegal(lang, source) {
     title: "Términos de uso",
     intro: "Estos términos rigen el uso de Jax Max Delta y sus funciones Gratis y Jax Pro.",
     updated: "Última actualización: 24 de octubre de 2026",
-    reviewNotice: "Estado de revisión legal: este borrador ampliado requiere aprobación antes de publicarse en producción.",
     sections: termsSections("es")
   };
 }

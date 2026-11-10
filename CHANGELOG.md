@@ -3,6 +3,16 @@
 The website has no version number of its own. Entries are dated and name the
 Jax Max Delta app release the site was checked against.
 
+## 2026-11-09 — Terms approved; new homepage lead (app 0.29.0)
+
+- **Legal review complete.** The "Legal review status: this expanded draft
+  requires approval…" notice is removed from the EN/FR/ES Terms pages. The
+  validator now fails if a legal-review notice is published again.
+- **Homepage lead** (EN/FR/ES): "Your phone becomes your live dashboard, or
+  the pit wall beside your cockpit. Jax Max Delta turns live F1 telemetry into
+  on-track assistance — and keeps a race memory of every session, using it to
+  prepare you for the next one." It no longer names the iPhone alone.
+
 ## 2026-11-09 — aligned with Jax Max Delta app 1.29.0
 
 Original homepage headline restored; public blog retired. Follows the 2026-11
