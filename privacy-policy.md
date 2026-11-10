@@ -23,7 +23,8 @@ not to be survived.
   subscription processing**, support messages or exports you initiate, and — only if
   your device has iCloud available and iCloud Backup is on — a **backup of your session
   history and race history in your own private iCloud container**, which Camilore
-  cannot read.
+  cannot read. Checking for new Racing Tips contacts GitHub but sends nothing about
+  you (see 4.6).
 - You can delete the data on your device at any time from inside the app, or by deleting
   the app. iCloud backups are removed separately (see 4.3).
 
@@ -130,6 +131,10 @@ you are comfortable sharing them.
 Feature suggestions sent to the same address are voluntary and are handled like any
 other support message. Nothing from the app is attached automatically.
 
+### 4.6 Racing Tips updates
+
+When the app starts, and when you pull down on the Racing Tips list, it asks GitHub (raw.githubusercontent.com, operated by GitHub, Inc.) whether a new edition of the Racing Tips is available, and downloads it if there is one. These are plain requests for public files: the app sends no identifier, account, cookie or information about you, your device or your sessions. As with any request on the internet, GitHub receives your device's IP address in order to answer it, and handles it under its own privacy statement.
+
 ## 5. What we do not do
 
 - No in-app accounts, sign-up or automatic email collection.
@@ -188,8 +193,8 @@ so we can review and address it.
 
 ## 10. International processing
 
-Apple, Google and RevenueCat provide services internationally and may process limited
-purchase or diagnostic information outside your province, state or country under their
+Apple, Google, RevenueCat and GitHub provide services internationally and may process
+limited purchase, diagnostic or connection information outside your province, state or country under their
 own terms and privacy practices. Review the linked provider notices for current details;
 Camilore does not claim a processing location that those providers have not verified.
 

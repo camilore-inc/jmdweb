@@ -3,6 +3,13 @@
 The website has no version number of its own. Entries are dated and name the
 Jax Max Delta app release the site was checked against.
 
+## 2026-11-09 — Privacy Policy: Racing Tips updates (app 0.32.0)
+
+- New section 4.6 (EN/FR/ES): the app asks GitHub for new Racing Tips at start-up
+  and on pull-to-refresh; nothing about the driver is sent, and GitHub sees the
+  device's IP address as with any web request. The short version (section 1)
+  and international processing (section 10) now name GitHub too.
+
 ## 2026-11-09 — Racing Tips feed (app 0.30.0)
 
 - New `_racing_tips/` folder: the Racing Tips content the app downloads from
