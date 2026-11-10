@@ -40,14 +40,15 @@ claim, the site leaves it out.
 | Roadmap | R1 now lists what has shipped (Prepare for Session, Race Replay, Pit Wall, F1 26 energy management, SC/VSC/red-flag handling, iCloud backup, and more). Future items are cautious and have no dates. Practice and qualifying replay is listed as *exploring*, not shipped. Sprint races already get Race Replay, as the app does. |
 | Support | FAQ adds supported games, Android status, why some sessions have no Race Replay, and where to download. The "only a dashboard?" answer is updated. |
 | Privacy / Terms | **Wording not changed** (see below). They pick up the new page layout only. |
-| Blog | Posts not changed. They pick up the new layout and metadata only. |
+| Blog | Posts not changed. They pick up the new layout and metadata only. *(Retired from the public site on 2026-11-09; see CHANGELOG.md.)* |
 
 ### Navigation
 
 - The header now has **Features · How It Works · Support**, plus the EN/FR/ES
   switcher.
-- The footer has Product (Features, How It Works, Roadmap, Blog) and Help &
-  legal (Support, Privacy, Terms), plus the independence disclaimer.
+- The footer has Product (Features, How It Works, Roadmap, Roro Engine) and
+  Help & legal (Support, Privacy, Terms), plus the independence disclaimer.
+  The Blog link was removed on 2026-11-09 when the blog was retired.
 - Every existing URL still works: `/en|fr|es/{index,features,how-to,support,blog,roadmap,privacy,terms}.html`,
   the blog posts, and the root `index.html` / `privacy.html` / `support.html`
   redirects.
@@ -218,9 +219,8 @@ See `docs/CAMILORE_OWNERSHIP_MIGRATION.md` for the current audit and approvals.
 2. Replace `assets/brand/jmd-og-1200x630.png` with final social art.
 3. Set `SITE.store.appStoreUrl` on launch day, and update the Terms clause
    about placeholders.
-4. Refresh the four starter blog posts. They still use the older
-   "second-screen / virtual pit wall crew" framing, and their FR/ES text lacks
-   accents.
+4. ~~Refresh the four starter blog posts.~~ Superseded: the blog was retired
+   on 2026-11-09. Any return must meet `docs/EDITORIAL_STANDARD.md`.
 5. Once the App Store listing exists, consider `SoftwareApplication` JSON-LD
    using the real store data. Nothing was added now, to avoid guessing.
 6. iPad support is untested, so all iPad references were removed (2026-11-03).

@@ -85,27 +85,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/support.html"/>
   </url>
   <url>
-    <loc>https://jaxmaxdelta.com/en/blog.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/fr/blog.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/es/blog.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog.html"/>
-  </url>
-  <url>
     <loc>https://jaxmaxdelta.com/en/roadmap.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/roadmap.html"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/roadmap.html"/>
@@ -188,90 +167,6 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/terms.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/terms.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/terms.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/en/blog/second-screen-dashboard.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/second-screen-dashboard.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/second-screen-dashboard.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/second-screen-dashboard.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/second-screen-dashboard.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/fr/blog/second-screen-dashboard.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/second-screen-dashboard.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/second-screen-dashboard.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/second-screen-dashboard.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/second-screen-dashboard.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/es/blog/second-screen-dashboard.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/second-screen-dashboard.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/second-screen-dashboard.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/second-screen-dashboard.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/second-screen-dashboard.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/en/blog/different-from-telemetry-app.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/different-from-telemetry-app.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/different-from-telemetry-app.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/different-from-telemetry-app.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/different-from-telemetry-app.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/fr/blog/different-from-telemetry-app.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/different-from-telemetry-app.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/different-from-telemetry-app.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/different-from-telemetry-app.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/different-from-telemetry-app.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/es/blog/different-from-telemetry-app.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/different-from-telemetry-app.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/different-from-telemetry-app.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/different-from-telemetry-app.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/different-from-telemetry-app.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/en/blog/league-race-weekend.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/league-race-weekend.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/league-race-weekend.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/league-race-weekend.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/league-race-weekend.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/fr/blog/league-race-weekend.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/league-race-weekend.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/league-race-weekend.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/league-race-weekend.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/league-race-weekend.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/es/blog/league-race-weekend.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/league-race-weekend.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/league-race-weekend.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/league-race-weekend.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/league-race-weekend.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/en/blog/fanatec-wheel-tips.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/fanatec-wheel-tips.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/fanatec-wheel-tips.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/fanatec-wheel-tips.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/fanatec-wheel-tips.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/fr/blog/fanatec-wheel-tips.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/fanatec-wheel-tips.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/fanatec-wheel-tips.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/fanatec-wheel-tips.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/fanatec-wheel-tips.html"/>
-  </url>
-  <url>
-    <loc>https://jaxmaxdelta.com/es/blog/fanatec-wheel-tips.html</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jaxmaxdelta.com/en/blog/fanatec-wheel-tips.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://jaxmaxdelta.com/fr/blog/fanatec-wheel-tips.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://jaxmaxdelta.com/es/blog/fanatec-wheel-tips.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jaxmaxdelta.com/en/blog/fanatec-wheel-tips.html"/>
   </url>
   <!-- guides:start (generated by scripts/build_guide_pages.py) -->
   <url>

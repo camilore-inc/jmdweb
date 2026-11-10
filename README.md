@@ -41,5 +41,12 @@ The validator checks local links, sitemap targets, support destinations, legal
 routes, corporate attribution, publisher metadata and JSON-LD. Browser testing
 should cover desktop and mobile widths in English, French and Spanish.
 
+## Blog (retired)
+
+The blog is retired. Old article URLs still resolve but are `noindex`, out of
+the sitemap and not linked anywhere; the files and text are kept for later
+use. Any future article must meet
+[`docs/EDITORIAL_STANDARD.md`](docs/EDITORIAL_STANDARD.md).
+
 Deployment, legal-review status, App Store checks and repository-transfer steps
 are documented in [`docs/CAMILORE_OWNERSHIP_MIGRATION.md`](docs/CAMILORE_OWNERSHIP_MIGRATION.md).

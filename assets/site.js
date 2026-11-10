@@ -23,6 +23,9 @@ const SITE = {
     appStoreUrl: "",
     testFlightUrl: ""
   },
+  // Retired blog (2026-11): the posts stay reachable at their old URLs but are
+  // not linked from navigation, footer or other pages, are out of the sitemap
+  // and carry noindex. See docs/EDITORIAL_STANDARD.md before reviving it.
   posts: [
     "second-screen-dashboard",
     "different-from-telemetry-app",
@@ -84,7 +87,6 @@ const copy = {
       features: "Features",
       how: "How It Works",
       support: "Support",
-      blog: "Blog",
       roadmap: "Roadmap",
       roro: "Roro Engine",
       privacy: "Privacy",
@@ -147,7 +149,7 @@ const copy = {
       racingTipsDetail: "A Racing Tip, with an exercise to practise"
     },
     home: {
-      titleLines: ["Your pit wall. In your hand.", "Your race engineer. In your ear."],
+      titleLines: ["Your Race Engineer.", "Your Pit Wall.", "Your Race Memory."],
       lead: "Your iPhone becomes the pit wall beside your cockpit. Jax Max Delta turns live F1 telemetry into preparation, coaching and race context — and keeps a race memory of every session, before, during and after.",
       reelLabel: "Jax Max Delta in action",
       reelPause: "Pause the previews",
@@ -754,7 +756,6 @@ const copy = {
       features: "Fonctions",
       how: "Fonctionnement",
       support: "Soutien",
-      blog: "Blogue",
       roadmap: "Feuille de route",
       roro: "Roro Engine",
       privacy: "Confidentialité",
@@ -817,7 +818,7 @@ const copy = {
       racingTipsDetail: "Un conseil de course, avec un exercice à pratiquer"
     },
     home: {
-      titleLines: ["Votre mur des stands. Dans votre main.", "Votre ingénieur de course. À votre oreille."],
+      titleLines: ["Votre ingénieur de course.", "Votre mur des stands.", "Votre mémoire de course."],
       lead: "Votre iPhone devient le mur des stands à côté de votre cockpit. Jax Max Delta transforme la télémétrie F1 en direct en préparation, en coaching et en contexte de course — et garde la mémoire de chaque session, avant, pendant et après.",
       reelLabel: "Jax Max Delta en action",
       reelPause: "Mettre les aperçus en pause",
@@ -1328,7 +1329,6 @@ const copy = {
       features: "Funciones",
       how: "Cómo funciona",
       support: "Soporte",
-      blog: "Blog",
       roadmap: "Hoja de ruta",
       roro: "Roro Engine",
       privacy: "Privacidad",
@@ -1391,7 +1391,7 @@ const copy = {
       racingTipsDetail: "Un consejo de carrera, con un ejercicio para practicar"
     },
     home: {
-      titleLines: ["Tu muro de boxes. En tu mano.", "Tu ingeniero de carrera. En tu oído."],
+      titleLines: ["Tu ingeniero de carrera.", "Tu muro de boxes.", "Tu memoria de carrera."],
       lead: "Tu iPhone se convierte en el muro de boxes junto a tu cockpit. Jax Max Delta transforma la telemetría de F1 en vivo en preparación, coaching y contexto de carrera — y guarda la memoria de cada sesión, antes, durante y después.",
       reelLabel: "Jax Max Delta en acción",
       reelPause: "Pausar las vistas previas",
@@ -2253,7 +2253,7 @@ function footer(t, lang) {
           <p class="footer-parent">${t.common.parent} <a href="${SITE.corporateUrl}">camilore.com</a></p>
           <p class="footer-copyright">${t.common.copyright}</p>
         </div>
-        ${col(t.common.footerProduct, [["features", "features.html"], ["how", "how-to.html"], ["roadmap", "roadmap.html"], ["roro", "roro.html"], ["blog", "blog.html"]])}
+        ${col(t.common.footerProduct, [["features", "features.html"], ["how", "how-to.html"], ["roadmap", "roadmap.html"], ["roro", "roro.html"]])}
         ${col(t.common.footerHelp, [["support", "support.html"], ["privacy", "privacy.html"], ["terms", "terms.html"]])}
         <p class="footer-disclaimer">${t.common.disclaimer}</p>
       </div>
@@ -2872,7 +2872,7 @@ function postCard(t, lang, slug) {
 
 function post(t, lang, slug) {
   const p = t.blog.posts[slug] || t.blog.posts[SITE.posts[0]];
-  return `${pageHero(t.blog.title, p.title, p.summary)}<section class="section section--tight"><div class="wrap page-grid"><article class="panel prose"><p class="post-meta">${p.date}</p>${p.body.map(([h, b]) => `<h2>${h}</h2><p>${b}</p>`).join("")}</article><aside class="panel"><h2>${t.blog.title}</h2>${SITE.posts.filter((s) => s !== slug).map((s) => `<p><a class="text-link" href="${s}.html">${t.blog.posts[s].title}</a></p>`).join("")}<a class="btn btn-secondary" href="../blog.html">${t.nav.blog}</a></aside></div></section>`;
+  return `${pageHero(t.blog.title, p.title, p.summary)}<section class="section section--tight"><div class="wrap"><article class="panel prose"><p class="post-meta">${p.date}</p>${p.body.map(([h, b]) => `<h2>${h}</h2><p>${b}</p>`).join("")}</article></div></section>`;
 }
 
 function privacy(t) {

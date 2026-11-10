@@ -135,6 +135,25 @@ check((ROOT / "en" / "privacy.html").is_file(), "English privacy route missing")
 check((ROOT / "en" / "terms.html").is_file(), "English terms route missing")
 
 sitemap = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
+
+# Retired blog (2026-11): old URLs keep working, but the pages are noindex,
+# out of the sitemap, and nothing on the site links to them.
+check("/blog" not in sitemap, "sitemap still lists blog URLs")
+check('"blog.html"' not in site_js, "site.js still links to blog.html")
+check("../blog.html" not in site_js, "post pages still link to the blog index")
+for lang in ("en", "fr", "es"):
+    blog_pages = [ROOT / lang / "blog.html", *sorted((ROOT / lang / "blog").glob("*.html"))]
+    for page in blog_pages:
+        check(
+            '<meta name="robots" content="noindex, follow">' in page.read_text(encoding="utf-8"),
+            f"{page.relative_to(ROOT)}: retired blog page missing noindex",
+        )
+for page in ROOT.rglob("*.html"):
+    rel = page.relative_to(ROOT).as_posix()
+    if "/blog" in f"/{rel}" or rel.startswith(".") or "/references/" in f"/{rel}":
+        continue
+    check("blog" not in page.read_text(encoding="utf-8").lower(), f"{rel}: mentions the retired blog")
+
 for raw_path in re.findall(r"<loc>https://jaxmaxdelta\.com([^<]*)</loc>", sitemap):
     url_path = urlsplit(unquote(raw_path)).path
     local = f"{url_path}index.html" if url_path.endswith("/") else url_path

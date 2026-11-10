@@ -933,7 +933,7 @@ main:focus { outline: none; }
   text-underline-offset: 3px;
   text-decoration-color: rgba(255, 106, 90, 0.45);
 }
-.legal { max-width: 900px; }
+.legal, .prose { max-width: 900px; }
 
 .post-meta { margin: 0; color: var(--quiet); font-size: 0.88rem; font-weight: 700; }
 .post-card { display: flex; flex-direction: column; gap: 10px; padding: 26px; }
