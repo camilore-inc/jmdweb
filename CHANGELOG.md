@@ -3,6 +3,14 @@
 The website has no version number of its own. Entries are dated and name the
 Jax Max Delta app release the site was checked against.
 
+## 2026-11-11 — New lap-comparison and VSC media (app 0.32.2)
+
+- Lap trace screenshot (EN/FR/ES): the new Reference (solid) vs Compare
+  (dashed) comparison with the inspection cursor.
+- VSC delta screenshot and the "VSC delta" and "After the race" clips re-cut
+  from 0.32.2: the VSC clip now shows the differential setting popup and the
+  VSC ending; the after-the-race clip ends on the new lap comparison.
+
 ## 2026-11-09 — Privacy Policy: Racing Tips updates (app 0.32.0)
 
 - New section 4.6 (EN/FR/ES): the app asks GitHub for new Racing Tips at start-up
