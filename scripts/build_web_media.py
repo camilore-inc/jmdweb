@@ -51,31 +51,30 @@ SITE_CAPTURES = {
     "08b-history-league-filtered": "session-history-league",
     "09a-prep-track-map": "prepare-map",
     "09b-prep-corners": "prepare-corners",
+    "10-dashboard": "dashboard",
+    "11-qualifying": "qualifying",
+    "12-pit-wall-timing": "pit-wall-timing",
+    "13-pit-wall-map": "pit-wall-map",
+    "14-pit-wall-car": "pit-wall-car",
+    "15-jax-audio": "jax-audio",
+    "16-race-results": "race-results",
+    "17-lap-trace": "lap-trace",
+    "18-setup-library": "setup-library",
 }
 
 # Website clips kept in this repository: assets/video/source/<lang>/<name>.mp4
-# (1920 px masters, cut from simulator recordings) -> same name in assets/video/<lang>/.
-SITE_PREVIEWS = ("prepare-session",)
+# (1920 x 886 masters, cut from simulator recordings of the app) -> same name in assets/video/<lang>/.
+SITE_PREVIEWS = ("live-race", "pit-wall", "after-the-race", "prepare-session")
 
-# App Store screenshots (app repo) -> web name.
+# App Store screenshots (app repo) -> web name. Only the race-control shots come
+# from the App Store set; everything else is a website capture above.
 APP_CAPTURES = {
-    "01_dashboard": "dashboard",
-    "02_pitwall_timing": "pit-wall-timing",
-    "03_track_map": "pit-wall-map",
-    "04_car_health": "pit-wall-car",
-    "05_qualifying": "qualifying",
-    "06_jax_audio": "jax-audio",
-    "07_race_results": "race-results",
-    "08_lap_trace": "lap-trace",
-    "10_setup_library": "setup-library",
     "11_vsc_delta": "vsc-delta",
+    "12_setting_popup": "setting-popup",
 }
 
 # App Store previews (app repo) -> web name.
 APP_PREVIEWS = {
-    "01_live_race": "live-race",
-    "02_pit_wall": "pit-wall",
-    "03_after_the_race": "after-the-race",
     "04_vsc_delta": "vsc-delta",
 }
 

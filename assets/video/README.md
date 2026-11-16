@@ -1,30 +1,28 @@
 # Preview videos
 
 One folder per language (`en/`, `fr/`, `es/`), each with five clips and their
-poster frames:
+poster frames. **Current set: Jax Max Delta 0.32.6**, except the VSC clip,
+which is the 0.32.5 App Store preview (0.32.6 changed nothing it shows).
 
-| Clip                  | Source in camilore-inc/JaxMaxDelta      | Used by slot          |
-|-----------------------|-----------------------------------------|-----------------------|
-| `live-race.mp4`       | `assets/previews/<lang>/01_live_race.mp4`     | `dashboardVideo`      |
-| `pit-wall.mp4`        | `assets/previews/<lang>/02_pit_wall.mp4`      | `pitWallVideo`        |
-| `after-the-race.mp4`  | `assets/previews/<lang>/03_after_the_race.mp4`| `raceReplayLandscape` |
-| `vsc-delta.mp4`       | `assets/previews/<lang>/04_vsc_delta.mp4`     | `vscDelta`            |
-| `prepare-session.mp4` | this repository: `source/<lang>/prepare-session.mp4` | `prepare`      |
+| Clip                  | Source                                                        | Used by slot          |
+|-----------------------|---------------------------------------------------------------|-----------------------|
+| `live-race.mp4`       | `source/<lang>/live-race.mp4` (Racing Dashboard demo, Monaco) | `dashboardVideo`      |
+| `pit-wall.mp4`        | `source/<lang>/pit-wall.mp4` (PitWall demo: TIMING → MAP → CAR) | `pitWallVideo`      |
+| `after-the-race.mp4`  | `source/<lang>/after-the-race.mp4` (Session History demo: results → Race Replay → lap comparison) | `raceReplayLandscape` |
+| `prepare-session.mp4` | `source/<lang>/prepare-session.mp4` (Session Preparation demo, Spa: map full screen → Corners) | `prepare` |
+| `vsc-delta.mp4`       | app repository `apps/jax_max_delta/assets/previews/<lang>/04_vsc_delta.mp4` | `vscDelta` |
 
-`prepare-session.mp4` is cut from iOS Simulator recordings of the Session
-Preparation demo (Settings → SUPPORT → Explore JMD Demos): open Spa, expand the
-circuit map, scroll to Corners and open it. The 1920 × 884 masters in `source/`
-have no audio; plain `python3 scripts/build_web_media.py` rebuilds the web copies.
-
-`<name>-poster.webp` is the frame at 1.5 s, shown before the clip loads.
+The four masters in `source/` are cut from `xcrun simctl io booted recordVideo`
+recordings of the 0.32.6 demos (Settings → SUPPORT → Explore JMD Demos): 1920 ×
+886, 30 fps, H.264, no audio, 18–30 s; still stretches are cut out, never sped
+up. `<name>-poster.webp` is the frame at 1.5 s, shown before the clip loads.
 
 ## Export
 
-The sources are 1920 × 886 H.264 with a silent audio track (about 94 MB for all
-twelve). `scripts/build_web_media.py --app-repo <path to JaxMaxDelta>` scales
-them to 1280 px, drops the audio track, moves the moov atom to the front (about
-8 MB for all twelve) and writes the poster frame. The originals are never
-modified.
+`python3 scripts/build_web_media.py` scales each source to 1280 px, drops any
+audio track, moves the moov atom to the front and writes the poster frame. Add
+`--app-repo <path to JaxMaxDelta>` to rebuild the VSC clip too. The sources are
+never modified.
 
 ## Slots
 

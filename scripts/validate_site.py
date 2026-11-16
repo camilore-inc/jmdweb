@@ -160,6 +160,54 @@ for raw_path in re.findall(r"<loc>https://jaxmaxdelta\.com([^<]*)</loc>", sitema
     local = f"{url_path}index.html" if url_path.endswith("/") else url_path
     check(exists_as_page(ROOT / local.lstrip("/")), f"sitemap target missing: {url_path}")
 
+# Screenshots and preview clips: every slot the pages use exists in all three
+# languages and has a caption in each, every guide shot names a real slot,
+# every web copy is built from a known original, and nothing else sits in
+# assets/screenshots/ (it is all publicly served, so a stray capture from an old
+# app version would be too).
+LANGS = ("en", "fr", "es")
+guides_js = (ROOT / "assets" / "guides.js").read_text(encoding="utf-8")
+shots_block = re.search(r"const SHOTS = \{(.*?)\n\};", site_js, re.S)
+check(shots_block is not None, "site.js: SHOTS table not found")
+slots = dict(re.findall(r"^\s*(\w+):\s*\{(.*)\},?$", shots_block.group(1) if shots_block else "", re.M))
+for key, body in slots.items():
+    names = re.findall(r'perLang\("([^"]+)"\)', body)
+    for clip in re.findall(r'clip\("([^"]+)"\)', body):
+        names += [f"{clip}.mp4", f"{clip}-poster.webp"]
+    for name in names:
+        folder = "video" if name.endswith((".mp4", "-poster.webp")) else "screenshots/web"
+        for lang in LANGS:
+            check(
+                (ROOT / "assets" / folder / lang / name).is_file(),
+                f"SHOTS.{key}: missing assets/{folder}/{lang}/{name}",
+            )
+    check(
+        len(re.findall(rf'^\s+{key}: "', site_js, re.M)) >= len(LANGS),
+        f"site.js: SHOTS.{key} needs a caption in EN, FR and ES",
+    )
+used = re.findall(r'\bshot: "(\w+)"', guides_js)
+for keys in re.findall(r"\bshots: \[([^\]]*)\]", guides_js + site_js):
+    used += re.findall(r'"(\w+)"', keys)
+for key in sorted(set(used)):
+    check(key in slots, f"shot {key!r} is not a SHOTS slot")
+
+build_script = (ROOT / "scripts" / "build_web_media.py").read_text(encoding="utf-8")
+built = set(re.findall(r'"[^"]+": "([\w-]+)"', build_script))
+site_previews = re.search(r"SITE_PREVIEWS = \(([^)]*)\)", build_script)
+built |= set(re.findall(r'"([\w-]+)"', site_previews.group(1) if site_previews else ""))
+for lang in LANGS:
+    for web in sorted((ROOT / "assets" / "screenshots" / "web" / lang).glob("*.webp")):
+        check(web.stem in built, f"{web.relative_to(ROOT)}: no original in build_web_media.py")
+    for clip in sorted((ROOT / "assets" / "video" / lang).glob("*.mp4")):
+        check(clip.stem in built, f"{clip.relative_to(ROOT)}: no source in build_web_media.py")
+for entry in (ROOT / "assets" / "screenshots").iterdir():
+    if entry.name.startswith("."):
+        continue
+    check(
+        entry.name in {"current", "web"},
+        f"assets/screenshots/{entry.name}: only current/ and web/ belong here",
+    )
+
 if FAILURES:
     print(f"Site validation failed ({len(FAILURES)}):", file=sys.stderr)
     for failure in FAILURES:

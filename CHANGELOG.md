@@ -3,6 +3,37 @@
 The website has no version number of its own. Entries are dated and name the
 Jax Max Delta app release the site was checked against.
 
+## 2026-11-16 — Every screenshot and preview from app 0.32.6
+
+- **All website screenshots and preview clips recaptured from Jax Max Delta
+  0.32.6** in English, French and Spanish: Home, the three Settings tabs, the
+  Dashboard (live and qualifying), the Pit Wall (timing, LIVE with Quick Jax,
+  map, car), Jax audio, Session History (list, league filter, league and
+  season, race results, lap comparison), the Setup Library and a rated setup,
+  Racing Tips (list and article), Prepare for Session (map and corners), and
+  the live-race, Pit Wall, after-the-race and Prepare for Session clips. The
+  hero reel plays the new clips. The VSC delta screenshot and clip now come
+  from the 0.32.5 App Store set (the yellow frame glow), unchanged in 0.32.6.
+- **New: the brake-bias popup** (`setting-popup`), in the Dashboard guide.
+- **Dashboard guide** (EN/FR/ES): the glowing frame and what each colour
+  means (yellow pulsing VSC, yellow steady Safety Car, red flag, blue flags),
+  the single race-control popup and its green/yellow/red delta, the indigo
+  popup for brake bias, differential and engine braking, and the gear that
+  opens Settings mid-session. Pit Wall guide: the gear and the same frame.
+- **Prepare for Session guide:** the game comes first (F1 26, F1 25, F1 24),
+  then the circuit; the book icon. **Setups guide:** one game at a time under
+  "F1 26 Setups", TRACK/TITLE/RATING (+SESSION in landscape), tap a header to
+  sort and again to reverse; no GAME column or Sort by control. **Racing
+  Tips guide:** A−/A+ text size.
+- Home and Features "During" lists: race control at a glance (frame colours)
+  and the indigo setting popup. Captions updated for the new shots.
+- Removed 37 old captures and an old guide deck (`JMD-Guide.pptx`) that sat unused in
+  `assets/screenshots/` but were still publicly reachable.
+- `scripts/validate_site.py` now checks every screenshot slot and clip exists
+  in all three languages with captions, every guide shot names a real slot,
+  every web copy has an original in `build_web_media.py`, and nothing stray
+  sits in `assets/screenshots/`.
+
 ## 2026-11-11 — New lap-comparison and VSC media (app 0.32.2)
 
 - Lap trace screenshot (EN/FR/ES): the new Reference (solid) vs Compare

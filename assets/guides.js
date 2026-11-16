@@ -89,12 +89,39 @@ const GUIDES = {
             shot: "pitWallTiming"
           },
           {
-            h: "Abbreviations and overlays",
+            h: "Abbreviations and Settings",
             p: [
               "Tap the rain forecast in the top bar to open the dashboard legend, which explains every abbreviation (BB, DIFF, PEN, SC, VSC, ERS and more). The same <strong>Dashboard Guide</strong> is in Settings → SUPPORT.",
-              "Under a Virtual Safety Car or Safety Car, a large delta overlay tells you whether you are keeping the required delta. Red flags and race-control phases get their own clear overlays."
+              "The gear in the top-right corner opens Settings without leaving the session: telemetry, recording and Jax keep running while you change something."
+            ]
+          },
+          {
+            h: "Race control: the glowing frame",
+            p: ["When race control steps in, the Dashboard's own frame changes colour, so you can read the situation from the corner of your eye. The Pit Wall's frame does the same."],
+            list: [
+              "<strong>Yellow, pulsing</strong>: Virtual Safety Car.",
+              "<strong>Yellow, steady</strong>: Safety Car. It pulses again once the Safety Car comes in this lap.",
+              "<strong>Red</strong>: red flag. It outranks everything else.",
+              "<strong>Blue</strong>: you are being shown blue flags. After a Safety Car, blue returns only if the flags are still shown.",
+              "<strong>No glow</strong>: green-flag racing."
+            ],
+            note: "With Reduce Motion on in iOS, the glow stays steady instead of pulsing."
+          },
+          {
+            h: "One popup for race-control messages",
+            p: [
+              "Every race-control message appears in the same popup, in the same place, in a few words: RED FLAG, SC DELTA, CATCH THE QUEUE, SC IN THIS LAP, VSC · HOLD DELTA, VSC ENDING, GREEN FLAG and BLUE FLAG.",
+              "Under a Safety Car or VSC, the delta popup shows your margin to the required delta and changes colour with it: <strong>green</strong> for OK, <strong>yellow</strong> for CAREFUL, <strong>red</strong> for SLOW DOWN."
             ],
             shot: "vscDelta"
+          },
+          {
+            h: "Brake bias and differential changes",
+            p: [
+              "When you change brake bias, the differential (on or off throttle) or engine braking from your wheel, the new value appears in an <strong>indigo</strong> popup with the size of the change, for example “58% front, +2”. Indigo means nothing else in JMD, so a setting change is never mistaken for race control.",
+              "During a Safety Car or VSC, the setting popup covers the race-control popup for at most 2 seconds, then the race-control popup is back. Several quick changes show one popup with the newest value. Changes made in the garage or pit lane are not shown."
+            ],
+            shot: "settingPopup"
           },
           {
             h: "Qualifying and practice",
@@ -123,7 +150,9 @@ const GUIDES = {
             p: ["The header always shows the track, air and track temperatures, the rain forecast, the number of cars on track and the session clock."],
             list: [
               "<strong>Jax</strong> opens Quick Jax: switch <strong>Jax Audio Guidance</strong> on or off and choose the message categories without leaving the session.",
-              "<strong>Past</strong> opens Session History, already filtered to your current game and car. A <strong>RETURN TO PIT WALL</strong> button brings you back."
+              "<strong>Past</strong> opens Session History, already filtered to your current game and car. A <strong>RETURN TO PIT WALL</strong> button brings you back.",
+              "The <strong>gear</strong> opens Settings without stopping the session.",
+              "Race control lights the Pit Wall's frame in the same colours as the Dashboard's (see the Dashboard guide)."
             ],
             shot: "pitWallHeader"
           },
@@ -220,9 +249,9 @@ const GUIDES = {
         summary: "Learn the circuit with About, then build a plan for practice, qualifying or the race with Session.",
         sections: [
           {
-            h: "Choose the circuit and car",
+            h: "Choose the game, circuit and car",
             p: [
-              "Open <strong>Prepare for Session</strong> from the Home screen. Pick the circuit and the car at the top. The circuit list is alphabetical and searchable, and also finds other names such as “Spielberg” or “COTA”. The car list only offers supported game and formula combinations.",
+              "Open <strong>Prepare for Session</strong> from the Home screen and tap the circuit at the top. Pick the game first (F1 26, F1 25 or F1 24), then a circuit from that game. The list is alphabetical and searchable, and also finds other names such as “Spielberg” or “COTA”. A small book icon marks the circuits that have a full circuit reference. The car selector only offers supported game and formula combinations.",
               "JMD remembers your choice for next time. As you scroll, the selectors shrink into one line that you can still tap."
             ]
           },
@@ -360,7 +389,7 @@ const GUIDES = {
           },
           {
             h: "Find a setup",
-            p: ["The library is a table: GAME, TITLE, TRACK, RATING and SESSION. It opens sorted by game, newest edition first, so you never load an older game's setup by mistake. Tap a column header, or use <strong>Sort by</strong> for Game, Track, Rating, Title or Recently used. The filter chips narrow the list by track, car category (F1 or F2) and game."]
+            p: ["The library shows one game at a time, under a heading such as <strong>F1 26 Setups</strong>, so you never load an older game's setup by mistake. When you have setups from more than one game, a game selector sits above the heading. The table lists TRACK, TITLE and RATING, plus SESSION in landscape. It opens sorted by track; tap a column header to sort by it, and tap it again to reverse the order. The filter chips narrow the list by track and car category (F1 or F2)."]
           },
           {
             h: "Rate a setup",
@@ -369,7 +398,7 @@ const GUIDES = {
               "Tap the stars: one star is <strong>Poor</strong>, two is <strong>Good</strong>, three is <strong>Excellent</strong>.",
               "To remove a rating, tap the selected star again. The setup returns to Not rated."
             ],
-            p: ["A rating and a name belong to the setup itself, not to one session. Rate it in Session History and the library shows the same stars, and the other way round. In the library, sort by <strong>Rating</strong> to put your best setups first."],
+            p: ["A rating and a name belong to the setup itself, not to one session. Rate it in Session History and the library shows the same stars, and the other way round. In the library, tap the <strong>RATING</strong> header to put your best setups first."],
             shot: "setupRating"
           },
           {
@@ -378,7 +407,7 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["Every setup you've run, listed by game, track, name, rating and session", "Every new setup captured with its session"],
+          free: ["Every setup you've run, listed by game, then by track, name, rating and session", "Every new setup captured with its session"],
           pro: ["Opening a setup's values, comparing, renaming, rating and camera notes"]
         },
         related: ["session-history", "prepare-for-session", "pit-wall"]
@@ -402,7 +431,7 @@ const GUIDES = {
           {
             h: "Read, practise, mark as read",
             steps: [
-              "Tap a tip to open it: a one-line summary, then the explanation.",
+              "Tap a tip to open it: a one-line summary, then the explanation. <strong>A−</strong> and <strong>A+</strong> at the top make the text smaller or larger; JMD keeps your choice for every tip.",
               "Use the <strong>PRACTICE THIS</strong> box. It gives you one concrete thing to try in your next session.",
               "Tap <strong>Mark as read</strong> when you're done. The tip's dot turns green in the list, so you can see what's left. Tap <strong>Mark as unread</strong> to undo."
             ],
@@ -577,12 +606,39 @@ const GUIDES = {
             shot: "pitWallTiming"
           },
           {
-            h: "Abréviations et affichages superposés",
+            h: "Abréviations et paramètres",
             p: [
               "Touchez la prévision de pluie dans la barre du haut pour ouvrir la légende du tableau de bord, qui explique chaque abréviation (BB, DIFF, PEN, SC, VSC, ERS et plus). Le même <strong>Guide du tableau de bord</strong> se trouve dans Paramètres → ASSISTANCE.",
-              "Sous voiture de sécurité virtuelle ou voiture de sécurité, un grand delta superposé vous indique si vous respectez le delta exigé. Les drapeaux rouges et les phases de la direction de course ont aussi leur affichage bien visible."
+              "L’engrenage en haut à droite ouvre les Paramètres sans quitter la session : la télémétrie, l’enregistrement et Jax continuent pendant que vous changez un réglage."
+            ]
+          },
+          {
+            h: "Direction de course : le cadre lumineux",
+            p: ["Quand la direction de course intervient, le cadre du tableau de bord change de couleur : la situation se lit du coin de l’œil. Le cadre du mur des stands fait de même."],
+            list: [
+              "<strong>Jaune, pulsé</strong> : voiture de sécurité virtuelle.",
+              "<strong>Jaune, fixe</strong> : voiture de sécurité. Il pulse de nouveau quand la voiture de sécurité rentre ce tour-ci.",
+              "<strong>Rouge</strong> : drapeau rouge. Il passe avant tout le reste.",
+              "<strong>Bleu</strong> : on vous présente le drapeau bleu. Après une voiture de sécurité, le bleu ne revient que si le drapeau est toujours présenté.",
+              "<strong>Aucune lueur</strong> : course sous drapeau vert."
+            ],
+            note: "Si l’option Réduire les animations d’iOS est activée, la lueur reste fixe au lieu de pulser."
+          },
+          {
+            h: "Une seule fenêtre pour la direction de course",
+            p: [
+              "Chaque message de la direction de course apparaît dans la même fenêtre, au même endroit, en quelques mots : DRAPEAU ROUGE, DELTA SC, RECOLLEZ À LA FILE, SC RENTRE CE TOUR, VSC · TENEZ LE DELTA, FIN DU VSC, DRAPEAU VERT et DRAPEAU BLEU.",
+              "Sous voiture de sécurité ou VSC, la fenêtre du delta affiche votre marge par rapport au delta exigé et change de couleur avec elle : <strong>vert</strong> pour OK, <strong>jaune</strong> pour ATTENTION, <strong>rouge</strong> pour RALENTISSEZ."
             ],
             shot: "vscDelta"
+          },
+          {
+            h: "Répartition de freinage et différentiel",
+            p: [
+              "Quand vous modifiez la répartition de freinage, le différentiel (à l’accélération ou au lever de pied) ou le frein moteur au volant, la nouvelle valeur s’affiche dans une fenêtre <strong>indigo</strong> avec l’ampleur du changement, par exemple « 58 % avant, +2 ». L’indigo ne signifie rien d’autre dans JMD : un changement de réglage ne se confond jamais avec la direction de course.",
+              "Sous voiture de sécurité ou VSC, la fenêtre du réglage recouvre celle de la direction de course pendant 2 secondes au plus, puis celle-ci revient. Plusieurs changements rapprochés donnent une seule fenêtre avec la dernière valeur. Les changements faits au garage ou dans la voie des stands ne s’affichent pas."
+            ],
+            shot: "settingPopup"
           },
           {
             h: "Qualification et essais",
@@ -611,7 +667,9 @@ const GUIDES = {
             p: ["L’en-tête affiche toujours le circuit, les températures de l’air et de la piste, la prévision de pluie, le nombre de voitures en piste et l’horloge de session."],
             list: [
               "<strong>Jax</strong> ouvre le panneau <strong>Voix de Jax</strong> : activez ou coupez le <strong>Guidage audio Jax</strong> et choisissez les catégories de messages sans quitter la session.",
-              "<strong>Passées</strong> ouvre l’historique des sessions, déjà filtré sur votre jeu et votre voiture. Un bouton <strong>RETOUR AU MUR DES STANDS</strong> vous ramène."
+              "<strong>Passées</strong> ouvre l’historique des sessions, déjà filtré sur votre jeu et votre voiture. Un bouton <strong>RETOUR AU MUR DES STANDS</strong> vous ramène.",
+              "L’<strong>engrenage</strong> ouvre les Paramètres sans interrompre la session.",
+              "La direction de course allume le cadre du mur des stands dans les mêmes couleurs que celui du tableau de bord (voir le guide du tableau de bord)."
             ],
             shot: "pitWallHeader"
           },
@@ -708,9 +766,9 @@ const GUIDES = {
         summary: "Apprenez le circuit avec À propos, puis bâtissez un plan pour les essais, la qualification ou la course avec Séance.",
         sections: [
           {
-            h: "Choisir le circuit et la voiture",
+            h: "Choisir le jeu, le circuit et la voiture",
             p: [
-              "Ouvrez <strong>Préparer la session</strong> depuis l’écran d’accueil. Choisissez le circuit et la voiture en haut. La liste des circuits est alphabétique et se recherche ; elle trouve aussi d’autres noms comme « Spielberg » ou « COTA ». La liste des voitures ne propose que les combinaisons de jeu et de formule prises en charge.",
+              "Ouvrez <strong>Préparer la session</strong> depuis l’écran d’accueil et touchez le circuit en haut. Choisissez d’abord le jeu (F1 26, F1 25 ou F1 24), puis un circuit de ce jeu. La liste est alphabétique et se recherche ; elle trouve aussi d’autres noms comme « Spielberg » ou « COTA ». Une petite icône de livre signale les circuits qui ont une fiche de référence complète. Le sélecteur de voiture ne propose que les combinaisons de jeu et de formule prises en charge.",
               "JMD retient votre choix pour la prochaine fois. Quand vous faites défiler, les sélecteurs se réduisent en une seule ligne, toujours touchable."
             ]
           },
@@ -848,7 +906,7 @@ const GUIDES = {
           },
           {
             h: "Retrouver un réglage",
-            p: ["La bibliothèque est un tableau : jeu, titre, circuit, note et session. Elle s’ouvre triée par jeu, l’édition la plus récente en premier, pour ne jamais charger par erreur un réglage d’un jeu plus ancien. Touchez un en-tête de colonne, ou utilisez <strong>Trier par</strong> : jeu, circuit, note, titre ou Utilisés récemment. Les filtres réduisent la liste par circuit, catégorie (F1 ou F2) et jeu."]
+            p: ["La bibliothèque montre un jeu à la fois, sous un titre comme <strong>Réglages F1 26</strong>, pour ne jamais charger par erreur un réglage d’un jeu plus ancien. Si vous avez des réglages de plusieurs jeux, un sélecteur de jeu apparaît au-dessus du titre. Le tableau affiche circuit, titre et note, plus la session en paysage. Il s’ouvre trié par circuit ; touchez un en-tête de colonne pour trier, et touchez-le de nouveau pour inverser l’ordre. Les filtres réduisent la liste par circuit et catégorie (F1 ou F2)."]
           },
           {
             h: "Noter un réglage",
@@ -857,7 +915,7 @@ const GUIDES = {
               "Touchez les étoiles : une étoile signifie <strong>Médiocre</strong>, deux <strong>Bon</strong>, trois <strong>Excellent</strong>.",
               "Pour retirer la note, touchez de nouveau l’étoile sélectionnée. Le réglage redevient Non noté."
             ],
-            p: ["La note et le nom appartiennent au réglage lui-même, pas à une seule session. Notez-le dans l’historique et la bibliothèque affiche les mêmes étoiles, et inversement. Dans la bibliothèque, triez par <strong>Note</strong> pour mettre vos meilleurs réglages en tête."],
+            p: ["La note et le nom appartiennent au réglage lui-même, pas à une seule session. Notez-le dans l’historique et la bibliothèque affiche les mêmes étoiles, et inversement. Dans la bibliothèque, touchez l’en-tête <strong>NOTE</strong> pour mettre vos meilleurs réglages en tête."],
             shot: "setupRating"
           },
           {
@@ -866,7 +924,7 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["Tous les réglages utilisés, listés par jeu, circuit, nom, note et session", "Chaque nouveau réglage enregistré avec sa session"],
+          free: ["Tous les réglages utilisés, listés par jeu, puis par circuit, nom, note et session", "Chaque nouveau réglage enregistré avec sa session"],
           pro: ["Ouvrir les valeurs d’un réglage, comparer, renommer, noter et noter la caméra"]
         },
         related: ["session-history", "prepare-for-session", "pit-wall"]
@@ -890,7 +948,7 @@ const GUIDES = {
           {
             h: "Lire, pratiquer, marquer comme lu",
             steps: [
-              "Touchez un conseil pour l’ouvrir : un résumé d’une ligne, puis l’explication.",
+              "Touchez un conseil pour l’ouvrir : un résumé d’une ligne, puis l’explication. <strong>A−</strong> et <strong>A+</strong> en haut réduisent ou agrandissent le texte ; JMD garde votre choix pour tous les conseils.",
               "Servez-vous de l’encadré <strong>PRATIQUER</strong>. Il vous donne une chose concrète à essayer lors de votre prochaine session.",
               "Touchez <strong>Marquer comme lu</strong> quand vous avez terminé. La pastille du conseil devient verte dans la liste, pour voir ce qu’il reste. Touchez <strong>Marquer non lu</strong> pour annuler."
             ],
@@ -1065,12 +1123,39 @@ const GUIDES = {
             shot: "pitWallTiming"
           },
           {
-            h: "Abreviaturas y avisos en pantalla",
+            h: "Abreviaturas y ajustes",
             p: [
               "Toca la previsión de lluvia en la barra superior para abrir la leyenda del panel, que explica cada abreviatura (BB, DIFF, PEN, SC, VSC, ERS y más). La misma <strong>Guía del panel</strong> está en Ajustes → SOPORTE.",
-              "Con coche de seguridad virtual o coche de seguridad, un gran delta en pantalla te dice si mantienes el delta exigido. Las banderas rojas y las fases de dirección de carrera tienen también su aviso bien visible."
+              "El engranaje de arriba a la derecha abre Ajustes sin salir de la sesión: la telemetría, la grabación y Jax siguen funcionando mientras cambias algo."
+            ]
+          },
+          {
+            h: "Dirección de carrera: el marco iluminado",
+            p: ["Cuando interviene la dirección de carrera, el propio marco del panel cambia de color, para que leas la situación con el rabillo del ojo. El marco del muro de boxes hace lo mismo."],
+            list: [
+              "<strong>Amarillo, pulsante</strong>: coche de seguridad virtual.",
+              "<strong>Amarillo, fijo</strong>: coche de seguridad. Vuelve a pulsar cuando el coche de seguridad entra esta vuelta.",
+              "<strong>Rojo</strong>: bandera roja. Tiene prioridad sobre todo lo demás.",
+              "<strong>Azul</strong>: te muestran la bandera azul. Tras un coche de seguridad, el azul solo vuelve si la bandera sigue mostrándose.",
+              "<strong>Sin brillo</strong>: carrera con bandera verde."
+            ],
+            note: "Con la opción Reducir movimiento de iOS activada, el brillo queda fijo en lugar de pulsar."
+          },
+          {
+            h: "Un solo aviso para la dirección de carrera",
+            p: [
+              "Cada mensaje de dirección de carrera aparece en el mismo aviso, en el mismo lugar, en pocas palabras: BANDERA ROJA, DELTA SC, ALCANZA LA FILA, SC ENTRA ESTA VUELTA, VSC · MANTÉN EL DELTA, FIN DEL VSC, BANDERA VERDE y BANDERA AZUL.",
+              "Con coche de seguridad o VSC, el aviso del delta muestra tu margen respecto al delta exigido y cambia de color con él: <strong>verde</strong> para OK, <strong>amarillo</strong> para CUIDADO, <strong>rojo</strong> para REDUCE."
             ],
             shot: "vscDelta"
+          },
+          {
+            h: "Reparto de frenada y diferencial",
+            p: [
+              "Cuando cambias el reparto de frenada, el diferencial (acelerando o sin acelerar) o el freno motor desde el volante, el nuevo valor aparece en un aviso <strong>índigo</strong> con el tamaño del cambio, por ejemplo «58 % delante, +2». El índigo no significa nada más en JMD, así que un cambio de reglaje nunca se confunde con la dirección de carrera.",
+              "Con coche de seguridad o VSC, el aviso del reglaje cubre el de dirección de carrera durante 2 segundos como máximo y después este vuelve. Varios cambios seguidos muestran un solo aviso con el valor más reciente. Los cambios hechos en el garaje o en el pit lane no se muestran."
+            ],
+            shot: "settingPopup"
           },
           {
             h: "Clasificación y libres",
@@ -1099,7 +1184,9 @@ const GUIDES = {
             p: ["La cabecera muestra siempre el circuito, las temperaturas del aire y de la pista, la previsión de lluvia, el número de coches en pista y el reloj de sesión."],
             list: [
               "<strong>Jax</strong> abre el panel de la voz de Jax: activa o desactiva la <strong>Guía de audio de Jax</strong> y elige las categorías de mensajes sin salir de la sesión.",
-              "<strong>Anteriores</strong> abre el historial de sesiones, ya filtrado por tu juego y tu coche. Un botón <strong>VOLVER AL MURO DE BOXES</strong> te trae de vuelta."
+              "<strong>Anteriores</strong> abre el historial de sesiones, ya filtrado por tu juego y tu coche. Un botón <strong>VOLVER AL MURO DE BOXES</strong> te trae de vuelta.",
+              "El <strong>engranaje</strong> abre Ajustes sin detener la sesión.",
+              "La dirección de carrera ilumina el marco del muro de boxes con los mismos colores que el del panel (consulta la guía del panel)."
             ],
             shot: "pitWallHeader"
           },
@@ -1196,9 +1283,9 @@ const GUIDES = {
         summary: "Aprende el circuito con Acerca de y crea un plan para libres, clasificación o carrera con Sesión.",
         sections: [
           {
-            h: "Elegir circuito y coche",
+            h: "Elegir juego, circuito y coche",
             p: [
-              "Abre <strong>Preparar sesión</strong> desde la pantalla de inicio. Elige el circuito y el coche arriba. La lista de circuitos es alfabética y se puede buscar; también encuentra otros nombres, como «Spielberg» o «COTA». La lista de coches solo ofrece combinaciones de juego y fórmula compatibles.",
+              "Abre <strong>Preparar sesión</strong> desde la pantalla de inicio y toca el circuito arriba. Elige primero el juego (F1 26, F1 25 o F1 24) y después un circuito de ese juego. La lista es alfabética y se puede buscar; también encuentra otros nombres, como «Spielberg» o «COTA». Un pequeño icono de libro marca los circuitos con una ficha de referencia completa. El selector de coche solo ofrece combinaciones de juego y fórmula compatibles.",
               "JMD recuerda tu elección para la próxima vez. Al desplazarte, los selectores se reducen a una sola línea que puedes seguir tocando."
             ]
           },
@@ -1336,7 +1423,7 @@ const GUIDES = {
           },
           {
             h: "Encontrar un reglaje",
-            p: ["La biblioteca es una tabla: juego, título, circuito, valoración y sesión. Se abre ordenada por juego, la edición más reciente primero, para que nunca cargues por error un reglaje de un juego anterior. Toca una cabecera de columna o usa <strong>Ordenar por</strong>: juego, circuito, valoración, título o Uso reciente. Los filtros acotan la lista por circuito, categoría (F1 o F2) y juego."]
+            p: ["La biblioteca muestra un juego cada vez, bajo un título como <strong>Reglajes de F1 26</strong>, para que nunca cargues por error un reglaje de un juego anterior. Si tienes reglajes de más de un juego, aparece un selector de juego encima del título. La tabla muestra circuito, título y valoración, y también la sesión en horizontal. Se abre ordenada por circuito; toca una cabecera de columna para ordenar por ella y vuelve a tocarla para invertir el orden. Los filtros acotan la lista por circuito y categoría (F1 o F2)."]
           },
           {
             h: "Valorar un reglaje",
@@ -1345,7 +1432,7 @@ const GUIDES = {
               "Toca las estrellas: una estrella es <strong>Flojo</strong>, dos <strong>Bueno</strong> y tres <strong>Excelente</strong>.",
               "Para quitar la valoración, vuelve a tocar la estrella seleccionada. El reglaje vuelve a Sin valorar."
             ],
-            p: ["La valoración y el nombre pertenecen al reglaje, no a una sola sesión. Valóralo en el historial y la biblioteca muestra las mismas estrellas, y al revés. En la biblioteca, ordena por <strong>Valoración</strong> para poner primero tus mejores reglajes."],
+            p: ["La valoración y el nombre pertenecen al reglaje, no a una sola sesión. Valóralo en el historial y la biblioteca muestra las mismas estrellas, y al revés. En la biblioteca, toca la cabecera <strong>VALORACIÓN</strong> para poner primero tus mejores reglajes."],
             shot: "setupRating"
           },
           {
@@ -1354,7 +1441,7 @@ const GUIDES = {
           }
         ],
         access: {
-          free: ["Todos los reglajes que has usado, en la lista por juego, circuito, nombre, valoración y sesión", "Cada reglaje nuevo se guarda con su sesión"],
+          free: ["Todos los reglajes que has usado, en la lista por juego y después por circuito, nombre, valoración y sesión", "Cada reglaje nuevo se guarda con su sesión"],
           pro: ["Abrir los valores de un reglaje, compararlos, renombrarlos, valorarlos y anotar la cámara"]
         },
         related: ["session-history", "prepare-for-session", "pit-wall"]
@@ -1378,7 +1465,7 @@ const GUIDES = {
           {
             h: "Leer, practicar, marcar como leído",
             steps: [
-              "Toca un consejo para abrirlo: un resumen de una línea y después la explicación.",
+              "Toca un consejo para abrirlo: un resumen de una línea y después la explicación. <strong>A−</strong> y <strong>A+</strong> arriba reducen o amplían el texto; JMD guarda tu elección para todos los consejos.",
               "Usa el recuadro <strong>PRACTICAR</strong>. Te da una cosa concreta que probar en tu próxima sesión.",
               "Toca <strong>Marcar como leído</strong> al terminar. El punto del consejo se vuelve verde en la lista, para que veas lo que te queda. Toca <strong>Marcar como no leído</strong> para deshacerlo."
             ],

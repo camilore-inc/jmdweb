@@ -20,7 +20,7 @@ removing or retitling a guide, regenerate the page shells and sitemap entries:
 python3 scripts/build_guide_pages.py
 ```
 
-Screenshots and preview videos: full-size originals stay untouched; the site
+Screenshots and preview videos (currently all from app 0.32.6): full-size originals stay untouched; the site
 loads web-sized copies made by `python3 scripts/build_web_media.py` (see
 `assets/screenshots/current/README.md` and `assets/video/README.md`).
 

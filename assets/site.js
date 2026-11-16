@@ -75,6 +75,7 @@ const SHOTS = {
   setupRating:           { file: perLang("setup-rating.webp"), orientation: "landscape" },
   racingTips:            { file: perLang("racing-tips.webp"), orientation: "landscape" },
   racingTipsDetail:      { file: perLang("racing-tips-detail.webp"), orientation: "landscape" },
+  settingPopup:          { file: perLang("setting-popup.webp"), orientation: "landscape" },
   settingsSetup:         { file: perLang("settings-setup.webp"), orientation: "portrait" },
   settingsJax:           { file: perLang("settings-jax.webp"), orientation: "portrait" },
   settingsSupport:       { file: perLang("settings-support.webp"), orientation: "portrait" }
@@ -126,7 +127,7 @@ const copy = {
       dashboard: "Live Dashboard",
       dashboardVideo: "Live Dashboard during a race",
       qualifying: "Dashboard in qualifying",
-      vscDelta: "VSC delta overlay",
+      vscDelta: "VSC delta popup, with the frame glowing yellow",
       pitWallTiming: "Pit Wall — Timing",
       pitWallVideo: "Pit Wall — Timing, Map and Car",
       pitWallMap: "Pit Wall — Map",
@@ -136,7 +137,7 @@ const copy = {
       sessionHistoryLeague: "Session History filtered to one league",
       sessionLeagueSeason: "A session’s LEAGUE & SEASON tags",
       raceResults: "Race results",
-      pitWallHeader: "Pit Wall — Classification, Jax and Past",
+      pitWallHeader: "Pit Wall — LIVE timing, Jax, Past and Settings",
       quickJax: "Quick Jax on the Pit Wall",
       setupRating: "A setup with its star rating",
       settingsSetup: "Settings — SETUP",
@@ -146,7 +147,8 @@ const copy = {
       raceReplayLandscape: "After the race: results, Race Replay and lap traces",
       setupLibrary: "Setup library with ratings",
       racingTips: "Racing Tips",
-      racingTipsDetail: "A Racing Tip, with an exercise to practise"
+      racingTipsDetail: "A Racing Tip, with an exercise to practise",
+      settingPopup: "Brake bias change in the indigo popup, during a Safety Car"
     },
     home: {
       titleLines: ["Your Race Engineer.", "Your Pit Wall.", "Your Race Memory."],
@@ -188,7 +190,9 @@ const copy = {
           "Tyre compound, wear and temperatures",
           "Brake and engine temperatures",
           "Fuel, ERS — including F1 26 energy management — and DRS",
-          "Flags, Safety Car, VSC, pit and penalty information",
+          "Race control at a glance: the screen’s frame glows yellow for SC/VSC, red for a red flag, blue for blue flags",
+          "Brake bias and differential changes confirmed in an indigo popup",
+          "Pit and penalty information",
           "Wing damage, weather and session context"
         ],
         jaxKicker: "Jax · Voice",
@@ -300,7 +304,9 @@ const copy = {
             "Tyre compound, wear and temperatures for all four corners",
             "Brake and engine temperatures in your chosen unit",
             "Fuel, ERS and F1 26 energy management, DRS",
-            "Flags, Safety Car, VSC, pit and penalty information",
+            "Race control at a glance: the screen’s frame glows yellow for SC/VSC, red for a red flag, blue for blue flags",
+          "Brake bias and differential changes confirmed in an indigo popup",
+          "Pit and penalty information",
             "Wing damage, weather and session context"
           ],
           shots: ["dashboardVideo"]
@@ -795,7 +801,7 @@ const copy = {
       dashboard: "Tableau de bord en direct",
       dashboardVideo: "Le tableau de bord pendant une course",
       qualifying: "Le tableau de bord en qualification",
-      vscDelta: "Le delta VSC à l’écran",
+      vscDelta: "La fenêtre du delta VSC, cadre allumé en jaune",
       pitWallTiming: "Mur des stands — Timing",
       pitWallVideo: "Mur des stands — Timing, carte et voiture",
       pitWallMap: "Mur des stands — Carte",
@@ -805,7 +811,7 @@ const copy = {
       sessionHistoryLeague: "Historique filtré sur une ligue",
       sessionLeagueSeason: "La ligue et la saison d’une session",
       raceResults: "Résultats de course",
-      pitWallHeader: "Mur des stands — classement, Jax et Passées",
+      pitWallHeader: "Mur des stands — EN DIRECT, Jax, Passées et Paramètres",
       quickJax: "La voix de Jax sur le mur des stands",
       setupRating: "Un réglage et sa note en étoiles",
       settingsSetup: "Paramètres — RÉGLAGES",
@@ -815,7 +821,8 @@ const copy = {
       raceReplayLandscape: "Après la course : résultats, Race Replay et tracés",
       setupLibrary: "Bibliothèque de setups avec évaluations",
       racingTips: "Conseils de course",
-      racingTipsDetail: "Un conseil de course, avec un exercice à pratiquer"
+      racingTipsDetail: "Un conseil de course, avec un exercice à pratiquer",
+      settingPopup: "Changement de répartition de freinage dans la fenêtre indigo, sous voiture de sécurité"
     },
     home: {
       titleLines: ["Votre ingénieur de course.", "Votre mur des stands.", "Votre mémoire de course."],
@@ -857,7 +864,9 @@ const copy = {
           "Gomme, usure et températures des pneus",
           "Températures des freins et du moteur",
           "Carburant, ERS — y compris la gestion de l'énergie de F1 26 — et DRS",
-          "Drapeaux, voiture de sécurité, VSC, arrêts et pénalités",
+          "La direction de course d’un coup d’œil : le cadre de l’écran s’allume en jaune (SC/VSC), en rouge (drapeau rouge), en bleu (drapeau bleu)",
+          "Changements de répartition de freinage et de différentiel confirmés dans une fenêtre indigo",
+          "Arrêts et pénalités",
           "Dégâts d'aileron, météo et contexte de session"
         ],
         jaxKicker: "Jax · Voix",
@@ -969,7 +978,9 @@ const copy = {
             "Gomme, usure et températures des quatre pneus",
             "Températures des freins et du moteur dans l'unité de votre choix",
             "Carburant, ERS et gestion de l'énergie de F1 26, DRS",
-            "Drapeaux, voiture de sécurité, VSC, arrêts et pénalités",
+            "La direction de course d’un coup d’œil : le cadre de l’écran s’allume en jaune (SC/VSC), en rouge (drapeau rouge), en bleu (drapeau bleu)",
+          "Changements de répartition de freinage et de différentiel confirmés dans une fenêtre indigo",
+          "Arrêts et pénalités",
             "Dégâts d'aileron, météo et contexte de session"
           ],
           shots: ["dashboardVideo"]
@@ -1368,7 +1379,7 @@ const copy = {
       dashboard: "Panel en vivo",
       dashboardVideo: "El panel durante una carrera",
       qualifying: "El panel en clasificación",
-      vscDelta: "El delta VSC en pantalla",
+      vscDelta: "El aviso del delta VSC, con el marco en amarillo",
       pitWallTiming: "Muro de boxes — Timing",
       pitWallVideo: "Muro de boxes — Timing, mapa y coche",
       pitWallMap: "Muro de boxes — Mapa",
@@ -1378,7 +1389,7 @@ const copy = {
       sessionHistoryLeague: "Historial filtrado por una liga",
       sessionLeagueSeason: "La liga y la temporada de una sesión",
       raceResults: "Resultados de carrera",
-      pitWallHeader: "Muro de boxes — clasificación, Jax y Anteriores",
+      pitWallHeader: "Muro de boxes — EN VIVO, Jax, Anteriores y Ajustes",
       quickJax: "La voz de Jax en el muro de boxes",
       setupRating: "Un reglaje con su valoración en estrellas",
       settingsSetup: "Ajustes — AJUSTES",
@@ -1388,7 +1399,8 @@ const copy = {
       raceReplayLandscape: "Después de la carrera: resultados, Race Replay y trazas",
       setupLibrary: "Biblioteca de setups con valoraciones",
       racingTips: "Consejos de carrera",
-      racingTipsDetail: "Un consejo de carrera, con un ejercicio para practicar"
+      racingTipsDetail: "Un consejo de carrera, con un ejercicio para practicar",
+      settingPopup: "Cambio de reparto de frenada en el aviso índigo, con coche de seguridad"
     },
     home: {
       titleLines: ["Tu ingeniero de carrera.", "Tu muro de boxes.", "Tu memoria de carrera."],
@@ -1430,7 +1442,9 @@ const copy = {
           "Compuesto, desgaste y temperaturas de neumáticos",
           "Temperaturas de frenos y motor",
           "Combustible, ERS — incluida la gestión de energía de F1 26 — y DRS",
-          "Banderas, Safety Car, VSC, paradas y penalizaciones",
+          "La dirección de carrera de un vistazo: el marco de la pantalla se ilumina en amarillo (SC/VSC), rojo (bandera roja) o azul (bandera azul)",
+          "Cambios de reparto de frenada y diferencial confirmados en un aviso índigo",
+          "Paradas y penalizaciones",
           "Daños en alerones, clima y contexto de sesión"
         ],
         jaxKicker: "Jax · Voz",
@@ -1542,7 +1556,9 @@ const copy = {
             "Compuesto, desgaste y temperaturas de los cuatro neumáticos",
             "Temperaturas de frenos y motor en la unidad que elijas",
             "Combustible, ERS y gestión de energía de F1 26, DRS",
-            "Banderas, Safety Car, VSC, paradas y penalizaciones",
+            "La dirección de carrera de un vistazo: el marco de la pantalla se ilumina en amarillo (SC/VSC), rojo (bandera roja) o azul (bandera azul)",
+          "Cambios de reparto de frenada y diferencial confirmados en un aviso índigo",
+          "Paradas y penalizaciones",
             "Daños en alerones, clima y contexto de sesión"
           ],
           shots: ["dashboardVideo"]
