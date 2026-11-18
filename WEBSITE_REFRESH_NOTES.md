@@ -174,9 +174,11 @@ Race Replay cut for a second App Store preview.
 
 - The old literal placeholder links (`https://testflight.apple.com/join/placeholder`,
   `https://apps.apple.com/app/id-placeholder`) are **gone**.
-- The repository has no real App Store or TestFlight URL. `SITE.store.appStoreUrl`
-  and `SITE.store.testFlightUrl` in `assets/site.js` are therefore empty, and
-  the site shows a non-clickable **"Coming soon on the App Store"** status.
+- `SITE.store.testFlightUrl` is the public TestFlight link
+  (`https://testflight.apple.com/join/2yr2sxFd`, app 0.32.7, set 2026-11-18). The
+  hero, How It Works and the closing panel show **"Join the TestFlight beta"**;
+  the closing heading still reads "Coming soon to the App Store".
+  `SITE.store.appStoreUrl` stays empty until the listing is live.
 - **When the listing is live**, set `appStoreUrl` and the site switches over
   on its own:
   - the hero and How It Works show "Download on the App Store";

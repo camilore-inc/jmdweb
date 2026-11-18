@@ -21,7 +21,7 @@ const SITE = {
   store: {
     // Real, public URLs only - never a placeholder. Empty = "Coming soon".
     appStoreUrl: "",
-    testFlightUrl: ""
+    testFlightUrl: "https://testflight.apple.com/join/2yr2sxFd"
   },
   // Retired blog (2026-11): the posts stay reachable at their old URLs but are
   // not linked from navigation, footer or other pages, are out of the sitemap

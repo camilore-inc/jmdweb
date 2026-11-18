@@ -3,6 +3,13 @@
 The website has no version number of its own. Entries are dated and name the
 Jax Max Delta app release the site was checked against.
 
+## 2026-11-18 — Public TestFlight beta of app 0.32.7
+
+- **"Join the TestFlight beta" is live** on Home (hero and Availability) and
+  How It Works, in English, French and Spanish. It opens the public TestFlight
+  link for Jax Max Delta 0.32.7. The App Store button replaces it once the
+  listing is live.
+
 ## 2026-11-16 — Every screenshot and preview from app 0.32.6
 
 - **All website screenshots and preview clips recaptured from Jax Max Delta
