@@ -18,6 +18,7 @@ removing or retitling a guide, regenerate the page shells and sitemap entries:
 
 ```sh
 python3 scripts/build_guide_pages.py
+python3 scripts/prerender.py
 ```
 
 Screenshots and preview videos (currently all from app 0.32.6): full-size originals stay untouched; the site
@@ -31,10 +32,26 @@ published on the website). See `_racing_tips/README.md` for the format and
 how to publish a change, and run `python3 scripts/validate_racing_tips.py`
 before pushing.
 
+## Static rendering
+
+The page text lives in `assets/site.js` and `assets/guides.js`, but every page
+also ships that text already rendered in its HTML, so search engines and AI
+crawlers (which do not run JavaScript) can read it. After **any** change to
+`site.js`, `guides.js` or a page shell, regenerate it (needs Google Chrome):
+
+```sh
+python3 scripts/prerender.py
+```
+
+In the browser, `site.js` still runs and replaces the markup with identical
+markup. `validate_site.py` fails when a page is out of date. The retired blog
+pages are not prerendered.
+
 ## Local validation
 
-There is no dependency installation or compilation step. GitHub Pages serves the
-HTML, CSS, JavaScript and assets directly.
+There is no dependency installation. GitHub Pages serves the HTML, CSS,
+JavaScript and assets directly; the only build step is the static rendering
+above.
 
 ```sh
 python3 scripts/validate_site.py

@@ -208,6 +208,25 @@ for entry in (ROOT / "assets" / "screenshots").iterdir():
         f"assets/screenshots/{entry.name}: only current/ and web/ belong here",
     )
 
+# Static rendering: every page site.js draws (except the retired blog) ships its
+# full markup in #app, rendered from the current sources. If this fails, run
+# python3 scripts/prerender.py.
+sys.path.insert(0, str(ROOT / "scripts"))
+import prerender  # noqa: E402
+
+for path in prerender.pages():
+    source = path.read_text(encoding="utf-8")
+    label = path.relative_to(ROOT)
+    stamp = re.search(r'<div id="app" data-prerender="([0-9a-f]+)">', source)
+    check(stamp is not None, f"{label}: not prerendered (run scripts/prerender.py)")
+    if stamp:
+        check(
+            stamp.group(1) == prerender.fingerprint(source),
+            f"{label}: prerendered markup is out of date (run scripts/prerender.py)",
+        )
+    check(len(re.findall(r"<h1\b", source)) == 1, f"{label}: needs exactly one <h1>")
+    check("?prerender" not in source, f"{label}: a ?prerender URL leaked into the markup")
+
 if FAILURES:
     print(f"Site validation failed ({len(FAILURES)}):", file=sys.stderr)
     for failure in FAILURES:

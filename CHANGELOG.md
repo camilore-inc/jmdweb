@@ -3,6 +3,16 @@
 The website has no version number of its own. Entries are dated and name the
 Jax Max Delta app release the site was checked against.
 
+## 2026-11-22 — Every page readable without JavaScript
+
+- **Every page now ships its full text in the HTML** (Home, Features, How It
+  Works and the ten guides, Support, Roadmap, Roro, Privacy, Terms; EN/FR/ES).
+  Search engines no longer have to run JavaScript to read the site, and AI
+  search crawlers, which never run it, now see the content too. Visitors see
+  the page before the script loads. Nothing changes in how the site looks or
+  behaves. Built by `scripts/prerender.py`; `scripts/validate_site.py` fails
+  when a page is out of date with `assets/site.js` or `assets/guides.js`.
+
 ## 2026-11-18 — Public TestFlight beta of app 0.32.7
 
 - **"Join the TestFlight beta" is live** on Home (hero and Availability) and

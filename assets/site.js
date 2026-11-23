@@ -2158,7 +2158,13 @@ function boot() {
   const page = document.body.dataset.page || "home";
   const slug = document.body.dataset.slug || "";
   const t = copy[lang];
+  // Each page already ships this exact markup in #app (scripts/prerender.py),
+  // so crawlers and readers without JavaScript get the full text. Rendering
+  // again here swaps in identical markup, then wires up the interactive parts.
   root.innerHTML = `${header(t, lang, page)}<main id="main" tabindex="-1">${renderPage(t, lang, page, slug)}</main>${footer(t, lang)}`;
+  // prerender.py loads pages with ?prerender and captures the markup before
+  // any setup step changes classes, styles or video state.
+  if (new URLSearchParams(window.location.search).has("prerender")) return;
   setupMobileNav();
   setupVideos(t);
   setupHeroReel(t);
