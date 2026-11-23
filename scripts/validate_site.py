@@ -76,6 +76,12 @@ for lang in ("en", "fr", "es"):
                 structured.get("publisher", {}).get("name") == "Camilore Inc.",
                 f"{lang}/index.html: JSON-LD publisher mismatch",
             )
+            # Same @id as the Organization on camilore.com, so search engines
+            # treat the publisher and the company site as one entity.
+            check(
+                structured.get("publisher", {}).get("@id") == "https://camilore.com/#organization",
+                f"{lang}/index.html: JSON-LD publisher must carry Camilore's @id",
+            )
         except json.JSONDecodeError as error:
             FAILURES.append(f"{lang}/index.html: invalid JSON-LD ({error})")
 
