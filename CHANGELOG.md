@@ -5,8 +5,8 @@ Jax Max Delta app release the site was checked against.
 
 ## 2026-11-23 — Search engines notified on every push
 
-- Google Search Console and Bing Webmaster Tools set up (verification file
-  `googleb770fc204538b5b8.html`, sitemap submitted).
+- Google Search Console and Bing Webmaster Tools set up (owner: the Camilore company Google account; verification file
+  `google5471991e324eb795.html`, sitemap submitted).
 - IndexNow: after each push to `main`, a GitHub Actions workflow waits for the
   Pages deploy and sends the changed sitemap pages to Bing and the other
   IndexNow engines (`scripts/indexnow.py`, key file at the root).

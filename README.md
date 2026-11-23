@@ -49,8 +49,8 @@ pages are not prerendered.
 
 ## Search engines
 
-- **Google Search Console and Bing Webmaster Tools** verify the site with
-  `googleb770fc204538b5b8.html` at the root. Do not delete it.
+- **Google Search Console and Bing Webmaster Tools** verify the site for the Camilore company Google account
+  with `google5471991e324eb795.html` at the root. Do not delete it.
 - **IndexNow:** after every push to `main`, `.github/workflows/indexnow.yml`
   waits until GitHub Pages has published the commit, then
   `scripts/indexnow.py` tells Bing and the other IndexNow engines which sitemap
