@@ -47,6 +47,17 @@ In the browser, `site.js` still runs and replaces the markup with identical
 markup. `validate_site.py` fails when a page is out of date. The retired blog
 pages are not prerendered.
 
+## Search engines
+
+- **Google Search Console and Bing Webmaster Tools** verify the site with
+  `googleb770fc204538b5b8.html` at the root. Do not delete it.
+- **IndexNow:** after every push to `main`, `.github/workflows/indexnow.yml`
+  waits until GitHub Pages has published the commit, then
+  `scripts/indexnow.py` tells Bing and the other IndexNow engines which sitemap
+  pages changed. The key is the `<32 hex>.txt` file at the root (public by
+  design). By hand: `python3 scripts/indexnow.py --range OLD..NEW --dry-run`, or
+  run the workflow from the Actions tab with "all" to resend every page.
+
 ## Local validation
 
 There is no dependency installation. GitHub Pages serves the HTML, CSS,

@@ -1,0 +1,68 @@
+# After each push to main, wait until GitHub Pages has published it, then tell
+# IndexNow (Bing and other engines) which sitemap pages changed.
+# See scripts/indexnow.py.
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: "Send every sitemap page, not only the changed ones"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  pages: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Wait for GitHub Pages to publish this commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 60); do
+            build=$(gh api "repos/${{ github.repository }}/pages/builds/latest" --jq '.status + " " + .commit')
+            status=${build%% *}; commit=${build##* }
+            echo "Pages build: $status $commit"
+            if [ "$status" = "built" ] && git merge-base --is-ancestor "${{ github.sha }}" "$commit" 2>/dev/null; then
+              exit 0
+            fi
+            if [ "$status" = "errored" ] && [ "$commit" = "${{ github.sha }}" ]; then
+              echo "Pages build failed; not notifying IndexNow." >&2
+              exit 1
+            fi
+            sleep 10
+          done
+          echo "Timed out waiting for GitHub Pages." >&2
+          exit 1
+
+      - name: Check the key file is live
+        run: |
+          key=$(ls | grep -E '^[0-9a-f]{32}\.txt$' | head -1)
+          host=$(grep -o '<loc>https://[^/<]*' sitemap.xml | head -1 | sed 's#<loc>https://##')
+          test -n "$key" && test -n "$host"
+          test "$(curl -fsS "https://$host/$key")" = "${key%.txt}"
+
+      - name: Notify IndexNow
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.all }}" = "true" ]; then
+            python3 scripts/indexnow.py --all
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python3 scripts/indexnow.py --range "${{ github.sha }}~1..${{ github.sha }}"
+          else
+            python3 scripts/indexnow.py --range "${{ github.event.before }}..${{ github.sha }}"
+          fi
